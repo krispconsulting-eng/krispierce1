@@ -1,0 +1,82 @@
+/* ------------------------------------------------------------------
+   Kris Pierce Consulting — Colour system
+   A warm, authoritative neutral world: cream paper, greige/taupe,
+   warm clay accent, and a soft near-black "ink". Sampled from the
+   approved reference layout. Muted, never loud — the work is the colour.
+------------------------------------------------------------------ */
+:root {
+  /* ---- Cream / paper (page & surfaces) ---- */
+  --cream-50:  #FBF9F5;   /* page background            */
+  --cream-100: #F4F1EB;   /* alternate section surface  */
+  --cream-200: #ECE7DD;   /* hairline / quiet fills     */
+  --paper:     #FFFFFF;   /* cards on cream             */
+
+  /* ---- Taupe / greige (warm grey-brown) ---- */
+  --taupe-100: #DFDAD0;
+  --taupe-200: #C9C2B5;
+  --taupe-300: #ABA294;
+  --taupe-400: #8C867A;   /* the signature mushroom     */
+  --taupe-500: #6E685E;
+  --taupe-600: #56514A;
+  --taupe-700: #423E38;
+
+  /* ---- Ink (warm near-black) ---- */
+  --ink-900: #1D1C21;     /* primary text, dark panels  */
+  --ink-800: #29272E;
+  --ink-700: #38353F;
+
+  /* ---- Clay (the single warm accent) ---- */
+  --clay-200: #ECD8BD;
+  --clay-300: #DFC09B;
+  --clay-400: #CDA67A;    /* warm tan (reference)       */
+  --clay-500: #BC8F5E;
+  --clay-600: #A2774A;    /* accent for links / marks   */
+  --clay-700: #835E39;
+
+  /* ---- Muted status hues (kept desaturated to sit in the warm world) ---- */
+  --sage-500:  #5E7A55;   /* success / positive         */
+  --amber-500: #B5872F;   /* warning / attention        */
+  --brick-500: #9E4B3B;   /* danger / error             */
+  --slate-500: #4E6373;   /* info / neutral notice       */
+
+  /* =================================================================
+     SEMANTIC ALIASES  — reach for these in components, not raw scales
+     ================================================================= */
+  --color-bg:             var(--cream-50);
+  --color-surface:        var(--paper);
+  --color-surface-alt:    var(--cream-100);
+  --color-surface-sunken: var(--cream-200);
+  --color-surface-inverse:var(--ink-900);
+
+  --text-primary:     var(--ink-900);
+  --text-secondary:   #5A554C;
+  --text-muted:       var(--taupe-400);
+  --text-on-inverse:        #F4F1EB;
+  --text-on-inverse-muted:  rgba(244, 241, 235, 0.66);
+  --text-accent:      var(--clay-700);
+
+  --border-subtle:  rgba(29, 28, 33, 0.09);
+  --border-default: rgba(29, 28, 33, 0.16);
+  --border-strong:  rgba(29, 28, 33, 0.28);
+  --border-inverse: rgba(244, 241, 235, 0.18);
+
+  --accent:      var(--clay-600);
+  --accent-soft: var(--clay-400);
+  --accent-wash: #F3EADD;
+
+  /* Buttons */
+  --btn-primary-bg:   var(--ink-900);
+  --btn-primary-fg:   var(--cream-50);
+  --btn-primary-hover:#000000;
+  --btn-secondary-bg: transparent;
+  --btn-secondary-fg: var(--ink-900);
+
+  /* Glass (floating pills / nav over imagery) */
+  --glass-bg:      rgba(255, 255, 255, 0.14);
+  --glass-bg-dark: rgba(29, 28, 33, 0.28);
+  --glass-border:  rgba(255, 255, 255, 0.32);
+  --glass-blur:    16px;
+
+  /* Focus ring */
+  --focus-ring: var(--clay-600);
+}
