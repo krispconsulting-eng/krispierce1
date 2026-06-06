@@ -1,0 +1,11 @@
+/* ==================================================================
+   Kris Pierce Consulting — Design System entry point
+   Consumers link THIS file only. Imports reach every token + font.
+   (Keep this file as @import lines only.)
+   ================================================================== */
+@import "tokens/fonts.css";
+@import "tokens/colors.css";
+@import "tokens/typography.css";
+@import "tokens/spacing.css";
+@import "tokens/effects.css";
+@import "tokens/base.css";
