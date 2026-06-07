@@ -28,7 +28,7 @@ function Reader({ item, onClose }) {
           {body.map((p, i) => <p key={i}>{p}</p>)}
         </div>
         <div className="reader__foot">
-          <Button arrow href="index.html#contact">Start a conversation</Button>
+          <Button arrow href="/#contact">Start a conversation</Button>
           <span>Working on something like this? Tell me about it.</span>
         </div>
       </article>
@@ -103,7 +103,7 @@ function InsightsApp() {
         <InsGuides onOpen={openGuide} />
         <InsSubscribe />
       </main>
-      <Footer onNav={(id) => { window.location.href = 'index.html#' + id; }} />
+      <Footer onNav={(id) => { window.location.href = '/#' + id; }} />
 
       {reading && <Reader item={reading} onClose={() => setReading(null)} />}
       {toast && <Toast msg={toast} />}

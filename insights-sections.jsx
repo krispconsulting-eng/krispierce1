@@ -188,11 +188,11 @@ function InsightsTeaser() {
           <span className="overline">From the desk</span>
           <h2 className="teaser__title">Insights you can put to work</h2>
         </div>
-        <Button variant="secondary" arrow href="insights.html">All insights &amp; resources</Button>
+        <Button variant="secondary" arrow href="/insights">All insights &amp; resources</Button>
       </div>
       <div className="teaser__grid">
         {latest.map((a) => (
-          <a key={a.id} className="ins-card" href="insights.html" style={{ textDecoration:'none' }}>
+          <a key={a.id} className="ins-card" href="/insights" style={{ textDecoration:'none' }}>
             <div className="ins-card__body">
               <div className="ins-card__top">
                 <span className="ins-card__cat">{a.category}</span>

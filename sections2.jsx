@@ -123,11 +123,11 @@ function Footer({ onNav }) {
       <a className="foot__email" href="mailto:hello@krispierce.com.au">hello@krispierce.com.au</a>
       <div className="foot__bar">
         <div className="foot__links">
-          <a href="about.html">About</a>
-          <a href="expertise.html">Expertise</a>
-          <a href="insights.html">Insights</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="contact.html">Contact</a>
+          <a href="/about">About</a>
+          <a href="/expertise">Expertise</a>
+          <a href="/insights">Insights</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/contact">Contact</a>
         </div>
         <div className="foot__social">
           <a href="#" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>

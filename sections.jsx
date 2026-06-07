@@ -7,12 +7,12 @@ const { useState } = React;
    (when onNav is supplied) and jump otherwise; the rest navigate to their page.
    `active` highlights the current item. */
 const NAV_LINKS = [
-  ['Home','home','index.html#home', true],
-  ['About','about','about.html', false],
-  ['Expertise','offerings','expertise.html', false],
-  ['Insights','insights','insights.html', false],
-  ['Portfolio','portfolio','portfolio.html', false],
-  ['Contact','contact','contact.html', false],
+  ['Home','home','/#home', true],
+  ['About','about','/about', false],
+  ['Expertise','offerings','/expertise', false],
+  ['Insights','insights','/insights', false],
+  ['Portfolio','portfolio','/portfolio', false],
+  ['Contact','contact','/contact', false],
 ];
 
 function Nav({ onNav, theme='hero', active }) {
@@ -22,10 +22,10 @@ function Nav({ onNav, theme='hero', active }) {
     if (anchor && typeof onNav === 'function') { e.preventDefault(); onNav(id); }
     /* else: allow default navigation to the page href */
   };
-  const goContact = () => { if (typeof onNav === 'function') onNav('contact'); else window.location.href = 'contact.html'; };
+  const goContact = () => { if (typeof onNav === 'function') onNav('contact'); else window.location.href = '/contact'; };
   return (
     <header className={`site-nav site-nav--${theme}`}>
-      <Logo href="index.html#home" size={63} inverse={theme==='hero'} />
+      <Logo href="/#home" size={63} inverse={theme==='hero'} />
       <nav className="site-nav__links">
         {NAV_LINKS.map(([label, id, href, anchor]) => (
           <a key={id} href={href} aria-current={active===id ? 'page' : undefined}

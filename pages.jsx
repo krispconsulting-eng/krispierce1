@@ -16,7 +16,7 @@ function AboutPage() {
             health policy, working with health organisations, industry partners, and not-for-profits to generate
             insights and reach patient-centred outcomes.</p>
           <div className="page-hero__cta">
-            <Button variant="primary" arrow href="contact.html">Let's talk</Button>
+            <Button variant="primary" arrow href="/contact">Let's talk</Button>
           </div>
         </section>
 
@@ -90,7 +90,7 @@ function AboutPage() {
           overline="Let's work together"
           title={<>Let's work <em>together</em></>}
           sub="If you're trying to involve patients, carers, or communities in a way that genuinely changes what you do, get in touch. Tell us your organisation, the challenge, and roughly when you need to move."
-          ctaLabel="Get in touch" ctaHref="contact.html" />
+          ctaLabel="Get in touch" ctaHref="/contact" />
       </main>
       <Footer />
     </div>
@@ -162,7 +162,7 @@ function ExpertisePage() {
           overline="How we'd start"
           title={<>A conversation about the <em>challenge</em>, not the method</>}
           sub="Most engagements begin with a conversation about the challenge, not the method. You'll get a straight answer on whether this is the right fit and what approach suits."
-          ctaLabel="Let's talk" ctaHref="contact.html" />
+          ctaLabel="Let's talk" ctaHref="/contact" />
       </main>
       <Footer />
     </div>
@@ -318,7 +318,7 @@ function PortfolioPage() {
           <div className="cta__panel">
             <h2 className="cta__title">Your project could be <em>next</em></h2>
             <p className="cta__sub">If you're shaping an engagement and want it to hold up, start a conversation.</p>
-            <Button variant="inverse" size="lg" arrow href="contact.html">Get in touch</Button>
+            <Button variant="inverse" size="lg" arrow href="/contact">Get in touch</Button>
           </div>
         </section>
       </main>
