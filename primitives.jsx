@@ -69,3 +69,38 @@ function Icon({ name, size = 20, fill = false, style = {}, ...rest }) {
 
 /* Expose on window too, so any global lookups resolve to the DS-backed set. */
 Object.assign(window, { Icon, Button, Pill, IconChip, StatCard, Avatar, AvatarStack, Logo, Badge, Card, Field });
+
+/* ============================================================================
+   Lead delivery — Web3Forms (no backend required).
+   Submissions are emailed to the address tied to the access key below.
+   SETUP: create a free key at https://web3forms.com using hello@krispierce.com.au,
+   then paste it as WEB3FORMS_ACCESS_KEY. Until then, forms show an error on submit.
+   ========================================================================== */
+const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY';
+
+async function sendLead(fields) {
+  if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.startsWith('REPLACE_WITH')) {
+    console.error('[sendLead] Web3Forms access key not set. Get one at https://web3forms.com and set WEB3FORMS_ACCESS_KEY in primitives.jsx.');
+    throw new Error('Form not configured yet.');
+  }
+  const res = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({ access_key: WEB3FORMS_ACCESS_KEY, ...fields }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok || !data.success) throw new Error(data.message || 'Submission failed. Please try again.');
+  return data;
+}
+
+/* Shared "what do you need" options for the contact forms. */
+const NEED_OPTIONS = [
+  { value: '', label: 'What can I help with?' },
+  { value: 'Co-design or participatory research', label: 'Co-design or participatory research' },
+  { value: 'Strategic insights & advice', label: 'Strategic insights & advice' },
+  { value: 'Industry or sponsor support', label: 'Industry or sponsor support' },
+  { value: 'Speaking or facilitation', label: 'Speaking or facilitation' },
+  { value: 'Something else', label: 'Something else' },
+];
+
+Object.assign(window, { sendLead, NEED_OPTIONS, WEB3FORMS_ACCESS_KEY });

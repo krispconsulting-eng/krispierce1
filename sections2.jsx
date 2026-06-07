@@ -83,32 +83,64 @@ function CTA({ onNav }) {
 
 function Contact() {
   const [sent, setSent] = useState2(false);
-  const [form, setForm] = useState2({ name:'', org:'', about:'', email:'' });
+  const [status, setStatus] = useState2('idle'); // idle | sending | error
+  const [form, setForm] = useState2({ name:'', org:'', email:'', phone:'', need:'', about:'', company:'' });
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+  const submit = async (e) => {
+    e.preventDefault();
+    if (status === 'sending') return;
+    if (form.company) { setSent(true); return; } // honeypot
+    setStatus('sending');
+    try {
+      await sendLead({
+        subject: 'New enquiry — krispierce.com.au',
+        from_name: form.name || 'Website enquiry',
+        Name: form.name, Organisation: form.org, Email: form.email, Phone: form.phone,
+        'What they need': form.need, Message: form.about,
+      });
+      setSent(true);
+    } catch (err) { setStatus('error'); }
+  };
   return (
     <section className="contact" id="contact">
       <div className="contact__intro">
         <span className="overline">Start a conversation</span>
         <h2 className="contact__title">Tell me what you're working on</h2>
-        <p className="contact__body">A sentence or two is plenty to begin. I read everything myself, and I'll reply
-          to arrange a short, no-obligation call.</p>
+        <p className="contact__body">A sentence or two is plenty to begin. Tell me what you need and the best number to
+          reach you, and I'll personally call you within a week — a short, no-obligation conversation.</p>
+        <ol className="contact__steps">
+          <li><span>1</span>You tell me what you're after</li>
+          <li><span>2</span>I read it myself — every message</li>
+          <li><span>3</span>I call you within a week to talk it through</li>
+        </ol>
       </div>
       <div className="contact__card">
         {sent ? (
           <div className="contact__thanks">
             <span className="contact__check"><Icon name="check" size={22} /></span>
-            <h3>Thank you. Message received.</h3>
-            <p>I'll be in touch within a few working days.</p>
+            <h3>Thank you{form.name ? ', ' + form.name.split(' ')[0] : ''}. Message received.</h3>
+            <p>I've got your details and I'll personally call you within a week. Prefer email in the meantime?
+              <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a></p>
           </div>
         ) : (
-          <form className="contact__form" onSubmit={(e)=>{e.preventDefault(); setSent(true);}}>
+          <form className="contact__form" onSubmit={submit}>
             <div className="contact__row">
               <Field label="Your name" placeholder="Jane Citizen" value={form.name} onChange={set('name')} required />
               <Field label="Organisation" placeholder="Where you work" value={form.org} onChange={set('org')} />
             </div>
-            <Field as="textarea" label="What are you working on?" placeholder="A project, a study, or a way of working you'd like to improve." value={form.about} onChange={set('about')} />
-            <Field type="email" label="Email" placeholder="you@organisation.org" value={form.email} onChange={set('email')} required />
-            <Button arrow>Send message</Button>
+            <div className="contact__row">
+              <Field type="email" label="Email" placeholder="you@organisation.org" value={form.email} onChange={set('email')} required />
+              <Field type="tel" label="Phone (so I can call you)" placeholder="04xx xxx xxx" value={form.phone} onChange={set('phone')} required />
+            </div>
+            <Field as="select" label="What do you need?" options={NEED_OPTIONS} value={form.need} onChange={set('need')} required />
+            <Field as="textarea" label="Tell me a little about it" placeholder="A project, a study, or a way of working you'd like to improve." value={form.about} onChange={set('about')} />
+            <input type="text" className="hp-field" tabIndex={-1} autoComplete="off" aria-hidden="true"
+              value={form.company} onChange={set('company')} />
+            {status === 'error' && (
+              <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
+                <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a>.</p>
+            )}
+            <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Send message'}</Button>
           </form>
         )}
       </div>

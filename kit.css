@@ -186,6 +186,23 @@
   display:inline-flex; align-items:center; justify-content:center; margin-bottom:18px; }
 .contact__thanks h3 { font-family:var(--font-display); font-weight:600; font-size:22px; color:var(--text-primary); }
 .contact__thanks p { color:var(--text-secondary); margin-top:8px; }
+.contact__thanks a, .contact__error a { color:var(--clay-600); font-weight:600; }
+
+/* What-happens-next steps */
+.contact__steps { list-style:none; margin:22px 0 0; padding:0; display:flex; flex-direction:column; gap:12px; }
+.contact__steps li { display:flex; align-items:center; gap:12px; color:var(--text-secondary);
+  font-size:15px; line-height:1.4; }
+.contact__steps li span { flex:none; width:26px; height:26px; border-radius:999px; background:var(--cream-200);
+  color:var(--clay-700); font-family:var(--font-display); font-weight:600; font-size:13px;
+  display:inline-flex; align-items:center; justify-content:center; }
+
+/* Inline form error */
+.contact__error { color:var(--brick-500); font-size:14px; line-height:1.5; margin:0; }
+
+/* Honeypot — visually hidden, off-screen, never display:none (bots skip those) */
+.hp-field { position:absolute; left:-9999px; top:auto; width:1px; height:1px; opacity:0;
+  pointer-events:none; }
+.contact__form .kpc-btn[disabled] { opacity:.6; cursor:progress; }
 
 /* ---------------- Footer ---------------- */
 .foot { max-width:var(--container-max); margin: var(--section-y) auto 0; padding: 0 var(--container-pad) 40px; }

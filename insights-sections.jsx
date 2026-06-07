@@ -118,8 +118,8 @@ function InsGuides({ onOpen }) {
         <div className="ins-guides__head">
           <span className="overline">Take and use</span>
           <h2 className="ins-guides__title">Guides &amp; frameworks</h2>
-          <p className="ins-guides__sub">Practical starting points drawn from the work. No sign-up wall;
-            download what is useful and adapt it to your context.</p>
+          <p className="ins-guides__sub">Practical starting points drawn from the work. Tell me where to send it,
+            and adapt whatever's useful to your context.</p>
         </div>
         <div className="ins-guides__grid">
           {window.GUIDES.map((g) => (
@@ -147,7 +147,18 @@ function InsGuides({ onOpen }) {
 /* ---------------- Subscribe ---------------- */
 function InsSubscribe() {
   const [sent, setSent] = useIns(false);
+  const [status, setStatus] = useIns('idle'); // idle | sending | error
   const [email, setEmail] = useIns('');
+  const submit = async (e) => {
+    e.preventDefault();
+    if (status === 'sending') return;
+    setStatus('sending');
+    try {
+      await sendLead({ subject: 'New subscriber — krispierce.com.au', from_name: 'Newsletter signup',
+        Email: email, Type: 'Newsletter subscriber' });
+      setSent(true);
+    } catch (err) { setStatus('error'); }
+  };
   return (
     <section className="ins-sub">
       <div className="ins-sub__panel">
@@ -164,13 +175,14 @@ function InsSubscribe() {
                 <span>Thank you. You are on the list, and I will keep it worth your while.</span>
               </div>
             ) : (
-              <form className="ins-sub__row" onSubmit={(e)=>{ e.preventDefault(); setSent(true); }}>
+              <form className="ins-sub__row" onSubmit={submit}>
                 <Field label="Email" type="email" required placeholder="you@organisation.org"
                   value={email} onChange={(e)=>setEmail(e.target.value)} />
-                <Button arrow>Subscribe</Button>
+                <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Subscribe'}</Button>
               </form>
             )}
-            {!sent && <p className="ins-sub__note">For people working in health, industry, and advocacy. I do not share your address.</p>}
+            {status === 'error' && <p className="ins-sub__note" role="alert" style={{ color: 'var(--brick-500)' }}>Sorry — that didn't send. Please try again.</p>}
+            {!sent && status !== 'error' && <p className="ins-sub__note">For people working in health, industry, and advocacy. I do not share your address.</p>}
           </div>
         </div>
       </div>
