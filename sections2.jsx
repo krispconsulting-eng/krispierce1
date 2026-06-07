@@ -195,4 +195,5 @@ function Motif({ id='kp-motif', src='assets/rocks-blocks.jpg', position='50% 52%
   );
 }
 
-Object.assign(window, { Offerings, Voices, CTA, Contact, Footer, Motif });
+/* VOICES (testimonial data) is reused by the Portfolio page, so publish it too. */
+Object.assign(window, { Offerings, Voices, CTA, Contact, Footer, Motif, VOICES });
