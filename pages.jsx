@@ -23,7 +23,7 @@ function AboutPage() {
         <section className="about-portrait">
           <div className="about-portrait__media">
             <image-slot id="kp-about-page" shape="rounded" radius="24" fit="cover" position="50% 22%"
-              src="assets/kris-studio.jpg"
+              src="assets/kris-studio2.jpg"
               placeholder="Drop a candid working portrait of Kris"></image-slot>
           </div>
           <div className="about-portrait__text">
@@ -86,7 +86,7 @@ function AboutPage() {
           </div>
         </section>
 
-        <Motif id="about-motif" src="assets/bush-path.jpg" position="50% 42%"
+        <Motif id="about-motif" src="assets/hero-path.jpg" position="50% 42%"
           overline="Let's work together"
           title={<>Let's work <em>together</em></>}
           sub="If you're trying to involve patients, carers, or communities in a way that genuinely changes what you do, get in touch. Tell us your organisation, the challenge, and roughly when you need to move."
