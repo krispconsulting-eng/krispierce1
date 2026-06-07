@@ -130,7 +130,7 @@ function Footer({ onNav }) {
           <a href="/contact">Contact</a>
         </div>
         <div className="foot__social">
-          <a href="#" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>
+          <a href="https://www.linkedin.com/in/krispierceaust" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>
           <a href="mailto:hello@krispierce.com.au" aria-label="Email"><Icon name="mail" size={18} /></a>
         </div>
       </div>
