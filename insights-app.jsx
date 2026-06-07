@@ -28,7 +28,7 @@ function Reader({ item, onClose }) {
           {body.map((p, i) => <p key={i}>{p}</p>)}
         </div>
         <div className="reader__foot">
-          <Button arrow href="index.html#contact">Start a conversation</Button>
+          <Button arrow href="/#contact">Start a conversation</Button>
           <span>Working on something like this? Tell me about it.</span>
         </div>
       </article>
@@ -36,9 +36,68 @@ function Reader({ item, onClose }) {
   );
 }
 
-/* ---------------- Toast ---------------- */
-function Toast({ msg }) {
-  return <div className="toast"><span className="tick"><Icon name="check" size={17} /></span>{msg}</div>;
+/* ---------------- Resource gate (name + email, then reveal the file) ---------------- */
+function ResourceGate({ item, onClose }) {
+  const [name, setName] = useApp('');
+  const [email, setEmail] = useApp('');
+  const [company, setCompany] = useApp(''); // honeypot
+  const [status, setStatus] = useApp('idle'); // idle | sending | done | error
+  useAppEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = prev; };
+  }, []);
+  const openFile = () => { if (item.file) window.open(item.file, '_blank', 'noopener'); };
+  const submit = async (e) => {
+    e.preventDefault();
+    if (status === 'sending') return;
+    if (company) { setStatus('done'); openFile(); return; } // honeypot
+    setStatus('sending');
+    try {
+      await sendLead({
+        subject: 'Resource download — ' + item.title,
+        from_name: name || 'Resource download',
+        Name: name, Email: email, Resource: item.title, Type: 'Guide / resource download',
+      });
+      setStatus('done');
+      openFile();
+    } catch (err) { setStatus('error'); }
+  };
+  return (
+    <div className="gate" onClick={onClose}>
+      <div className="gate__sheet" onClick={(e)=>e.stopPropagation()}>
+        <button className="gate__close" aria-label="Close" onClick={onClose}><Icon name="x" size={18} /></button>
+        {status === 'done' ? (
+          <div className="gate__done">
+            <span className="gate__tick"><Icon name="check" size={22} /></span>
+            <h3 className="gate__title">It's on its way{name ? ', ' + name.split(' ')[0] : ''}.</h3>
+            <p className="gate__dek">“{item.title}” is opening in a new tab. If it didn't, use the button below.</p>
+            <Button arrow href={item.file} target="_blank" rel="noopener">Open the {item.kind.toLowerCase()}</Button>
+          </div>
+        ) : (
+          <React.Fragment>
+            <span className="gate__kind">{item.kind}</span>
+            <h3 className="gate__title">{item.title}</h3>
+            <p className="gate__dek">Tell me where to send it and it's yours — I'll only use this to share resources
+              you'd actually want, never spam.</p>
+            <form className="gate__form" onSubmit={submit}>
+              <Field label="Your name" placeholder="Jane Citizen" value={name} onChange={(e)=>setName(e.target.value)} required />
+              <Field type="email" label="Email" placeholder="you@organisation.org" value={email} onChange={(e)=>setEmail(e.target.value)} required />
+              <input type="text" className="hp-field" tabIndex={-1} autoComplete="off" aria-hidden="true"
+                value={company} onChange={(e)=>setCompany(e.target.value)} />
+              {status === 'error' && (
+                <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
+                  <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a>.</p>
+              )}
+              <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Get the ' + item.kind.toLowerCase()}</Button>
+            </form>
+          </React.Fragment>
+        )}
+      </div>
+    </div>
+  );
 }
 
 /* ---------------- Entrance reveal ---------------- */
@@ -78,17 +137,12 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 function InsightsApp() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [reading, setReading] = useApp(null);
-  const [toast, setToast] = useApp(null);
+  const [gating, setGating] = useApp(null);
 
   useAppEffect(() => { setupInsReveal(); }, [t.cols, t.cardStyle, t.showFeatured]);
-  useAppEffect(() => {
-    if (!toast) return;
-    const id = setTimeout(() => setToast(null), 2600);
-    return () => clearTimeout(id);
-  }, [toast]);
 
   const openArticle = (a) => setReading(a);
-  const openGuide = (g) => setToast('Downloading \u201C' + g.title + '\u201D');
+  const openGuide = (g) => setGating(g);
 
   const total = 1 + window.INSIGHTS.length;
 
@@ -103,10 +157,10 @@ function InsightsApp() {
         <InsGuides onOpen={openGuide} />
         <InsSubscribe />
       </main>
-      <Footer onNav={(id) => { window.location.href = 'index.html#' + id; }} />
+      <Footer onNav={(id) => { window.location.href = '/#' + id; }} />
 
       {reading && <Reader item={reading} onClose={() => setReading(null)} />}
-      {toast && <Toast msg={toast} />}
+      {gating && <ResourceGate item={gating} onClose={() => setGating(null)} />}
 
       <TweaksPanel title="Tweaks">
         <TweakSection label="Library layout" />

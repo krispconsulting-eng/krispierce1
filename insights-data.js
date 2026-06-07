@@ -136,6 +136,7 @@ window.GUIDES = [
     title: 'A starting checklist for genuine engagement',
     dek: 'Twelve questions worth asking before you commission a single session.',
     meta: 'PDF, 2 pages',
+    file: 'assets/guides/starting-checklist.pdf',
   },
   {
     id: 'codesign-planner',
@@ -143,6 +144,7 @@ window.GUIDES = [
     title: 'Co-design session planner',
     dek: 'The structure I use to hand the pen over without losing the thread.',
     meta: 'PDF, 4 pages',
+    file: 'assets/guides/codesign-planner.pdf',
   },
   {
     id: 'ma-code-map',
@@ -150,5 +152,6 @@ window.GUIDES = [
     title: 'Patient voice inside the MA Code',
     dek: 'A plain-language map of where engagement and compliance meet for industry partners.',
     meta: 'PDF, 6 pages',
+    file: 'assets/guides/ma-code-map.pdf',
   },
 ];

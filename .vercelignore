@@ -1,0 +1,8 @@
+# Keep the Claude Design handoff bundle and private working files out of the
+# public Vercel deployment. These are build-time inputs, not site assets.
+project/
+chats/
+README.md
+_ds/**/readme.md
+_ds/**/_adherence.oxlintrc.json
+_ds/**/_ds_manifest.json

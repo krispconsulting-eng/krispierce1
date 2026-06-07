@@ -16,14 +16,14 @@ function AboutPage() {
             health policy, working with health organisations, industry partners, and not-for-profits to generate
             insights and reach patient-centred outcomes.</p>
           <div className="page-hero__cta">
-            <Button variant="primary" arrow href="contact.html">Let's talk</Button>
+            <Button variant="primary" arrow href="/contact">Let's talk</Button>
           </div>
         </section>
 
         <section className="about-portrait">
           <div className="about-portrait__media">
             <image-slot id="kp-about-page" shape="rounded" radius="24" fit="cover" position="50% 22%"
-              src="assets/kris-studio.jpg"
+              src="assets/kris-studio2.jpg"
               placeholder="Drop a candid working portrait of Kris"></image-slot>
           </div>
           <div className="about-portrait__text">
@@ -86,11 +86,11 @@ function AboutPage() {
           </div>
         </section>
 
-        <Motif id="about-motif" src="assets/bush-path.jpg" position="50% 42%"
+        <Motif id="about-motif" src="assets/hero-path.jpg" position="50% 42%"
           overline="Let's work together"
           title={<>Let's work <em>together</em></>}
           sub="If you're trying to involve patients, carers, or communities in a way that genuinely changes what you do, get in touch. Tell us your organisation, the challenge, and roughly when you need to move."
-          ctaLabel="Get in touch" ctaHref="contact.html" />
+          ctaLabel="Get in touch" ctaHref="/contact" />
       </main>
       <Footer />
     </div>
@@ -162,7 +162,7 @@ function ExpertisePage() {
           overline="How we'd start"
           title={<>A conversation about the <em>challenge</em>, not the method</>}
           sub="Most engagements begin with a conversation about the challenge, not the method. You'll get a straight answer on whether this is the right fit and what approach suits."
-          ctaLabel="Let's talk" ctaHref="contact.html" />
+          ctaLabel="Let's talk" ctaHref="/contact" />
       </main>
       <Footer />
     </div>
@@ -172,8 +172,24 @@ function ExpertisePage() {
 /* ============================ Contact ============================ */
 function ContactPage() {
   const [sent, setSent] = useState3(false);
-  const [form, setForm] = useState3({ name:'', org:'', about:'', email:'' });
+  const [status, setStatus] = useState3('idle'); // idle | sending | error
+  const [form, setForm] = useState3({ name:'', org:'', email:'', phone:'', need:'', about:'', company:'' });
   const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+  const submit = async (e) => {
+    e.preventDefault();
+    if (status === 'sending') return;
+    if (form.company) { setSent(true); return; } // honeypot
+    setStatus('sending');
+    try {
+      await sendLead({
+        subject: 'New enquiry — krispierce.com.au',
+        from_name: form.name || 'Website enquiry',
+        Name: form.name, Organisation: form.org, Email: form.email, Phone: form.phone,
+        'What they need': form.need, Message: form.about,
+      });
+      setSent(true);
+    } catch (err) { setStatus('error'); }
+  };
   return (
     <div className="site">
       <Nav theme="solid" active="contact" />
@@ -198,9 +214,9 @@ function ContactPage() {
               <li className="row"><span className="bullet">3</span>When you'd ideally like to move</li>
             </ul>
 
-            <p className="contact-page__lead" style={{ fontSize: '16px' }}>You'll get a straight answer on whether this is
-              the right fit, what approach might suit, and what working together would look like. If it's not a fit, you'll
-              be pointed somewhere better.</p>
+            <p className="contact-page__lead" style={{ fontSize: '16px' }}>Once you send this, I'll personally call you
+              within a week. You'll get a straight answer on whether this is the right fit, what approach might suit, and
+              what working together would look like. If it's not a fit, you'll be pointed somewhere better.</p>
 
             <div className="contact-page__email">
               <span className="contact-page__email-label">Prefer email?</span>
@@ -212,24 +228,37 @@ function ContactPage() {
             {sent ? (
               <div className="contact-thanks">
                 <span className="contact-thanks__tick"><Icon name="check" size={22} /></span>
-                <h3>Thank you. Message received.</h3>
-                <p>Every message gets a personal read. Expect a reply within a few working days.</p>
+                <h3>Thank you{form.name ? ', ' + form.name.split(' ')[0] : ''}. Message received.</h3>
+                <p>Every message gets a personal read. I'll call you within a week to talk it through — no obligation.
+                  Prefer email? <a href="mailto:hello@krispierce.com.au">hello@krispierce.com.au</a></p>
               </div>
             ) : (
               <React.Fragment>
                 <h2 className="contact-card__heading">Start a conversation</h2>
-                <p className="contact-card__note">A sentence or two is plenty to begin.</p>
-                <form className="contact__form" onSubmit={(e)=>{ e.preventDefault(); setSent(true); }}>
+                <p className="contact-card__note">Tell me what you need and the best number to reach you — I'll call within a week.</p>
+                <form className="contact__form" onSubmit={submit}>
                   <div className="contact__row">
                     <Field label="Your name" placeholder="Jane Citizen" value={form.name} onChange={set('name')} required />
                     <Field label="Organisation" placeholder="Where you work" value={form.org} onChange={set('org')} />
                   </div>
-                  <Field as="textarea" label="What are you working on?"
+                  <div className="contact__row">
+                    <Field type="email" label="Email" placeholder="you@organisation.org"
+                      value={form.email} onChange={set('email')} required />
+                    <Field type="tel" label="Phone (so I can call you)" placeholder="04xx xxx xxx"
+                      value={form.phone} onChange={set('phone')} required />
+                  </div>
+                  <Field as="select" label="What do you need?" options={NEED_OPTIONS}
+                    value={form.need} onChange={set('need')} required />
+                  <Field as="textarea" label="Tell me a little about it"
                     placeholder="A project, a study, or a way of working you'd like to improve."
                     value={form.about} onChange={set('about')} />
-                  <Field type="email" label="Email" placeholder="you@organisation.org"
-                    value={form.email} onChange={set('email')} required />
-                  <Button arrow>Send message</Button>
+                  <input type="text" className="hp-field" tabIndex={-1} autoComplete="off" aria-hidden="true"
+                    value={form.company} onChange={set('company')} />
+                  {status === 'error' && (
+                    <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
+                      <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a>.</p>
+                  )}
+                  <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Send message'}</Button>
                 </form>
               </React.Fragment>
             )}
@@ -318,7 +347,7 @@ function PortfolioPage() {
           <div className="cta__panel">
             <h2 className="cta__title">Your project could be <em>next</em></h2>
             <p className="cta__sub">If you're shaping an engagement and want it to hold up, start a conversation.</p>
-            <Button variant="inverse" size="lg" arrow href="contact.html">Get in touch</Button>
+            <Button variant="inverse" size="lg" arrow href="/contact">Get in touch</Button>
           </div>
         </section>
       </main>
