@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCN2A Australia — Logo Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #F7F4F0; font-family: 'Plus Jakarta Sans', sans-serif; color: #0D1B2A; }
+    .sheet { max-width: 1000px; margin: 0 auto; padding: 48px 32px 80px; }
+    .sheet h1 { font-size: 18px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
+    .row { display: flex; flex-wrap: wrap; gap: 32px; align-items: center; }
+    .tile { background: #fff; border: 1px solid #E4DFD3; border-radius: 12px; padding: 40px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .tile.dark { background: #1E3A6E; border-color: #1E3A6E; }
+    .label { font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #6B6659; margin: 40px 0 12px; }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <h1>SCN2A Australia — wordmark lockups</h1>
+    <div id="root"></div>
+  </div>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="logo.jsx"></script>
+  <script>
+    const e = React.createElement;
+    function Tile(props) {
+      return e('div', { className: 'tile' + (props.dark ? ' dark' : ''), style: props.style }, props.children);
+    }
+    function Sheet() {
+      return e(React.Fragment, null,
+        e('div', { className: 'label' }, 'Stacked lockup (centred)'),
+        e('div', { className: 'row' },
+          e(Tile, null, e(window.Logo, { layout: 'stacked', scale: 1.4 })),
+          e(Tile, { dark: true }, e(window.Logo, { layout: 'stacked', scale: 1.4, text: '#F7F4F0', accentName: '#F7F4F0', desc: '#B9C6DE', rule: '#3A5A94' }))
+        ),
+        e('div', { className: 'label' }, 'Horizontal lockup (left-aligned)'),
+        e('div', { className: 'row' },
+          e(Tile, null, e(window.Logo, { layout: 'horizontal', scale: 1.2 }))
+        ),
+        e('div', { className: 'label' }, 'Monogram — app icon / favicon'),
+        e('div', { className: 'row' },
+          e(window.Monogram, { size: 120 }),
+          e(window.Monogram, { size: 80 }),
+          e(window.Monogram, { size: 48 }),
+          e(window.Monogram, { size: 120, bg: '#0D1B2A' })
+        ),
+        e('div', { className: 'label' }, 'Circular profile mark'),
+        e('div', { className: 'row' },
+          e(window.ProfileMark, { size: 240 }),
+          e(window.ProfileMark, { size: 240, bg: '#0D1B2A', ring: '#4A7EC7' })
+        ),
+        e('div', { className: 'label' }, 'ArcField — decorative background (not the logo)'),
+        e('div', { className: 'row' },
+          e(Tile, { dark: true, style: { width: 420, height: 240, padding: 0 } },
+            e(window.ArcField, { w: 420, h: 240, opacity: 0.35 }),
+            e(window.Logo, { layout: 'stacked', scale: 1, text: '#F7F4F0', accentName: '#F7F4F0', desc: '#B9C6DE', rule: '#3A5A94' })
+          )
+        )
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(e(Sheet));
+  </script>
+</body>
+</html>
