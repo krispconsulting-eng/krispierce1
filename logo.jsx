@@ -39,6 +39,7 @@ function Logo({ layout = 'stacked', scale = 1, text = '#0D1B2A', accentName = '#
 
 // ----- Compact monogram (app icon / favicon / small avatar) ------------------
 // Typographic only: "SCN2A" stacked over a hairline + "AU".
+// Ratios keep "SCN2A" at ≤84% of the tile width (8% safe margin each side).
 function Monogram({ size = 120, bg = '#1E3A6E', fg = '#F7F4F0', accent = '#4A7EC7', rounded = true }) {
   return (
     React.createElement('div', {
@@ -48,9 +49,9 @@ function Monogram({ size = 120, bg = '#1E3A6E', fg = '#F7F4F0', accent = '#4A7EC
         fontFamily: "'Plus Jakarta Sans', sans-serif", lineHeight: 1,
       }
     },
-      React.createElement('div', { style: { fontWeight: 800, fontSize: size * 0.3 + 'px', letterSpacing: '-0.01em', color: fg } }, 'SCN2A'),
-      React.createElement('div', { style: { width: size * 0.34, height: Math.max(2, size * 0.016), background: accent, margin: size * 0.085 + 'px 0' } }),
-      React.createElement('div', { style: { fontWeight: 600, fontSize: size * 0.115 + 'px', letterSpacing: '0.2em', color: fg } }, 'AU')
+      React.createElement('div', { style: { fontWeight: 800, fontSize: size * 0.244 + 'px', letterSpacing: '-0.01em', color: fg } }, 'SCN2A'),
+      React.createElement('div', { style: { width: size * 0.276, height: Math.max(2, size * 0.013), background: accent, margin: size * 0.069 + 'px 0' } }),
+      React.createElement('div', { style: { fontWeight: 600, fontSize: size * 0.093 + 'px', letterSpacing: '0.2em', color: fg } }, 'AU')
     )
   );
 }
