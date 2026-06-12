@@ -10,6 +10,7 @@ const NAV_LINKS = [
   ['Home','home','/#home', true],
   ['About','about','/about', false],
   ['Expertise','offerings','/expertise', false],
+  ['Methods','methods','/methods', false],
   ['Insights','insights','/insights', false],
   ['Portfolio','portfolio','/portfolio', false],
   ['Contact','contact','/contact', false],

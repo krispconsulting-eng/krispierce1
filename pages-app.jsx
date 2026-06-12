@@ -5,7 +5,8 @@ const { useEffect: usePageEffect } = React;
 
 function setupPageReveal() {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const sels = ['.page-figure', '.page-block__body', '.wid-item', '.contact-page__intro', '.contact-card', '.cta__panel', '.work-card', '.quote-card', '.motif__inner'];
+  const sels = ['.page-figure', '.page-block__body', '.wid-item', '.contact-page__intro', '.contact-card', '.cta__panel', '.work-card', '.quote-card', '.motif__inner',
+    '.spectrum__head', '.spectrum__rail-wrap', '.spectrum__panel', '.spectrum__foot'];
   const els = [];
   sels.forEach((s) => document.querySelectorAll(s).forEach((e) => els.push(e)));
   if (!els.length) return;
@@ -27,7 +28,7 @@ function setupPageReveal() {
   setTimeout(() => els.forEach((e) => { e.style.transition = 'none'; e.style.opacity = '1'; e.style.transform = 'none'; }), 2400);
 }
 
-const PAGES = { about: AboutPage, expertise: ExpertisePage, contact: ContactPage, portfolio: PortfolioPage };
+const PAGES = { about: AboutPage, expertise: ExpertisePage, methods: MethodsPage, contact: ContactPage, portfolio: PortfolioPage };
 
 function PageApp() {
   usePageEffect(() => { setupPageReveal(); }, []);
