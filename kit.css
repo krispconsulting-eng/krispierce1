@@ -209,8 +209,8 @@
 .foot { max-width:var(--container-max); margin: var(--section-y) auto 0; padding: 0 var(--container-pad) 40px; }
 .foot__label { font-family:var(--font-display); font-weight:600; font-size:clamp(22px,3vw,34px); letter-spacing:-.02em;
   color:var(--text-primary); display:block; }
-.foot__email { display:block; font-family:var(--font-text); font-weight:500; font-size:clamp(32px,8vw,100px);
-  letter-spacing:-.03em; line-height:1.0; color:var(--text-primary); margin:18px 0 44px; word-break:break-word; }
+.foot__email { display:block; font-family:var(--font-text); font-weight:500; font-size:clamp(22px,3.4vw,42px);
+  letter-spacing:-.02em; line-height:1.05; color:var(--text-primary); margin:14px 0 40px; word-break:break-word; }
 .foot__email:hover { color:var(--clay-700); text-decoration:none; }
 .foot__bar { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;
   padding-top:30px; border-top:1px solid var(--border-subtle); }
