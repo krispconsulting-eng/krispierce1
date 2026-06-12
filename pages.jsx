@@ -133,7 +133,8 @@ function ExpertisePage() {
             are areas of expertise and the outcomes they are built for. If your challenge doesn't fit neatly into one of
             these, that's usually a sign to talk.</p>
           <p className="page-hero__lead" style={{ color: 'var(--clay-700)', fontWeight: 500, maxWidth: '40em' }}>
-            Methodology flexible. Outcome-focused. The point is never the method. The point is what changes because of it.</p>
+            I bring the method the problem needs, and I know which one that is. The point is never the method. It's what
+            changes because of it: a decision, a design, a strategy.</p>
         </section>
 
         <section className="page-block">

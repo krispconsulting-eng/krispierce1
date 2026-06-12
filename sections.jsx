@@ -55,7 +55,7 @@ function Hero({ onNav }) {
   return (
     <section className="hero" id="home">
       <div className="hero__media">
-        <image-slot id="kp-hero" shape="rect" fit="cover" position="50% 12%"
+        <image-slot id="kp-hero" shape="rect" fit="cover" position="50% 0%"
           src="assets/kris-podium-hero.jpg"
           placeholder="Drop a warm portrait of Kris"></image-slot>
         <div className="hero__scrim"></div>
@@ -63,9 +63,10 @@ function Hero({ onNav }) {
       <div className="hero__banner"></div>
       <Nav onNav={onNav} />
       <div className="hero__inner">
-        <h1 className="hero__title">Insights. Patient-centred outcomes. Flexible methodology. Together, we discover <em>what works</em></h1>
-        <p className="hero__sub">Most organisations know they need to involve the people their work affects. Fewer know how
-          to do it so the involvement actually changes the outcome. That gap is where the work happens.</p>
+        <h1 className="hero__title">Australia's leading specialist in consumer and community engagement for rare disease and health <em>policy</em></h1>
+        <p className="hero__sub">Not-for-profits, research teams, and industry partners come to me when patient and
+          carer voice has to be real, rigorous, and actually change decisions. Twenty-three years of lived experience
+          and senior national advisory roles, held to one standard: if the work doesn't change a decision, it isn't done.</p>
         <div className="hero__proof">
           <span className="hero__proof-label">Partnered with teams across</span>
           <div className="hero__sectors">
