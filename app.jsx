@@ -13,7 +13,6 @@ function App() {
         <About onNav={onNav} />
         <Relate />
         <Motif />
-        <Offerings />
         <Voices />
         <InsightsTeaser />
         <CTA onNav={onNav} />
