@@ -158,6 +158,8 @@ function ExpertisePage() {
           </div>
         </section>
 
+        <MethodSpectrum showFoot={false} />
+
         <Motif id="exp-motif" src="assets/driftwood.jpg" position="50% 56%"
           overline="How we'd start"
           title={<>A conversation about the <em>challenge</em>, not the method</>}

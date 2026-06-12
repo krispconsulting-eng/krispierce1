@@ -128,14 +128,14 @@ function ShareMeter({ level }) {
   );
 }
 
-function MethodSpectrum() {
+function MethodSpectrum({ showFoot = true }) {
   const [active, setActive] = useState4(2); // default to co-design, the centre of gravity
   const m = METHODS[active];
   return (
     <section className="spectrum" id="methods">
       <div className="spectrum__head">
         <span className="overline">Fit-for-purpose engagement</span>
-        <h1 className="spectrum__title">There's no single way to bring people into the work</h1>
+        <h2 className="spectrum__title">There's no single way to bring people into the work</h2>
         <p className="spectrum__sub">The method should follow the question, not the other way around. Here's the
           range I work across, and how I decide what fits. Click any method to see where it earns its place.</p>
       </div>
@@ -187,26 +187,15 @@ function MethodSpectrum() {
         </div>
       </div>
 
-      <div className="spectrum__foot">
-        <p>Most projects need more than one of these. The craft is sequencing them, and knowing when a lighter
-          touch will do and when nothing short of co-design will hold. That's the conversation I'd start with.</p>
-        <Button variant="primary" size="lg" arrow href="/contact">Talk through what fits</Button>
-      </div>
+      {showFoot && (
+        <div className="spectrum__foot">
+          <p>Most projects need more than one of these. The craft is sequencing them, and knowing when a lighter
+            touch will do and when nothing short of co-design will hold. That's the conversation I'd start with.</p>
+          <Button variant="primary" size="lg" arrow href="/contact">Talk through what fits</Button>
+        </div>
+      )}
     </section>
   );
 }
 
-/* ============================ Methods page shell ============================ */
-function MethodsPage() {
-  return (
-    <div className="site">
-      <Nav theme="solid" active="methods" />
-      <main>
-        <MethodSpectrum />
-      </main>
-      <Footer />
-    </div>
-  );
-}
-
-Object.assign(window, { MethodSpectrum, MethodsPage });
+Object.assign(window, { MethodSpectrum });

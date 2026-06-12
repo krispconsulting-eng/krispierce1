@@ -10,9 +10,9 @@ const NAV_LINKS = [
   ['Home','home','/#home', true],
   ['About','about','/about', false],
   ['Expertise','offerings','/expertise', false],
-  ['Methods','methods','/methods', false],
   ['Insights','insights','/insights', false],
   ['Portfolio','portfolio','/portfolio', false],
+  ['Resources','resources','/resources', false],
   ['Contact','contact','/contact', false],
 ];
 
@@ -55,8 +55,8 @@ function Hero({ onNav }) {
   return (
     <section className="hero" id="home">
       <div className="hero__media">
-        <image-slot id="kp-hero" shape="rect" fit="cover" position="50% 24%"
-          src="assets/kris-studio.jpg"
+        <image-slot id="kp-hero" shape="rect" fit="cover" position="50% 28%"
+          src="assets/kris-podium-hero.jpg"
           placeholder="Drop a warm portrait of Kris"></image-slot>
         <div className="hero__scrim"></div>
       </div>

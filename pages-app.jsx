@@ -28,7 +28,7 @@ function setupPageReveal() {
   setTimeout(() => els.forEach((e) => { e.style.transition = 'none'; e.style.opacity = '1'; e.style.transform = 'none'; }), 2400);
 }
 
-const PAGES = { about: AboutPage, expertise: ExpertisePage, methods: MethodsPage, contact: ContactPage, portfolio: PortfolioPage };
+const PAGES = { about: AboutPage, expertise: ExpertisePage, contact: ContactPage, portfolio: PortfolioPage };
 
 function PageApp() {
   usePageEffect(() => { setupPageReveal(); }, []);

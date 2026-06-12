@@ -1,0 +1,16 @@
+/* Resources page entry. Standalone app (renders ResourcesApp directly).
+   Pulls the guides data + the insights/guide styling, and the shared chrome. */
+import './global-react.js';
+import '../_ds/kris-pierce-consulting-design-system-ec4dc9a3-a5d6-4bcd-8af6-c104b8df65c5/_ds_bundle.js';
+import '../image-slot.js';
+import '../insights-data.js';
+
+import '../_ds/kris-pierce-consulting-design-system-ec4dc9a3-a5d6-4bcd-8af6-c104b8df65c5/styles.css';
+import '../kit.css';
+import '../pages.css';
+import '../insights.css';
+
+import '../primitives.jsx';
+import '../sections.jsx';
+import '../sections2.jsx';
+import '../resources.jsx';
