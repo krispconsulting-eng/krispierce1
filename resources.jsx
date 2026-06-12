@@ -27,6 +27,7 @@ function ResGlyphDoc({ size = 20 }) {
 function ResGate({ item, onClose }) {
   const [name, setName] = useRes('');
   const [email, setEmail] = useRes('');
+  const [optin, setOptin] = useRes(false);
   const [company, setCompany] = useRes(''); // honeypot
   const [status, setStatus] = useRes('idle'); // idle | sending | done | error
   useResEffect(() => {
@@ -47,6 +48,7 @@ function ResGate({ item, onClose }) {
         subject: 'Resource download — ' + item.title,
         from_name: name || 'Resource download',
         Name: name, Email: email, Resource: item.title, Type: 'Guide / resource download',
+        'Mailing list opt-in': optin ? 'Yes' : 'No',
       });
       setStatus('done');
       openFile();
@@ -74,6 +76,10 @@ function ResGate({ item, onClose }) {
               <Field type="email" label="Email" placeholder="you@organisation.org" value={email} onChange={(e) => setEmail(e.target.value)} required />
               <input type="text" className="hp-field" tabIndex={-1} autoComplete="off" aria-hidden="true"
                 value={company} onChange={(e) => setCompany(e.target.value)} />
+              <label className="gate__consent">
+                <input type="checkbox" checked={optin} onChange={(e) => setOptin(e.target.checked)} />
+                <span>Keep me on the list for the occasional resource and insight. No spam, and you can leave anytime.</span>
+              </label>
               {status === 'error' && (
                 <p className="contact__error" role="alert">Sorry, that didn't send. Please try again, or email
                   <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a>.</p>

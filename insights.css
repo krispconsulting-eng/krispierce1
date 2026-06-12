@@ -232,6 +232,10 @@
   color: var(--text-primary); margin: 8px 0 0; }
 .gate__dek { color: var(--text-secondary); font-size: 15px; line-height: 1.55; margin: 10px 0 0; }
 .gate__form { display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+.gate__consent { display: flex; gap: 9px; align-items: flex-start; cursor: pointer;
+  font-size: 12.5px; line-height: 1.4; color: var(--text-muted); margin-top: -4px; }
+.gate__consent input { margin-top: 2px; flex: none; width: 15px; height: 15px;
+  accent-color: var(--clay-600); cursor: pointer; }
 .gate__form .kpc-btn { align-self: flex-start; }
 .gate__form .kpc-btn[disabled] { opacity: .6; cursor: progress; }
 .gate__done { text-align: center; padding: 8px 4px 4px; }

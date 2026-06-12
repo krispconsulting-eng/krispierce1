@@ -143,7 +143,7 @@ window.GUIDES = [
     kind: 'Template',
     title: 'Co-design session planner',
     dek: 'The structure I use to hand the pen over without losing the thread.',
-    meta: 'PDF, 4 pages',
+    meta: 'PDF, 3 pages',
     file: 'assets/guides/codesign-planner.pdf',
   },
   {
@@ -151,7 +151,7 @@ window.GUIDES = [
     kind: 'Briefing',
     title: 'Patient voice inside the MA Code',
     dek: 'A plain-language map of where engagement and compliance meet for industry partners.',
-    meta: 'PDF, 6 pages',
+    meta: 'PDF, 3 pages',
     file: 'assets/guides/ma-code-map.pdf',
   },
 ];
