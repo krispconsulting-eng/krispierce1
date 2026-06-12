@@ -15,7 +15,6 @@ export default defineConfig({
         index: 'index.html',
         about: 'about.html',
         expertise: 'expertise.html',
-        methods: 'methods.html',
         insights: 'insights.html',
         portfolio: 'portfolio.html',
         resources: 'resources.html',
