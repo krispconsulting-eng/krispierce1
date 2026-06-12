@@ -68,9 +68,9 @@ function Hero({ onNav }) {
           carer voice has to be real, rigorous, and actually change decisions. Twenty-three years of lived experience
           and senior national advisory roles, held to one standard: if the work doesn't change a decision, it isn't done.</p>
         <div className="hero__proof">
-          <span className="hero__proof-label">Partnered with teams across</span>
+          <span className="hero__proof-label">Areas of expertise</span>
           <div className="hero__sectors">
-            <span>Pharmaceutical</span><span>Biotech</span><span>Not-for-profit</span><span>Research</span><span>Advocacy</span>
+            <span>Participatory research</span><span>Co-design</span><span>Strategic insights</span><span>Industry support</span><span>Ongoing advisory</span>
           </div>
         </div>
       </div>

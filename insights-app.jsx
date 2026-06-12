@@ -40,6 +40,7 @@ function Reader({ item, onClose }) {
 function ResourceGate({ item, onClose }) {
   const [name, setName] = useApp('');
   const [email, setEmail] = useApp('');
+  const [optin, setOptin] = useApp(false);
   const [company, setCompany] = useApp(''); // honeypot
   const [status, setStatus] = useApp('idle'); // idle | sending | done | error
   useAppEffect(() => {
@@ -60,6 +61,7 @@ function ResourceGate({ item, onClose }) {
         subject: 'Resource download — ' + item.title,
         from_name: name || 'Resource download',
         Name: name, Email: email, Resource: item.title, Type: 'Guide / resource download',
+        'Mailing list opt-in': optin ? 'Yes' : 'No',
       });
       setStatus('done');
       openFile();
@@ -87,6 +89,10 @@ function ResourceGate({ item, onClose }) {
               <Field type="email" label="Email" placeholder="you@organisation.org" value={email} onChange={(e)=>setEmail(e.target.value)} required />
               <input type="text" className="hp-field" tabIndex={-1} autoComplete="off" aria-hidden="true"
                 value={company} onChange={(e)=>setCompany(e.target.value)} />
+              <label className="gate__consent">
+                <input type="checkbox" checked={optin} onChange={(e)=>setOptin(e.target.checked)} />
+                <span>Keep me on the list for the occasional resource and insight. No spam, and you can leave anytime.</span>
+              </label>
               {status === 'error' && (
                 <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
                   <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a>.</p>
