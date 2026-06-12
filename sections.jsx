@@ -55,7 +55,7 @@ function Hero({ onNav }) {
   return (
     <section className="hero" id="home">
       <div className="hero__media">
-        <image-slot id="kp-hero" shape="rect" fit="cover" position="50% 28%"
+        <image-slot id="kp-hero" shape="rect" fit="cover" position="50% 12%"
           src="assets/kris-podium-hero.jpg"
           placeholder="Drop a warm portrait of Kris"></image-slot>
         <div className="hero__scrim"></div>
