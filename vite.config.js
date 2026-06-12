@@ -18,6 +18,7 @@ export default defineConfig({
         methods: 'methods.html',
         insights: 'insights.html',
         portfolio: 'portfolio.html',
+        resources: 'resources.html',
         contact: 'contact.html',
       },
     },

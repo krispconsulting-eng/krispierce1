@@ -160,6 +160,7 @@ function Footer({ onNav }) {
           <a href="/methods">Methods</a>
           <a href="/insights">Insights</a>
           <a href="/portfolio">Portfolio</a>
+          <a href="/resources">Resources</a>
           <a href="/contact">Contact</a>
         </div>
         <div className="foot__social">
