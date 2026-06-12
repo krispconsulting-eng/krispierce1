@@ -57,8 +57,8 @@
   background: linear-gradient(180deg, rgba(140,134,122,.88) 0%, rgba(140,134,122,.62) 72px, rgba(140,134,122,.32) 156px, rgba(140,134,122,0) 280px); }
 .hero__scrim { position:absolute; inset:0; pointer-events:none;
   background:
-    linear-gradient(102deg, rgba(29,28,33,.66) 0%, rgba(29,28,33,.30) 42%, rgba(29,28,33,0) 72%),
-    linear-gradient(0deg, rgba(29,28,33,.40), transparent 40%); }
+    linear-gradient(102deg, rgba(29,28,33,.50) 0%, rgba(29,28,33,.20) 42%, rgba(29,28,33,0) 72%),
+    linear-gradient(0deg, rgba(29,28,33,.28), transparent 40%); }
 .hero__inner { position:relative; z-index:5; max-width:820px; padding: clamp(26px,5vw,60px);
   padding-top: clamp(180px,26vh,280px); }
 .hero__title { font-family:var(--font-display); font-weight:800; font-style:italic;
