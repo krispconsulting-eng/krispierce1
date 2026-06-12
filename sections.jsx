@@ -94,7 +94,7 @@ function About({ onNav }) {
         </div>
         <div className="about__right">
           <div className="about__photo">
-            <image-slot id="kp-about" shape="rounded" radius="22" fit="contain" position="50% 50%"
+            <image-slot id="kp-about" shape="rounded" radius="22" fit="cover" position="50% 32%"
               src="assets/kris-towerbridge.jpg"
               placeholder="Drop a candid working photo"></image-slot>
           </div>
