@@ -2,10 +2,11 @@
 const { useState: useState2 } = React;
 
 const OFFERINGS = [
-  ['users', 'Workshops', 'Structured sessions that turn a mixed room of clinicians, community and sponsors into one shared direction.', 'For you if you need alignment, with everyone genuinely heard.'],
-  ['message', 'Focus groups', 'Carefully facilitated conversations that surface what people really think, not what they think you want to hear.', 'For you if you need the depth behind the data.'],
-  ['pen', 'Co-design', 'Hand the pen to the people affected. We build the approach together, rather than for them.', 'For you if the outcome has to belong to the community.'],
-  ['grid', 'Engagement frameworks', 'A repeatable way for your organisation to engage well, on every project, not just this one.', 'For you if you want engagement embedded, not outsourced.'],
+  ['message', 'Participatory research and discovery', 'Understanding what people actually experience, not what a survey assumes they experience. Focus groups, interviews, structured discovery, whatever generates the insight you need.', 'Insight you can act on, grounded in what people genuinely told you.'],
+  ['pen', 'Co-design and solution development', 'Building the answer with the people affected, rather than consulting them on one already drafted. The difference shows up in whether the solution survives contact with reality.', 'Solutions people can actually live with, because they helped shape them.'],
+  ['compass', 'Strategic insights', 'What people say, turned into something an organisation can use. Themes, priorities, and the patient-centred outcomes that genuinely matter, distilled into a form that feeds real decisions.', 'Clear direction, drawn from evidence rather than assumption.'],
+  ['target', 'Industry support', 'Patient and carer perspective brought into evidence, HTA submissions, and launch strategy, credibly and inside the Medicines Australia Code.', 'Authentic engagement that strengthens strategy and stands up to scrutiny.'],
+  ['users', 'Ongoing advisory', 'Retained work for organisations that want this thinking in the room continuously, not project by project.', 'Better decisions, consistently, because the right perspective is always at the table.'],
 ];
 
 function Offerings() {
@@ -15,9 +16,10 @@ function Offerings() {
         <image-slot id="kp-offer" shape="rect" fit="cover" position="50% 30%" src="assets/kris-podium-portrait.jpg" placeholder="Drop a portrait / working photo"></image-slot>
       </div>
       <div className="offer__panel">
-        <span className="overline overline--inv">What we'll do together</span>
-        <h2 className="offer__title">Four ways I bring people into the work</h2>
-        <p className="offer__lead">Each can stand alone, or build on the last. We'll choose what your project actually needs.</p>
+        <span className="overline overline--inv">What I do</span>
+        <h2 className="offer__title">Where I focus</h2>
+        <p className="offer__lead">Five areas of expertise, each built for a specific outcome. I bring the one your
+          challenge needs, and I know which that is.</p>
         <div className="offer__grid">
           {OFFERINGS.map(([icon, title, body, fit], i) => (
             <div className="offer__item" key={title}>
