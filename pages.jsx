@@ -121,6 +121,39 @@ const WID = [
     'Better decisions, consistently, because the right perspective is always at the table.'],
 ];
 
+function ExpertiseCards() {
+  const [flipped, setFlipped] = useState3(null);
+  const toggle = (i) => setFlipped((f) => (f === i ? null : i));
+  return (
+    <section className="exp-cards-section">
+      <div className="exp-cards__label">Areas of expertise</div>
+      <div className="exp-cards">
+        {WID.map(([icon, title, body, who, outcome], i) => (
+          <button key={title} type="button"
+            className={'exp-card' + (flipped === i ? ' is-flipped' : '')}
+            onClick={() => toggle(i)} aria-pressed={flipped === i}
+            aria-label={title + '. Activate to read more.'}>
+            <span className="exp-card__inner">
+              <span className="exp-card__face exp-card__front">
+                <span className="exp-card__top">
+                  <IconChip variant="wash" size={44}>{<Icon name={icon} size={20} />}</IconChip>
+                  <span className="exp-card__num">{String(i + 1).padStart(2, '0')}</span>
+                </span>
+                <span className="exp-card__title">{title}</span>
+                <span className="exp-card__hint">Hover or tap</span>
+              </span>
+              <span className="exp-card__face exp-card__back">
+                <span className="exp-card__body">{body}</span>
+                <span className="exp-card__outcome"><Icon name="arrow-right" size={15} />{outcome}</span>
+              </span>
+            </span>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ExpertisePage() {
   return (
     <div className="site">
@@ -137,27 +170,7 @@ function ExpertisePage() {
             changes because of it: a decision, a design, a strategy.</p>
         </section>
 
-        <section className="page-block">
-          <div className="page-block__label">Areas of expertise</div>
-          <div className="page-block__body">
-            <div className="wid-list">
-              {WID.map(([icon, title, body, who, outcome], i) => (
-                <article className="wid-item" key={title}>
-                  <div className="wid-item__aside">
-                    <IconChip variant="wash" size={48}>{<Icon name={icon} size={20} />}</IconChip>
-                    <span className="wid-item__num">{String(i+1).padStart(2,'0')}</span>
-                  </div>
-                  <div className="wid-item__main">
-                    <h2 className="wid-item__title">{title}</h2>
-                    <p className="wid-item__body">{body}</p>
-                    <p className="wid-item__who">{who}</p>
-                    <p className="wid-item__outcome"><Icon name="arrow-right" size={17} />{outcome}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ExpertiseCards />
 
         <MethodSpectrum showFoot={false} />
 
