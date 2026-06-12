@@ -169,22 +169,24 @@
   letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px; }
 .exp-cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(10px,1.4vw,18px); }
 
-.exp-card { appearance: none; border: none; background: none; padding: 0; margin: 0;
-  font: inherit; text-align: left; cursor: pointer; perspective: 1100px; aspect-ratio: 1 / 1; }
-.exp-card__inner { position: relative; display: block; width: 100%; height: 100%;
+.exp-card { appearance: none; border: none; background: none; padding: 0; margin: 0; height: 100%;
+  font: inherit; text-align: left; cursor: pointer; perspective: 1100px; }
+.exp-card__inner { position: relative; display: grid; width: 100%; height: 100%; min-height: 100%;
   transition: transform .55s var(--ease-out); transform-style: preserve-3d; }
 .exp-card:hover .exp-card__inner,
 .exp-card.is-flipped .exp-card__inner { transform: rotateY(180deg); }
 .exp-card:focus-visible { outline: none; }
 .exp-card:focus-visible .exp-card__face { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
 
-.exp-card__face { position: absolute; inset: 0; display: flex; flex-direction: column;
-  padding: clamp(14px,1.5vw,20px); border: 1px solid var(--border-default); border-radius: var(--radius-lg);
-  background: var(--paper); box-shadow: var(--shadow-sm); overflow: hidden;
+/* Both faces share one grid cell and stack, so the card grows to the
+   taller face (the back) and the full content is always visible. */
+.exp-card__face { grid-area: 1 / 1; min-width: 0; display: flex; flex-direction: column;
+  padding: clamp(16px,1.5vw,22px); border: 1px solid var(--border-default); border-radius: var(--radius-lg);
+  background: var(--paper); box-shadow: var(--shadow-sm);
   -webkit-backface-visibility: hidden; backface-visibility: hidden; }
 .exp-card:hover .exp-card__front { box-shadow: var(--shadow-md); }
 
-.exp-card__front { justify-content: flex-start; }
+.exp-card__front { justify-content: flex-start; gap: 14px; }
 .exp-card__top { display: flex; align-items: center; justify-content: space-between; }
 .exp-card__num { font-family: var(--font-text); font-size: 12px; font-weight: 700;
   letter-spacing: .12em; color: var(--text-muted); }
@@ -192,15 +194,13 @@
   font-size: clamp(15px,1.15vw,18px); line-height: 1.18; letter-spacing: -.01em;
   color: var(--text-primary); margin-top: auto; }
 .exp-card__hint { font-family: var(--font-text); font-size: 11px; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--text-muted); margin-top: 10px; }
+  text-transform: uppercase; color: var(--text-muted); margin-top: 6px; }
 
 .exp-card__back { transform: rotateY(180deg); background: var(--cream-100);
-  justify-content: space-between; gap: 10px; border-color: var(--border-strong); }
-.exp-card__body { font-size: clamp(12px,0.92vw,13.5px); line-height: 1.42; color: var(--text-secondary);
-  flex: 1 1 auto; min-height: 0; overflow: hidden;
-  -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent); mask-image: linear-gradient(180deg, #000 72%, transparent); }
-.exp-card__outcome { display: flex; gap: 7px; align-items: flex-start; flex: none;
-  font-size: 12.5px; font-weight: 500; line-height: 1.3; color: var(--text-accent); }
+  justify-content: flex-start; gap: 12px; border-color: var(--border-strong); }
+.exp-card__body { font-size: clamp(12.5px,0.92vw,14px); line-height: 1.5; color: var(--text-secondary); }
+.exp-card__outcome { display: flex; gap: 7px; align-items: flex-start;
+  font-size: 12.5px; font-weight: 500; line-height: 1.35; color: var(--text-accent); margin-top: auto; }
 .exp-card__outcome svg { flex: none; margin-top: 2px; }
 
 @media (max-width: 1080px) { .exp-cards { grid-template-columns: repeat(3, 1fr); } }
