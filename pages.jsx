@@ -14,7 +14,8 @@ function AboutPage() {
           <h1 className="page-hero__title">Putting the person at the centre, and making the involvement <em>count</em></h1>
           <p className="page-hero__lead">Kris Pierce is a strategic advisor in consumer engagement, rare disease, and
             health policy, working with health organisations, industry partners, and not-for-profits to generate
-            insights and reach patient-centred outcomes.</p>
+            insights and reach patient-centred outcomes, and supporting the advocates and emerging leaders growing
+            into those rooms.</p>
           <div className="page-hero__cta">
             <Button variant="primary" arrow href="/contact">Let's talk</Button>
           </div>
@@ -119,6 +120,10 @@ const WID = [
     'Retained advisory work for organisations that want this thinking in the room continuously, not project by project.',
     'For teams making decisions where patient-centred outcomes matter often enough that occasional consultation is not enough.',
     'Better decisions, consistently, because the right perspective is always at the table.'],
+  ['heart', 'Education and capability building',
+    'Consumer engagement training for teams, and education, mentoring, and support for advocates and emerging leaders. The skills behind genuine engagement, taught so they outlast any single project.',
+    'For organisations building capability in-house, and for advocates and emerging leaders growing into the rooms where decisions get made.',
+    'Capability that stays, in people and teams, not just a report.'],
 ];
 
 function ExpertiseCards() {

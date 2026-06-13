@@ -7,6 +7,7 @@ const OFFERINGS = [
   ['compass', 'Strategic insights', 'What people say, turned into something an organisation can use. Themes, priorities, and the patient-centred outcomes that genuinely matter, distilled into a form that feeds real decisions.', 'Clear direction, drawn from evidence rather than assumption.'],
   ['target', 'Industry support', 'Patient and carer perspective brought into evidence, HTA submissions, and launch strategy, credibly and inside the Medicines Australia Code.', 'Authentic engagement that strengthens strategy and stands up to scrutiny.'],
   ['users', 'Ongoing advisory', 'Retained work for organisations that want this thinking in the room continuously, not project by project.', 'Better decisions, consistently, because the right perspective is always at the table.'],
+  ['heart', 'Education and capability building', 'Consumer engagement training for teams, and education, mentoring, and support for advocates and emerging leaders. The skills behind genuine engagement, taught so they stay in the room after I leave it.', 'People and teams who can do this themselves, not buy it in each time.'],
 ];
 
 function Offerings() {
@@ -18,7 +19,7 @@ function Offerings() {
       <div className="offer__panel">
         <span className="overline overline--inv">What I do</span>
         <h2 className="offer__title">Where I focus</h2>
-        <p className="offer__lead">Five areas of expertise, each built for a specific outcome. I bring the one your
+        <p className="offer__lead">Six areas of expertise, each built for a specific outcome. I bring the one your
           challenge needs, and I know which that is.</p>
         <div className="offer__grid">
           {OFFERINGS.map(([icon, title, body, fit], i) => (
