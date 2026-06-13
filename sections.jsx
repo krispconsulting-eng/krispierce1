@@ -66,8 +66,8 @@ function Hero({ onNav }) {
         <h1 className="hero__title">Consumer and community engagement for rare disease and health policy, done so it <em>changes the decision</em></h1>
         <p className="hero__sub">Not-for-profits, research teams, and industry partners come to me when patient and
           carer voice has to be real, rigorous, and actually change decisions. I also train teams, and support the
-          advocates and emerging leaders coming up behind them. Twenty-three years of lived experience and senior
-          national advisory roles, held to one standard: if the work doesn't change a decision, it isn't done.</p>
+          advocates and emerging leaders coming up behind them. Two decades of expertise, professional and lived, and
+          senior national advisory roles, held to one standard: if the work doesn't change a decision, it isn't done.</p>
         <div className="hero__proof">
           <span className="hero__proof-label">Areas of expertise</span>
           <div className="hero__sectors">
