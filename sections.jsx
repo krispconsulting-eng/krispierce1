@@ -73,7 +73,7 @@ function Hero({ onNav }) {
         <div className="hero__proof">
           <span className="hero__proof-label">Areas of expertise</span>
           <div className="hero__sectors">
-            <span>Participatory research</span><span>Co-design</span><span>Strategic insights</span><span>Industry support</span><span>Ongoing advisory</span>
+            <a href="/expertise#exp-participatory">Participatory research</a><a href="/expertise#exp-co-design">Co-design</a><a href="/expertise#exp-strategic-insights">Strategic insights</a><a href="/expertise#exp-industry-support">Industry support</a><a href="/expertise#exp-ongoing">Ongoing advisory</a>
           </div>
         </div>
       </div>

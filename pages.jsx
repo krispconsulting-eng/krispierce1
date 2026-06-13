@@ -126,6 +126,9 @@ const WID = [
     'Capability that stays, in people and teams, not just a report.'],
 ];
 
+/* Slugs let the homepage hero chip strip deep-link to the matching card. */
+const EXP_SLUGS = ['participatory', 'co-design', 'strategic-insights', 'industry-support', 'ongoing', 'education'];
+
 function ExpertiseCards() {
   const [flipped, setFlipped] = useState3(null);
   const toggle = (i) => setFlipped((f) => (f === i ? null : i));
@@ -134,7 +137,7 @@ function ExpertiseCards() {
       <div className="exp-cards__label">Areas of expertise</div>
       <div className="exp-cards">
         {WID.map(([icon, title, body, who, outcome], i) => (
-          <button key={title} type="button"
+          <button key={title} id={'exp-' + EXP_SLUGS[i]} type="button"
             className={'exp-card' + (flipped === i ? ' is-flipped' : '')}
             onClick={() => toggle(i)} aria-pressed={flipped === i}
             aria-label={title + '. Activate to read more.'}>
