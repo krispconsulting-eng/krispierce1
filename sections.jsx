@@ -63,10 +63,13 @@ function Hero({ onNav }) {
       <div className="hero__banner"></div>
       <Nav onNav={onNav} />
       <div className="hero__inner">
-        <h1 className="hero__title">Consumer and community engagement for rare disease and health policy, done so it <em>changes the decision</em></h1>
-        <p className="hero__sub">Not-for-profits, research teams, and industry partners come to me when patient and
-          carer voice has to be real, rigorous, and actually change decisions. Twenty-three years of lived experience
-          and senior national advisory roles, held to one standard: if the work doesn't change a decision, it isn't done.</p>
+        <h1 className="hero__title">Consumer and community engagement that moves beyond consultation and <em>influences decisions</em></h1>
+        <p className="hero__sub">I help organisations design, strengthen, and embed meaningful engagement across
+          research, health policy, and rare disease. Whether you're building an engagement strategy, developing
+          organisational capability, training advocates, or strengthening patient and carer partnerships, I bring the
+          experience, structure, and practical tools needed to make engagement count.</p>
+        <p className="hero__sub hero__sub--2">Backed by two decades of professional and lived experience, and senior
+          national advisory roles, I bring lived experience and professional rigour to the same table.</p>
         <div className="hero__proof">
           <span className="hero__proof-label">Areas of expertise</span>
           <div className="hero__sectors">
