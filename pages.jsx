@@ -230,9 +230,8 @@ function ContactPage() {
               <li className="row"><span className="bullet">3</span>When you'd ideally like to move</li>
             </ul>
 
-            <p className="contact-page__lead" style={{ fontSize: '16px' }}>Once you send this, I'll personally call you
-              within a week. You'll get a straight answer on whether this is the right fit, what approach might suit, and
-              what working together would look like. If it's not a fit, you'll be pointed somewhere better.</p>
+            <p className="contact-page__lead" style={{ fontSize: '16px' }}>Once you send this, I'll personally be in
+              touch to talk it through. You'll get a straight answer on whether I'm the right fit, either way.</p>
 
             <div className="contact-page__email">
               <span className="contact-page__email-label">Prefer email?</span>
@@ -245,13 +244,13 @@ function ContactPage() {
               <div className="contact-thanks">
                 <span className="contact-thanks__tick"><Icon name="check" size={22} /></span>
                 <h3>Thank you{form.name ? ', ' + form.name.split(' ')[0] : ''}. Message received.</h3>
-                <p>Every message gets a personal read. I'll call you within a week to talk it through — no obligation.
+                <p>Every message gets a personal read. I'll be in touch personally to talk it through — no obligation.
                   Prefer email? <a href="mailto:hello@krispierce.com.au">hello@krispierce.com.au</a></p>
               </div>
             ) : (
               <React.Fragment>
                 <h2 className="contact-card__heading">Start a conversation</h2>
-                <p className="contact-card__note">Tell me what you need and the best number to reach you — I'll call within a week.</p>
+                <p className="contact-card__note">Tell me what you need and the best number to reach you. I'll be in touch personally.</p>
                 <form className="contact__form" onSubmit={submit}>
                   <div className="contact__row">
                     <Field label="Your name" placeholder="Jane Citizen" value={form.name} onChange={set('name')} required />

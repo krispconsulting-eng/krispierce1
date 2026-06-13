@@ -21,7 +21,7 @@ function GlyphDoc({ size=20 }) {
 }
 
 /* ---------------- Page header ---------------- */
-function InsHeader({ count }) {
+function InsHeader() {
   return (
     <section className="ins-head">
       <div className="ins-head__top">
@@ -29,7 +29,7 @@ function InsHeader({ count }) {
           <span className="overline">Insights</span>
           <h1 className="ins-head__title">From the work, not the <em>sidelines</em></h1>
         </div>
-        <span className="ins-head__count">{count} pieces, updated monthly</span>
+        <span className="ins-head__count">Field notes from the work</span>
       </div>
       <p className="ins-head__lead">This is where the real work gets shared: research findings, what co-design and
         participatory research actually reveal, and reflections on consumer engagement, rare disease, and patient voice.

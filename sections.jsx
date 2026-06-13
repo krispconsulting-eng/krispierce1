@@ -63,7 +63,7 @@ function Hero({ onNav }) {
       <div className="hero__banner"></div>
       <Nav onNav={onNav} />
       <div className="hero__inner">
-        <h1 className="hero__title">Australia's leading specialist in consumer and community engagement for rare disease and health <em>policy</em></h1>
+        <h1 className="hero__title">Consumer and community engagement for rare disease and health policy, done so it <em>changes the decision</em></h1>
         <p className="hero__sub">Not-for-profits, research teams, and industry partners come to me when patient and
           carer voice has to be real, rigorous, and actually change decisions. Twenty-three years of lived experience
           and senior national advisory roles, held to one standard: if the work doesn't change a decision, it isn't done.</p>
@@ -73,6 +73,30 @@ function Hero({ onNav }) {
             <span>Participatory research</span><span>Co-design</span><span>Strategic insights</span><span>Industry support</span><span>Ongoing advisory</span>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* Quiet credibility strip directly under the hero. Proves the seniority the
+   headline no longer asserts, in the client's own institutional language. */
+const CRED = [
+  'Rare Diseases NSW',
+  'UNSW Sydney',
+  'HTA Consumer Consultative Committee',
+  'MSAC Evaluation Sub-Committee',
+  'Genomics Australia Advisory Council',
+  'Founder, SCN2A Australia',
+];
+
+function CredStrip() {
+  return (
+    <section className="cred" aria-label="Senior advisory roles">
+      <div className="cred__inner">
+        <span className="cred__label">Senior advisory roles</span>
+        <ul className="cred__list">
+          {CRED.map((c) => <li key={c}>{c}</li>)}
+        </ul>
       </div>
     </section>
   );
@@ -131,4 +155,4 @@ function Relate() {
   );
 }
 
-Object.assign(window, { Nav, Hero, About, Relate });
+Object.assign(window, { Nav, Hero, CredStrip, About, Relate });

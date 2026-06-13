@@ -150,13 +150,11 @@ function InsightsApp() {
   const openArticle = (a) => setReading(a);
   const openGuide = (g) => setGating(g);
 
-  const total = 1 + window.INSIGHTS.length;
-
   return (
     <div className="site">
       <Nav theme="solid" active="insights" />
       <main>
-        <InsHeader count={total} />
+        <InsHeader />
         {t.showFeatured && <InsFeature item={window.FEATURED_INSIGHT} onOpen={openArticle} />}
         <InsLibrary items={window.INSIGHTS} cols={t.cols} cardStyle={t.cardStyle}
           accent={t.accent} onOpen={openArticle} />

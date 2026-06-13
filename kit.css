@@ -87,6 +87,18 @@
 .hero__star { width:26px; height:26px; border-radius:999px; background:rgba(255,255,255,.18);
   display:inline-flex; align-items:center; justify-content:center; color:#fff; }
 
+/* ---------------- Credibility strip ---------------- */
+.cred { max-width:var(--container-max); margin:0 auto; padding: clamp(30px,5vw,52px) var(--container-pad) 0; }
+.cred__inner { display:flex; flex-wrap:wrap; align-items:baseline; gap:12px 22px;
+  padding-bottom: clamp(30px,5vw,52px); border-bottom:1px solid var(--border-subtle); }
+.cred__label { font-family:var(--font-text); font-size:12px; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--text-muted); flex:none; }
+.cred__list { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; align-items:center;
+  gap:8px 0; }
+.cred__list li { font-family:var(--font-display); font-weight:600; font-size:clamp(13.5px,1.05vw,15px);
+  color:var(--text-secondary); letter-spacing:-.01em; }
+.cred__list li:not(:last-child)::after { content:"·"; margin:0 12px; color:var(--clay-500); font-weight:700; }
+
 /* ---------------- About ---------------- */
 .about { max-width:var(--container-max); margin:0 auto; padding: var(--section-y) var(--container-pad); }
 .about__grid { display:grid; grid-template-columns: 1.04fr 0.96fr; gap: clamp(32px,6vw,84px); align-items:center; }
