@@ -67,7 +67,8 @@ function Hero({ onNav }) {
         <p className="hero__sub">Not-for-profits, research teams, and industry partners come to me when patient and
           carer voice has to be real, rigorous, and actually change decisions. I also train teams, and support the
           advocates and emerging leaders coming up behind them. Two decades of expertise, professional and lived, and
-          senior national advisory roles, held to one standard: if the work doesn't change a decision, it isn't done.</p>
+          senior national advisory roles, partnering with people and communities to ensure the voices that matter most
+          shape decisions and drive meaningful change.</p>
         <div className="hero__proof">
           <span className="hero__proof-label">Areas of expertise</span>
           <div className="hero__sectors">
