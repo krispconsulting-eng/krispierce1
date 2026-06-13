@@ -109,11 +109,11 @@ function Contact() {
         <span className="overline">Start a conversation</span>
         <h2 className="contact__title">Tell me what you're working on</h2>
         <p className="contact__body">A sentence or two is plenty to begin. Tell me what you need and the best number to
-          reach you, and I'll personally call you within a week — a short, no-obligation conversation.</p>
+          reach you, and I'll personally be in touch to talk it through — a short, no-obligation conversation.</p>
         <ol className="contact__steps">
           <li><span>1</span>You tell me what you're after</li>
           <li><span>2</span>I read it myself — every message</li>
-          <li><span>3</span>I call you within a week to talk it through</li>
+          <li><span>3</span>I'll call you personally to talk it through</li>
         </ol>
       </div>
       <div className="contact__card">
@@ -121,7 +121,7 @@ function Contact() {
           <div className="contact__thanks">
             <span className="contact__check"><Icon name="check" size={22} /></span>
             <h3>Thank you{form.name ? ', ' + form.name.split(' ')[0] : ''}. Message received.</h3>
-            <p>I've got your details and I'll personally call you within a week. Prefer email in the meantime?
+            <p>I've got your details and I'll personally be in touch. Prefer email in the meantime?
               <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a></p>
           </div>
         ) : (
@@ -171,7 +171,7 @@ function Footer({ onNav }) {
       </div>
       <div className="foot__legal">
         <span>© 2025 Kris Pierce Consulting</span>
-        <span>Naarm / Melbourne, Australia</span>
+        <span>Kabi Kabi Country / Sunshine Coast, Queensland</span>
         <span>Privacy</span>
       </div>
     </footer>

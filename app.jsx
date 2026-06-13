@@ -10,6 +10,7 @@ function App() {
     <div className="site">
       <Hero onNav={onNav} />
       <main>
+        <CredStrip />
         <About onNav={onNav} />
         <Relate />
         <Motif />
@@ -28,7 +29,7 @@ function App() {
    hard fallback so content can never stay hidden. */
 function setupReveal() {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const sels = ['.about__col', '.about__photo', '.relate__head', '.relate__card',
+  const sels = ['.cred__inner', '.about__col', '.about__photo', '.relate__head', '.relate__card',
     '.offer__portrait', '.offer__panel', '.voices', '.teaser__head', '.teaser__grid .ins-card',
     '.cta__panel', '.contact__intro', '.contact__card', '.foot', '.motif__inner'];
   const els = [];
