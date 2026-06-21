@@ -53,7 +53,7 @@ Set on the Vercel project (server-side, NOT prefixed with `VITE_`):
 | Var | Example |
 | --- | --- |
 | `RESEND_API_KEY` | `re_xxxxxxxxxxxxxxxxxxxx` |
-| `CONTACT_TO_EMAIL` | `hello@krispierce.com.au` |
+| `CONTACT_TO_EMAIL` | `info@krispierce.com.au` |
 | `CONTACT_FROM_EMAIL` | `engage@krispierce.com.au` (must be a verified Resend sender) |
 
 The form POSTs to `/api/contact`. The serverless function validates input and forwards via Resend.
@@ -88,7 +88,7 @@ Drop `kris-pierce.jpg` into `public/images/` and replace the placeholder block i
 
 These need answers from Kris before launch:
 
-1. Contact form destination email (assumed `hello@krispierce.com.au`)
+1. Contact form destination email (assumed `info@krispierce.com.au`)
 2. Deployment target (standalone subdomain vs WordPress embed)
 3. Analytics (Plausible vs GA4)
 4. Headshot for about section

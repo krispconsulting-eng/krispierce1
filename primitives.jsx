@@ -73,7 +73,7 @@ Object.assign(window, { Icon, Button, Pill, IconChip, StatCard, Avatar, AvatarSt
 /* ============================================================================
    Lead delivery — Web3Forms (no backend required).
    Submissions are emailed to the address tied to the access key below.
-   SETUP: create a free key at https://web3forms.com using hello@krispierce.com.au,
+   SETUP: create a free key at https://web3forms.com using info@krispierce.com.au,
    then paste it as WEB3FORMS_ACCESS_KEY. Until then, forms show an error on submit.
    ========================================================================== */
 const WEB3FORMS_ACCESS_KEY = '8de27910-e9a3-44fe-b0c2-93e42708b8e6';

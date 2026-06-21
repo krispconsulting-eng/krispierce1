@@ -62,7 +62,7 @@ export default function ContactForm() {
       setStatus('submitted')
     } catch (err) {
       setStatus('error')
-      setErrorMessage(err.message || 'Something went wrong. Please email hello@krispierce.com.au directly.')
+      setErrorMessage(err.message || 'Something went wrong. Please email info@krispierce.com.au directly.')
     }
   }
 

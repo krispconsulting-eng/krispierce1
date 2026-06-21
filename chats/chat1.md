@@ -842,7 +842,7 @@ Verified: all pages load with no console errors, DS components throughout (`Pill
 
 Two things worth your call:
 - The homepage still has its own About / What I do / Contact sections as a scroll narrative, with the nav pointing to the dedicated pages. Happy to trim those homepage sections to short teasers if you'd prefer less duplication.
-- Email is set to `hello@krispierce.com.au` everywhere; your draft flagged `krispconsulting@gmail.com` as the address to confirm. Tell me which to lock in.
+- Email is set to `info@krispierce.com.au` everywhere; your draft flagged `krispconsulting@gmail.com` as the address to confirm. Tell me which to lock in.
 
 ## User
 
@@ -854,7 +854,7 @@ _[tool: read_file]_
 
 _[tool: snip]_
 
-Good — `hello@krispierce.com.au` is locked in everywhere, so nothing to change there. I've re-read `sections.jsx`; the nav/chrome is intact (your edit didn't conflict with anything).
+Good — `info@krispierce.com.au` is locked in everywhere, so nothing to change there. I've re-read `sections.jsx`; the nav/chrome is intact (your edit didn't conflict with anything).
 
 The site is complete: homepage plus five real pages (About, What I do, Insights, Contact, with "In their words" as a homepage section), all six nav items resolving correctly, built on the bound design system. Ready for you to drop real photos into the image slots whenever you'd like.
 
