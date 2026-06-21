@@ -24,9 +24,9 @@ function BrandHero({ onNav }) {
           systems and the people they serve, as a carer, an advocate, a consultant, and a researcher. My work runs
           across a few connected areas, held together by one belief: the person whose health is on the line belongs
           in the room.</p>
-        <p className="hero__sub hero__sub--2">It begins with consumer and community engagement and health research,
-          and is growing to include advocacy training, not-for-profit mentoring, and a caregiving program, each
-          grounded in senior national advisory roles and lived experience in rare disease.</p>
+        <p className="hero__sub hero__sub--2">From consumer and community engagement and health research to advocacy
+          training, not-for-profit mentoring, and a passion for caregiver wellbeing, the work draws on senior national
+          advisory roles and lived experience in rare disease.</p>
         <div className="hero__intro">
           <span className="hero__intro-label">Areas of work</span>
           <div className="hero__sectors">
