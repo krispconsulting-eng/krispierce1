@@ -4,6 +4,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/methods", "destination": "/expertise", "permanent": true }
+    { "source": "/methods", "destination": "/engagement/expertise", "permanent": true },
+    { "source": "/expertise", "destination": "/engagement/expertise", "permanent": true },
+    { "source": "/insights", "destination": "/engagement/insights", "permanent": true }
   ]
 }

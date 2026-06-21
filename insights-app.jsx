@@ -28,7 +28,7 @@ function Reader({ item, onClose }) {
           {body.map((p, i) => <p key={i}>{p}</p>)}
         </div>
         <div className="reader__foot">
-          <Button arrow href="/#contact">Start a conversation</Button>
+          <Button arrow href="/contact">Start a conversation</Button>
           <span>Working on something like this? Tell me about it.</span>
         </div>
       </article>
@@ -152,7 +152,7 @@ function InsightsApp() {
 
   return (
     <div className="site">
-      <Nav theme="solid" active="insights" />
+      <Nav theme="solid" active="engagement" />
       <main>
         <InsHeader />
         {t.showFeatured && <InsFeature item={window.FEATURED_INSIGHT} onOpen={openArticle} />}

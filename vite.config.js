@@ -13,9 +13,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: 'index.html',
+        engagement: 'engagement/index.html',
+        'engagement-expertise': 'engagement/expertise.html',
+        'engagement-insights': 'engagement/insights.html',
         about: 'about.html',
-        expertise: 'expertise.html',
-        insights: 'insights.html',
         portfolio: 'portfolio.html',
         resources: 'resources.html',
         contact: 'contact.html',

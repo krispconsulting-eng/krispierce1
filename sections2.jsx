@@ -158,9 +158,11 @@ function Footer({ onNav }) {
       <a className="foot__email" href="mailto:hello@krispierce.com.au">hello@krispierce.com.au</a>
       <div className="foot__bar">
         <div className="foot__links">
+          <a href="/">Home</a>
+          <a href="/engagement">Engagement</a>
+          <a href="/engagement/expertise">Expertise</a>
+          <a href="/engagement/insights">Insights</a>
           <a href="/about">About</a>
-          <a href="/expertise">Expertise</a>
-          <a href="/insights">Insights</a>
           <a href="/portfolio">Portfolio</a>
           <a href="/resources">Resources</a>
           <a href="/contact">Contact</a>
@@ -171,7 +173,7 @@ function Footer({ onNav }) {
         </div>
       </div>
       <div className="foot__legal">
-        <span>© 2025 Kris Pierce Consulting</span>
+        <span>© 2025 Kris Pierce</span>
         <span>Kabi Kabi Country / Sunshine Coast, Queensland</span>
         <span>Privacy</span>
       </div>

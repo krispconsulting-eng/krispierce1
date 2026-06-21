@@ -165,7 +165,7 @@ function ExpertiseCards() {
 function ExpertisePage() {
   return (
     <div className="site">
-      <Nav theme="solid" active="offerings" />
+      <Nav theme="solid" active="engagement" />
       <main>
         <section className="page-hero">
           <Pill variant="wash" className="page-hero__overline">Expertise</Pill>

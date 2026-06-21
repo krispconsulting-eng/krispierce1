@@ -7,10 +7,9 @@ const { useState } = React;
    (when onNav is supplied) and jump otherwise; the rest navigate to their page.
    `active` highlights the current item. */
 const NAV_LINKS = [
-  ['Home','home','/#home', true],
+  ['Home','home','/', false],
+  ['Engagement','engagement','/engagement', false],
   ['About','about','/about', false],
-  ['Expertise','offerings','/expertise', false],
-  ['Insights','insights','/insights', false],
   ['Portfolio','portfolio','/portfolio', false],
   ['Resources','resources','/resources', false],
   ['Contact','contact','/contact', false],
@@ -23,10 +22,10 @@ function Nav({ onNav, theme='hero', active }) {
     if (anchor && typeof onNav === 'function') { e.preventDefault(); onNav(id); }
     /* else: allow default navigation to the page href */
   };
-  const goContact = () => { if (typeof onNav === 'function') onNav('contact'); else window.location.href = '/contact'; };
+  const goContact = () => { window.location.href = '/contact'; };
   return (
     <header className={`site-nav site-nav--${theme}`}>
-      <Logo href="/#home" size={63} inverse={theme==='hero'} />
+      <Logo href="/" size={63} inverse={theme==='hero'} />
       <nav className="site-nav__links">
         {NAV_LINKS.map(([label, id, href, anchor]) => (
           <a key={id} href={href} aria-current={active===id ? 'page' : undefined}
@@ -61,7 +60,7 @@ function Hero({ onNav }) {
         <div className="hero__scrim"></div>
       </div>
       <div className="hero__banner"></div>
-      <Nav onNav={onNav} />
+      <Nav onNav={onNav} active="engagement" />
       <div className="hero__inner">
         <h1 className="hero__title">Consumer and community engagement that moves beyond consultation and <em>influences decisions</em></h1>
         <p className="hero__sub">I help organisations design, strengthen, and embed meaningful engagement across
@@ -73,7 +72,7 @@ function Hero({ onNav }) {
         <div className="hero__proof">
           <span className="hero__proof-label">Areas of expertise</span>
           <div className="hero__sectors">
-            <a href="/expertise#exp-participatory">Participatory research</a><a href="/expertise#exp-co-design">Co-design</a><a href="/expertise#exp-strategic-insights">Strategic insights</a><a href="/expertise#exp-industry-support">Industry support</a><a href="/expertise#exp-ongoing">Ongoing advisory</a>
+            <a href="/engagement/expertise#exp-participatory">Participatory research</a><a href="/engagement/expertise#exp-co-design">Co-design</a><a href="/engagement/expertise#exp-strategic-insights">Strategic insights</a><a href="/engagement/expertise#exp-industry-support">Industry support</a><a href="/engagement/expertise#exp-ongoing">Ongoing advisory</a>
           </div>
         </div>
       </div>
