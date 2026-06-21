@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TechElla — Tech Girl, flying (animation)</title>
+<meta name="description" content="Animated hero for TechElla — a flying tech girl in cool techwear with a laptop in hand. Inspired by the superhero brief, rebuilt in TechElla's girly-tech colours." />
+<meta name="theme-color" content="#190A2E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,500&amp;display=swap" />
+<style>
+/* ===================================================================
+   TECHELLA — "Tech Girl" flying animation
+   -------------------------------------------------------------------
+   PLACEHOLDER BRAND PALETTE (girly-tech). techellafest.com couldn't be
+   reached from the build environment, so these are researched stand-ins
+   for "Australia's girliest tech event". Swap the values below to the
+   real brand hex codes and the whole scene recolours — every paint in
+   the SVG reads from these variables.
+   =================================================================== */
+:root{
+  /* ---- Brand colours (edit these) ---- */
+  --tg-bg-deep:   #170A2B;   /* page / deepest violet      */
+  --tg-bg-violet: #2C1152;   /* mid violet glow            */
+  --tg-pink:      #FF4FB7;   /* primary hot pink           */
+  --tg-pink-lt:   #FF93D8;   /* light pink highlight       */
+  --tg-magenta:   #E12F9C;   /* deep fuchsia               */
+  --tg-lilac:     #B985FF;   /* lilac                      */
+  --tg-purple:    #7B34E0;   /* purple                     */
+  --tg-cyan:      #43E9FF;   /* tech cyan accent           */
+  --tg-mint:      #67F3D0;   /* mint / screen glow         */
+  --tg-cream:     #FFF0FA;   /* near-white, pink-tinted    */
+  --tg-gold:      #FFD36E;   /* sparkle gold               */
+  --tg-ink:       #220A3A;   /* dark outlines              */
+
+  /* ---- Character incidentals ---- */
+  --skin:    #F8CDA8;
+  --skin-sh: #E7A982;
+  --hair:    #7A4B2E;
+  --hair-lt: #A86C3E;
+
+  /* ---- Type (swap to real brand fonts when known) ---- */
+  --tg-font-display: 'Fredoka', 'Poppins', system-ui, sans-serif;
+  --tg-font-text:    'Poppins', system-ui, sans-serif;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family:var(--tg-font-text);
+  color:var(--tg-cream);
+  background:
+    radial-gradient(120% 120% at 78% 12%, var(--tg-bg-violet) 0%, var(--tg-bg-deep) 55%, #0E0620 100%);
+  min-height:100svh;
+  overflow-x:hidden;
+}
+
+/* faint dotted "grid of light" so the violet isn't flat */
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image:radial-gradient(rgba(255,255,255,.06) 1px, transparent 1.4px);
+  background-size:34px 34px;
+  -webkit-mask-image:radial-gradient(120% 100% at 70% 10%, #000 0%, transparent 70%);
+          mask-image:radial-gradient(120% 100% at 70% 10%, #000 0%, transparent 70%);
+}
+
+.stage{
+  position:relative; z-index:1;
+  max-width:1180px; margin:0 auto;
+  min-height:100svh;
+  display:grid; grid-template-rows:auto 1fr auto;
+  padding:clamp(20px,3vw,40px) clamp(20px,5vw,64px) clamp(16px,2.5vw,32px);
+}
+
+/* ---------- Brand header ---------- */
+.brand{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+.brand__mark{
+  font-family:var(--tg-font-display); font-weight:700;
+  font-size:clamp(26px,4.4vw,40px); letter-spacing:-.01em; line-height:1;
+  background:linear-gradient(92deg, var(--tg-pink-lt), var(--tg-pink) 45%, var(--tg-lilac) 78%, var(--tg-cyan));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  filter:drop-shadow(0 2px 14px rgba(255,79,183,.45));
+}
+.brand__mark b{ font-weight:700; }
+.brand__spark{ -webkit-text-fill-color:var(--tg-gold); color:var(--tg-gold);
+  filter:drop-shadow(0 0 8px rgba(255,211,110,.8)); }
+.brand__chip{
+  font-size:11.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  padding:6px 12px; border-radius:999px; color:var(--tg-cream);
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.18);
+  backdrop-filter:blur(6px);
+}
+
+/* ---------- Hero copy + stage ---------- */
+.hero{ position:relative; align-self:center; display:grid; gap:6px; padding-top:clamp(8px,2vw,22px); }
+.hero__eyebrow{
+  font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  font-size:clamp(11px,1.4vw,13px); color:var(--tg-cyan);
+  display:flex; align-items:center; gap:10px;
+}
+.hero__eyebrow::before{ content:""; width:34px; height:2px; border-radius:2px;
+  background:linear-gradient(90deg,var(--tg-cyan),transparent); }
+.hero__title{
+  font-family:var(--tg-font-display); font-weight:700;
+  font-size:clamp(34px,7vw,76px); line-height:.98; letter-spacing:-.02em;
+  margin:.18em 0 .1em; max-width:14ch;
+  text-shadow:0 8px 40px rgba(123,52,224,.45);
+}
+.hero__title em{ font-style:normal;
+  background:linear-gradient(96deg,var(--tg-pink) 10%, var(--tg-lilac) 60%, var(--tg-cyan));
+  -webkit-background-clip:text; background-clip:text; color:transparent; }
+.hero__sub{ color:rgba(255,240,250,.78); font-size:clamp(14px,1.7vw,18px); max-width:42ch; font-weight:400; }
+
+.scene-wrap{ position:relative; }
+.scene{ width:100%; height:auto; display:block; overflow:visible; }
+
+/* ---------- Footer note ---------- */
+.foot{ display:flex; justify-content:space-between; align-items:center; gap:16px;
+  flex-wrap:wrap; font-size:12.5px; color:rgba(255,240,250,.55); }
+.foot a{ color:var(--tg-pink-lt); text-decoration:none; }
+.foot a:hover{ text-decoration:underline; }
+
+@media (max-width:760px){
+  .hero{ text-align:left; }
+  .scene-wrap{ margin-top:6px; }
+}
+
+/* ===================================================================
+   ANIMATION KEYFRAMES
+   =================================================================== */
+@keyframes float{
+  0%,100%{ transform:translateY(0) rotate(0deg); }
+  50%    { transform:translateY(-16px) rotate(-1.1deg); }
+}
+@keyframes capeWave{
+  0%,100%{ transform:rotate(-2.4deg) skewX(0deg); }
+  50%    { transform:rotate(3.2deg)  skewX(-4deg); }
+}
+@keyframes hairWave{
+  0%,100%{ transform:rotate(-1.6deg); }
+  50%    { transform:rotate(2.6deg); }
+}
+@keyframes fistPump{
+  0%,100%{ transform:translate(0,0) rotate(0deg); }
+  50%    { transform:translate(2px,-6px) rotate(3deg); }
+}
+@keyframes ringPulse{
+  0%   { transform:scale(.35); opacity:.85; }
+  70%  { opacity:.18; }
+  100% { transform:scale(1.7); opacity:0; }
+}
+@keyframes screenPulse{
+  0%,100%{ opacity:.55; }
+  50%    { opacity:1; }
+}
+@keyframes glowPulse{
+  0%,100%{ opacity:.7; transform:scale(1); }
+  50%    { opacity:1;  transform:scale(1.06); }
+}
+@keyframes streakMove{
+  0%   { transform:translate(0,0); opacity:0; }
+  12%  { opacity:.9; }
+  80%  { opacity:.9; }
+  100% { transform:translate(-240px,118px); opacity:0; }
+}
+@keyframes twinkle{
+  0%,100%{ transform:scale(.6) rotate(0deg); opacity:.25; }
+  50%    { transform:scale(1.15) rotate(45deg); opacity:1; }
+}
+@keyframes drift{
+  0%   { transform:translate(0,0) rotate(0deg); opacity:0; }
+  15%  { opacity:.9; }
+  85%  { opacity:.9; }
+  100% { transform:translate(26px,-120px) rotate(20deg); opacity:0; }
+}
+
+/* hook keyframes to elements (transform-box lets SVG groups use % origins) */
+#hero      { animation:float 6.4s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+#cape      { animation:capeWave 4.6s ease-in-out infinite; transform-box:fill-box; transform-origin:72% 6%; }
+#hairBack  { animation:hairWave 5.2s ease-in-out infinite; transform-box:fill-box; transform-origin:86% 8%; }
+#fist      { animation:fistPump 3.2s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 80%; }
+#ring      { animation:ringPulse 2.6s ease-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+#screenGlow{ animation:screenPulse 2.2s ease-in-out infinite; }
+#bgGlow    { animation:glowPulse 5s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+.streak    { animation:streakMove 3.4s linear infinite; }
+.spark     { animation:twinkle 3s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+.floaty    { animation:drift 7s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+
+@media (prefers-reduced-motion:reduce){
+  #hero,#cape,#hairBack,#fist,#ring,#screenGlow,#bgGlow,.streak,.spark,.floaty{
+    animation:none !important;
+  }
+  .streak{ opacity:.55; }
+}
+</style>
+</head>
+<body>
+  <div class="stage">
+
+    <!-- ===== brand header ===== -->
+    <header class="brand">
+      <span class="brand__mark">tech<b>ella</b><span class="brand__spark">✦</span></span>
+      <span class="brand__chip">Australia's girliest tech event</span>
+    </header>
+
+    <!-- ===== hero ===== -->
+    <section class="hero">
+      <p class="hero__eyebrow">Sydney · 05 . 11 . 26</p>
+      <h1 class="hero__title">Show up. <em>Take off.</em></h1>
+      <p class="hero__sub">The tech event for girls who hate tech events — code in one hand, cape on your back.</p>
+
+      <div class="scene-wrap">
+        <!-- ============================================================
+             THE ANIMATED SCENE
+             ============================================================ -->
+        <svg class="scene" viewBox="0 0 800 600" role="img"
+             aria-label="A tech girl flying upward in cool techwear and a cape, holding a glowing laptop, fist raised, against a girly-tech violet sky with neon speed lines and sparkles.">
+          <defs>
+            <!-- soft background glow -->
+            <radialGradient id="bgGlowGrad" cx="50%" cy="50%" r="50%">
+              <stop offset="0%"   style="stop-color:var(--tg-pink)"   stop-opacity=".55"/>
+              <stop offset="45%"  style="stop-color:var(--tg-purple)" stop-opacity=".28"/>
+              <stop offset="100%" style="stop-color:var(--tg-purple)" stop-opacity="0"/>
+            </radialGradient>
+
+            <!-- holographic cape -->
+            <linearGradient id="holoGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%"   style="stop-color:var(--tg-pink-lt)"/>
+              <stop offset="38%"  style="stop-color:var(--tg-pink)"/>
+              <stop offset="68%"  style="stop-color:var(--tg-lilac)"/>
+              <stop offset="100%" style="stop-color:var(--tg-cyan)"/>
+            </linearGradient>
+            <linearGradient id="capeBack" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%"   style="stop-color:var(--tg-magenta)"/>
+              <stop offset="100%" style="stop-color:var(--tg-purple)"/>
+            </linearGradient>
+
+            <!-- clothing -->
+            <linearGradient id="hoodieGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   style="stop-color:var(--tg-pink-lt)"/>
+              <stop offset="55%"  style="stop-color:var(--tg-pink)"/>
+              <stop offset="100%" style="stop-color:var(--tg-magenta)"/>
+            </linearGradient>
+            <linearGradient id="skirtGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   style="stop-color:var(--tg-lilac)"/>
+              <stop offset="100%" style="stop-color:var(--tg-purple)"/>
+            </linearGradient>
+            <linearGradient id="sockGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   style="stop-color:var(--tg-lilac)"/>
+              <stop offset="100%" style="stop-color:var(--tg-pink)"/>
+            </linearGradient>
+
+            <!-- skin + hair -->
+            <linearGradient id="skinGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%"   stop-color="#FBDDC4"/>
+              <stop offset="60%"  style="stop-color:var(--skin)"/>
+              <stop offset="100%" style="stop-color:var(--skin-sh)"/>
+            </linearGradient>
+            <linearGradient id="hairGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%"   style="stop-color:var(--hair-lt)"/>
+              <stop offset="100%" style="stop-color:var(--hair)"/>
+            </linearGradient>
+
+            <!-- laptop -->
+            <linearGradient id="lapBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%"   stop-color="#F3EEFF"/>
+              <stop offset="100%" stop-color="#C9BEEC"/>
+            </linearGradient>
+            <radialGradient id="screenGrad" cx="50%" cy="40%" r="75%">
+              <stop offset="0%"   style="stop-color:var(--tg-mint)"/>
+              <stop offset="55%"  style="stop-color:var(--tg-cyan)"/>
+              <stop offset="100%" style="stop-color:var(--tg-purple)"/>
+            </radialGradient>
+
+            <!-- speed-line gradient -->
+            <linearGradient id="streakGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%"   style="stop-color:var(--tg-cyan)" stop-opacity="0"/>
+              <stop offset="50%"  style="stop-color:var(--tg-pink-lt)"/>
+              <stop offset="100%" style="stop-color:var(--tg-cyan)" stop-opacity="0"/>
+            </linearGradient>
+
+            <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+              <feGaussianBlur stdDeviation="7"/>
+            </filter>
+            <filter id="softer" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="14"/>
+            </filter>
+          </defs>
+
+          <!-- ===== background glow ===== -->
+          <ellipse id="bgGlow" cx="392" cy="300" rx="300" ry="300" fill="url(#bgGlowGrad)"/>
+
+          <!-- ===== speed lines (diagonal, streaming up-right) ===== -->
+          <g stroke-linecap="round">
+            <rect class="streak" x="470" y="120" width="230" height="7" rx="3.5" fill="url(#streakGrad)" transform="rotate(-26 585 123)" style="animation-delay:0s"/>
+            <rect class="streak" x="520" y="190" width="180" height="5" rx="2.5" fill="url(#streakGrad)" transform="rotate(-26 610 192)" style="animation-delay:.6s"/>
+            <rect class="streak" x="440" y="250" width="260" height="8" rx="4"   fill="url(#streakGrad)" transform="rotate(-26 570 254)" style="animation-delay:1.1s"/>
+            <rect class="streak" x="540" y="320" width="170" height="5" rx="2.5" fill="url(#streakGrad)" transform="rotate(-26 625 322)" style="animation-delay:.3s"/>
+            <rect class="streak" x="470" y="380" width="220" height="7" rx="3.5" fill="url(#streakGrad)" transform="rotate(-26 580 383)" style="animation-delay:1.6s"/>
+            <rect class="streak" x="560" y="440" width="150" height="5" rx="2.5" fill="url(#streakGrad)" transform="rotate(-26 635 442)" style="animation-delay:.9s"/>
+            <rect class="streak" x="430" y="500" width="200" height="6" rx="3"   fill="url(#streakGrad)" transform="rotate(-26 530 503)" style="animation-delay:2s"/>
+          </g>
+
+          <!-- ============================================================
+               THE FLYING TECH GIRL
+               designed upright around (392,300), tilted into the climb.
+               ============================================================ -->
+          <g id="hero">
+          <g id="figure" transform="rotate(7 392 300)">
+
+            <!-- ===== CAPE (behind everything) ===== -->
+            <g id="cape">
+              <path d="M372 198 C320 214 270 244 246 300 C223 352 220 408 236 462
+                       C252 480 266 462 282 476 C298 490 314 466 332 478
+                       C350 490 366 466 384 476 C400 452 414 388 412 326
+                       C410 262 396 214 384 196 C380 206 378 206 372 198 Z"
+                    fill="url(#capeBack)" opacity=".95"/>
+              <path d="M380 200 C338 216 300 244 282 296 C266 344 264 398 280 448
+                       C294 464 306 448 320 460 C334 472 348 450 364 460
+                       C380 470 392 448 406 458 C416 432 420 380 416 326
+                       C411 266 402 220 392 200 C388 208 386 208 380 200 Z"
+                    fill="url(#holoGrad)" opacity=".92"/>
+              <!-- little stars on the cape -->
+              <g fill="#fff" opacity=".7">
+                <path d="M322 300 l4 9 10 1 -7 7 2 10 -9 -5 -9 5 2 -10 -7 -7 10 -1 Z" transform="scale(.7) translate(140 130)"/>
+                <circle cx="338" cy="372" r="3.2"/>
+                <circle cx="306" cy="338" r="2.4"/>
+              </g>
+            </g>
+
+            <!-- ===== BACK HAIR (streaming) ===== -->
+            <g id="hairBack">
+              <path d="M374 116 C342 110 320 130 318 162 C315 200 330 226 314 260
+                       C300 290 280 308 276 336 C292 326 306 326 318 334
+                       C326 306 344 290 352 262 C362 226 356 196 368 168
+                       C376 148 384 132 374 116 Z" fill="url(#hairGrad)"/>
+              <!-- pink dip-dyed tips -->
+              <path d="M286 320 C282 332 280 340 282 350 C292 340 304 338 314 344
+                       C312 332 314 326 318 318 C306 316 296 316 286 320 Z"
+                    style="fill:var(--tg-pink)" opacity=".9"/>
+            </g>
+
+            <!-- ===== LEGS + thigh-high socks + sneakers ===== -->
+            <g>
+              <!-- left leg -->
+              <path d="M374 350 C366 392 360 426 356 452 C354 470 360 480 372 482
+                       C382 480 386 470 386 452 C388 424 392 392 398 352 Z" fill="url(#skinGrad)"/>
+              <!-- right leg -->
+              <path d="M402 352 C404 392 410 424 418 450 C422 466 432 470 440 462
+                       C444 452 442 440 436 426 C426 400 422 376 422 350 Z" fill="url(#skinGrad)"/>
+              <!-- thigh-high socks (over the lower legs) -->
+              <path d="M357 416 C355 440 359 470 372 482 C383 480 386 470 386 452
+                       C386 440 387 428 388 416 Z" fill="url(#sockGrad)"/>
+              <path d="M413 412 C414 430 416 444 422 456 C430 468 440 462 440 452
+                       C440 440 436 428 430 414 Z" fill="url(#sockGrad)"/>
+              <!-- sock cyan stripe -->
+              <path d="M357 418 l31 -3" style="stroke:var(--tg-cyan)" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M414 416 l18 4"  style="stroke:var(--tg-cyan)" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <!-- chunky sneakers -->
+              <g>
+                <path d="M336 478 C336 470 344 466 356 466 L382 466 C392 466 394 474 392 482
+                         C390 492 380 496 366 496 L344 496 C336 496 334 488 336 478 Z" style="fill:var(--tg-cream)"/>
+                <rect x="334" y="490" width="62" height="8" rx="4" style="fill:var(--tg-pink)"/>
+                <path d="M360 470 l8 10 M368 468 l8 10" style="stroke:var(--tg-cyan)" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <path d="M418 452 C420 444 428 442 438 446 L460 456 C468 460 468 468 464 474
+                         C458 482 448 482 436 476 L420 468 C414 464 416 458 418 452 Z" style="fill:var(--tg-cream)"/>
+                <rect x="424" y="468" width="48" height="8" rx="4" transform="rotate(24 448 472)" style="fill:var(--tg-pink)"/>
+                <path d="M436 452 l6 11 M444 452 l6 11" style="stroke:var(--tg-cyan)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              </g>
+            </g>
+
+            <!-- ===== SKIRT (pleated, flared) ===== -->
+            <path d="M356 300 C354 320 350 338 344 356 C356 352 362 360 372 356
+                     C380 362 388 354 396 358 C404 352 412 360 422 356
+                     C432 360 438 352 448 356 C442 336 438 318 436 300 Z"
+                  fill="url(#skirtGrad)"/>
+            <g style="stroke:var(--tg-purple)" stroke-width="2" opacity=".5" fill="none">
+              <path d="M372 306 l-6 48"/><path d="M396 308 l0 48"/><path d="M420 306 l6 48"/>
+            </g>
+
+            <!-- ===== TORSO: crop top + open bomber jacket ===== -->
+            <!-- crop top (cream) -->
+            <path d="M360 214 C360 240 362 270 366 296 L428 296 C432 270 434 240 434 214
+                     C418 206 376 206 360 214 Z" style="fill:var(--tg-cream)"/>
+            <!-- midriff peek -->
+            <path d="M368 292 h58 v10 a30 8 0 0 1 -58 0 Z" fill="url(#skinGrad)"/>
+            <!-- jacket (open) -->
+            <path d="M352 210 C346 212 344 230 346 252 C348 276 352 290 360 300
+                     C362 280 360 250 364 224 C358 222 354 216 352 210 Z" fill="url(#hoodieGrad)"/>
+            <path d="M436 210 C442 214 444 232 442 256 C440 280 436 292 430 300
+                     C426 280 430 250 426 224 C432 220 434 216 436 210 Z" fill="url(#hoodieGrad)"/>
+            <!-- shoulders / collar -->
+            <path d="M356 208 C372 196 416 196 434 208 C430 220 420 226 412 226
+                     C400 218 388 218 378 226 C368 226 360 220 356 208 Z" fill="url(#hoodieGrad)"/>
+            <!-- jacket trim (cyan) -->
+            <path d="M364 224 l-3 74 M426 224 l3 74" style="stroke:var(--tg-cyan)" stroke-width="3" fill="none" stroke-linecap="round" opacity=".85"/>
+            <!-- neck -->
+            <path d="M384 186 h24 v18 c0 8 -24 8 -24 0 Z" fill="url(#skinGrad)"/>
+
+            <!-- ===== HEADPHONES around neck ===== -->
+            <path d="M372 196 C372 214 378 224 392 226 C406 224 412 214 412 196"
+                  fill="none" style="stroke:var(--tg-ink)" stroke-width="7" stroke-linecap="round" opacity=".85"/>
+            <circle cx="370" cy="198" r="9" style="fill:var(--tg-pink);stroke:#fff" stroke-width="2"/>
+            <circle cx="414" cy="198" r="9" style="fill:var(--tg-pink);stroke:#fff" stroke-width="2"/>
+
+            <!-- ===== LAPTOP-HOLDING ARM (left / viewer-left), in front of torso ===== -->
+            <path d="M356 216 C342 224 332 250 330 282 C329 300 334 314 346 320
+                     C356 318 360 308 360 296 C360 272 360 244 366 224 Z" fill="url(#hoodieGrad)"/>
+            <!-- forearm + hand cupping the laptop -->
+            <path d="M332 300 C322 312 320 330 330 342 C342 348 356 346 366 338
+                     C360 326 352 314 346 304 C342 300 336 298 332 300 Z" fill="url(#skinGrad)"/>
+
+            <!-- ===== THE LAPTOP (in hand, glowing) ===== -->
+            <g transform="rotate(-12 326 324)">
+              <!-- glow halo -->
+              <ellipse id="screenGlow" cx="318" cy="300" rx="62" ry="44" style="fill:var(--tg-cyan)" opacity=".7" filter="url(#softer)"/>
+              <!-- base / keyboard -->
+              <path d="M286 338 L372 338 L388 360 L296 360 Z" fill="url(#lapBody)"/>
+              <rect x="300" y="346" width="74" height="7" rx="3" fill="#B7ABDB"/>
+              <!-- lid -->
+              <rect x="290" y="276" width="78" height="60" rx="7" fill="#2A1247"/>
+              <rect x="296" y="282" width="66" height="48" rx="4" fill="url(#screenGrad)"/>
+              <!-- on-screen: </> and a heart -->
+              <text x="312" y="312" font-family="var(--tg-font-display)" font-size="20" font-weight="700" fill="#fff" opacity=".95">&lt;/&gt;</text>
+              <path d="M340 296 c-3 -5 -11 -3 -11 3 c0 5 7 9 11 12 c4 -3 11 -7 11 -12 c0 -6 -8 -8 -11 -3 Z" fill="#fff" opacity=".9"/>
+            </g>
+
+            <!-- ===== HEAD ===== -->
+            <ellipse cx="392" cy="150" rx="39" ry="43" fill="url(#skinGrad)"/>
+            <!-- ear + earring -->
+            <circle cx="356" cy="156" r="7" fill="url(#skinGrad)"/>
+            <circle cx="356" cy="166" r="2.4" style="fill:var(--tg-gold)"/>
+            <!-- blush + smile -->
+            <ellipse cx="372" cy="166" rx="6" ry="4" style="fill:var(--tg-pink)" opacity=".4"/>
+            <path d="M378 172 q12 9 24 0" fill="none" style="stroke:var(--tg-ink)" stroke-width="3" stroke-linecap="round"/>
+            <!-- cyber visor / smart glasses with glow -->
+            <path d="M360 150 q32 -12 64 0 l-2 12 q-30 -8 -60 0 Z" style="fill:var(--tg-ink)"/>
+            <path d="M364 151 q28 -9 56 0" fill="none" style="stroke:var(--tg-cyan)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="416" cy="150" r="3.2" style="fill:var(--tg-mint)"/>
+
+            <!-- ===== FRONT HAIR / fringe ===== -->
+            <path d="M356 150 C350 120 366 96 396 94 C424 92 442 112 440 140
+                     C436 128 430 120 422 118 C424 128 422 136 416 142
+                     C410 128 398 122 388 124 C396 132 396 142 392 148
+                     C382 132 366 132 356 150 Z" fill="url(#hairGrad)"/>
+            <!-- headphone band over the hair -->
+            <path d="M360 132 q32 -34 66 -2" fill="none" style="stroke:var(--tg-ink)" stroke-width="6" stroke-linecap="round" opacity=".6"/>
+
+            <!-- ===== RAISED ARM (right / viewer-right) + FIST ===== -->
+            <path d="M432 212 C456 196 486 172 506 146 C516 134 514 122 504 116
+                     C494 124 470 146 448 166 C436 178 428 196 426 210 Z" fill="url(#hoodieGrad)"/>
+            <!-- forearm -->
+            <path d="M500 150 C516 132 534 110 544 92 C550 80 546 70 536 70
+                     C526 74 512 96 498 116 C490 128 492 140 500 150 Z" fill="url(#skinGrad)"/>
+            <!-- fist + power ring -->
+            <g id="fist">
+              <circle id="ring" cx="540" cy="74" r="26" fill="none" style="stroke:var(--tg-cyan)" stroke-width="4"/>
+              <circle cx="540" cy="74" r="15" fill="url(#skinGrad)"/>
+              <path d="M530 70 q10 -8 20 0" style="stroke:var(--skin-sh)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
+              <!-- spark off the knuckles -->
+              <path d="M556 58 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 Z" style="fill:var(--tg-gold)"/>
+            </g>
+
+          </g><!-- /figure -->
+          </g><!-- /hero -->
+
+          <!-- ===== floating particles (sparkles, hearts, code) ===== -->
+          <g>
+            <path class="spark"  d="M150 150 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5 Z" style="animation-delay:.2s;fill:var(--tg-gold)"/>
+            <path class="spark"  d="M120 360 l4 9 9 4 -9 4 -4 9 -4 -9 -9 -4 9 -4 Z"        style="animation-delay:1.4s;fill:var(--tg-cyan)"/>
+            <path class="spark"  d="M650 420 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z" style="animation-delay:.8s;fill:var(--tg-pink-lt)"/>
+            <path class="floaty" d="M210 470 c-4 -7 -15 -4 -15 4 c0 7 9 12 15 16 c6 -4 15 -9 15 -16 c0 -8 -11 -11 -15 -4 Z" style="animation-delay:.5s;fill:var(--tg-pink)"/>
+            <path class="floaty" d="M700 250 c-3 -5 -11 -3 -11 3 c0 5 7 9 11 12 c4 -3 11 -7 11 -12 c0 -6 -8 -8 -11 -3 Z" style="animation-delay:2.2s;fill:var(--tg-lilac)"/>
+            <text class="floaty" x="120" y="240" font-family="var(--tg-font-display)" font-size="22" font-weight="700" opacity=".8" style="animation-delay:1.1s;fill:var(--tg-cyan)">&lt;/&gt;</text>
+            <text class="floaty" x="690" y="540" font-family="var(--tg-font-display)" font-size="18" font-weight="700" opacity=".8" style="animation-delay:3s;fill:var(--tg-pink-lt)">{ }</text>
+            <circle class="spark" cx="600" cy="120" r="4"   fill="#fff" style="animation-delay:1.9s"/>
+            <circle class="spark" cx="80"  cy="520" r="3.5" fill="#fff" style="animation-delay:2.6s"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== footer note ===== -->
+    <footer class="foot">
+      <span>Animation concept — flying tech girl, laptop in hand. Inspired by the superhero brief, rebuilt in TechElla colours.</span>
+      <span>Palette &amp; type are placeholders · <a href="https://techellafest.com/">techellafest.com</a></span>
+    </footer>
+
+  </div>
+</body>
+</html>
