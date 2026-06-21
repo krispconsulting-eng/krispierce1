@@ -76,7 +76,7 @@ Object.assign(window, { Icon, Button, Pill, IconChip, StatCard, Avatar, AvatarSt
    SETUP: create a free key at https://web3forms.com using hello@krispierce.com.au,
    then paste it as WEB3FORMS_ACCESS_KEY. Until then, forms show an error on submit.
    ========================================================================== */
-const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY';
+const WEB3FORMS_ACCESS_KEY = '8de27910-e9a3-44fe-b0c2-93e42708b8e6';
 
 async function sendLead(fields) {
   if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.startsWith('REPLACE_WITH')) {
@@ -93,12 +93,19 @@ async function sendLead(fields) {
   return data;
 }
 
-/* Shared "what do you need" options for the contact forms. */
+/* Shared "what do you need" options for the contact forms.
+   Spans the full breadth of the work (engagement, research, advocacy,
+   not-for-profit mentoring, caregiving) so enquiries route to the right area. */
 const NEED_OPTIONS = [
   { value: '', label: 'What can I help with?' },
+  { value: 'Consumer and community engagement', label: 'Consumer and community engagement' },
   { value: 'Co-design or participatory research', label: 'Co-design or participatory research' },
   { value: 'Strategic insights & advice', label: 'Strategic insights & advice' },
+  { value: 'Health research and evidence', label: 'Health research and evidence' },
   { value: 'Industry or sponsor support', label: 'Industry or sponsor support' },
+  { value: 'Advocacy or advocate training', label: 'Advocacy or advocate training' },
+  { value: 'Not-for-profit mentoring', label: 'Not-for-profit mentoring' },
+  { value: 'Caregiver wellbeing', label: 'Caregiver wellbeing' },
   { value: 'Speaking or facilitation', label: 'Speaking or facilitation' },
   { value: 'Something else', label: 'Something else' },
 ];
