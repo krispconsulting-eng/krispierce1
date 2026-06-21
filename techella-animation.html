@@ -142,14 +142,9 @@ body::before{
   0%,100%{ transform:rotate(-1.6deg); }
   50%    { transform:rotate(2.6deg); }
 }
-@keyframes fistPump{
-  0%,100%{ transform:translate(0,0) rotate(0deg); }
-  50%    { transform:translate(2px,-6px) rotate(3deg); }
-}
-@keyframes ringPulse{
-  0%   { transform:scale(.35); opacity:.85; }
-  70%  { opacity:.18; }
-  100% { transform:scale(1.7); opacity:0; }
+@keyframes pointAssert{
+  0%,100%{ transform:rotate(0deg); }
+  50%    { transform:rotate(-2.6deg); }
 }
 @keyframes screenPulse{
   0%,100%{ opacity:.55; }
@@ -180,8 +175,7 @@ body::before{
 #hero      { animation:float 6.4s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
 #cape      { animation:capeWave 4.6s ease-in-out infinite; transform-box:fill-box; transform-origin:72% 6%; }
 #hairBack  { animation:hairWave 5.2s ease-in-out infinite; transform-box:fill-box; transform-origin:86% 8%; }
-#fist      { animation:fistPump 3.2s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 80%; }
-#ring      { animation:ringPulse 2.6s ease-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
+#pointArm  { animation:pointAssert 3.6s ease-in-out infinite; transform-box:fill-box; transform-origin:1% 91%; }
 #screenGlow{ animation:screenPulse 2.2s ease-in-out infinite; }
 #bgGlow    { animation:glowPulse 5s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
 .streak    { animation:streakMove 3.4s linear infinite; }
@@ -189,7 +183,7 @@ body::before{
 .floaty    { animation:drift 7s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
 
 @media (prefers-reduced-motion:reduce){
-  #hero,#cape,#hairBack,#fist,#ring,#screenGlow,#bgGlow,.streak,.spark,.floaty{
+  #hero,#cape,#hairBack,#pointArm,#screenGlow,#bgGlow,.streak,.spark,.floaty{
     animation:none !important;
   }
   .streak{ opacity:.55; }
@@ -308,7 +302,7 @@ body::before{
                designed upright around (392,300), tilted into the climb.
                ============================================================ -->
           <g id="hero">
-          <g id="figure" transform="rotate(7 392 300)">
+          <g id="figure" transform="rotate(15 392 300)">
 
             <!-- ===== CAPE (behind everything) ===== -->
             <g id="cape">
@@ -448,19 +442,24 @@ body::before{
             <!-- headphone band over the hair -->
             <path d="M360 132 q32 -34 66 -2" fill="none" style="stroke:var(--tg-ink)" stroke-width="6" stroke-linecap="round" opacity=".6"/>
 
-            <!-- ===== RAISED ARM (right / viewer-right) + FIST ===== -->
-            <path d="M432 212 C456 196 486 172 506 146 C516 134 514 122 504 116
-                     C494 124 470 146 448 166 C436 178 428 196 426 210 Z" fill="url(#hoodieGrad)"/>
-            <!-- forearm -->
-            <path d="M500 150 C516 132 534 110 544 92 C550 80 546 70 536 70
-                     C526 74 512 96 498 116 C490 128 492 140 500 150 Z" fill="url(#skinGrad)"/>
-            <!-- fist + power ring -->
-            <g id="fist">
-              <circle id="ring" cx="540" cy="74" r="26" fill="none" style="stroke:var(--tg-cyan)" stroke-width="4"/>
-              <circle cx="540" cy="74" r="15" fill="url(#skinGrad)"/>
-              <path d="M530 70 q10 -8 20 0" style="stroke:var(--skin-sh)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".7"/>
-              <!-- spark off the knuckles -->
-              <path d="M556 58 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 Z" style="fill:var(--tg-gold)"/>
+            <!-- ===== EXTENDED POINTING ARM ("boss lady" point, leading the take-off) ===== -->
+            <g id="pointArm">
+              <!-- upper arm (sleeve) -->
+              <path d="M430 216 C456 198 490 172 516 152 C522 158 522 168 518 174
+                       C492 194 458 216 438 228 C432 226 428 220 430 216 Z" fill="url(#hoodieGrad)"/>
+              <!-- forearm (skin) -->
+              <path d="M512 156 C534 140 556 124 574 112 C580 118 580 126 576 132
+                       C558 144 536 160 520 174 C514 170 510 162 512 156 Z" fill="url(#skinGrad)"/>
+              <!-- pointing hand: folded fist + extended index finger + thumb -->
+              <path d="M564 120 C560 110 566 100 578 100 C590 100 596 110 592 120
+                       C589 128 578 132 570 130 C566 128 564 124 564 120 Z" fill="url(#skinGrad)"/>
+              <path d="M583 106 C591 98 601 90 609 84 C613 88 614 93 611 97
+                       C604 103 595 112 589 118 C585 115 582 110 583 106 Z" fill="url(#skinGrad)"/>
+              <path d="M566 126 C562 130 562 135 567 136 C571 135 573 131 572 127 C570 125 568 125 566 126 Z" fill="url(#skinGrad)"/>
+              <!-- knuckle line for a little definition -->
+              <path d="M569 116 q9 -5 18 -1" style="stroke:var(--skin-sh)" stroke-width="2" fill="none" stroke-linecap="round" opacity=".55"/>
+              <!-- spark off the fingertip (leading the way) -->
+              <path class="spark" d="M616 76 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z" style="fill:var(--tg-gold)"/>
             </g>
 
           </g><!-- /figure -->
