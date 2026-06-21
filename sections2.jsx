@@ -123,7 +123,7 @@ function Contact() {
             <span className="contact__check"><Icon name="check" size={22} /></span>
             <h3>Thank you{form.name ? ', ' + form.name.split(' ')[0] : ''}. Message received.</h3>
             <p>I've got your details and I'll personally be in touch. Prefer email in the meantime?
-              <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a></p>
+              <a href="mailto:info@krispierce.com.au"> info@krispierce.com.au</a></p>
           </div>
         ) : (
           <form className="contact__form" onSubmit={submit}>
@@ -141,7 +141,7 @@ function Contact() {
               value={form.company} onChange={set('company')} />
             {status === 'error' && (
               <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
-                <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a>.</p>
+                <a href="mailto:info@krispierce.com.au"> info@krispierce.com.au</a>.</p>
             )}
             <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Send message'}</Button>
           </form>
@@ -155,7 +155,7 @@ function Footer({ onNav }) {
   return (
     <footer className="foot" id="foot">
       <span className="foot__label">Prefer email?</span>
-      <a className="foot__email" href="mailto:hello@krispierce.com.au">hello@krispierce.com.au</a>
+      <a className="foot__email" href="mailto:info@krispierce.com.au">info@krispierce.com.au</a>
       <div className="foot__bar">
         <div className="foot__links">
           <a href="/">Home</a>
@@ -169,7 +169,7 @@ function Footer({ onNav }) {
         </div>
         <div className="foot__social">
           <a href="https://www.linkedin.com/in/krispierceaust" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>
-          <a href="mailto:hello@krispierce.com.au" aria-label="Email"><Icon name="mail" size={18} /></a>
+          <a href="mailto:info@krispierce.com.au" aria-label="Email"><Icon name="mail" size={18} /></a>
         </div>
       </div>
       <div className="foot__legal">
