@@ -76,7 +76,7 @@ Object.assign(window, { Icon, Button, Pill, IconChip, StatCard, Avatar, AvatarSt
    SETUP: create a free key at https://web3forms.com using hello@krispierce.com.au,
    then paste it as WEB3FORMS_ACCESS_KEY. Until then, forms show an error on submit.
    ========================================================================== */
-const WEB3FORMS_ACCESS_KEY = 'REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY';
+const WEB3FORMS_ACCESS_KEY = '8de27910-e9a3-44fe-b0c2-93e42708b8e6';
 
 async function sendLead(fields) {
   if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.startsWith('REPLACE_WITH')) {
