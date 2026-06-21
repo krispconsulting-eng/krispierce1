@@ -93,12 +93,19 @@ async function sendLead(fields) {
   return data;
 }
 
-/* Shared "what do you need" options for the contact forms. */
+/* Shared "what do you need" options for the contact forms.
+   Spans the full breadth of the work (engagement, research, advocacy,
+   not-for-profit mentoring, caregiving) so enquiries route to the right area. */
 const NEED_OPTIONS = [
   { value: '', label: 'What can I help with?' },
+  { value: 'Consumer and community engagement', label: 'Consumer and community engagement' },
   { value: 'Co-design or participatory research', label: 'Co-design or participatory research' },
   { value: 'Strategic insights & advice', label: 'Strategic insights & advice' },
+  { value: 'Health research and evidence', label: 'Health research and evidence' },
   { value: 'Industry or sponsor support', label: 'Industry or sponsor support' },
+  { value: 'Advocacy or advocate training', label: 'Advocacy or advocate training' },
+  { value: 'Not-for-profit mentoring', label: 'Not-for-profit mentoring' },
+  { value: 'Caregiver wellbeing', label: 'Caregiver wellbeing' },
   { value: 'Speaking or facilitation', label: 'Speaking or facilitation' },
   { value: 'Something else', label: 'Something else' },
 ];
