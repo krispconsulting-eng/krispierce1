@@ -7,7 +7,7 @@
 .hero__intro-label { font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.6); }
 
 /* ---------------- Work areas ---------------- */
-.areas { background:var(--color-surface-alt); }
+.areas { background:var(--color-surface-alt); padding-bottom: var(--section-y); }
 .areas__head { text-align:center; max-width:680px; margin:0 auto;
   padding: var(--section-y) var(--container-pad) 0; }
 .areas__title { font-family:var(--font-display); font-weight:600; font-size:var(--text-display);
@@ -15,10 +15,15 @@
 .areas__title em { font-style:italic; color:var(--clay-600); }
 .areas__sub { color:var(--text-muted); margin-top:14px; font-size:17px; line-height:1.6; }
 
-.areas__grid { max-width:var(--container-max); margin:0 auto;
-  padding: clamp(36px,5vw,56px) var(--container-pad) var(--section-y);
-  display:grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px,2vw,26px); }
-@media (max-width:900px) { .areas__grid { grid-template-columns:1fr; } }
+/* Tiered groups: established work, then programs in development. */
+.areas__group { max-width:var(--container-max); margin:0 auto;
+  padding: clamp(34px,4.5vw,52px) var(--container-pad) 0; }
+.areas__group-title { font-family:var(--font-text); font-weight:600; font-size:13px;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--clay-600); margin:0 0 20px; }
+
+.areas__grid { display:grid; grid-template-columns: repeat(2, 1fr); gap: clamp(18px,2vw,26px); }
+.areas__grid--three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width:900px) { .areas__grid, .areas__grid--three { grid-template-columns:1fr; } }
 
 .area-card { position:relative; display:flex; flex-direction:column;
   background:var(--paper); border:1px solid var(--border-subtle); border-radius:var(--radius-lg);

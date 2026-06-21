@@ -226,7 +226,7 @@
 
   class ImageSlot extends HTMLElement {
     static get observedAttributes() {
-      return ['shape', 'radius', 'mask', 'fit', 'position', 'placeholder', 'src', 'id'];
+      return ['shape', 'radius', 'mask', 'fit', 'position', 'placeholder', 'src', 'id', 'alt'];
     }
 
     constructor() {
@@ -614,6 +614,8 @@
           y: stored && Number.isFinite(stored.y) ? stored.y : 0,
         };
       }
+      // Descriptive alt text for accessibility and SEO (author-controlled).
+      this._img.alt = this.getAttribute('alt') || '';
       this._cap.textContent = this.getAttribute('placeholder') || 'Drop an image';
       // Toggle via style.display — the [hidden] attribute alone loses to
       // the display:flex / display:block rules in the stylesheet above.
