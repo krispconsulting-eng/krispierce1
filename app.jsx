@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="site">
       <Hero onNav={onNav} />
+      <SectionNav active="engagement" />
       <main>
         <CredStrip />
         <About onNav={onNav} />

@@ -4,6 +4,21 @@
 
 .site { position: relative; overflow-x: clip; }
 
+/* Engagement section sub-navigation (keeps the section's subpages reachable
+   now that the top nav is brand-level). */
+.subnav { background: var(--paper); border-bottom: 1px solid var(--border-subtle); }
+.subnav__inner { max-width: var(--container-max); margin: 0 auto; padding: 10px var(--container-pad);
+  display: flex; align-items: center; gap: 8px 18px; flex-wrap: wrap; }
+.subnav__label { font-family: var(--font-text); font-size: 12px; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--text-muted); margin-right: 4px; }
+.subnav__links { display: flex; gap: 6px; flex-wrap: wrap; }
+.subnav__links a { font-family: var(--font-display); font-weight: 600; font-size: 15px;
+  color: var(--ink-900); text-decoration: none; padding: 7px 14px; border-radius: 999px;
+  border: 1px solid transparent; transition: background .2s var(--ease-out), color .2s var(--ease-out); }
+.subnav__links a:hover, .subnav__links a:focus-visible { background: var(--accent-wash); color: var(--clay-700); }
+.subnav__links a.is-active { background: var(--accent-wash); color: var(--clay-700); }
+@media (max-width: 560px) { .subnav__label { display: none; } }
+
 .overline { display:inline-flex; align-items:center; gap:9px; font-family:var(--font-text);
   font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--text-muted); }
 .overline--inv { color:var(--text-on-inverse-muted); }
