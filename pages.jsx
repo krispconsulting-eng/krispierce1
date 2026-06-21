@@ -166,6 +166,7 @@ function ExpertisePage() {
   return (
     <div className="site">
       <Nav theme="solid" active="engagement" />
+      <SectionNav active="expertise" />
       <main>
         <section className="page-hero">
           <Pill variant="wash" className="page-hero__overline">Expertise</Pill>

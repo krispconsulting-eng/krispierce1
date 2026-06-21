@@ -50,6 +50,32 @@ function Nav({ onNav, theme='hero', active }) {
   );
 }
 
+/* Engagement section sub-navigation. The top nav is brand-level, so the
+   engagement work area surfaces its own pages here: Overview, Expertise,
+   Insights. Rendered on every page within the section so the subpages stay
+   reachable. */
+const ENGAGEMENT_SUBNAV = [
+  ['Overview', 'engagement', '/engagement'],
+  ['Expertise', 'expertise', '/engagement/expertise'],
+  ['Insights', 'insights', '/engagement/insights'],
+];
+
+function SectionNav({ active, label = 'Consumer & community engagement' }) {
+  return (
+    <nav className="subnav" aria-label="Engagement section">
+      <div className="subnav__inner">
+        <span className="subnav__label">{label}</span>
+        <div className="subnav__links">
+          {ENGAGEMENT_SUBNAV.map(([text, id, href]) => (
+            <a key={id} href={href} aria-current={active === id ? 'page' : undefined}
+              className={active === id ? 'is-active' : ''}>{text}</a>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+}
+
 function Hero({ onNav }) {
   return (
     <section className="hero" id="home">
@@ -157,4 +183,4 @@ function Relate() {
   );
 }
 
-Object.assign(window, { Nav, Hero, CredStrip, About, Relate });
+Object.assign(window, { Nav, SectionNav, Hero, CredStrip, About, Relate });
