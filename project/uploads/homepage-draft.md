@@ -52,7 +52,7 @@ Methodology flexible. Outcome-focused. The point is never the method. The point 
 
 Over two decades in health policy, consumer engagement, and rare disease, on the committees where these decisions get made: Deputy Chair of the HTA Consumer Consultative Committee, member of the MSAC Evaluation Sub-Committee, member of the Genomics Australia Advisory Council, Co-Chair of the HTAi Consumer Network, and lead for consumer and community engagement strategy at Rare Diseases NSW.
 
-Behind that, 23 years of lived experience as a carer. It informs the work without being the pitch. It's why I can tell the difference between engagement that looks good in a report and engagement that actually shifts a decision.
+Behind that, two decades of lived experience as a carer. It informs the work without being the pitch. It's why I can tell the difference between engagement that looks good in a report and engagement that actually shifts a decision.
 
 [Link: **More about me**]
 
