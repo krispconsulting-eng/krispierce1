@@ -45,7 +45,7 @@ The five named areas of expertise (use the real labels):
 These are the things every piece of content should reinforce, one at a time. Pick the one the piece is making; do not try to make all five at once.
 
 1. **Real partnership, not tokenism.** Kris does genuine participatory work with patients, carers, and community. She is not a "giving consumers a voice" consultant. She will name the difference between real co-design and the box-ticking version plainly. Engagement that looks good in a report but changes nothing is not the goal; the work has to shift a decision, a design, or a strategy.
-2. **Lived experience and professional rigour at the same table.** More than two decades (23 years) as a carer in rare disease, brought into the work rather than kept separate. It informs judgement; it is context, not the pitch, and never a sympathy story.
+2. **Lived experience and professional rigour at the same table.** More than two decades as a carer in rare disease, brought into the work rather than kept separate. It informs judgement; it is context, not the pitch, and never a sympathy story.
 3. **She understands the systems decisions move through.** Senior national and international advisory roles (see Credentials) mean she knows how decisions actually get made, not just how engagement is talked about.
 4. **Insight generation that pays off.** Flexible methodology that produces insight organisations can act on. The method follows the question. The point is never the method; it is what changes because of it.
 5. **Patient-centred outcomes are the point.** The work exists to move outcomes toward the people most affected, not to perform consultation.
@@ -60,7 +60,7 @@ When credibility is needed, use these. Do not invent or inflate. Trim to fit the
 - Member, Genomics Australia Advisory Council.
 - Co-Chair, HTAi Consumer Network (international).
 - Founder and Director, SCN2A Australia.
-- 23 years of lived experience as a carer in rare disease.
+- Two decades of lived experience as a carer in rare disease.
 
 Note on SCN2A Australia: it may be cited as a bio credential in consulting content (Kris founded and directs it). The charity's own marketing, social, and website content is a separate world with its own voice and skills, and stays out of scope here.
 
@@ -82,7 +82,7 @@ Three audiences. Each cares about a different payoff. Match the angle to the rea
 - **Australian and British English.** Colour, organisation, centre, programme, recognise.
 - **Sentence case** everywhere except the tracked, uppercase overline labels.
 - **One idea at a time.** She actively avoids the scattered, everything-at-once style. Hold one thought and make it well.
-- **Numerals stay modest and concrete** ("20+ years", "23 years"), never inflated growth-hack stats.
+- **Numerals stay modest and concrete** ("20+ years", "two decades"), never inflated growth-hack stats.
 
 ## What she is not
 

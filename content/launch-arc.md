@@ -179,7 +179,7 @@ open to the organisations ready to work this way.
 >
 > The day-to-day is consumer and community engagement strategy at Rare Diseases NSW, based at UNSW Sydney. Alongside it, the committees where patient voice enters health decisions in Australia: Deputy Chair of the HTA Consumer Consultative Committee, member of the MSAC Evaluation Sub-Committee, member of the Genomics Australia Advisory Council, and internationally, Co-Chair of the HTAi Consumer Network.
 >
-> Behind all of it, 23 years of lived experience as a carer in rare disease. It informs the work without being the pitch. It is why the difference between engagement that looks good in a report and engagement that shifts a decision is easy to spot.
+> Behind all of it, two decades of lived experience as a carer in rare disease. It informs the work without being the pitch. It is why the difference between engagement that looks good in a report and engagement that shifts a decision is easy to spot.
 >
 > Lived experience and professional rigour, at the same table.
 >
@@ -189,7 +189,7 @@ open to the organisations ready to work this way.
 
 > Two weeks of laying out why this practice exists. The experience behind it:
 >
-> Consumer engagement strategy at Rare Diseases NSW. Deputy Chair of the HTA Consumer Consultative Committee, plus the MSAC and Genomics Australia advisory bodies. 23 years as a carer.
+> Consumer engagement strategy at Rare Diseases NSW. Deputy Chair of the HTA Consumer Consultative Committee, plus the MSAC and Genomics Australia advisory bodies. Two decades as a carer.
 >
 > Lived experience and professional rigour, same table. The practice is open.
 
@@ -201,7 +201,7 @@ open to the organisations ready to work this way.
 >
 > The day-to-day is consumer and community engagement strategy at Rare Diseases NSW, based at UNSW Sydney. Alongside it, the committees where patient voice enters health decisions: Deputy Chair of the HTA Consumer Consultative Committee, the MSAC Evaluation Sub-Committee, and the Genomics Australia Advisory Council.
 >
-> Behind all of it, 23 years of lived experience as a carer. It informs the work without being the pitch.
+> Behind all of it, two decades of lived experience as a carer. It informs the work without being the pitch.
 >
 > Lived experience and professional rigour, at the same table. If your organisation wants to build real partnership into the decisions that matter, the door is open. Details in the bio.
 
