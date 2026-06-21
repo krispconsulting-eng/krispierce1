@@ -9,7 +9,7 @@ Built with the `kris-social-positioning` skill (launch mode); voice governed by
 
 ---
 
-## Beat 1 — The why (the founding idea)
+## Beat 1 - The why (the founding idea)
 
 **Hero message:** Most health decisions are still made about patients and then
 explained to them. Closing that gap is the reason the practice exists.
@@ -77,7 +77,7 @@ explained to them. Closing that gap is the reason the practice exists.
 
 ---
 
-## Beat 2 — The what (how she works)
+## Beat 2 - The what (how she works)
 
 **Hero message:** Consultation asks people what they think after the design is locked.
 Partnership builds with them while it can still change. That difference is the whole method.
@@ -122,7 +122,7 @@ Partnership builds with them while it can still change. That difference is the w
 
 ---
 
-## Beat 3 — The who (who she helps and why it pays off)
+## Beat 3 - The who (who she helps and why it pays off)
 
 **Hero message:** Earlier, genuine partnership pays off differently for each group:
 stronger evidence for health organisations, lower risk and more trust for industry,
@@ -168,7 +168,7 @@ and a stronger mission for not-for-profits.
 
 ---
 
-## Beat 4 — The proof and the open door (closes the arc)
+## Beat 4 - The proof and the open door (closes the arc)
 
 **Hero message:** Two decades across both sides of the table is the credibility behind
 the method, and the practice is open to the organisations ready to work this way.
