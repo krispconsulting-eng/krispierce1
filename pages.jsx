@@ -244,7 +244,7 @@ function ContactPage() {
 
             <div className="contact-page__email">
               <span className="contact-page__email-label">Prefer email?</span>
-              <a href="mailto:hello@krispierce.com.au">hello@krispierce.com.au</a>
+              <a href="mailto:info@krispierce.com.au">info@krispierce.com.au</a>
             </div>
           </div>
 
@@ -254,7 +254,7 @@ function ContactPage() {
                 <span className="contact-thanks__tick"><Icon name="check" size={22} /></span>
                 <h3>Thank you{form.name ? ', ' + form.name.split(' ')[0] : ''}. Message received.</h3>
                 <p>Every message gets a personal read. I'll be in touch personally to talk it through — no obligation.
-                  Prefer email? <a href="mailto:hello@krispierce.com.au">hello@krispierce.com.au</a></p>
+                  Prefer email? <a href="mailto:info@krispierce.com.au">info@krispierce.com.au</a></p>
               </div>
             ) : (
               <React.Fragment>
@@ -280,7 +280,7 @@ function ContactPage() {
                     value={form.company} onChange={set('company')} />
                   {status === 'error' && (
                     <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
-                      <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a>.</p>
+                      <a href="mailto:info@krispierce.com.au"> info@krispierce.com.au</a>.</p>
                   )}
                   <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Send message'}</Button>
                 </form>

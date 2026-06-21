@@ -95,7 +95,7 @@ function ResourceGate({ item, onClose }) {
               </label>
               {status === 'error' && (
                 <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
-                  <a href="mailto:hello@krispierce.com.au"> hello@krispierce.com.au</a>.</p>
+                  <a href="mailto:info@krispierce.com.au"> info@krispierce.com.au</a>.</p>
               )}
               <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Get the ' + item.kind.toLowerCase()}</Button>
             </form>
