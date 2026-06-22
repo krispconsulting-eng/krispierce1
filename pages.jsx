@@ -11,11 +11,10 @@ function AboutPage() {
       <main>
         <section className="page-hero">
           <Pill variant="wash" dot className="page-hero__overline">About Kris</Pill>
-          <h1 className="page-hero__title">Putting the person at the centre, and making the involvement <em>count</em></h1>
-          <p className="page-hero__lead">Kris Pierce is a strategic advisor in consumer engagement, rare disease, and
-            health policy, working with health organisations, industry partners, and not-for-profits to generate
-            insights and reach patient-centred outcomes, and supporting the advocates and emerging leaders growing
-            into those rooms.</p>
+          <h1 className="page-hero__title">Using what I've learnt to level up engagement, build capacity, and back the next gen of <em>changemakers</em></h1>
+          <p className="page-hero__lead">I'm Kris Pierce. My consulting practice draws on two decades as a carer,
+            advocate, consultant, and researcher to help organisations strengthen engagement, build evidence,
+            train advocates, mentor not-for-profits, and support the carers who hold the system together.</p>
           <div className="page-hero__cta">
             <Button variant="primary" arrow href="/contact">Let's talk</Button>
           </div>
@@ -29,9 +28,9 @@ function AboutPage() {
           </div>
           <div className="about-portrait__text">
             <div className="page-block__label">The work</div>
-            <p className="page-prose">Most engagements start in the same place: an organisation knows it needs to
-              involve patients, carers, or communities, and wants that involvement to change the outcome rather than
-              tick a box. Working out how to make that happen, then doing it alongside them, is the job.</p>
+            <p className="page-prose">My consulting practice covers engagement, research, advocacy training, not-for-profit
+              mentoring, and caregiver support. The thread through all of it: using what I've learnt through life and
+              work to help people and organisations do this better.</p>
           </div>
         </section>
 
@@ -88,9 +87,9 @@ function AboutPage() {
         </section>
 
         <Motif id="about-motif" src="assets/hero-path.jpg" position="50% 42%"
-          overline="Let's work together"
-          title={<>Let's work <em>together</em></>}
-          sub="If you're trying to involve patients, carers, or communities in a way that genuinely changes what you do, get in touch. Tell us your organisation, the challenge, and roughly when you need to move."
+          overline="Work with me"
+          title={<>Bring me into <em>the work</em></>}
+          sub="If you're building engagement, growing capability, or investing in the next generation of advocates and leaders, I can help you get there. Tell me what you're working on."
           ctaLabel="Get in touch" ctaHref="/contact" />
       </main>
       <Footer />
@@ -185,8 +184,8 @@ function ExpertisePage() {
 
         <Motif id="exp-motif" src="assets/driftwood.jpg" position="50% 56%"
           overline="How we'd start"
-          title={<>A conversation about the <em>challenge</em>, not the method</>}
-          sub="Most engagements begin with a conversation about the challenge, not the method. You'll get a straight answer on whether this is the right fit and what approach suits."
+          title={<>A conversation about what you <em>need</em></>}
+          sub="Most consulting starts with a conversation about the challenge, not the method. You'll get a straight answer on whether I'm the right fit and what approach suits."
           ctaLabel="Let's talk" ctaHref="/contact" />
       </main>
       <Footer />
@@ -226,9 +225,9 @@ function ContactPage() {
 
         <section className="contact-page">
           <div className="contact-page__intro">
-            <p className="contact-page__lead">Health organisations, industry partners, and not-for-profits come here to
-              generate insights and reach patient-centred outcomes. If you're working out how to involve patients,
-              carers, or communities in a way that genuinely changes the outcome, start a conversation.</p>
+            <p className="contact-page__lead">My consulting practice helps organisations level up engagement, build
+              capacity, and support the next generation of changemakers. If you're working on any part of that,
+              start a conversation.</p>
             <p className="contact-page__lead">You don't need a fully formed brief. Most good engagements start with a
               challenge, not a scope.</p>
 
@@ -369,8 +368,8 @@ function PortfolioPage() {
 
         <section className="cta">
           <div className="cta__panel">
-            <h2 className="cta__title">Your project could be <em>next</em></h2>
-            <p className="cta__sub">If you're shaping an engagement and want it to hold up, start a conversation.</p>
+            <h2 className="cta__title">Bring me into <em>the work</em></h2>
+            <p className="cta__sub">If you're building engagement, growing capability, or backing emerging leaders, I can help you get there.</p>
             <Button variant="inverse" size="lg" arrow href="/contact">Get in touch</Button>
           </div>
         </section>
