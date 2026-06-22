@@ -19,14 +19,13 @@ function BrandHero({ onNav }) {
       <div className="hero__banner"></div>
       <Nav onNav={onNav} active="home" />
       <div className="hero__inner">
-        <h1 className="hero__title">Lived experience and professional rigour, brought to the <em>same table</em></h1>
-        <p className="hero__sub">I'm Kris Pierce. For more than two decades I've worked at the meeting point of health
-          systems and the people they serve, as a carer, an advocate, a consultant, and a researcher. My work runs
-          across a few connected areas, held together by one belief: the person whose health is on the line belongs
-          in the room.</p>
-        <p className="hero__sub hero__sub--2">From consumer and community engagement and health research to advocacy
-          training, not-for-profit mentoring, and a passion for caregiver wellbeing, the work draws on senior national
-          advisory roles and lived experience in rare disease.</p>
+        <h1 className="hero__title">I'm using what I've learnt through life and work to level up engagement, build capacity, and support the next gen of <em>changemakers</em></h1>
+        <p className="hero__sub">I'm Kris Pierce. Two decades as a carer, advocate, consultant, and researcher have
+          taught me what it takes to bring the right people into the room and make their involvement count. Now I use
+          that experience to help organisations, teams, and emerging leaders do the same.</p>
+        <p className="hero__sub hero__sub--2">My consulting draws on senior national advisory roles and lived experience
+          in rare disease to strengthen engagement, build evidence, train advocates, mentor not-for-profits, and
+          support the carers who hold so much of the system together.</p>
         <div className="hero__intro">
           <span className="hero__intro-label">Areas of work</span>
           <div className="hero__sectors">
@@ -70,10 +69,11 @@ function WorkAreas() {
     <section className="areas" id="work">
       <div className="areas__head">
         <span className="overline">How I work</span>
-        <h2 className="areas__title">Connected work, one <em>throughline</em></h2>
-        <p className="areas__sub">Different audiences, the same principle. Whether the work is consulting on
-          engagement, research that puts patient experience into the evidence, or the programs I'm building for
-          advocates and carers, it starts with the person at the centre.</p>
+        <h2 className="areas__title">One consulting practice, many <em>ways in</em></h2>
+        <p className="areas__sub">Everything I offer comes from the same place: what I've learnt through life and work
+          about putting people at the centre. Whether it's strengthening engagement, building the evidence base,
+          training the next generation of advocates, or supporting carers and small organisations to find their
+          feet, it's all one practice.</p>
       </div>
 
       <div className="areas__group">
@@ -101,11 +101,13 @@ function BrandAbout() {
       <div className="about__grid">
         <div className="about__col">
           <span className="overline">About Kris</span>
-          <h2 className="about__title">A partner for work that earns trust, and holds up to scrutiny</h2>
-          <p className="about__body">As a carer, an advocate, a consultant, and a researcher, I bring lived experience
-            and professional rigour to the same table. My work is to make involvement genuine rather than performative.</p>
-          <p className="about__body">That throughline runs through everything here, from consulting on consumer
-            engagement and health research to the advocacy, mentoring, and caregiving work I'm building next.</p>
+          <h2 className="about__title">Consulting grounded in what I've lived, not just what I've studied</h2>
+          <p className="about__body">I've been the carer in the waiting room, the advocate at the table, the consultant
+            redesigning the process, and the researcher building the evidence. That combination is what I bring to
+            every engagement.</p>
+          <p className="about__body">My consulting practice exists to level up engagement, build capacity in
+            organisations and communities, and support the emerging leaders and carers who will carry this work
+            forward.</p>
           <Button variant="secondary" arrow href="/about">More about Kris</Button>
         </div>
         <div className="about__right">
@@ -125,9 +127,9 @@ function BrandCTA() {
   return (
     <section className="cta">
       <div className="cta__panel">
-        <h2 className="cta__title">Let's bring people into <em>the work</em></h2>
-        <p className="cta__sub">If you're shaping a project, a study, a program, or a whole approach to involving the
-          people most affected, I'd like to hear about it.</p>
+        <h2 className="cta__title">Bring me into <em>the work</em></h2>
+        <p className="cta__sub">If you're building engagement, growing capability, or investing in the next generation
+          of advocates and leaders, I can help you get there.</p>
         <Button variant="inverse" size="lg" arrow href="/contact">Start a conversation</Button>
       </div>
     </section>

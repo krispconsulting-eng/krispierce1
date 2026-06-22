@@ -17,10 +17,10 @@ function Offerings() {
         <image-slot id="kp-offer" shape="rect" fit="cover" position="50% 30%" src="assets/kris-podium-portrait.jpg" placeholder="Drop a portrait / working photo"></image-slot>
       </div>
       <div className="offer__panel">
-        <span className="overline overline--inv">What I do</span>
+        <span className="overline overline--inv">My consulting practice</span>
         <h2 className="offer__title">Where I focus</h2>
-        <p className="offer__lead">Six areas of expertise, each built for a specific outcome. I bring the one your
-          challenge needs, and I know which that is.</p>
+        <p className="offer__lead">Six areas of expertise, drawn from what I've learnt through life and work. I bring
+          the one your challenge needs, and I know which that is.</p>
         <div className="offer__grid">
           {OFFERINGS.map(([icon, title, body, fit], i) => (
             <div className="offer__item" key={title}>
@@ -76,8 +76,8 @@ function CTA({ onNav }) {
   return (
     <section className="cta">
       <div className="cta__panel">
-        <h2 className="cta__title">Let's bring people into <em>the work</em></h2>
-        <p className="cta__sub">If you're shaping a project, a study or a whole approach to engagement, I'd like to hear about it.</p>
+        <h2 className="cta__title">Bring me into <em>the work</em></h2>
+        <p className="cta__sub">If you're building engagement, growing capability, or investing in the next generation of advocates and leaders, I can help you get there.</p>
         <Button variant="inverse" size="lg" arrow onClick={()=>onNav('contact')}>Book an intro call</Button>
       </div>
     </section>

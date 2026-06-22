@@ -89,12 +89,12 @@ function Hero({ onNav }) {
       <Nav onNav={onNav} active="engagement" />
       <div className="hero__inner">
         <h1 className="hero__title">Consumer and community engagement that moves beyond consultation and <em>influences decisions</em></h1>
-        <p className="hero__sub">I help organisations design, strengthen, and embed meaningful engagement across
-          research, health policy, and rare disease. Whether you're building an engagement strategy, developing
-          organisational capability, training advocates, or strengthening patient and carer partnerships, I bring the
-          experience, structure, and practical tools needed to make engagement count.</p>
-        <p className="hero__sub hero__sub--2">Backed by two decades of professional and lived experience, and senior
-          national advisory roles, I bring lived experience and professional rigour to the same table.</p>
+        <p className="hero__sub">This is the engagement arm of my consulting practice. I help organisations design,
+          strengthen, and embed meaningful engagement across research, health policy, and rare disease, drawing on
+          two decades of lived and professional experience to make involvement count.</p>
+        <p className="hero__sub hero__sub--2">Whether you're building an engagement strategy, developing organisational
+          capability, training advocates, or strengthening patient and carer partnerships, I bring the structure and
+          practical tools to get you there.</p>
         <div className="hero__proof">
           <span className="hero__proof-label">Areas of expertise</span>
           <div className="hero__sectors">
@@ -136,12 +136,13 @@ function About({ onNav }) {
       <div className="about__grid">
         <div className="about__col">
           <span className="overline">About Kris</span>
-          <h2 className="about__title">I'm a partner for engagement that earns trust, and holds up to scrutiny</h2>
-          <p className="about__body">For more than two decades I've worked at the meeting point of health systems and
-            the people they serve, as a carer, an advocate and a consultant. I bring lived experience and
-            professional rigour to the same table.</p>
-          <p className="about__body">My work is to make engagement genuine rather than performative: to put the
-            person whose health is on the line into the room, and design the conversation outward from there.</p>
+          <h2 className="about__title">I built this consulting practice on what life and work taught me</h2>
+          <p className="about__body">Two decades as a carer, advocate, consultant, and researcher showed me what it
+            takes to put the right people in the room and make their involvement count. That's what I do now,
+            across engagement, research, advocacy, mentoring, and caregiver support.</p>
+          <p className="about__body">The consulting is built to level up engagement, build capacity in organisations
+            and communities, and support the next generation of changemakers growing into the rooms where decisions
+            get made.</p>
           <Button variant="secondary" arrow onClick={()=>onNav('offerings')}>What I can do with you</Button>
         </div>
         <div className="about__right">

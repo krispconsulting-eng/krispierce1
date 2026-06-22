@@ -159,9 +159,9 @@ function ResourcesApp() {
 
         <section className="cta">
           <div className="cta__panel">
-            <h2 className="cta__title">A tool only goes so far. The work goes <em>further</em></h2>
-            <p className="cta__sub">If you're shaping engagement that has to change a decision, not just tick a box,
-              start a conversation. You'll get a straight answer on whether it's a fit.</p>
+            <h2 className="cta__title">A tool only goes so far. The consulting goes <em>further</em></h2>
+            <p className="cta__sub">If you're building engagement, growing capability, or backing the next generation
+              of changemakers, I can help you get there.</p>
             <Button variant="inverse" size="lg" arrow href="/contact">Let's talk</Button>
           </div>
         </section>
