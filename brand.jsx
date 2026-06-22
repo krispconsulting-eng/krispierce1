@@ -127,9 +127,9 @@ function BrandCTA() {
   return (
     <section className="cta">
       <div className="cta__panel">
-        <h2 className="cta__title">If this sounds like your <em>work too</em></h2>
-        <p className="cta__sub">I'm always happy to hear from people doing similar things, whether you're looking
-          for a hand with something specific or just want to talk about the work.</p>
+        <h2 className="cta__title">Bring me into <em>the work</em></h2>
+        <p className="cta__sub">If you're building engagement, growing capability, or investing in the next generation
+          of advocates and leaders, I can help you get there.</p>
         <Button variant="inverse" size="lg" arrow href="/contact">Start a conversation</Button>
       </div>
     </section>
