@@ -19,21 +19,9 @@ function BrandHero({ onNav }) {
       <div className="hero__banner"></div>
       <Nav onNav={onNav} active="home" />
       <div className="hero__inner">
-        <h1 className="hero__title">I'm using what I've learnt through life and work to level up engagement, build capacity, and support the next gen of <em>changemakers</em></h1>
-        <p className="hero__sub">I'm Kris Pierce. Two decades as a carer, advocate, consultant, and researcher have
-          taught me what it takes to bring the right people into the room and make their involvement count. Now I use
-          that experience to help organisations, teams, and emerging leaders do the same.</p>
-        <p className="hero__sub hero__sub--2">My consulting draws on senior national advisory roles and lived experience
-          in rare disease to strengthen engagement, build evidence, train advocates, mentor not-for-profits, and
-          support the carers who hold so much of the system together.</p>
-        <div className="hero__intro">
-          <span className="hero__intro-label">Areas of work</span>
-          <div className="hero__sectors">
-            {WORK_AREAS.map((a) => (
-              <a key={a.id} href={a.href || '#work'} onClick={(e)=>{ if(!a.href){ e.preventDefault(); onNav('work'); } }}>{a.title}</a>
-            ))}
-          </div>
-        </div>
+        <h1 className="hero__title">Strengthening engagement and <em>capacity</em></h1>
+        <p className="hero__sub">Drawing on two decades of lived and professional experience to support advocacy,
+          leadership, and meaningful participation.</p>
       </div>
     </section>
   );
