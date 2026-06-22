@@ -10,8 +10,8 @@ function BrandHero({ onNav }) {
   return (
     <section className="hero" id="home">
       <div className="hero__media">
-        <image-slot id="kp-brand-hero" shape="rect" fit="cover" position="50% 20%"
-          src="assets/kris-podium-hero.jpg"
+        <image-slot id="kp-brand-hero" shape="rect" fit="cover" position="50% 30%"
+          src="assets/kris-podium-portrait.jpg"
           alt="Kris Pierce speaking at a podium"
           placeholder="Drop a warm portrait of Kris"></image-slot>
         <div className="hero__scrim"></div>
