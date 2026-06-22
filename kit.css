@@ -236,7 +236,7 @@ html { scroll-behavior: smooth; }
 .voices__mark { display:inline-flex; }
 .voices__quote { font-family:var(--font-text); font-weight:500; font-size:clamp(19px,2.1vw,25px); line-height:1.42;
   letter-spacing:-.01em; color:var(--text-primary); margin:16px 0 26px;
-  padding-left: clamp(18px,2vw,28px); border-left: 3px solid var(--clay-400); }
+  }
 .voices__who { display:flex; align-items:center; gap:14px; }
 .voices__role { font-weight:600; font-size:15px; color:var(--text-primary); line-height:1.25; }
 .voices__org { color:var(--text-muted); font-size:13.5px; line-height:1.25; margin-top:2px; }

@@ -110,10 +110,10 @@ function Contact() {
         <span className="overline">Start a conversation</span>
         <h2 className="contact__title">Tell me what you're working on</h2>
         <p className="contact__body">A sentence or two is plenty to begin. Tell me what you need and the best number to
-          reach you, and I'll personally be in touch to talk it through — a short, no-obligation conversation.</p>
+          reach you, and I'll personally be in touch to talk it through: a short, no-obligation conversation.</p>
         <ol className="contact__steps">
           <li><span>1</span>You tell me what you're after</li>
-          <li><span>2</span>I read it myself — every message</li>
+          <li><span>2</span>I read it myself, every message</li>
           <li><span>3</span>I'll call you personally to talk it through</li>
         </ol>
       </div>
@@ -140,7 +140,7 @@ function Contact() {
             <input type="text" className="hp-field" tabIndex={-1} autoComplete="off" aria-hidden="true"
               value={form.company} onChange={set('company')} />
             {status === 'error' && (
-              <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
+              <p className="contact__error" role="alert">Sorry, that didn't send. Please try again, or email
                 <a href="mailto:info@krispierce.com.au"> info@krispierce.com.au</a>.</p>
             )}
             <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Send message'}</Button>

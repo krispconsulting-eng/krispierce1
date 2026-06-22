@@ -181,7 +181,7 @@ function InsSubscribe() {
                 <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Subscribe'}</Button>
               </form>
             )}
-            {status === 'error' && <p className="ins-sub__note" role="alert" style={{ color: 'var(--brick-500)' }}>Sorry — that didn't send. Please try again.</p>}
+            {status === 'error' && <p className="ins-sub__note" role="alert" style={{ color: 'var(--brick-500)' }}>Sorry, that didn't send. Please try again.</p>}
             {!sent && status !== 'error' && <p className="ins-sub__note">For people working in health, industry, and advocacy. I do not share your address.</p>}
           </div>
         </div>
