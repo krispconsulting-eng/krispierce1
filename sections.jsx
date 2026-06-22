@@ -80,9 +80,9 @@ function Hero({ onNav }) {
   return (
     <section className="hero" id="home">
       <div className="hero__media">
-        <image-slot id="kp-hero" shape="rect" fit="cover" position="50% 30%"
-          src="assets/kris-presenting.jpg"
-          alt="Kris Pierce presenting to an audience"
+        <image-slot id="kp-hero" shape="rect" fit="cover" position="50% 40%"
+          src="assets/iStock-1146645994.jpg"
+          alt="Team working with sticky notes on a window"
           placeholder="Drop a warm portrait of Kris"></image-slot>
         <div className="hero__scrim"></div>
       </div>
