@@ -65,6 +65,14 @@
     linear-gradient(152deg, #4F4A43 0%, #837B6E 50%, #B7A487 100%); }
 .hero__media image-slot::part(frame){ background: transparent; }
 .hero__media image-slot::part(empty){ color: rgba(255,255,255,0.78); }
+#kp-brand-hero::part(image) {
+  width:100% !important; height:100% !important;
+  left:0 !important; top:0 !important; transform:none !important;
+  object-fit:cover !important; object-position:50% 20% !important; }
+#kp-hero::part(image) {
+  width:100% !important; height:100% !important;
+  left:0 !important; top:0 !important; transform:none !important;
+  object-fit:cover !important; object-position:50% 40% !important; }
 .hero__media { position:absolute; inset:0; }
 .hero__media image-slot { width:100%; height:100%; display:block; }
 /* banner: a solid bar at the very top that dissolves down into the photo's canopy */
