@@ -58,7 +58,7 @@
 
 /* ---------------- Hero ---------------- */
 .hero { position:relative; margin: clamp(8px,1.2vw,16px); border-radius:var(--radius-xl); overflow:hidden;
-  min-height: min(90vh, 900px); display:flex; align-items:flex-start;
+  min-height: min(90vh, 900px); display:flex; align-items:flex-end;
   background:
     radial-gradient(115% 80% at 80% 6%, rgba(205,166,122,0.55), rgba(205,166,122,0) 56%),
     radial-gradient(90% 75% at 8% 104%, rgba(29,28,33,0.45), transparent 58%),
@@ -76,7 +76,7 @@
     linear-gradient(0deg, rgba(29,28,33,.55), transparent 50%),
     rgba(29,28,33,.22); }
 .hero__inner { position:relative; z-index:5; max-width:860px; padding: clamp(26px,5vw,60px);
-  padding-top: clamp(180px,26vh,280px); }
+  padding-bottom: clamp(60px,10vh,120px); }
 .hero__title { font-family:var(--font-display); font-weight:800; font-style:italic;
   font-size:clamp(2.1rem, 1.2rem + 3.2vw, 3.1rem);
   line-height:1.12; letter-spacing:-.025em; color:#fff; margin:20px 0 0; text-wrap:balance; }
