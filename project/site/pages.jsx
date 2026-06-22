@@ -204,7 +204,7 @@ function ContactPage() {
 
             <div className="contact-page__email">
               <span className="contact-page__email-label">Prefer email?</span>
-              <a href="mailto:hello@krispierce.com.au">hello@krispierce.com.au</a>
+              <a href="mailto:info@krispierce.com.au">info@krispierce.com.au</a>
             </div>
           </div>
 

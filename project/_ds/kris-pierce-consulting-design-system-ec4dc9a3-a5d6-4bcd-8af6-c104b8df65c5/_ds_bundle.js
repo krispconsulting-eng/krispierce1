@@ -3849,8 +3849,8 @@ function Footer({
     className: "foot__label"
   }, "Prefer email?"), /*#__PURE__*/React.createElement("a", {
     className: "foot__email",
-    href: "mailto:hello@krispierce.com.au"
-  }, "hello@krispierce.com.au"), /*#__PURE__*/React.createElement("div", {
+    href: "mailto:info@krispierce.com.au"
+  }, "info@krispierce.com.au"), /*#__PURE__*/React.createElement("div", {
     className: "foot__bar"
   }, /*#__PURE__*/React.createElement("div", {
     className: "foot__links"
@@ -3887,7 +3887,7 @@ function Footer({
     name: "linkedin",
     size: 18
   })), /*#__PURE__*/React.createElement("a", {
-    href: "mailto:hello@krispierce.com.au",
+    href: "mailto:info@krispierce.com.au",
     "aria-label": "Email"
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "mail",

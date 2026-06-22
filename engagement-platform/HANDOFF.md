@@ -86,7 +86,7 @@ Options in order of preference:
 Form fields: name, organisation, email, message  
 On submit: POST to endpoint, show success state (already designed in UI)  
 Validation: name and email required; inline error states  
-Send to: hello@krispierce.com.au (confirm with Kris before wiring)
+Send to: info@krispierce.com.au (confirm with Kris before wiring)
 
 ### 4. SEO meta tags
 See SEO.md for full tag set. Add to index.html and/or via react-helmet-async.
@@ -135,7 +135,7 @@ src/
 
 ## Questions to Resolve Before Going Live
 
-1. Contact form destination email — confirm with Kris (likely hello@krispierce.com.au)
+1. Contact form destination email — confirm with Kris (likely info@krispierce.com.au)
 2. Deployment target — standalone subdomain or embedded in existing WordPress site?
 3. Analytics — Google Analytics 4 or privacy-first alternative (Plausible)?
 4. Photo — supply headshot for about section

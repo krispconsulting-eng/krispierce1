@@ -3,7 +3,7 @@
 //
 // Required env vars on Vercel:
 //   RESEND_API_KEY      — Resend API key
-//   CONTACT_TO_EMAIL    — destination address, eg hello@krispierce.com.au
+//   CONTACT_TO_EMAIL    — destination address, eg info@krispierce.com.au
 //   CONTACT_FROM_EMAIL  — verified sender, eg engage@krispierce.com.au
 
 const MAX_LENGTH = 5000
