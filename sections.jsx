@@ -89,9 +89,9 @@ function Hero({ onNav }) {
       <div className="hero__banner"></div>
       <Nav onNav={onNav} active="engagement" />
       <div className="hero__inner">
-        <h1 className="hero__title">Strengthening engagement and <em>capacity</em></h1>
-        <p className="hero__sub">Drawing on two decades of lived and professional experience to support advocacy,
-          leadership, and meaningful participation.</p>
+        <h1 className="hero__title">Engagement that moves beyond consultation and <em>influences decisions</em></h1>
+        <p className="hero__sub">Designing, strengthening, and embedding meaningful consumer and community engagement
+          across health, research, and rare disease.</p>
       </div>
     </section>
   );
