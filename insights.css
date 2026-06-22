@@ -29,7 +29,10 @@
   display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 0;
   background: var(--paper); border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-card);
+  cursor: pointer; transition: box-shadow .3s var(--ease-out), transform .3s var(--ease-out);
 }
+.ins-feature:hover { box-shadow: 0 20px 52px -18px rgba(29,28,33,0.18); transform: translateY(-2px); }
+.ins-feature:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
 .ins-feature__body { padding: clamp(28px,3.4vw,52px); display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
 .ins-feature__eyebrow { display: flex; align-items: center; gap: 12px; }
 .ins-feature__cat { font-family: var(--font-text); font-weight: 600; font-size: 12.5px;
@@ -78,6 +81,7 @@
   transition: transform .26s var(--ease-out), box-shadow .26s var(--ease-out), border-color .26s;
 }
 .ins-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--border-default); }
+.ins-card:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
 .ins-card__media { display: none; position: relative; height: 188px; background: var(--cream-200); }
 .ins-card__media image-slot { width: 100%; height: 100%; display: block; }
 .ins-card__media image-slot::part(frame){ background: linear-gradient(145deg, var(--taupe-200), var(--clay-300) 80%); }
@@ -115,7 +119,7 @@
 .ins-guide { display: flex; flex-direction: column; gap: 16px; background: var(--paper);
   border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: clamp(24px,2.4vw,30px);
   box-shadow: var(--shadow-sm); transition: transform .26s var(--ease-out), box-shadow .26s var(--ease-out); }
-.ins-guide:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.ins-guide:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-default); }
 .ins-guide__top { display: flex; align-items: center; justify-content: space-between; }
 .ins-guide__kind { font-family: var(--font-text); font-weight: 600; font-size: 11.5px; letter-spacing: .12em;
   text-transform: uppercase; color: var(--clay-700); background: var(--accent-wash);

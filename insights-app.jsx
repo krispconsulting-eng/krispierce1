@@ -110,25 +110,32 @@ function ResourceGate({ item, onClose }) {
 function setupInsReveal() {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   const sels = ['.ins-feature', '.ins-card', '.ins-guide', '.ins-sub__panel'];
+  const staggerSels = ['.ins-card', '.ins-guide'];
   const els = [];
   sels.forEach((s) => document.querySelectorAll(s).forEach((e) => els.push(e)));
   if (!els.length) return;
   const EASE = 'cubic-bezier(0.22,1,0.36,1)';
-  els.forEach((e) => { e.style.opacity = '0'; e.style.transform = 'translateY(20px)';
-    e.style.transition = 'opacity .6s ' + EASE + ', transform .6s ' + EASE; });
+  els.forEach((e) => {
+    e.style.opacity = '0';
+    e.style.transform = 'translateY(28px)';
+    const isStagger = staggerSels.some((s) => e.matches(s));
+    const idx = isStagger ? Array.from(e.parentElement.children).indexOf(e) : 0;
+    const delay = isStagger ? idx * 0.08 : 0;
+    e.style.transition = 'opacity .8s ' + EASE + ' ' + delay + 's, transform .8s ' + EASE + ' ' + delay + 's';
+  });
   const check = () => {
     const h = window.innerHeight;
     els.forEach((e) => {
       if (e.style.opacity === '1') return;
       const r = e.getBoundingClientRect();
-      if (r.top < h * 0.94 && r.bottom > 0) { e.style.opacity = '1'; e.style.transform = 'none'; }
+      if (r.top < h * 0.88 && r.bottom > 0) { e.style.opacity = '1'; e.style.transform = 'none'; }
     });
   };
   requestAnimationFrame(check);
   window.addEventListener('scroll', check, { passive: true });
   window.addEventListener('resize', check);
   setTimeout(check, 400);
-  setTimeout(() => els.forEach((e) => { e.style.transition = 'none'; e.style.opacity = '1'; e.style.transform = 'none'; }), 2400);
+  setTimeout(() => els.forEach((e) => { e.style.transition = 'none'; e.style.opacity = '1'; e.style.transform = 'none'; }), 3200);
 }
 
 /* ---------------- Tweak defaults ---------------- */
@@ -152,9 +159,10 @@ function InsightsApp() {
 
   return (
     <div className="site">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav theme="solid" active="engagement" />
       <SectionNav active="insights" />
-      <main>
+      <main id="main-content">
         <InsHeader />
         {t.showFeatured && <InsFeature item={window.FEATURED_INSIGHT} onOpen={openArticle} />}
         <InsLibrary items={window.INSIGHTS} cols={t.cols} cardStyle={t.cardStyle}

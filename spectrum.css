@@ -154,7 +154,9 @@
   border-radius: var(--radius-xl);
   padding: clamp(28px, 4vw, 52px);
   box-shadow: var(--shadow-card);
+  animation: panel-in .36s cubic-bezier(0.22,1,0.36,1);
 }
+@keyframes panel-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
 .spectrum__panel-main {
   min-width: 0;
@@ -341,4 +343,7 @@
   .spectrum__axis span:nth-child(2) {
     min-width: 24px;
   }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spectrum__panel { animation: none; }
 }

@@ -173,7 +173,7 @@ function Footer({ onNav }) {
         </div>
       </div>
       <div className="foot__legal">
-        <span>© 2025 Kris Pierce</span>
+        <span>© {new Date().getFullYear()} Kris Pierce</span>
         <span>Kabi Kabi Country / Sunshine Coast, Queensland</span>
         <span>Privacy</span>
       </div>
