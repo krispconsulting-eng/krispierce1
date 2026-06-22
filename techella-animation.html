@@ -147,8 +147,8 @@ body::before{
   50%    { transform:rotate(-2.6deg); }
 }
 @keyframes screenPulse{
-  0%,100%{ opacity:.55; }
-  50%    { opacity:1; }
+  0%,100%{ opacity:.2; }
+  50%    { opacity:.46; }
 }
 @keyframes glowPulse{
   0%,100%{ opacity:.7; transform:scale(1); }
@@ -175,7 +175,7 @@ body::before{
 #hero      { animation:float 6.4s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
 #cape      { animation:capeWave 4.6s ease-in-out infinite; transform-box:fill-box; transform-origin:72% 6%; }
 #hairBack  { animation:hairWave 5.2s ease-in-out infinite; transform-box:fill-box; transform-origin:86% 8%; }
-#pointArm  { animation:pointAssert 3.6s ease-in-out infinite; transform-box:fill-box; transform-origin:1% 91%; }
+#pointArm  { animation:pointAssert 3.6s ease-in-out infinite; transform-box:fill-box; transform-origin:6% 90%; }
 #screenGlow{ animation:screenPulse 2.2s ease-in-out infinite; }
 #bgGlow    { animation:glowPulse 5s ease-in-out infinite; transform-box:fill-box; transform-origin:50% 50%; }
 .streak    { animation:streakMove 3.4s linear infinite; }
@@ -203,7 +203,7 @@ body::before{
     <section class="hero">
       <p class="hero__eyebrow">Sydney · 05 . 11 . 26</p>
       <h1 class="hero__title">Show up. <em>Take off.</em></h1>
-      <p class="hero__sub">The tech event for girls who hate tech events — code in one hand, cape on your back.</p>
+      <p class="hero__sub">The tech event for girls who hate tech events — laptop under your arm, cape on your back.</p>
 
       <div class="scene-wrap">
         <!-- ============================================================
@@ -302,7 +302,7 @@ body::before{
                designed upright around (392,300), tilted into the climb.
                ============================================================ -->
           <g id="hero">
-          <g id="figure" transform="rotate(15 392 300)">
+          <g id="figure" transform="rotate(55 392 300)">
 
             <!-- ===== CAPE (behind everything) ===== -->
             <g id="cape">
@@ -336,32 +336,32 @@ body::before{
                     style="fill:var(--tg-pink)" opacity=".9"/>
             </g>
 
-            <!-- ===== LEGS + thigh-high socks + sneakers ===== -->
+            <!-- ===== LEGS (straight, extended for flight) + socks + sneakers ===== -->
             <g>
               <!-- left leg -->
-              <path d="M374 350 C366 392 360 426 356 452 C354 470 360 480 372 482
-                       C382 480 386 470 386 452 C388 424 392 392 398 352 Z" fill="url(#skinGrad)"/>
+              <path d="M374 352 C372 396 369 444 366 484 C365 491 369 495 375 493
+                       C381 492 384 489 384 484 C386 444 389 396 393 354 Z" fill="url(#skinGrad)"/>
               <!-- right leg -->
-              <path d="M402 352 C404 392 410 424 418 450 C422 466 432 470 440 462
-                       C444 452 442 440 436 426 C426 400 422 376 422 350 Z" fill="url(#skinGrad)"/>
-              <!-- thigh-high socks (over the lower legs) -->
-              <path d="M357 416 C355 440 359 470 372 482 C383 480 386 470 386 452
-                       C386 440 387 428 388 416 Z" fill="url(#sockGrad)"/>
-              <path d="M413 412 C414 430 416 444 422 456 C430 468 440 462 440 452
-                       C440 440 436 428 430 414 Z" fill="url(#sockGrad)"/>
+              <path d="M401 354 C403 398 408 444 412 484 C413 491 419 495 425 492
+                       C430 489 428 483 427 478 C424 444 421 398 421 352 Z" fill="url(#skinGrad)"/>
+              <!-- thigh-high socks -->
+              <path d="M366 414 C364 444 365 468 368 486 C373 491 380 490 384 484
+                       C385 460 387 436 388 414 Z" fill="url(#sockGrad)"/>
+              <path d="M411 414 C412 442 413 464 415 484 C420 490 427 489 427 480
+                       C426 458 423 436 422 414 Z" fill="url(#sockGrad)"/>
               <!-- sock cyan stripe -->
-              <path d="M357 418 l31 -3" style="stroke:var(--tg-cyan)" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <path d="M414 416 l18 4"  style="stroke:var(--tg-cyan)" stroke-width="4" fill="none" stroke-linecap="round"/>
-              <!-- chunky sneakers -->
+              <path d="M367 416 l21 -2" style="stroke:var(--tg-cyan)" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <path d="M412 416 l10 0"  style="stroke:var(--tg-cyan)" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <!-- pointed sneakers (toes trailing for flight) -->
               <g>
-                <path d="M336 478 C336 470 344 466 356 466 L382 466 C392 466 394 474 392 482
-                         C390 492 380 496 366 496 L344 496 C336 496 334 488 336 478 Z" style="fill:var(--tg-cream)"/>
-                <rect x="334" y="490" width="62" height="8" rx="4" style="fill:var(--tg-pink)"/>
-                <path d="M360 470 l8 10 M368 468 l8 10" style="stroke:var(--tg-cyan)" stroke-width="3" stroke-linecap="round" fill="none"/>
-                <path d="M418 452 C420 444 428 442 438 446 L460 456 C468 460 468 468 464 474
-                         C458 482 448 482 436 476 L420 468 C414 464 416 458 418 452 Z" style="fill:var(--tg-cream)"/>
-                <rect x="424" y="468" width="48" height="8" rx="4" transform="rotate(24 448 472)" style="fill:var(--tg-pink)"/>
-                <path d="M436 452 l6 11 M444 452 l6 11" style="stroke:var(--tg-cyan)" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <path d="M360 484 C358 478 364 474 372 476 C381 478 386 486 385 496
+                         C384 504 377 508 369 506 C361 504 360 492 360 484 Z" style="fill:var(--tg-cream)"/>
+                <path d="M362 500 q12 6 22 -2" style="stroke:var(--tg-pink)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <path d="M368 484 l8 6 M374 482 l7 6" style="stroke:var(--tg-cyan)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+                <path d="M408 484 C406 478 412 474 420 476 C429 478 434 486 433 496
+                         C432 504 425 508 417 506 C409 504 408 492 408 484 Z" style="fill:var(--tg-cream)"/>
+                <path d="M410 500 q12 6 22 -2" style="stroke:var(--tg-pink)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <path d="M416 484 l8 6 M422 482 l7 6" style="stroke:var(--tg-cyan)" stroke-width="2.6" stroke-linecap="round" fill="none"/>
               </g>
             </g>
 
@@ -399,27 +399,26 @@ body::before{
             <circle cx="370" cy="198" r="9" style="fill:var(--tg-pink);stroke:#fff" stroke-width="2"/>
             <circle cx="414" cy="198" r="9" style="fill:var(--tg-pink);stroke:#fff" stroke-width="2"/>
 
-            <!-- ===== LAPTOP-HOLDING ARM (left / viewer-left), in front of torso ===== -->
-            <path d="M356 216 C342 224 332 250 330 282 C329 300 334 314 346 320
-                     C356 318 360 308 360 296 C360 272 360 244 366 224 Z" fill="url(#hoodieGrad)"/>
-            <!-- forearm + hand cupping the laptop -->
-            <path d="M332 300 C322 312 320 330 330 342 C342 348 356 346 366 338
-                     C360 326 352 314 346 304 C342 300 336 298 332 300 Z" fill="url(#skinGrad)"/>
-
-            <!-- ===== THE LAPTOP (in hand, glowing) ===== -->
-            <g transform="rotate(-12 326 324)">
-              <!-- glow halo -->
-              <ellipse id="screenGlow" cx="318" cy="300" rx="62" ry="44" style="fill:var(--tg-cyan)" opacity=".7" filter="url(#softer)"/>
-              <!-- base / keyboard -->
-              <path d="M286 338 L372 338 L388 360 L296 360 Z" fill="url(#lapBody)"/>
-              <rect x="300" y="346" width="74" height="7" rx="3" fill="#B7ABDB"/>
+            <!-- ===== CLOSED LAPTOP tucked under the left arm ===== -->
+            <g transform="rotate(20 336 300)">
+              <!-- soft glow so it still reads as 'tech' -->
+              <ellipse id="screenGlow" cx="338" cy="296" rx="50" ry="36" style="fill:var(--tg-cyan)" opacity=".28" filter="url(#softer)"/>
               <!-- lid -->
-              <rect x="290" y="276" width="78" height="60" rx="7" fill="#2A1247"/>
-              <rect x="296" y="282" width="66" height="48" rx="4" fill="url(#screenGrad)"/>
-              <!-- on-screen: </> and a heart -->
-              <text x="312" y="312" font-family="var(--tg-font-display)" font-size="20" font-weight="700" fill="#fff" opacity=".95">&lt;/&gt;</text>
-              <path d="M340 296 c-3 -5 -11 -3 -11 3 c0 5 7 9 11 12 c4 -3 11 -7 11 -12 c0 -6 -8 -8 -11 -3 Z" fill="#fff" opacity=".9"/>
+              <rect x="300" y="266" width="80" height="58" rx="9" fill="url(#lapBody)"/>
+              <!-- clamshell seam / thickness -->
+              <rect x="300" y="316" width="80" height="10" rx="5" fill="#B7ABDB"/>
+              <rect x="304" y="320" width="72" height="3" rx="1.5" style="fill:var(--tg-purple)" opacity=".5"/>
+              <!-- TechElla mark on the lid -->
+              <path d="M340 288 c-4 -6 -13 -3 -13 3 c0 6 8 11 13 14 c5 -3 13 -8 13 -14 c0 -6 -9 -9 -13 -3 Z" style="fill:var(--tg-pink)"/>
+              <circle cx="340" cy="295" r="20" fill="none" style="stroke:var(--tg-pink)" stroke-width="2" opacity=".45"/>
             </g>
+            <!-- ===== LEFT ARM clamping the laptop under it ===== -->
+            <!-- upper arm down the side, over the laptop's top edge -->
+            <path d="M358 214 C344 222 334 244 332 270 C330 288 333 304 343 314
+                     C353 312 359 300 359 286 C359 262 361 240 367 222 Z" fill="url(#hoodieGrad)"/>
+            <!-- forearm + hand across the laptop front (clamping it) -->
+            <path d="M336 306 C330 320 333 336 347 342 C361 346 375 340 381 330
+                     C373 322 361 316 351 310 C345 306 340 304 336 306 Z" fill="url(#skinGrad)"/>
 
             <!-- ===== HEAD ===== -->
             <ellipse cx="392" cy="150" rx="39" ry="43" fill="url(#skinGrad)"/>
@@ -442,24 +441,24 @@ body::before{
             <!-- headphone band over the hair -->
             <path d="M360 132 q32 -34 66 -2" fill="none" style="stroke:var(--tg-ink)" stroke-width="6" stroke-linecap="round" opacity=".6"/>
 
-            <!-- ===== EXTENDED POINTING ARM ("boss lady" point, leading the take-off) ===== -->
+            <!-- ===== LEADING ARM (shorter, proportionate) pointing the way ===== -->
             <g id="pointArm">
-              <!-- upper arm (sleeve) -->
-              <path d="M430 216 C456 198 490 172 516 152 C522 158 522 168 518 174
-                       C492 194 458 216 438 228 C432 226 428 220 430 216 Z" fill="url(#hoodieGrad)"/>
-              <!-- forearm (skin) -->
-              <path d="M512 156 C534 140 556 124 574 112 C580 118 580 126 576 132
-                       C558 144 536 160 520 174 C514 170 510 162 512 156 Z" fill="url(#skinGrad)"/>
+              <!-- upper arm (sleeve): shoulder -> elbow -->
+              <path d="M424 220 C432 196 444 176 456 162 C464 165 470 172 468 180
+                       C458 200 448 218 442 232 C434 230 426 226 424 220 Z" fill="url(#hoodieGrad)"/>
+              <!-- forearm (skin): elbow -> wrist -->
+              <path d="M452 170 C462 154 472 138 482 124 C489 127 493 134 490 140
+                       C482 154 472 170 466 182 C459 179 452 176 452 170 Z" fill="url(#skinGrad)"/>
               <!-- pointing hand: folded fist + extended index finger + thumb -->
-              <path d="M564 120 C560 110 566 100 578 100 C590 100 596 110 592 120
-                       C589 128 578 132 570 130 C566 128 564 124 564 120 Z" fill="url(#skinGrad)"/>
-              <path d="M583 106 C591 98 601 90 609 84 C613 88 614 93 611 97
-                       C604 103 595 112 589 118 C585 115 582 110 583 106 Z" fill="url(#skinGrad)"/>
-              <path d="M566 126 C562 130 562 135 567 136 C571 135 573 131 572 127 C570 125 568 125 566 126 Z" fill="url(#skinGrad)"/>
-              <!-- knuckle line for a little definition -->
-              <path d="M569 116 q9 -5 18 -1" style="stroke:var(--skin-sh)" stroke-width="2" fill="none" stroke-linecap="round" opacity=".55"/>
+              <path d="M478 124 C474 114 480 106 490 106 C500 106 505 114 502 122
+                       C499 129 490 132 483 130 C480 128 478 126 478 124 Z" fill="url(#skinGrad)"/>
+              <path d="M492 110 C498 100 506 90 512 84 C516 87 517 92 514 96
+                       C508 104 500 114 495 120 C491 117 489 113 492 110 Z" fill="url(#skinGrad)"/>
+              <path d="M480 128 C476 132 477 137 482 137 C486 136 487 132 486 129 C484 127 482 127 480 128 Z" fill="url(#skinGrad)"/>
+              <!-- knuckle line -->
+              <path d="M483 120 q8 -5 16 -2" style="stroke:var(--skin-sh)" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
               <!-- spark off the fingertip (leading the way) -->
-              <path class="spark" d="M616 76 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z" style="fill:var(--tg-gold)"/>
+              <path class="spark" d="M517 79 l2.6 7 7 2.6 -7 2.6 -2.6 7 -2.6 -7 -7 -2.6 7 -2.6 Z" style="fill:var(--tg-gold)"/>
             </g>
 
           </g><!-- /figure -->
