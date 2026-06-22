@@ -88,19 +88,9 @@ function Hero({ onNav }) {
       <div className="hero__banner"></div>
       <Nav onNav={onNav} active="engagement" />
       <div className="hero__inner">
-        <h1 className="hero__title">Consumer and community engagement that moves beyond consultation and <em>influences decisions</em></h1>
-        <p className="hero__sub">This is the engagement arm of my consulting practice. I help organisations design,
-          strengthen, and embed meaningful engagement across research, health policy, and rare disease, drawing on
-          two decades of lived and professional experience to make involvement count.</p>
-        <p className="hero__sub hero__sub--2">Whether you're building an engagement strategy, developing organisational
-          capability, training advocates, or strengthening patient and carer partnerships, I bring the structure and
-          practical tools to get you there.</p>
-        <div className="hero__proof">
-          <span className="hero__proof-label">Areas of expertise</span>
-          <div className="hero__sectors">
-            <a href="/engagement/expertise#exp-participatory">Participatory research</a><a href="/engagement/expertise#exp-co-design">Co-design</a><a href="/engagement/expertise#exp-strategic-insights">Strategic insights</a><a href="/engagement/expertise#exp-industry-support">Industry support</a><a href="/engagement/expertise#exp-ongoing">Ongoing advisory</a>
-          </div>
-        </div>
+        <h1 className="hero__title">Strengthening engagement and <em>capacity</em></h1>
+        <p className="hero__sub">Drawing on two decades of lived and professional experience to support advocacy,
+          leadership, and meaningful participation.</p>
       </div>
     </section>
   );
