@@ -11,9 +11,9 @@
 .areas__head { text-align:center; max-width:680px; margin:0 auto;
   padding: var(--section-y) var(--container-pad) 0; }
 .areas__title { font-family:var(--font-display); font-weight:600; font-size:var(--text-display);
-  letter-spacing:-.02em; line-height:1.08; color:var(--ink-900); margin:14px 0 0; }
+  letter-spacing:-.02em; line-height:1.08; color:var(--ink-900); margin:14px 0 0; text-wrap:balance; }
 .areas__title em { font-style:italic; color:var(--clay-600); }
-.areas__sub { color:var(--text-muted); margin-top:14px; font-size:17px; line-height:1.6; }
+.areas__sub { color:var(--text-muted); margin-top:14px; font-size:17px; line-height:1.6; text-wrap:pretty; }
 
 /* Tiered groups: established work, then programs in development. */
 .areas__group { max-width:var(--container-max); margin:0 auto;
@@ -49,6 +49,8 @@ a.area-card:hover .area-card__cta { gap:12px; }
 .area-card__soon { display:inline-flex; align-items:center; margin-top:auto; padding-top:22px;
   font-family:var(--font-text); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
   font-weight:600; color:var(--text-muted); }
+a.area-card:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; }
+
 .area-card__badge { display:inline-block; padding:3px 10px; border-radius:999px;
   background:var(--cream-200); color:var(--clay-700); font-family:var(--font-text);
   font-size:11px; letter-spacing:.08em; text-transform:uppercase; font-weight:600; }

@@ -7,8 +7,9 @@ const { useState: useState3 } = React;
 function AboutPage() {
   return (
     <div className="site">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav theme="solid" active="about" />
-      <main>
+      <main id="main-content">
         <section className="page-hero">
           <Pill variant="wash" dot className="page-hero__overline">About Kris</Pill>
           <h1 className="page-hero__title">Using what I've learnt to level up engagement, build capacity, and back the next gen of <em>changemakers</em></h1>
@@ -164,9 +165,10 @@ function ExpertiseCards() {
 function ExpertisePage() {
   return (
     <div className="site">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav theme="solid" active="engagement" />
       <SectionNav active="expertise" />
-      <main>
+      <main id="main-content">
         <section className="page-hero">
           <Pill variant="wash" className="page-hero__overline">Expertise</Pill>
           <h1 className="page-hero__title">This isn't a service menu</h1>
@@ -216,8 +218,9 @@ function ContactPage() {
   };
   return (
     <div className="site">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav theme="solid" active="contact" />
-      <main>
+      <main id="main-content">
         <section className="page-hero">
           <Pill variant="wash" className="page-hero__overline">Contact</Pill>
           <h1 className="page-hero__title">Let's <em>talk</em></h1>
@@ -312,8 +315,9 @@ const WORK = [
 function PortfolioPage() {
   return (
     <div className="site">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav theme="solid" active="portfolio" />
-      <main>
+      <main id="main-content">
         <section className="page-hero">
           <Pill variant="wash" className="page-hero__overline">Portfolio</Pill>
           <h1 className="page-hero__title">Previous work, and what people <em>say</em></h1>

@@ -10,7 +10,7 @@ function BrandHero({ onNav }) {
   return (
     <section className="hero" id="home">
       <div className="hero__media">
-        <image-slot id="kp-brand-hero" shape="rect" fit="contain" position="50% 50%"
+        <image-slot id="kp-brand-hero" shape="rect" fit="cover" position="50% 42%"
           src="assets/kris-podium-portrait.jpg"
           alt="Kris Pierce speaking at a podium"
           placeholder="Drop a warm portrait of Kris"></image-slot>
@@ -132,8 +132,9 @@ function BrandApp() {
   };
   return (
     <div className="site">
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <BrandHero onNav={onNav} />
-      <main>
+      <main id="main-content">
         <CredStrip />
         <WorkAreas />
         <Motif id="kp-brand-research" src="assets/insight-boardroom.jpg" position="50% 45%"
