@@ -19,7 +19,7 @@ function BrandHero({ onNav }) {
       <div className="hero__banner"></div>
       <Nav onNav={onNav} active="home" />
       <div className="hero__inner">
-        <h1 className="hero__title">Using what I've learnt through life and work to level up engagement, build capacity, and support the next gen of <em>changemakers</em></h1>
+        <h1 className="hero__title">I'm using what I've learnt through life and work to level up engagement, build capacity, and support the next gen of <em>changemakers</em></h1>
         <p className="hero__sub">I'm Kris Pierce. Two decades as a carer, advocate, consultant, and researcher have
           taught me what it takes to bring the right people into the room and make their involvement count. Now I use
           that experience to help organisations, teams, and emerging leaders do the same.</p>
@@ -127,9 +127,9 @@ function BrandCTA() {
   return (
     <section className="cta">
       <div className="cta__panel">
-        <h2 className="cta__title">Ready to level up your <em>engagement</em></h2>
-        <p className="cta__sub">Whether you need stronger engagement, better evidence, trained advocates, or support
-          for your organisation or your carers, let's talk about what's possible.</p>
+        <h2 className="cta__title">Let's build what comes <em>next</em></h2>
+        <p className="cta__sub">Whether it's engagement, research, advocacy, mentoring, or caregiver support, if
+          you're working to put people at the centre I'd like to hear about it.</p>
         <Button variant="inverse" size="lg" arrow href="/contact">Start a conversation</Button>
       </div>
     </section>
