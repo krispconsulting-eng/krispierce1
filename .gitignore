@@ -2,3 +2,6 @@ node_modules/
 dist/
 .DS_Store
 *.local
+
+# Raw image dump from the design handoff — not used by the live site
+project/uploads/
