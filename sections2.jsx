@@ -61,7 +61,7 @@ function Voices() {
       </div>
       <div className="voices__right">
         <span className="voices__mark"><Icon name="quote" size={22} fill style={{color:'var(--clay-500)'}} /></span>
-        <blockquote className="voices__quote">{quote}</blockquote>
+        <blockquote className="voices__quote" style={{fontStyle:'italic'}}>{quote}</blockquote>
         <div className="voices__who">
           <Avatar name={role} size={46} />
           <div><div className="voices__role">{role}</div><div className="voices__org">{org}</div></div>
