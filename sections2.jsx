@@ -79,10 +79,11 @@ function CTA() {
     <section className="v3-cta-section">
       <div className="v3-wrap">
         <div className="v3-cta">
-          <svg className="v3-cta__dots" viewBox="0 0 340 300" aria-hidden="true"><g>{Array.from({length: 8}, (_, y) => Array.from({length: 9}, (_, x) => (<circle key={y*9+x} cx={40+x*34} cy={40+y*32} r="3.4" opacity={Math.max(0.06, 0.5-y*0.045).toFixed(2)} fill="rgba(127,168,194,.4)" />)))}</g></svg>
-          <span className="v3-overline v3-cta__overline">Start a conversation</span>
-          <h2 className="v3-cta__h2">If you're building engagement, growing capability, or investing in the next generation, <b>I can help.</b></h2>
-          <p className="v3-cta__lead">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
+          <div className="v3-cta__content">
+            <span className="v3-overline v3-cta__overline">Start a conversation</span>
+            <h2 className="v3-cta__h2">Building engagement, growing capability, or investing in the next generation? <b>I can help.</b></h2>
+            <p className="v3-cta__lead">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
+          </div>
           <a href="/contact" className="v3-btn v3-btn--blue">Start a conversation <span>→</span></a>
         </div>
       </div>

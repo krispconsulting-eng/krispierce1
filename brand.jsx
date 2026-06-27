@@ -30,23 +30,6 @@ function FeatureArcs() {
   );
 }
 
-function DotMatrix() {
-  const dots = [];
-  for (let y = 0; y < 8; y++) {
-    for (let x = 0; x < 9; x++) {
-      const o = Math.max(0.06, 0.5 - y * 0.045);
-      dots.push(
-        <circle key={`${x}-${y}`} cx={40 + x * 34} cy={40 + y * 32} r="3.4" opacity={o.toFixed(2)} />
-      );
-    }
-  }
-  return (
-    <svg className="v3-cta__dots" viewBox="0 0 340 300" aria-hidden="true">
-      <g fill="rgba(127,168,194,.4)">{dots}</g>
-    </svg>
-  );
-}
-
 /* ---- Hero ---- */
 function BrandHero({ onNav }) {
   return (
@@ -190,7 +173,6 @@ function BrandCTA() {
     <section className="v3-cta-section">
       <div className="v3-wrap">
         <div className="v3-cta reveal">
-          <DotMatrix />
           <span className="v3-overline v3-cta__overline">Start a conversation</span>
           <h2 className="v3-cta__h2">Flexible methodology. Together, we discover <b>what works.</b></h2>
           <p className="v3-cta__lead">If you are bringing a medicine, a study or a programme to the people it
