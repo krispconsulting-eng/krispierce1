@@ -355,7 +355,7 @@ html { scroll-behavior: smooth; }
 @keyframes v3-float1{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,30px)}}
 @keyframes v3-float2{0%,100%{transform:translate(0,0)}50%{transform:translate(25px,-20px)}}
 @keyframes v3-float3{0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,-25px)}}
-.v3-page-hero__inner { position:relative; z-index:3; max-width:1240px; margin:0 auto; padding:0 30px; }
+.v3-page-hero__inner { position:relative; z-index:3; max-width:1240px; margin:0 auto; padding:0 clamp(24px, 5vw, 72px); }
 .v3-page-hero__overline { color:var(--blue-200); letter-spacing:.22em; }
 .v3-page-hero__title { font-family:var(--font-display); font-weight:200;
   font-size:clamp(2.8rem, 6vw, 5rem); line-height:.96; letter-spacing:-.035em;

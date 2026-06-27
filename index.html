@@ -122,7 +122,7 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:var(--sans);background:var(--cream-50);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(24px,5vw,72px)}
   .overline{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.2em;display:inline-block;font-family:var(--sans);color:var(--teal-600)}
   a{color:var(--blue-700);text-decoration:none}
 
@@ -288,13 +288,14 @@
   .voices .org{color:var(--taupe-500);font-size:13.5px;font-weight:400;margin-top:2px}
 
   /* ---- CTA ---- */
-  .cta{background:var(--ink);color:var(--cream-50);border-radius:var(--r-panel);padding:clamp(44px,6vw,86px);text-align:left;position:relative;overflow:hidden;box-shadow:0 32px 64px -24px rgba(28,37,48,.35),inset 0 1px 0 rgba(255,255,255,.06)}
-  .cta svg.cdots{position:absolute;right:0;bottom:0;width:340px;height:300px;opacity:.5;pointer-events:none}
+  .cta{background:var(--ink);color:var(--cream-50);border-radius:24px;padding:clamp(28px,3.6vw,44px) clamp(32px,4vw,52px);text-align:left;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr auto;gap:24px 40px;align-items:center;box-shadow:0 20px 48px -18px rgba(28,37,48,.3),inset 0 1px 0 rgba(255,255,255,.06)}
+  .cta__content{position:relative;z-index:2}
   .cta .overline{color:var(--blue-400)}
-  .cta h2{font-family:var(--display);font-weight:200;font-size:clamp(2.4rem,5.4vw,4.2rem);max-width:15ch;line-height:1.02;letter-spacing:-.03em;position:relative;z-index:2;margin-top:18px;color:var(--cream-50)}
+  .cta h2{font-family:var(--display);font-weight:200;font-size:clamp(1.6rem,3vw,2.4rem);max-width:32ch;line-height:1.12;letter-spacing:-.02em;position:relative;z-index:2;margin-top:10px;color:var(--cream-50)}
   .cta h2 b{font-weight:600;color:var(--blue-400)}
-  .cta .clead{font-size:1.2rem;color:rgba(251,250,247,.84);max-width:48ch;margin:24px 0 32px;position:relative;z-index:2}
-  .cta .btn{position:relative;z-index:2}
+  .cta .clead{font-size:1rem;color:rgba(251,250,247,.72);max-width:52ch;margin:12px 0 0;position:relative;z-index:2}
+  .cta .btn{position:relative;z-index:2;white-space:nowrap}
+  @media(max-width:720px){.cta{grid-template-columns:1fr}}
 
   /* ---- FOOTER ---- */
   footer{padding:48px 0;color:var(--taupe-500);font-size:14px}
@@ -548,10 +549,11 @@
 <section style="padding-top:20px;padding-bottom:96px">
   <div class="wrap">
     <div class="cta reveal-scale">
-      <svg class="cdots" viewBox="0 0 340 300" aria-hidden="true"><g fill="rgba(127,168,194,.4)" id="r"></g></svg>
-      <span class="overline">Start a conversation</span>
-      <h2>If you're building engagement, growing capability, or investing in the next generation, <b>I can help.</b></h2>
-      <p class="clead">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
+      <div class="cta__content">
+        <span class="overline">Start a conversation</span>
+        <h2>Building engagement, growing capability, or investing in the next generation? <b>I can help.</b></h2>
+        <p class="clead">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
+      </div>
       <a href="/contact" class="btn btn-blue">Start a conversation &rarr;</a>
     </div>
   </div>
@@ -566,9 +568,6 @@
 </footer>
 
 <script>
-  // dot-matrix
-  (function(){var g=document.getElementById('r');if(!g)return;var s='';for(var y=0;y<8;y++)for(var x=0;x<9;x++){var o=0.5-(y*0.045);if(o<0.06)o=0.06;s+='<circle cx="'+(40+x*34)+'" cy="'+(40+y*32)+'" r="3.4" opacity="'+o.toFixed(2)+'"/>';}g.innerHTML=s;})();
-
   // reveal observer (supports multiple animation classes)
   var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.1});
   document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.stagger').forEach(function(el,i){
