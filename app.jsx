@@ -43,13 +43,13 @@ function App() {
    hard fallback so content can never stay hidden. */
 function setupReveal() {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const sels = ['.v3-opener', '.v3-row-item', '.voices', '.teaser__head', '.teaser__grid .ins-card',
+  const sels = ['.v3-opener', '.v3-focus-card', '.voices', '.teaser__head', '.teaser__grid .ins-card',
     '.v3-cta', '.contact__intro', '.contact__card', '.v3-foot'];
   const els = [];
   sels.forEach((s) => document.querySelectorAll(s).forEach((e) => els.push(e)));
   if (!els.length) return;
   const EASE = 'cubic-bezier(0.22,1,0.36,1)';
-  const staggerSels = ['.teaser__grid .ins-card', '.v3-row-item'];
+  const staggerSels = ['.teaser__grid .ins-card', '.v3-focus-card'];
   els.forEach((e) => {
     e.style.opacity = '0';
     e.style.transform = 'translateY(28px)';

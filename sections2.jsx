@@ -11,23 +11,30 @@ const OFFERINGS = [
 ];
 
 function Offerings() {
+  const palette = ['teal','blue','teal','blue','teal','blue'];
   return (
-    <section className="v3-services" id="offerings">
+    <section className="v3-focus" id="offerings">
       <div className="v3-wrap v3-opener">
         <span className="v3-overline">Where I focus</span>
         <h2 className="v3-opener__h2">Six areas of expertise, drawn from what I've learnt through life and <b>work</b></h2>
       </div>
       <div className="v3-wrap">
-        <div className="v3-index">
+        <div className="v3-focus-grid">
           {OFFERINGS.map(([icon, title, body, fit], i) => (
-            <a className="v3-row-item" href="/engagement/expertise" key={title}>
-              <div className="v3-row-item__num">{String(i+1).padStart(2,'0')}</div>
-              <div>
-                <h3 className="v3-row-item__title">{title}</h3>
-                <p className="v3-row-item__body">{body}</p>
+            <div className="v3-focus-card" key={title}>
+              <div className="v3-focus-card__top">
+                <div className={'v3-focus-card__icon ' + palette[i]}>
+                  <Icon name={icon} size={28} />
+                </div>
+                <span className="v3-focus-card__num">{String(i+1).padStart(2,'0')}</span>
               </div>
-              <div className="v3-row-item__go">→</div>
-            </a>
+              <h3>{title}</h3>
+              <p className="v3-focus-card__body">{body}</p>
+              <div className="v3-focus-card__outcome">
+                <Icon name="arrow-right" size={15} />
+                <span>{fit}</span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
