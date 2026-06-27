@@ -182,6 +182,15 @@ function ExpertisePage() {
 
         <ExpertiseCards />
 
+        <section className="credential-badge" style={{ textAlign: 'center', padding: '3rem 1.5rem' }}>
+          <a href="https://credsverse.com/credentials/b2bd0a36-60d8-4eb3-a8c9-2a335403b4a4"
+            target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn.certifier.io/0952e954-56e7-4e86-af01-8571d859aef3/credentials/01kvyxdh82pt6ksk5frkkjvkjp/designs/01ketg54q3cdayckbzgem8jfh5/dKhS1X8KEg.png"
+              alt="Verified credential badge"
+              style={{ maxWidth: '280px', width: '100%', height: 'auto' }} />
+          </a>
+        </section>
+
         <MethodSpectrum showFoot={false} />
 
         <Motif id="exp-motif" src="assets/driftwood.jpg" position="50% 56%"
