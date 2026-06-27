@@ -20,24 +20,40 @@
   --taupe-600: #56514A;
   --taupe-700: #423E38;
 
-  /* ---- Ink (warm near-black) ---- */
-  --ink-900: #1D1C21;     /* primary text, dark panels  */
-  --ink-800: #29272E;
-  --ink-700: #38353F;
+  /* ---- Ink (cooled near-black) ---- */
+  --ink-900: #1C2530;
+  --ink-800: #2B3744;
+  --ink-700: #3E484A;
 
-  /* ---- Clay (the single warm accent) ---- */
-  --clay-200: #ECD8BD;
-  --clay-300: #DFC09B;
-  --clay-400: #CDA67A;    /* warm tan (reference)       */
-  --clay-500: #BC8F5E;
-  --clay-600: #A2774A;    /* accent for links / marks   */
-  --clay-700: #835E39;
+  /* ---- Clay (legacy, remapped to teal/blue) ---- */
+  --clay-200: var(--teal-200);
+  --clay-300: var(--teal-200);
+  --clay-400: var(--teal-400);
+  --clay-500: var(--teal-600);
+  --clay-600: var(--teal-600);
+  --clay-700: var(--blue-700);
 
   /* ---- Muted status hues (kept desaturated to sit in the warm world) ---- */
   --sage-500:  #5E7A55;   /* success / positive         */
   --amber-500: #B5872F;   /* warning / attention        */
   --brick-500: #9E4B3B;   /* danger / error             */
   --slate-500: #4E6373;   /* info / neutral notice       */
+
+  /* ---- Teal ---- */
+  --teal-200: #CFE0DA;
+  --teal-400: #7FA295;
+  --teal-600: #3D7A6B;
+  --teal-700: #2F5E52;
+
+  /* ---- Forest ---- */
+  --forest:      #1E3D34;
+  --forest-deep: #16302A;
+
+  /* ---- Blue ---- */
+  --blue-200: #D2E1EA;
+  --blue-400: #7FA8C2;
+  --blue-600: #3E6F8E;
+  --blue-700: #305670;
 
   /* =================================================================
      SEMANTIC ALIASES  — reach for these in components, not raw scales
@@ -53,21 +69,21 @@
   --text-muted:       var(--taupe-400);
   --text-on-inverse:        #F4F1EB;
   --text-on-inverse-muted:  rgba(244, 241, 235, 0.66);
-  --text-accent:      var(--clay-700);
+  --text-accent:      var(--blue-700);
 
   --border-subtle:  rgba(29, 28, 33, 0.09);
   --border-default: rgba(29, 28, 33, 0.16);
   --border-strong:  rgba(29, 28, 33, 0.28);
   --border-inverse: rgba(244, 241, 235, 0.18);
 
-  --accent:      var(--clay-600);
-  --accent-soft: var(--clay-400);
-  --accent-wash: #F3EADD;
+  --accent:      var(--teal-600);
+  --accent-soft: var(--teal-400);
+  --accent-wash: #E7F0EC;
 
   /* Buttons */
-  --btn-primary-bg:   var(--ink-900);
+  --btn-primary-bg:   var(--blue-600);
   --btn-primary-fg:   var(--cream-50);
-  --btn-primary-hover:#000000;
+  --btn-primary-hover:var(--blue-700);
   --btn-secondary-bg: transparent;
   --btn-secondary-fg: var(--ink-900);
 
@@ -78,5 +94,5 @@
   --glass-blur:    16px;
 
   /* Focus ring */
-  --focus-ring: var(--clay-600);
+  --focus-ring: var(--blue-600);
 }

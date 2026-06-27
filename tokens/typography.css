@@ -6,8 +6,8 @@
      • Text (Hanken Grotesk) — calm, legible body / UI / labels.
 ------------------------------------------------------------------ */
 :root {
-  --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
-  --font-text:    'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Outfit', 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-text:    'Archivo', 'Helvetica Neue', Arial, sans-serif;
 
   /* Weights */
   --weight-regular:  400;
