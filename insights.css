@@ -15,7 +15,7 @@
   letter-spacing: -.025em; line-height: 1.04; color: var(--text-primary);
   max-width: 17ch; margin: 18px 0 0; text-wrap: balance;
 }
-.ins-head__title em { font-style: italic; color: var(--clay-600); }
+.ins-head__title em, .ins-head__title b { font-style: normal; font-weight: 600; color: var(--teal-600); }
 .ins-head__lead {
   color: var(--text-secondary); font-size: var(--text-lead); line-height: 1.5;
   max-width: 34em; margin: 22px 0 0; text-wrap: pretty;

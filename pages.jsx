@@ -12,7 +12,7 @@ function AboutPage() {
       <main id="main-content">
         <section className="page-hero">
           <Pill variant="wash" dot className="page-hero__overline">About Kris</Pill>
-          <h1 className="page-hero__title">Using what I've learnt to level up engagement, build capacity, and back the next gen of <em>changemakers</em></h1>
+          <h1 className="page-hero__title">Using what I've learnt to level up engagement, build capacity, and back the next gen of <b>changemakers</b></h1>
           <p className="page-hero__lead">I'm Kris Pierce. My consulting practice draws on two decades as a carer,
             advocate, consultant, and researcher to help organisations strengthen engagement, build evidence,
             train advocates, mentor not-for-profits, and support the carers who hold the system together.</p>
@@ -89,7 +89,7 @@ function AboutPage() {
 
         <Motif id="about-motif" src="assets/hero-path.jpg" position="50% 42%"
           overline="Work with me"
-          title={<>Bring me into <em>the work</em></>}
+          title={<>Start a <b>conversation</b></>}
           sub="If you're building engagement, growing capability, or investing in the next generation of advocates and leaders, I can help you get there. Tell me what you're working on."
           ctaLabel="Get in touch" ctaHref="/contact" />
       </main>
@@ -195,7 +195,7 @@ function ExpertisePage() {
 
         <Motif id="exp-motif" src="assets/driftwood.jpg" position="50% 56%"
           overline="How we'd start"
-          title={<>A conversation about what you <em>need</em></>}
+          title={<>A conversation about what you <b>need</b></>}
           sub="Most consulting starts with a conversation about the challenge, not the method. You'll get a straight answer on whether I'm the right fit and what approach suits."
           ctaLabel="Let's talk" ctaHref="/contact" />
       </main>
@@ -232,7 +232,7 @@ function ContactPage() {
       <main id="main-content">
         <section className="page-hero">
           <Pill variant="wash" className="page-hero__overline">Contact</Pill>
-          <h1 className="page-hero__title">Let's <em>talk</em></h1>
+          <h1 className="page-hero__title">Let's <b>talk</b></h1>
         </section>
 
         <section className="contact-page">
@@ -329,7 +329,7 @@ function PortfolioPage() {
       <main id="main-content">
         <section className="page-hero">
           <Pill variant="wash" className="page-hero__overline">Portfolio</Pill>
-          <h1 className="page-hero__title">Previous work, and what people <em>say</em></h1>
+          <h1 className="page-hero__title">Previous work, and what people <b>say</b></h1>
           <p className="page-hero__lead">A selection of engagements and the outcomes they reached, alongside words from
             the people in the room. Client names are kept private; the work speaks plainly.</p>
         </section>
@@ -381,7 +381,7 @@ function PortfolioPage() {
 
         <section className="cta">
           <div className="cta__panel">
-            <h2 className="cta__title">Bring me into <em>the work</em></h2>
+            <h2 className="cta__title">Start a <b>conversation</b></h2>
             <p className="cta__sub">If you're building engagement, growing capability, or backing emerging leaders, I can help you get there.</p>
             <Button variant="inverse" size="lg" arrow href="/contact">Get in touch</Button>
           </div>
