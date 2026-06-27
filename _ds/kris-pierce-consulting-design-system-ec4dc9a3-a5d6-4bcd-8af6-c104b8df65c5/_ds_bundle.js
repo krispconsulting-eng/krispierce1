@@ -3691,7 +3691,7 @@ function Offerings() {
     className: "offer__fit"
   }, fit))))));
 }
-const VOICES = [[‘Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda.’, ‘Donna Walsh, CEO’, ‘International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening’], [‘Kris is a highly skilled professional who has delivered significant value to the Epilepsy Foundation. Respectfully engaging with multiple stakeholders, Kris has greatly improved the Foundation’s ability to support people living with rare and complex epilepsies, as well as people accessing our services in general.’, ‘Graeme Shears, CEO’, ‘Epilepsy Foundation’]];
+const VOICES = [['Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda.', 'Donna Walsh, CEO', 'International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening'], ['Kris is a highly skilled professional who has delivered significant value to the Epilepsy Foundation. Respectfully engaging with multiple stakeholders, Kris has greatly improved the Foundation\'s ability to support people living with rare and complex epilepsies, as well as people accessing our services in general.', 'Graeme Shears, CEO', 'Epilepsy Foundation']];
 function Voices() {
   const [i, setI] = useState2(0);
   const go = d => setI(p => (p + d + VOICES.length) % VOICES.length);
