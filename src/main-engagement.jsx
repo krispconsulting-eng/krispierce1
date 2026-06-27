@@ -10,6 +10,7 @@ import '../insights-data.js';
 
 import '../_ds/kris-pierce-consulting-design-system-ec4dc9a3-a5d6-4bcd-8af6-c104b8df65c5/styles.css';
 import '../kit.css';
+import '../brand.css';
 import '../insights.css';
 
 import '../primitives.jsx';
