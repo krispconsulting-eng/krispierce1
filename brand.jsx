@@ -10,8 +10,8 @@ function BrandHero({ onNav }) {
   return (
     <section className="hero" id="home">
       <div className="hero__media">
-        <image-slot id="kp-brand-hero" shape="rect" fit="cover" position="50% 42%"
-          src="assets/kris-podium-portrait.jpg"
+        <image-slot id="kp-brand-hero" shape="rect" fit="cover" position="32% 42%"
+          src="assets/kris-podium.jpg"
           alt="Kris Pierce speaking at a podium"
           placeholder="Drop a warm portrait of Kris"></image-slot>
         <div className="hero__scrim"></div>
@@ -38,7 +38,6 @@ function AreaCard({ a }) {
           : <span className="area-card__eyebrow">{a.eyebrow}</span>}
       </div>
       <h3>{a.title}</h3>
-      <p>{a.blurb}</p>
       {a.status === 'coming'
         ? <span className="area-card__soon">In development</span>
         : <span className="area-card__cta">{a.cta || 'Explore the work'} <Icon name="arrow-right" size={16} /></span>}
@@ -135,7 +134,6 @@ function BrandApp() {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <BrandHero onNav={onNav} />
       <main id="main-content">
-        <CredStrip />
         <WorkAreas />
         <Motif id="kp-brand-research" src="assets/insight-boardroom.jpg" position="50% 45%"
           overline="Research and evidence"
