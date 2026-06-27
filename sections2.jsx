@@ -40,7 +40,7 @@ function Offerings() {
 }
 
 const VOICES = [
-  [‘Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda.’, ‘Donna Walk, CEO’, ‘International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening’],
+  [‘Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda.’, ‘Donna Walsh, CEO’, ‘International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening’],
 ];
 
 function Voices() {
