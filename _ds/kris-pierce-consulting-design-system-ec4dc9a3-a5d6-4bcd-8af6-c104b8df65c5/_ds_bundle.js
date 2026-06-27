@@ -3691,7 +3691,7 @@ function Offerings() {
     className: "offer__fit"
   }, fit))))));
 }
-const VOICES = [['Kris made space for the voices our project had been talking about, but never with. The shift in the room was immediate, and the work was better for it.', 'Program Director', 'Health not-for-profit'], ['Rigorous and warm in equal measure. The engagement framework she built with us is now how we run every consumer advisory group.', 'Patient Engagement Lead', 'Pharmaceutical'], ['She turned a sceptical, mixed group into genuine collaborators. That’s a rare skill, and it changed how we design studies.', 'Principal Researcher', 'Medical research institute']];
+const VOICES = [[‘Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda.’, ‘Donna Walsh, CEO’, ‘International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening’], [‘Kris is a highly skilled professional who has delivered significant value to the Epilepsy Foundation. Respectfully engaging with multiple stakeholders, Kris has greatly improved the Foundation’s ability to support people living with rare and complex epilepsies, as well as people accessing our services in general.’, ‘Graeme Shears, CEO’, ‘Epilepsy Foundation’]];
 function Voices() {
   const [i, setI] = useState2(0);
   const go = d => setI(p => (p + d + VOICES.length) % VOICES.length);
