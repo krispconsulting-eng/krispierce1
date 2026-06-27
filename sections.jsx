@@ -1,12 +1,9 @@
 /* Kris Pierce Consulting — website sections (part 1): Nav, SectionNav */
 
 const NAV_LINKS = [
-  ['Home','home','/'],
   ['Engagement','engagement','/engagement'],
   ['About','about','/about'],
-  // ['Portfolio','portfolio','/portfolio'],
   ['Resources','resources','/resources'],
-  ['Contact','contact','/contact'],
 ];
 
 function Nav({ active }) {
