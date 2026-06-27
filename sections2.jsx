@@ -162,7 +162,7 @@ function Footer({ onNav }) {
           <a href="/engagement/expertise">Expertise</a>
           <a href="/engagement/insights">Insights</a>
           <a href="/about">About</a>
-          <a href="/portfolio">Portfolio</a>
+          {/* <a href="/portfolio">Portfolio</a> */}
           <a href="/resources">Resources</a>
           <a href="/contact">Contact</a>
         </div>
