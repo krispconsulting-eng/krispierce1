@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kris Pierce Consulting: design direction v3.0 (final)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream-25:#FBFAF7; --cream-50:#F6F4EF; --cream-100:#EDEAE3; --paper:#FFFFFF;
+    --ink:#1C2530; --ink-soft:#2B3744;
+    --forest:#1E3D34; --forest-deep:#16302A;
+    --teal-700:#2F5E52; --teal-600:#3D7A6B; --teal-400:#7FA295; --teal-200:#CFE0DA;
+    --blue-700:#305670; --blue-600:#3E6F8E; --blue-400:#7FA8C2; --blue-200:#D2E1EA;
+    --taupe-100:#DFDAD0; --taupe-200:#C9C2B5; --taupe-400:#8C867A; --taupe-500:#6E685E; --taupe-600:#56514A;
+    --display:"Outfit","Archivo","Helvetica Neue",Arial,sans-serif;
+    --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+    --maxw:1240px;
+    --r-card:22px; --r-panel:30px;
+    --shadow:0 36px 70px -30px rgba(22,48,42,.42);
+    --shadow-sm:0 12px 30px -16px rgba(22,48,42,.3);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--cream-25);color:var(--ink);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 30px}
+  .display{font-family:var(--display);font-weight:300;letter-spacing:-.03em;line-height:1}
+  .overline{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.2em;display:inline-block;font-family:var(--sans);color:var(--teal-600)}
+  a{color:var(--blue-700);text-decoration:none}
+
+  header{position:absolute;top:0;left:0;right:0;z-index:50}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:88px}
+  .mark{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:-.02em;color:var(--cream-25)}
+  .mark small{display:block;font-family:var(--sans);font-weight:600;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--teal-200);margin-top:0}
+  .links{display:flex;gap:36px;align-items:center}
+  .links a{color:rgba(251,250,247,.86);font-size:15px;font-weight:500;position:relative;padding:4px 0}
+  .links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--blue-400);transition:width .3s cubic-bezier(.16,1,.3,1)}
+  .links a:hover::after{width:100%}
+  .btn{font-family:var(--sans);font-weight:600;font-size:15px;border-radius:999px;padding:14px 28px;border:1px solid transparent;cursor:pointer;transition:transform .2s cubic-bezier(.16,1,.3,1),box-shadow .2s,background .2s,color .2s;display:inline-flex;align-items:center;gap:9px}
+  .btn-blue{background:var(--blue-600);color:var(--cream-25)}
+  .btn-blue:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(62,111,142,.65)}
+  .btn-blue:active{transform:translateY(0) scale(.985)}
+  .btn-out-light{background:transparent;color:var(--cream-25);border-color:rgba(251,250,247,.4)}
+  .btn-out-light:hover{transform:translateY(-2px);border-color:var(--blue-400);color:var(--blue-200)}
+  .btn-out{background:transparent;color:var(--ink);border-color:var(--taupe-200)}
+  .btn-out:hover{transform:translateY(-2px);border-color:var(--teal-600);color:var(--teal-700)}
+  .links .btn{padding:11px 22px}
+
+  /* ---------- HERO with pushed graphics: gradient mesh + SVG arcs + layered shapes ---------- */
+  .hero{background:linear-gradient(165deg,var(--forest) 0%,#234A52 100%);color:var(--cream-25);position:relative;overflow:hidden;padding:154px 0 96px;min-height:88vh;display:flex;align-items:center}
+  .hero .blob{position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}
+  .hero .b1{top:-14%;right:-6%;width:560px;height:560px;background:radial-gradient(circle at 35% 35%,rgba(127,168,194,.5),transparent 60%)}
+  .hero .b2{bottom:-26%;left:-12%;width:520px;height:520px;background:radial-gradient(circle at 50% 50%,rgba(207,224,218,.28),transparent 60%)}
+  .hero svg.arcs{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.5}
+  .hero .wrap{position:relative;z-index:3;width:100%}
+  .hero .kicker{color:var(--blue-200);letter-spacing:.22em}
+  .hero h1{font-family:var(--display);font-weight:200;font-size:clamp(3.2rem,8.6vw,7.2rem);line-height:.96;letter-spacing:-.035em;margin:24px 0 0;max-width:15ch}
+  .hero h1 b{font-weight:600;color:var(--blue-200)}
+  .hero .lead{font-size:clamp(1.15rem,1.8vw,1.4rem);color:rgba(251,250,247,.84);max-width:50ch;margin:30px 0 38px;font-weight:400;line-height:1.55}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+
+  /* floating glass stat chip in hero, pushes the graphic depth */
+  .hero .chip{position:absolute;right:30px;bottom:46px;z-index:3;background:rgba(251,250,247,.1);backdrop-filter:blur(18px);border:1px solid rgba(251,250,247,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.25);border-radius:20px;padding:20px 24px;max-width:230px}
+  .hero .chip .n{font-family:var(--display);font-weight:200;font-size:2.6rem;line-height:1;letter-spacing:-.03em;color:var(--cream-25)}
+  .hero .chip .t{font-size:13px;color:var(--blue-200);margin-top:8px;line-height:1.4}
+  @media(max-width:980px){.hero .chip{display:none}}
+
+  /* kinetic marquee */
+  .marquee{background:var(--forest-deep);color:var(--teal-200);overflow:hidden;border-top:1px solid rgba(207,224,218,.16);border-bottom:1px solid rgba(207,224,218,.16)}
+  .marquee .track{display:flex;white-space:nowrap;animation:scroll 36s linear infinite;will-change:transform}
+  .marquee span{font-family:var(--display);font-weight:300;font-size:1.5rem;letter-spacing:-.01em;padding:20px 0;display:inline-flex;align-items:center}
+  .marquee span::after{content:"\2022";color:var(--blue-400);opacity:.8;padding:0 34px}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .stats{padding:74px 0 10px}
+  .ledger{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink)}
+  .ledger div{padding:26px 24px 30px;border-left:1px solid var(--taupe-200)}
+  .ledger div:first-child{border-left:none;padding-left:0}
+  .ledger .fig{font-family:var(--display);font-weight:300;font-size:2.4rem;line-height:1;letter-spacing:-.03em;color:var(--forest)}
+  .ledger .cap{font-size:13.5px;color:var(--taupe-500);margin-top:11px}
+
+  section{padding:96px 0}
+  .opener .overline{margin-bottom:20px}
+  .opener h2{font-family:var(--display);font-weight:200;font-size:clamp(2.4rem,5vw,4rem);max-width:16ch;line-height:1.02;letter-spacing:-.03em}
+  .opener h2 b{font-weight:600;color:var(--teal-600)}
+
+  .index{margin-top:50px;border-top:1px solid var(--taupe-200)}
+  .row-item{display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center;padding:34px 6px;border-bottom:1px solid var(--taupe-200);transition:background .25s,padding .25s;cursor:pointer}
+  .row-item:hover{background:var(--cream-50);padding-left:18px;padding-right:18px}
+  .row-item .num{font-family:var(--display);font-weight:200;font-size:2.6rem;color:var(--teal-400);letter-spacing:-.03em;min-width:78px;transition:color .25s}
+  .row-item:hover .num{color:var(--blue-600)}
+  .row-item h3{font-family:var(--display);font-weight:500;font-size:clamp(1.4rem,2.6vw,2rem);letter-spacing:-.02em;margin-bottom:6px}
+  .row-item p{color:var(--taupe-600);max-width:60ch;font-size:15.5px}
+  .row-item .go{font-family:var(--display);font-size:1.6rem;color:var(--teal-600);transition:transform .25s,color .25s}
+  .row-item:hover .go{transform:translateX(6px);color:var(--blue-600)}
+
+  /* colour-blocked feature with arc graphic */
+  .feature{background:linear-gradient(150deg,var(--forest) 0%,#234A52 100%);color:var(--cream-25);border-radius:var(--r-panel);padding:clamp(40px,6vw,78px);position:relative;overflow:hidden}
+  .feature svg.farcs{position:absolute;right:-40px;top:-40px;width:360px;height:360px;opacity:.5;pointer-events:none}
+  .feature .overline{color:var(--blue-200)}
+  .feature .quote{font-family:var(--display);font-weight:200;font-size:clamp(1.9rem,4vw,3.1rem);line-height:1.2;max-width:24ch;margin:22px 0 0;letter-spacing:-.025em;position:relative;z-index:2}
+  .feature .quote b{font-weight:600;color:var(--blue-200)}
+  .feature .attrib{margin-top:30px;font-size:14px;color:var(--teal-200);letter-spacing:.02em;position:relative;z-index:2}
+
+  .specimen-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:54px}
+  .spec-card{background:var(--paper);border:1px solid var(--taupe-100);border-radius:var(--r-card);padding:38px;box-shadow:var(--shadow-sm)}
+  .spec-card .big{font-family:var(--display);font-size:4.4rem;font-weight:200;line-height:1;color:var(--forest);letter-spacing:-.04em}
+  .spec-card .meta{font-size:13px;color:var(--taupe-500);margin-top:7px}
+  .swatches{display:flex;border-radius:14px;overflow:hidden;border:1px solid var(--taupe-100);margin-top:18px}
+  .sw{flex:1;height:64px;display:flex;align-items:flex-end;padding:7px;font-size:10px;font-weight:600}
+
+  .cta{background:var(--ink);color:var(--cream-25);border-radius:var(--r-panel);padding:clamp(44px,6vw,86px);text-align:left;position:relative;overflow:hidden}
+  .cta svg.cdots{position:absolute;right:0;bottom:0;width:340px;height:300px;opacity:.5;pointer-events:none}
+  .cta h2{font-family:var(--display);font-weight:200;font-size:clamp(2.4rem,5.4vw,4.2rem);max-width:15ch;line-height:1.02;letter-spacing:-.03em;position:relative;z-index:2}
+  .cta h2 b{font-weight:600;color:var(--blue-400)}
+  .cta p{position:relative;z-index:2}
+  footer{padding:48px 0;color:var(--taupe-500);font-size:14px}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  .foot .mark{color:var(--ink)} .foot .mark small{color:var(--taupe-500)}
+  .note{font-size:12.5px;color:var(--taupe-400);text-align:center;padding:8px 0 54px}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .hero{min-height:auto}
+    .ledger{grid-template-columns:1fr 1fr}
+    .ledger div{border-left:none;border-top:1px solid var(--taupe-100);padding-left:0}
+    .ledger div:nth-child(-n+2){border-top:none}
+    .row-item{grid-template-columns:auto 1fr;gap:20px}
+    .row-item .go{display:none}.row-item .num{font-size:2rem;min-width:54px}
+    .specimen-grid{grid-template-columns:1fr}
+    .links{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    .marquee .track{animation:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="mark">Kris Pierce<small>Consulting</small></div>
+    <nav class="links">
+      <a href="#work">What I do</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn btn-blue">Start a conversation</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <svg class="arcs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke-width="1.5">
+      <circle cx="1180" cy="250" r="120" stroke="rgba(127,168,194,.55)"/>
+      <circle cx="1180" cy="250" r="200" stroke="rgba(127,168,194,.32)"/>
+      <circle cx="1180" cy="250" r="290" stroke="rgba(207,224,218,.22)"/>
+      <path d="M-50 700 Q 400 560 760 720 T 1500 660" stroke="rgba(207,224,218,.3)"/>
+      <path d="M-50 770 Q 400 630 760 790 T 1500 730" stroke="rgba(127,168,194,.28)"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <span class="overline kicker">Healthcare engagement practice</span>
+    <h1>The patient voice, in the rooms where <b>decisions get made.</b></h1>
+    <p class="lead">I partner with pharmaceutical, biotech, research and not-for-profit teams to put the person at the centre of the work. Two decades of lived experience, professional rigour.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-blue">Start a conversation</a>
+      <a href="#work" class="btn btn-out-light">See how I work</a>
+    </div>
+  </div>
+  <div class="chip"><div class="n">20+</div><div class="t">years of lived experience, brought into the work</div></div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Insights</span><span>Patient-centred outcomes</span><span>Flexible methodology</span><span>Co-design</span><span>Participatory research</span><span>Together, we discover what works</span>
+    <span>Insights</span><span>Patient-centred outcomes</span><span>Flexible methodology</span><span>Co-design</span><span>Participatory research</span><span>Together, we discover what works</span>
+  </div>
+</div>
+
+<section class="stats">
+  <div class="wrap">
+    <div class="ledger reveal">
+      <div><div class="fig">20+ years</div><div class="cap">Lived experience and practice</div></div>
+      <div><div class="fig">Co-design</div><div class="cap">Communities as collaborators</div></div>
+      <div><div class="fig">Participatory</div><div class="cap">Research that includes people</div></div>
+      <div><div class="fig">Independent</div><div class="cap">A practice, not a panel</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:40px">
+  <div class="wrap opener reveal">
+    <span class="overline">What I do</span>
+    <h2 class="display">Insights that <b>change the work.</b></h2>
+  </div>
+  <div class="wrap">
+    <div class="index reveal">
+      <div class="row-item"><div class="num">01</div><div><h3>Consumer and community engagement</h3><p>Engagement that genuinely includes people, from advisory work to co-designed research. Built with communities, never about them.</p></div><div class="go">&rarr;</div></div>
+      <div class="row-item"><div class="num">02</div><div><h3>Health research partnership</h3><p>Participatory and co-design methods that bring the patient perspective into study design, endpoints and evidence, with the rigour funders and regulators expect.</p></div><div class="go">&rarr;</div></div>
+      <div class="row-item"><div class="num">03</div><div><h3>Advocacy training and mentoring</h3><p>Practical support for advocates and not-for-profit teams who want to be effective in the rooms where health decisions are made. Coming soon.</p></div><div class="go">&rarr;</div></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="feature reveal">
+      <svg class="farcs" viewBox="0 0 360 360" aria-hidden="true"><g fill="none" stroke-width="1.5">
+        <circle cx="200" cy="160" r="70" stroke="rgba(210,225,234,.5)"/>
+        <circle cx="200" cy="160" r="120" stroke="rgba(127,168,194,.4)"/>
+        <circle cx="200" cy="160" r="170" stroke="rgba(207,224,218,.25)"/>
+      </g></svg>
+      <span class="overline">In their words</span>
+      <p class="quote">"Kris brought the patient voice into a room that had spent years talking <b>about</b> patients, not <b>with</b> them."</p>
+      <p class="attrib">Research partner, rare disease programme</p>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap opener reveal">
+    <span class="overline">The system</span>
+    <h2 class="display">Patient-centred <b>outcomes.</b></h2>
+  </div>
+  <div class="wrap specimen-grid">
+    <div class="spec-card reveal">
+      <div class="big">Aa</div>
+      <div class="meta">Outfit · display · light, oversized · the bold voice</div>
+      <p style="margin-top:20px;font-family:var(--display);font-weight:300;font-size:1.7rem;letter-spacing:-.02em">Together, we discover what works.</p>
+      <hr style="border:none;border-top:1px solid var(--taupe-100);margin:22px 0">
+      <div style="font-weight:700;font-size:1.5rem">Archivo</div>
+      <div class="meta">Working voice · body, labels, UI · 17px / 1.65</div>
+      <p style="margin-top:10px;color:var(--taupe-600)">All-sans. Energy from scale, colour blocks, layered graphics and motion, not a louder hue.</p>
+    </div>
+    <div class="spec-card reveal">
+      <span class="overline">Palette: teal and blue co-lead</span>
+      <div class="swatches">
+        <div class="sw" style="background:var(--cream-25);color:var(--taupe-600)">Cream</div>
+        <div class="sw" style="background:var(--teal-400);color:#16302A">Sage-teal</div>
+        <div class="sw" style="background:var(--forest);color:#fff">Forest</div>
+        <div class="sw" style="background:var(--blue-600);color:#fff">Blue 600</div>
+        <div class="sw" style="background:var(--ink);color:var(--cream-25)">Ink</div>
+      </div>
+      <p class="meta" style="margin-top:17px">Two cool leads: deep forest-teal anchors the big colour blocks, blue carries links, headline emphasis and primary action. Used boldly in large areas with layered graphic shapes, so it feels confident, not flat.</p>
+      <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+        <span class="btn btn-blue" style="cursor:default">Primary</span>
+        <span class="btn btn-out" style="cursor:default">Secondary</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:20px">
+  <div class="wrap">
+    <div class="cta reveal">
+      <svg class="cdots" viewBox="0 0 340 300" aria-hidden="true"><g fill="rgba(127,168,194,.4)">
+        <!-- dot matrix graphic -->
+        <g id="r"></g>
+      </g></svg>
+      <span class="overline" style="color:var(--blue-400)">Start a conversation</span>
+      <h2 class="display" style="margin-top:18px">Flexible methodology. Together, we discover <b>what works.</b></h2>
+      <p style="font-size:1.2rem;color:rgba(251,250,247,.84);max-width:48ch;margin:24px 0 32px">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
+      <a href="#" class="btn btn-blue">Best regards, Kris &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div class="mark" style="font-size:20px">Kris Pierce<small>Consulting</small></div>
+    <div>krispierce.com.au · Sunshine Coast, Queensland</div>
+  </div>
+</footer>
+
+<p class="note">Design direction mockup v3.0 (final) · teal and blue co-lead · bold editorial layout · all-sans Outfit and Archivo · layered graphics, SVG arc motif, kinetic marquee · placeholder imagery</p>
+
+<script>
+  // dot-matrix graphic for CTA
+  (function(){
+    var g=document.getElementById('r'); if(!g) return;
+    var s='';
+    for(var y=0;y<8;y++)for(var x=0;x<9;x++){var o=0.5-(y*0.045);if(o<0.06)o=0.06;s+='<circle cx="'+(40+x*34)+'" cy="'+(40+y*32)+'" r="3.4" opacity="'+o.toFixed(2)+'"/>';}
+    g.innerHTML=s;
+  })();
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionDelay=(Math.min(i,4)*60)+'ms';obs.observe(el)});
+</script>
+</body>
+</html>
