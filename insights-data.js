@@ -139,14 +139,6 @@ window.GUIDES = [
     file: 'assets/guides/starting-checklist.pdf',
   },
   {
-    id: 'codesign-planner',
-    kind: 'Template',
-    title: 'Co-design session planner',
-    dek: 'The structure I use to hand the pen over without losing the thread.',
-    meta: 'PDF, 3 pages',
-    file: 'assets/guides/codesign-planner.pdf',
-  },
-  {
     id: 'ma-code-map',
     kind: 'Briefing',
     title: 'Patient voice inside the MA Code',
