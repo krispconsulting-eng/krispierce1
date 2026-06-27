@@ -71,13 +71,17 @@ function Voices() {
   );
 }
 
-function CTA({ onNav }) {
+function CTA() {
   return (
-    <section className="cta">
-      <div className="cta__panel">
-        <h2 className="cta__title">Start a <b>conversation</b></h2>
-        <p className="cta__sub">If you're building engagement, growing capability, or investing in the next generation of advocates and leaders, I can help you get there.</p>
-        <Button variant="inverse" size="lg" arrow onClick={()=>onNav('contact')}>Book an intro call</Button>
+    <section className="v3-cta-section">
+      <div className="v3-wrap">
+        <div className="v3-cta">
+          <svg className="v3-cta__dots" viewBox="0 0 340 300" aria-hidden="true"><g id="cta-dots-g"></g></svg>
+          <span className="v3-overline v3-cta__overline">Start a conversation</span>
+          <h2 className="v3-cta__h2">If you're building engagement, growing capability, or investing in the next generation, <b>I can help.</b></h2>
+          <p className="v3-cta__lead">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
+          <a href="/contact" className="v3-btn v3-btn--blue">Start a conversation <span>→</span></a>
+        </div>
       </div>
     </section>
   );
@@ -150,55 +154,18 @@ function Contact() {
   );
 }
 
-function Footer({ onNav }) {
+function Footer() {
   return (
-    <footer className="foot" id="foot">
-      <span className="foot__label">Prefer email?</span>
-      <a className="foot__email" href="mailto:info@krispierce.com.au">info@krispierce.com.au</a>
-      <div className="foot__bar">
-        <div className="foot__links">
-          <a href="/">Home</a>
-          <a href="/engagement">Engagement</a>
-          <a href="/engagement/expertise">Expertise</a>
-          <a href="/engagement/insights">Insights</a>
-          <a href="/about">About</a>
-          {/* <a href="/portfolio">Portfolio</a> */}
-          <a href="/resources">Resources</a>
-          <a href="/contact">Contact</a>
-        </div>
-        <div className="foot__social">
-          <a href="https://www.linkedin.com/in/krispierceaust" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>
-          <a href="mailto:info@krispierce.com.au" aria-label="Email"><Icon name="mail" size={18} /></a>
-        </div>
-      </div>
-      <div className="foot__legal">
-        <span>© {new Date().getFullYear()} Kris Pierce</span>
-        <span>Kabi Kabi Country / Sunshine Coast, Queensland</span>
-        <span>Privacy</span>
+    <footer className="v3-foot">
+      <div className="v3-foot__inner">
+        <a href="/" className="v3-foot__mark" aria-label="Kris Pierce Consulting">
+          <img src="/assets/logo-wordmark.png" alt="Kris Pierce Consulting" />
+        </a>
+        <div className="v3-foot__info">krispierce.com.au · Sunshine Coast, Queensland · © {new Date().getFullYear()}</div>
       </div>
     </footer>
   );
 }
 
-function Motif({ id='kp-motif', src='assets/rocks-blocks.jpg', position='50% 52%',
-  overline='Building blocks',
-  title=<>We build the system <b>together</b></>,
-  sub="Engagement isn't handed over finished. It's assembled piece by piece, with the people it's meant to serve, until it holds.",
-  ctaLabel, ctaHref }) {
-  return (
-    <section className="motif">
-      <image-slot id={id} fit="cover" position={position} src={src}
-        placeholder="Drop a natural / metaphor image"></image-slot>
-      <div className="motif__scrim"></div>
-      <div className="motif__inner">
-        <span className="overline">{overline}</span>
-        <h2 className="motif__title">{title}</h2>
-        <p className="motif__sub">{sub}</p>
-        {ctaLabel && <Button variant="inverse" size="lg" arrow href={ctaHref} className="motif__cta">{ctaLabel}</Button>}
-      </div>
-    </section>
-  );
-}
-
 /* VOICES (testimonial data) is reused by the Portfolio page, so publish it too. */
-Object.assign(window, { Offerings, Voices, CTA, Contact, Footer, Motif, VOICES });
+Object.assign(window, { Offerings, Voices, CTA, Contact, Footer, VOICES });

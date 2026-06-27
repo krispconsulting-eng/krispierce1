@@ -96,7 +96,7 @@ function ResGate({ item, onClose }) {
 /* Entrance reveal (reduced-motion safe). */
 function setupResReveal() {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const sels = ['.page-hero', '.ins-guide', '.cta__panel'];
+  const sels = ['.v3-page-hero__inner', '.ins-guide', '.v3-cta'];
   const staggerSels = ['.ins-guide'];
   const els = [];
   sels.forEach((s) => document.querySelectorAll(s).forEach((e) => els.push(e)));
@@ -132,14 +132,17 @@ function ResourcesApp() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav theme="solid" active="resources" />
+      <Nav active="resources" />
       <main id="main-content">
-        <section className="page-hero">
-          <Pill variant="wash" dot className="page-hero__overline">Resources</Pill>
-          <h1 className="page-hero__title">Practical tools you can take and <em>use</em></h1>
-          <p className="page-hero__lead">Guides, frameworks, and checklists drawn straight from the work. Each one is
-            something I use with clients, made plain enough to apply on your own. Tell me where to send it, and adapt
-            whatever's useful to your context.</p>
+        <section className="v3-page-hero">
+          <div className="blob b1"></div><div className="blob b2"></div>
+          <div className="v3-page-hero__inner">
+            <span className="v3-overline v3-page-hero__overline">Resources</span>
+            <h1 className="v3-page-hero__title">Practical tools you can take and <b>use</b></h1>
+            <p className="v3-page-hero__lead">Guides, frameworks, and checklists drawn straight from the work. Each one is
+              something I use with clients, made plain enough to apply on your own. Tell me where to send it, and adapt
+              whatever's useful to your context.</p>
+          </div>
         </section>
 
         <section className="ins-guides" id="guides">
@@ -165,16 +168,9 @@ function ResourcesApp() {
           </div>
         </section>
 
-        <section className="cta">
-          <div className="cta__panel">
-            <h2 className="cta__title">A tool only goes so far. The consulting goes <em>further</em></h2>
-            <p className="cta__sub">If you're building engagement, growing capability, or backing the next generation
-              of changemakers, I can help you get there.</p>
-            <Button variant="inverse" size="lg" arrow href="/contact">Let's talk</Button>
-          </div>
-        </section>
+        <CTA />
       </main>
-      <Footer onNav={(id) => { window.location.href = '/#' + id; }} />
+      <Footer />
       {gating && <ResGate item={gating} onClose={() => setGating(null)} />}
     </div>
   );

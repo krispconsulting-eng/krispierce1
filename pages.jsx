@@ -8,16 +8,19 @@ function AboutPage() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav theme="solid" active="about" />
+      <Nav active="about" />
       <main id="main-content">
-        <section className="page-hero">
-          <Pill variant="wash" dot className="page-hero__overline">About Kris</Pill>
-          <h1 className="page-hero__title">Using what I've learnt to level up engagement, build capacity, and back the next gen of <b>changemakers</b></h1>
-          <p className="page-hero__lead">I'm Kris Pierce. My consulting practice draws on two decades as a carer,
-            advocate, consultant, and researcher to help organisations strengthen engagement, build evidence,
-            train advocates, mentor not-for-profits, and support the carers who hold the system together.</p>
-          <div className="page-hero__cta">
-            <Button variant="primary" arrow href="/contact">Let's talk</Button>
+        <section className="v3-page-hero">
+          <div className="blob b1"></div><div className="blob b2"></div>
+          <div className="v3-page-hero__inner">
+            <span className="v3-overline v3-page-hero__overline">About Kris</span>
+            <h1 className="v3-page-hero__title">Using what I've learnt to level up engagement, build capacity, and back the next gen of <b>changemakers</b></h1>
+            <p className="v3-page-hero__lead">I'm Kris Pierce. My consulting practice draws on two decades as a carer,
+              advocate, consultant, and researcher to help organisations strengthen engagement, build evidence,
+              train advocates, mentor not-for-profits, and support the carers who hold the system together.</p>
+            <div className="v3-page-hero__actions">
+              <a href="/contact" className="v3-btn v3-btn--blue">Start a conversation <span>→</span></a>
+            </div>
           </div>
         </section>
 
@@ -87,11 +90,7 @@ function AboutPage() {
           </div>
         </section>
 
-        <Motif id="about-motif" src="assets/hero-path.jpg" position="50% 42%"
-          overline="Work with me"
-          title={<>Start a <b>conversation</b></>}
-          sub="If you're building engagement, growing capability, or investing in the next generation of advocates and leaders, I can help you get there. Tell me what you're working on."
-          ctaLabel="Get in touch" ctaHref="/contact" />
+        <CTA />
       </main>
       <Footer />
     </div>
@@ -166,18 +165,21 @@ function ExpertisePage() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav theme="solid" active="engagement" />
+      <Nav active="engagement" />
       <SectionNav active="expertise" />
       <main id="main-content">
-        <section className="page-hero">
-          <Pill variant="wash" className="page-hero__overline">Expertise</Pill>
-          <h1 className="page-hero__title">This isn't a service menu</h1>
-          <p className="page-hero__lead">Every brief is different, and the method follows the question. What follows
-            are areas of expertise and the outcomes they are built for. If your challenge doesn't fit neatly into one of
-            these, that's usually a sign to talk.</p>
-          <p className="page-hero__lead" style={{ color: 'var(--clay-700)', fontWeight: 500, maxWidth: '40em' }}>
-            I bring the method the problem needs, and I know which one that is. The point is never the method. It's what
-            changes because of it: a decision, a design, a strategy.</p>
+        <section className="v3-page-hero">
+          <div className="blob b1"></div><div className="blob b2"></div>
+          <div className="v3-page-hero__inner">
+            <span className="v3-overline v3-page-hero__overline">Expertise</span>
+            <h1 className="v3-page-hero__title">This isn't a service menu</h1>
+            <p className="v3-page-hero__lead">Every brief is different, and the method follows the question. What follows
+              are areas of expertise and the outcomes they are built for. If your challenge doesn't fit neatly into one of
+              these, that's usually a sign to talk.</p>
+            <p className="v3-page-hero__lead" style={{ color: 'var(--blue-200)', fontWeight: 500 }}>
+              I bring the method the problem needs, and I know which one that is. The point is never the method. It's what
+              changes because of it: a decision, a design, a strategy.</p>
+          </div>
         </section>
 
         <ExpertiseCards />
@@ -193,11 +195,7 @@ function ExpertisePage() {
 
         <MethodSpectrum showFoot={false} />
 
-        <Motif id="exp-motif" src="assets/driftwood.jpg" position="50% 56%"
-          overline="How we'd start"
-          title={<>A conversation about what you <b>need</b></>}
-          sub="Most consulting starts with a conversation about the challenge, not the method. You'll get a straight answer on whether I'm the right fit and what approach suits."
-          ctaLabel="Let's talk" ctaHref="/contact" />
+        <CTA />
       </main>
       <Footer />
     </div>
@@ -228,11 +226,14 @@ function ContactPage() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav theme="solid" active="contact" />
+      <Nav active="contact" />
       <main id="main-content">
-        <section className="page-hero">
-          <Pill variant="wash" className="page-hero__overline">Contact</Pill>
-          <h1 className="page-hero__title">Let's <b>talk</b></h1>
+        <section className="v3-page-hero">
+          <div className="blob b1"></div><div className="blob b2"></div>
+          <div className="v3-page-hero__inner">
+            <span className="v3-overline v3-page-hero__overline">Contact</span>
+            <h1 className="v3-page-hero__title">Let's <b>talk</b></h1>
+          </div>
         </section>
 
         <section className="contact-page">
@@ -325,13 +326,16 @@ function PortfolioPage() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav theme="solid" active="portfolio" />
+      <Nav active="portfolio" />
       <main id="main-content">
-        <section className="page-hero">
-          <Pill variant="wash" className="page-hero__overline">Portfolio</Pill>
-          <h1 className="page-hero__title">Previous work, and what people <b>say</b></h1>
-          <p className="page-hero__lead">A selection of engagements and the outcomes they reached, alongside words from
-            the people in the room. Client names are kept private; the work speaks plainly.</p>
+        <section className="v3-page-hero">
+          <div className="blob b1"></div><div className="blob b2"></div>
+          <div className="v3-page-hero__inner">
+            <span className="v3-overline v3-page-hero__overline">Portfolio</span>
+            <h1 className="v3-page-hero__title">Previous work, and what people <b>say</b></h1>
+            <p className="v3-page-hero__lead">A selection of engagements and the outcomes they reached, alongside words from
+              the people in the room. Client names are kept private; the work speaks plainly.</p>
+          </div>
         </section>
 
         <section className="work-section">
@@ -379,13 +383,7 @@ function PortfolioPage() {
           </div>
         </section>
 
-        <section className="cta">
-          <div className="cta__panel">
-            <h2 className="cta__title">Start a <b>conversation</b></h2>
-            <p className="cta__sub">If you're building engagement, growing capability, or backing emerging leaders, I can help you get there.</p>
-            <Button variant="inverse" size="lg" arrow href="/contact">Get in touch</Button>
-          </div>
-        </section>
+        <CTA />
       </main>
       <Footer />
     </div>
