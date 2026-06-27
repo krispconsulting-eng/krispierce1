@@ -60,7 +60,7 @@ function Voices() {
         </div>
       </div>
       <div className="voices__right">
-        <span className="voices__mark"><Icon name="quote" size={22} fill style={{color:'var(--clay-500)'}} /></span>
+        <span className="voices__mark"><Icon name="quote" size={22} fill style={{color:'var(--teal-600)'}} /></span>
         <blockquote className="voices__quote" style={{fontStyle:'italic'}}>{quote}</blockquote>
         <div className="voices__who">
           <Avatar name={role} size={46} />
@@ -75,7 +75,7 @@ function CTA({ onNav }) {
   return (
     <section className="cta">
       <div className="cta__panel">
-        <h2 className="cta__title">Bring me into <em>the work</em></h2>
+        <h2 className="cta__title">Start a <b>conversation</b></h2>
         <p className="cta__sub">If you're building engagement, growing capability, or investing in the next generation of advocates and leaders, I can help you get there.</p>
         <Button variant="inverse" size="lg" arrow onClick={()=>onNav('contact')}>Book an intro call</Button>
       </div>
@@ -182,7 +182,7 @@ function Footer({ onNav }) {
 
 function Motif({ id='kp-motif', src='assets/rocks-blocks.jpg', position='50% 52%',
   overline='Building blocks',
-  title=<>We build the system <em>together</em></>,
+  title=<>We build the system <b>together</b></>,
   sub="Engagement isn't handed over finished. It's assembled piece by piece, with the people it's meant to serve, until it holds.",
   ctaLabel, ctaHref }) {
   return (
