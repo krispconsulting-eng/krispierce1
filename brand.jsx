@@ -1,87 +1,208 @@
-/* Kris Pierce — personal-brand home (the umbrella above every work area).
-   Introduces Kris and the breadth of her work, then routes to each area
-   (Engagement is live; research links to where it lives; advocacy,
-   not-for-profit mentoring, and caregiving are introduced as "Coming soon"
-   via WORK_AREAS). Reuses the shared chrome (Nav, CredStrip, Voices, Footer,
-   Motif) from the kit. */
-const { useEffect: useBrandEffect } = React;
+/* Kris Pierce — v3.0 brand home: teal+blue co-lead, bold editorial layout,
+   layered SVG graphics, kinetic marquee, numbered services index. */
+const { useEffect: useBrandEffect, useRef: useBrandRef } = React;
 
+/* ---- Inline SVG graphics (pointer-events:none, decorative) ---- */
+
+function HeroArcs() {
+  return (
+    <svg className="v3-hero__arcs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" strokeWidth="1.5">
+        <circle cx="1180" cy="250" r="120" stroke="rgba(127,168,194,.55)"/>
+        <circle cx="1180" cy="250" r="200" stroke="rgba(127,168,194,.32)"/>
+        <circle cx="1180" cy="250" r="290" stroke="rgba(207,224,218,.22)"/>
+        <path d="M-50 700 Q 400 560 760 720 T 1500 660" stroke="rgba(207,224,218,.3)"/>
+        <path d="M-50 770 Q 400 630 760 790 T 1500 730" stroke="rgba(127,168,194,.28)"/>
+      </g>
+    </svg>
+  );
+}
+
+function FeatureArcs() {
+  return (
+    <svg className="v3-feature__arcs" viewBox="0 0 360 360" aria-hidden="true">
+      <g fill="none" strokeWidth="1.5">
+        <circle cx="200" cy="160" r="70" stroke="rgba(210,225,234,.5)"/>
+        <circle cx="200" cy="160" r="120" stroke="rgba(127,168,194,.4)"/>
+        <circle cx="200" cy="160" r="170" stroke="rgba(207,224,218,.25)"/>
+      </g>
+    </svg>
+  );
+}
+
+function DotMatrix() {
+  const dots = [];
+  for (let y = 0; y < 8; y++) {
+    for (let x = 0; x < 9; x++) {
+      const o = Math.max(0.06, 0.5 - y * 0.045);
+      dots.push(
+        <circle key={`${x}-${y}`} cx={40 + x * 34} cy={40 + y * 32} r="3.4" opacity={o.toFixed(2)} />
+      );
+    }
+  }
+  return (
+    <svg className="v3-cta__dots" viewBox="0 0 340 300" aria-hidden="true">
+      <g fill="rgba(127,168,194,.4)">{dots}</g>
+    </svg>
+  );
+}
+
+/* ---- Hero ---- */
 function BrandHero({ onNav }) {
   return (
-    <section className="hero" id="home">
-      <div className="hero__media">
-        <image-slot id="kp-brand-hero" shape="rect" fit="cover" position="8% 42%"
-          src="assets/kris-podium.jpg"
-          alt="Kris Pierce speaking at a podium"
-          placeholder="Drop a warm portrait of Kris"></image-slot>
-        <div className="hero__scrim"></div>
-      </div>
-      <div className="hero__banner"></div>
+    <section className="v3-hero" id="home">
+      <div className="v3-hero__blob v3-hero__b1"></div>
+      <div className="v3-hero__blob v3-hero__b2"></div>
+      <HeroArcs />
       <Nav onNav={onNav} active="home" />
-      <div className="hero__inner">
-        <h1 className="hero__title">Strengthening engagement and <em>capacity</em></h1>
-        <p className="hero__sub">Drawing on two decades of lived and professional experience to support advocacy,
-          leadership, and meaningful participation.</p>
+      <div className="v3-hero__wrap">
+        <span className="v3-overline v3-hero__kicker">Healthcare engagement practice</span>
+        <h1 className="v3-hero__h1">The patient voice, in the rooms where <b>decisions get made.</b></h1>
+        <p className="v3-hero__lead">I partner with pharmaceutical, biotech, research and not-for-profit teams to put
+          the person at the centre of the work. Two decades of lived experience, professional rigour.</p>
+        <div className="v3-hero__actions">
+          <a href="/contact" className="v3-btn v3-btn--blue">Start a conversation</a>
+          <a href="#work" className="v3-btn v3-btn--outline-light" onClick={(e) => { e.preventDefault(); onNav('work'); }}>See how I work</a>
+        </div>
+      </div>
+      <div className="v3-hero__chip">
+        <div className="v3-hero__chip-n">20+</div>
+        <div className="v3-hero__chip-t">years of lived experience, brought into the work</div>
       </div>
     </section>
   );
 }
 
-/* Single work-area card, rendered by status. */
-function AreaCard({ a }) {
-  const inner = (
-    <React.Fragment>
-      <div className="area-card__top">
-        <IconChip variant="wash" size={46}>{<Icon name={a.icon} size={20} />}</IconChip>
-        {a.status === 'coming'
-          ? <span className="area-card__badge">Coming soon</span>
-          : <span className="area-card__eyebrow">{a.eyebrow}</span>}
-      </div>
-      <h3>{a.title}</h3>
-      {a.status === 'coming'
-        ? <span className="area-card__soon">In development</span>
-        : <span className="area-card__cta">{a.cta || 'Explore the work'} <Icon name="arrow-right" size={16} /></span>}
-    </React.Fragment>
-  );
-  if (a.status === 'coming') {
-    return <div className="area-card area-card--coming" aria-disabled="true">{inner}</div>;
-  }
-  return <a className={'area-card' + (a.status === 'current' ? ' area-card--current' : '')} href={a.href}>{inner}</a>;
-}
+/* ---- Kinetic marquee ---- */
+const MARQUEE_ITEMS = [
+  'Insights', 'Patient-centred outcomes', 'Flexible methodology',
+  'Co-design', 'Participatory research', 'Together, we discover what works',
+];
 
-function WorkAreas() {
-  const core = WORK_AREAS.filter((a) => a.tier === 'core');
-  const emerging = WORK_AREAS.filter((a) => a.tier === 'emerging');
+function Marquee() {
   return (
-    <section className="areas" id="work">
-      <div className="areas__head">
-        <span className="overline">How I work</span>
-        <h2 className="areas__title">One consulting practice, many <em>ways in</em></h2>
-        <p className="areas__sub">Everything I offer comes from the same place: what I've learnt through life and work
-          about putting people at the centre. Whether it's strengthening engagement, building the evidence base,
-          training the next generation of advocates, or supporting carers and small organisations to find their
-          feet, it's all one practice.</p>
+    <div className="v3-marquee" aria-hidden="true">
+      <div className="v3-marquee__track">
+        {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((t, i) => (
+          <span key={i}>{t}</span>
+        ))}
       </div>
+    </div>
+  );
+}
 
-      <div className="areas__group">
-        <h3 className="areas__group-title">Where I focus now</h3>
-        <div className="areas__grid">
-          {core.map((a) => <AreaCard key={a.id} a={a} />)}
-        </div>
-      </div>
+/* ---- Stat ledger ---- */
+const STATS = [
+  ['20+ years', 'Lived experience and practice'],
+  ['Co-design', 'Communities as collaborators'],
+  ['Participatory', 'Research that includes people'],
+  ['Independent', 'A practice, not a panel'],
+];
 
-      <div className="areas__group">
-        <h3 className="areas__group-title">Programs I'm developing</h3>
-        <div className="areas__grid areas__grid--three">
-          {emerging.map((a) => <AreaCard key={a.id} a={a} />)}
+function StatLedger() {
+  return (
+    <section className="v3-stats">
+      <div className="v3-wrap">
+        <div className="v3-ledger reveal">
+          {STATS.map(([fig, cap]) => (
+            <div key={fig}>
+              <div className="v3-ledger__fig">{fig}</div>
+              <div className="v3-ledger__cap">{cap}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-/* Brand-level about teaser. Reuses the kit's .about chrome; the deeper story
-   lives on the global /about page. */
+/* ---- Services index (replaces card grid) ---- */
+const SERVICES = [
+  {
+    num: '01',
+    title: 'Consumer and community engagement',
+    body: 'Engagement that genuinely includes people, from advisory work to co-designed research. Built with communities, never about them.',
+    href: '/engagement',
+  },
+  {
+    num: '02',
+    title: 'Health research partnership',
+    body: 'Participatory and co-design methods that bring the patient perspective into study design, endpoints and evidence, with the rigour funders and regulators expect.',
+    href: '/engagement/insights',
+  },
+  {
+    num: '03',
+    title: 'Advocacy training and mentoring',
+    body: 'Practical support for advocates and not-for-profit teams who want to be effective in the rooms where health decisions are made. Coming soon.',
+    href: null,
+  },
+];
+
+function ServicesIndex() {
+  return (
+    <section id="work" className="v3-services">
+      <div className="v3-wrap v3-opener reveal">
+        <span className="v3-overline">What I do</span>
+        <h2 className="v3-opener__h2">Insights that <b>change the work.</b></h2>
+      </div>
+      <div className="v3-wrap">
+        <div className="v3-index reveal">
+          {SERVICES.map((s) => {
+            const Tag = s.href ? 'a' : 'div';
+            const props = s.href ? { href: s.href } : {};
+            return (
+              <Tag className="v3-row-item" key={s.num} {...props}>
+                <div className="v3-row-item__num">{s.num}</div>
+                <div>
+                  <h3 className="v3-row-item__title">{s.title}</h3>
+                  <p className="v3-row-item__body">{s.body}</p>
+                </div>
+                <div className="v3-row-item__go">&rarr;</div>
+              </Tag>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---- Feature pull-quote ---- */
+function FeatureQuote() {
+  return (
+    <section className="v3-feature-section">
+      <div className="v3-wrap">
+        <div className="v3-feature reveal">
+          <FeatureArcs />
+          <span className="v3-overline v3-feature__overline">In their words</span>
+          <p className="v3-feature__quote">"Kris brought the patient voice into a room that had spent years talking
+            <b> about</b> patients, not <b>with</b> them."</p>
+          <p className="v3-feature__attrib">Research partner, rare disease programme</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---- CTA ---- */
+function BrandCTA() {
+  return (
+    <section className="v3-cta-section">
+      <div className="v3-wrap">
+        <div className="v3-cta reveal">
+          <DotMatrix />
+          <span className="v3-overline v3-cta__overline">Start a conversation</span>
+          <h2 className="v3-cta__h2">Flexible methodology. Together, we discover <b>what works.</b></h2>
+          <p className="v3-cta__lead">If you are bringing a medicine, a study or a programme to the people it
+            affects, let's talk about doing it with them.</p>
+          <a href="/contact" className="v3-btn v3-btn--blue">Start a conversation &rarr;</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---- Brand about (kept, restyled via CSS) ---- */
 function BrandAbout() {
   return (
     <section className="about" id="about">
@@ -110,19 +231,7 @@ function BrandAbout() {
   );
 }
 
-function BrandCTA() {
-  return (
-    <section className="cta">
-      <div className="cta__panel">
-        <h2 className="cta__title">Bring me into <em>the work</em></h2>
-        <p className="cta__sub">If you're building engagement, growing capability, or investing in the next generation
-          of advocates and leaders, I can help you get there.</p>
-        <Button variant="inverse" size="lg" arrow href="/contact">Start a conversation</Button>
-      </div>
-    </section>
-  );
-}
-
+/* ---- App root ---- */
 function BrandApp() {
   useBrandEffect(() => { if (typeof setupReveal === 'function') setupReveal(); }, []);
   const onNav = (id) => {
@@ -133,13 +242,11 @@ function BrandApp() {
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <BrandHero onNav={onNav} />
+      <Marquee />
       <main id="main-content">
-        <WorkAreas />
-        <Motif id="kp-brand-research" src="assets/insight-boardroom.jpg" position="50% 45%"
-          overline="Research and evidence"
-          title={<>Evidence that carries the patient <em>voice</em></>}
-          sub="Two decades of participatory and applied health research, built so that what patients and carers actually experience reaches the people designing studies, services, and policy."
-          ctaLabel="Read the research" ctaHref="/engagement/insights" />
+        <StatLedger />
+        <ServicesIndex />
+        <FeatureQuote />
         <BrandAbout />
         <Voices />
         <BrandCTA />
