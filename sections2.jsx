@@ -12,26 +12,22 @@ const OFFERINGS = [
 
 function Offerings() {
   return (
-    <section className="offer" id="offerings">
-      <div className="offer__portrait">
-        <image-slot id="kp-offer" shape="rect" fit="cover" position="50% 30%" src="assets/kris-podium-portrait.jpg" placeholder="Drop a portrait / working photo"></image-slot>
+    <section className="v3-services" id="offerings">
+      <div className="v3-wrap v3-opener">
+        <span className="v3-overline">Where I focus</span>
+        <h2 className="v3-opener__h2">Six areas of expertise, drawn from what I've learnt through life and <b>work</b></h2>
       </div>
-      <div className="offer__panel">
-        <span className="overline overline--inv">My consulting practice</span>
-        <h2 className="offer__title">Where I focus</h2>
-        <p className="offer__lead">Six areas of expertise, drawn from what I've learnt through life and work. I bring
-          the one your challenge needs, and I know which that is.</p>
-        <div className="offer__grid">
+      <div className="v3-wrap">
+        <div className="v3-index">
           {OFFERINGS.map(([icon, title, body, fit], i) => (
-            <div className="offer__item" key={title}>
-              <div className="offer__item-top">
-                <IconChip variant="ghostInverse" size={42}>{<Icon name={icon} size={18} />}</IconChip>
-                <span className="offer__num">{String(i+1).padStart(2,'0')}</span>
+            <a className="v3-row-item" href="/engagement/expertise" key={title}>
+              <div className="v3-row-item__num">{String(i+1).padStart(2,'0')}</div>
+              <div>
+                <h3 className="v3-row-item__title">{title}</h3>
+                <p className="v3-row-item__body">{body}</p>
               </div>
-              <h3>{title}</h3>
-              <p>{body}</p>
-              <span className="offer__fit">{fit}</span>
-            </div>
+              <div className="v3-row-item__go">→</div>
+            </a>
           ))}
         </div>
       </div>
