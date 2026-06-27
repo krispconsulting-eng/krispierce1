@@ -343,9 +343,17 @@ html { scroll-behavior: smooth; }
   color:var(--cream-50); padding:154px 0 72px; position:relative; overflow:hidden; }
 .v3-page-hero .blob { position:absolute; border-radius:50%; pointer-events:none; }
 .v3-page-hero .b1 { top:-14%; right:-6%; width:560px; height:560px;
-  background:radial-gradient(circle at 35% 35%, rgba(127,168,194,.5), transparent 60%); }
+  background:radial-gradient(circle at 35% 35%, rgba(127,168,194,.5), transparent 60%);
+  animation:v3-float1 12s ease-in-out infinite; }
 .v3-page-hero .b2 { bottom:-26%; left:-12%; width:520px; height:520px;
-  background:radial-gradient(circle at 50% 50%, rgba(207,224,218,.28), transparent 60%); }
+  background:radial-gradient(circle at 50% 50%, rgba(207,224,218,.28), transparent 60%);
+  animation:v3-float2 15s ease-in-out infinite; }
+.v3-page-hero .b3 { top:30%; left:50%; width:400px; height:400px;
+  background:radial-gradient(circle at 50% 50%, rgba(63,111,142,.18), transparent 60%);
+  animation:v3-float3 18s ease-in-out infinite; }
+@keyframes v3-float1{0%,100%{transform:translate(0,0)}50%{transform:translate(-20px,30px)}}
+@keyframes v3-float2{0%,100%{transform:translate(0,0)}50%{transform:translate(25px,-20px)}}
+@keyframes v3-float3{0%,100%{transform:translate(0,0)}50%{transform:translate(-15px,-25px)}}
 .v3-page-hero__inner { position:relative; z-index:3; max-width:1240px; margin:0 auto; padding:0 30px; }
 .v3-page-hero__overline { color:var(--blue-200); letter-spacing:.22em; }
 .v3-page-hero__title { font-family:var(--font-display); font-weight:200;
@@ -355,6 +363,17 @@ html { scroll-behavior: smooth; }
 .v3-page-hero__lead { font-size:clamp(1.1rem, 1.6vw, 1.3rem);
   color:rgba(251,250,247,.84); max-width:52ch; margin:28px 0 36px; line-height:1.55; }
 .v3-page-hero__actions { display:flex; gap:14px; flex-wrap:wrap; }
+.v3-page-hero__arcs { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; opacity:.5; }
+.v3-hero-reveal { opacity:0; transform:translateY(24px); animation:v3-textUp .9s cubic-bezier(.16,1,.3,1) forwards; }
+.v3-hero-reveal:nth-child(1) { animation-delay:.2s; }
+.v3-hero-reveal:nth-child(2) { animation-delay:.35s; }
+.v3-hero-reveal:nth-child(3) { animation-delay:.5s; }
+.v3-hero-reveal:nth-child(4) { animation-delay:.65s; }
+@keyframes v3-textUp { to { opacity:1; transform:none; } }
+@media (prefers-reduced-motion: reduce) {
+  .v3-page-hero .blob { animation:none; }
+  .v3-hero-reveal { opacity:1; transform:none; animation:none; }
+}
 
 /* ---------------- Responsive ---------------- */
 @media (max-width: 980px) {
