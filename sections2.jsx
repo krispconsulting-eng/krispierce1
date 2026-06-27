@@ -11,26 +11,29 @@ const OFFERINGS = [
 ];
 
 function Offerings() {
+  const palette = ['teal','blue','teal','blue','teal','blue'];
   return (
-    <section className="offer" id="offerings">
-      <div className="offer__portrait">
-        <image-slot id="kp-offer" shape="rect" fit="cover" position="50% 30%" src="assets/kris-podium-portrait.jpg" placeholder="Drop a portrait / working photo"></image-slot>
+    <section className="v3-focus" id="offerings">
+      <div className="v3-wrap v3-opener">
+        <span className="v3-overline">Where I focus</span>
+        <h2 className="v3-opener__h2">Six areas of expertise, drawn from what I've learnt through life and <b>work</b></h2>
       </div>
-      <div className="offer__panel">
-        <span className="overline overline--inv">My consulting practice</span>
-        <h2 className="offer__title">Where I focus</h2>
-        <p className="offer__lead">Six areas of expertise, drawn from what I've learnt through life and work. I bring
-          the one your challenge needs, and I know which that is.</p>
-        <div className="offer__grid">
+      <div className="v3-wrap">
+        <div className="v3-focus-grid">
           {OFFERINGS.map(([icon, title, body, fit], i) => (
-            <div className="offer__item" key={title}>
-              <div className="offer__item-top">
-                <IconChip variant="ghostInverse" size={42}>{<Icon name={icon} size={18} />}</IconChip>
-                <span className="offer__num">{String(i+1).padStart(2,'0')}</span>
+            <div className="v3-focus-card" key={title}>
+              <div className="v3-focus-card__top">
+                <div className={'v3-focus-card__icon ' + palette[i]}>
+                  <Icon name={icon} size={28} />
+                </div>
+                <span className="v3-focus-card__num">{String(i+1).padStart(2,'0')}</span>
               </div>
               <h3>{title}</h3>
-              <p>{body}</p>
-              <span className="offer__fit">{fit}</span>
+              <p className="v3-focus-card__body">{body}</p>
+              <div className="v3-focus-card__outcome">
+                <Icon name="arrow-right" size={15} />
+                <span>{fit}</span>
+              </div>
             </div>
           ))}
         </div>
@@ -63,7 +66,7 @@ function Voices() {
         <span className="voices__mark"><Icon name="quote" size={22} fill style={{color:'var(--teal-600)'}} /></span>
         <blockquote className="voices__quote" style={{fontStyle:'italic'}}>{quote}</blockquote>
         <div className="voices__who">
-          <Avatar name={role} size={46} />
+          <div style={{width:46,height:46,borderRadius:'50%',background:'linear-gradient(135deg, var(--teal-600), var(--teal-400))',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontFamily:'var(--font-display)',fontWeight:600,fontSize:16}}>{role.charAt(0)}</div>
           <div><div className="voices__role">{role}</div><div className="voices__org">{org}</div></div>
         </div>
       </div>
@@ -71,13 +74,17 @@ function Voices() {
   );
 }
 
-function CTA({ onNav }) {
+function CTA() {
   return (
-    <section className="cta">
-      <div className="cta__panel">
-        <h2 className="cta__title">Start a <b>conversation</b></h2>
-        <p className="cta__sub">If you're building engagement, growing capability, or investing in the next generation of advocates and leaders, I can help you get there.</p>
-        <Button variant="inverse" size="lg" arrow onClick={()=>onNav('contact')}>Book an intro call</Button>
+    <section className="v3-cta-section">
+      <div className="v3-wrap">
+        <div className="v3-cta">
+          <svg className="v3-cta__dots" viewBox="0 0 340 300" aria-hidden="true"><g>{Array.from({length: 8}, (_, y) => Array.from({length: 9}, (_, x) => (<circle key={y*9+x} cx={40+x*34} cy={40+y*32} r="3.4" opacity={Math.max(0.06, 0.5-y*0.045).toFixed(2)} fill="rgba(127,168,194,.4)" />)))}</g></svg>
+          <span className="v3-overline v3-cta__overline">Start a conversation</span>
+          <h2 className="v3-cta__h2">If you're building engagement, growing capability, or investing in the next generation, <b>I can help.</b></h2>
+          <p className="v3-cta__lead">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
+          <a href="/contact" className="v3-btn v3-btn--blue">Start a conversation <span>→</span></a>
+        </div>
       </div>
     </section>
   );
@@ -150,55 +157,18 @@ function Contact() {
   );
 }
 
-function Footer({ onNav }) {
+function Footer() {
   return (
-    <footer className="foot" id="foot">
-      <span className="foot__label">Prefer email?</span>
-      <a className="foot__email" href="mailto:info@krispierce.com.au">info@krispierce.com.au</a>
-      <div className="foot__bar">
-        <div className="foot__links">
-          <a href="/">Home</a>
-          <a href="/engagement">Engagement</a>
-          <a href="/engagement/expertise">Expertise</a>
-          <a href="/engagement/insights">Insights</a>
-          <a href="/about">About</a>
-          {/* <a href="/portfolio">Portfolio</a> */}
-          <a href="/resources">Resources</a>
-          <a href="/contact">Contact</a>
-        </div>
-        <div className="foot__social">
-          <a href="https://www.linkedin.com/in/krispierceaust" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><Icon name="linkedin" size={18} /></a>
-          <a href="mailto:info@krispierce.com.au" aria-label="Email"><Icon name="mail" size={18} /></a>
-        </div>
-      </div>
-      <div className="foot__legal">
-        <span>© {new Date().getFullYear()} Kris Pierce</span>
-        <span>Kabi Kabi Country / Sunshine Coast, Queensland</span>
-        <span>Privacy</span>
+    <footer className="v3-foot">
+      <div className="v3-foot__inner">
+        <a href="/" className="v3-foot__mark" aria-label="Kris Pierce Consulting">
+          <img src="/assets/logo-wordmark.png" alt="Kris Pierce Consulting" />
+        </a>
+        <div className="v3-foot__info">krispierce.com.au · Sunshine Coast, Queensland · © {new Date().getFullYear()}</div>
       </div>
     </footer>
   );
 }
 
-function Motif({ id='kp-motif', src='assets/rocks-blocks.jpg', position='50% 52%',
-  overline='Building blocks',
-  title=<>We build the system <b>together</b></>,
-  sub="Engagement isn't handed over finished. It's assembled piece by piece, with the people it's meant to serve, until it holds.",
-  ctaLabel, ctaHref }) {
-  return (
-    <section className="motif">
-      <image-slot id={id} fit="cover" position={position} src={src}
-        placeholder="Drop a natural / metaphor image"></image-slot>
-      <div className="motif__scrim"></div>
-      <div className="motif__inner">
-        <span className="overline">{overline}</span>
-        <h2 className="motif__title">{title}</h2>
-        <p className="motif__sub">{sub}</p>
-        {ctaLabel && <Button variant="inverse" size="lg" arrow href={ctaHref} className="motif__cta">{ctaLabel}</Button>}
-      </div>
-    </section>
-  );
-}
-
 /* VOICES (testimonial data) is reused by the Portfolio page, so publish it too. */
-Object.assign(window, { Offerings, Voices, CTA, Contact, Footer, Motif, VOICES });
+Object.assign(window, { Offerings, Voices, CTA, Contact, Footer, VOICES });
