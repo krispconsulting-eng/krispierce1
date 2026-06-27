@@ -365,7 +365,7 @@ function PortfolioPage() {
               {VOICES.map(([quote, role, org], i) => (
                 <article className="quote-card" key={i}>
                   <span className="quote-card__mark"><Icon name="quote" size={24} fill /></span>
-                  <p className="quote-card__text">{quote}</p>
+                  <p className="quote-card__text" style={{fontStyle:'italic'}}>{quote}</p>
                   <div className="quote-card__who">
                     <Avatar name={role} size={44} />
                     <div>
