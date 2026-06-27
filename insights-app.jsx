@@ -82,7 +82,7 @@ function ResourceGate({ item, onClose }) {
           <React.Fragment>
             <span className="gate__kind">{item.kind}</span>
             <h3 className="gate__title">{item.title}</h3>
-            <p className="gate__dek">Tell me where to send it and it's yours — I'll only use this to share resources
+            <p className="gate__dek">Tell me where to send it and it's yours. I'll only use this to share resources
               you'd actually want, never spam.</p>
             <form className="gate__form" onSubmit={submit}>
               <Field label="Your name" placeholder="Jane Citizen" value={name} onChange={(e)=>setName(e.target.value)} required />
@@ -94,7 +94,7 @@ function ResourceGate({ item, onClose }) {
                 <span>Keep me on the list for the occasional resource and insight. No spam, and you can leave anytime.</span>
               </label>
               {status === 'error' && (
-                <p className="contact__error" role="alert">Sorry — that didn't send. Please try again, or email
+                <p className="contact__error" role="alert">Sorry, that didn't send. Please try again, or email
                   <a href="mailto:info@krispierce.com.au"> info@krispierce.com.au</a>.</p>
               )}
               <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Get the ' + item.kind.toLowerCase()}</Button>

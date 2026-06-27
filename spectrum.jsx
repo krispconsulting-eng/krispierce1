@@ -19,7 +19,7 @@ const METHODS = [
       'Time and budget are tight, but the stakes still warrant real input',
     ],
     stats: {
-      Format: '1–2 sessions, in person or online',
+      Format: '1-2 sessions, in person or online',
       Timeframe: '2 to 4 weeks end to end',
       Output: 'Themed findings, verbatim evidence',
     },
@@ -68,7 +68,7 @@ const METHODS = [
   {
     icon: 'compass',
     name: 'Roundtable',
-    meta: '1–2 days · consensus',
+    meta: '1-2 days · consensus',
     eyebrow: 'The right people, one table',
     title: 'Roundtables',
     lead: 'Bring decision-makers and lived experience to one table to move a contested issue forward.',

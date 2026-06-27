@@ -399,7 +399,7 @@ function PortfolioPage() {
                   <span className="quote-card__mark"><Icon name="quote" size={24} fill /></span>
                   <p className="quote-card__text" style={{fontStyle:'italic'}}>{quote}</p>
                   <div className="quote-card__who">
-                    <Avatar name={role} size={44} />
+                    <div style={{width:44,height:44,borderRadius:'50%',background:'linear-gradient(135deg, var(--teal-600), var(--teal-400))',display:'flex',alignItems:'center',justifyContent:'center',color:'#fff',fontFamily:'var(--font-display)',fontWeight:600,fontSize:15}}>{role.charAt(0)}</div>
                     <div>
                       <div className="quote-card__role">{role}</div>
                       <div className="quote-card__org">{org}</div>
