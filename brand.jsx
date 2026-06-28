@@ -116,8 +116,8 @@ const SERVICES = [
   {
     num: '03',
     title: 'Advocacy training and mentoring',
-    body: 'Practical support for advocates and not-for-profit teams who want to be effective in the rooms where health decisions are made. Coming soon.',
-    href: null,
+    body: 'Practical support for advocates and not-for-profit teams who want to be effective in the rooms where health decisions are made.',
+    href: '/contact',
   },
 ];
 

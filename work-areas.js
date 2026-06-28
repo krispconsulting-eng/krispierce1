@@ -7,7 +7,7 @@
 
    status: 'available' — live section, linked, "Explore" CTA.
            'current'   — established work, linked to where it lives, no badge.
-           'coming'    — being introduced, shown as "Coming soon", not linked.
+           'coming'    — being developed, shown as "Make an enquiry", linked to contact.
 
    Adding or launching an area is a data change here only: flip status to
    'available' and give it an href, and it surfaces across the home and nav. */
@@ -41,7 +41,8 @@ const WORK_AREAS = [
     eyebrow: 'Capability',
     title: 'Advocacy and advocate training',
     blurb: 'Education, mentoring, and structured support for advocates and emerging leaders growing into the rooms where health decisions get made.',
-    href: null,
+    href: '/contact',
+    cta: 'Make an enquiry',
     status: 'coming',
   },
   {
@@ -51,7 +52,8 @@ const WORK_AREAS = [
     eyebrow: 'Mentoring',
     title: 'Not-for-profit mentoring',
     blurb: 'Practical guidance for small charities and not-for-profits finding their feet, from governance and strategy to building genuine community voice into the work.',
-    href: null,
+    href: '/contact',
+    cta: 'Make an enquiry',
     status: 'coming',
   },
   {
@@ -61,7 +63,8 @@ const WORK_AREAS = [
     eyebrow: 'Wellbeing',
     title: 'Caregiving program',
     blurb: 'A program supporting the carers who hold so much of the system together, grounded in two decades of lived experience in the rare disease community.',
-    href: null,
+    href: '/contact',
+    cta: 'Make an enquiry',
     status: 'coming',
   },
 ];
