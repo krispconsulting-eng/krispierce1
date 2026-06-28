@@ -1,37 +1,36 @@
 /* ------------------------------------------------------------------
-   Kris Pierce Consulting — Typography
-   Two voices:
-     • Display (Archivo) — heavy & italic for statement headlines/CTAs,
-       upright & semibold for section titles. This carries the authority.
-     • Text (Hanken Grotesk) — calm, legible body / UI / labels.
+   Kris Pierce Consulting v3.0 — Typography
+   Display: Outfit — light for hero statements, semibold for section heads
+   Text:    Archivo — clean body and UI type
 ------------------------------------------------------------------ */
 :root {
-  --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
-  --font-text:    'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Outfit', 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-text:    'Archivo', 'Helvetica Neue', Arial, sans-serif;
 
   /* Weights */
+  --weight-light:    200;
   --weight-regular:  400;
   --weight-medium:   500;
   --weight-semibold: 600;
   --weight-bold:     700;
   --weight-black:    800;
 
-  /* Fluid type scale (min @360px → max @1440px) */
-  --text-hero:    clamp(3rem, 1.4rem + 6vw, 5.5rem);   /* @kind spacing */ /* statement headline */
-  --text-display: clamp(2.25rem, 1.4rem + 3.8vw, 3.5rem); /* @kind spacing */ /* big section title  */
-  --text-h1:      clamp(1.9rem, 1.3rem + 2.4vw, 2.75rem);  /* @kind spacing */
+  /* Fluid type scale (min @360px -> max @1440px) */
+  --text-hero:    clamp(3.2rem, 1.6rem + 8.6vw, 7.2rem);    /* @kind spacing */
+  --text-display: clamp(2.4rem, 1.4rem + 5vw, 4rem);         /* @kind spacing */
+  --text-h1:      clamp(1.9rem, 1.3rem + 2.4vw, 2.75rem);    /* @kind spacing */
   --text-h2:      clamp(1.6rem, 1.25rem + 1.6vw, 2.25rem);   /* @kind spacing */
   --text-h3:      clamp(1.3rem, 1.12rem + 0.8vw, 1.625rem);  /* @kind spacing */
-  --text-h4:      1.25rem;        /* @kind spacing */
-  --text-lead:    clamp(1.125rem, 1.04rem + 0.37vw, 1.375rem);  /* @kind spacing */
-  --text-body:    1.0625rem;   /* @kind spacing */ /* 17px */
-  --text-base:    1rem;        /* @kind spacing */
-  --text-sm:      0.9375rem;    /* @kind spacing */
-  --text-xs:      0.8125rem;    /* @kind spacing */
-  --text-overline:0.75rem;      /* @kind spacing */
+  --text-h4:      1.25rem;         /* @kind spacing */
+  --text-lead:    clamp(1.15rem, 1.04rem + 0.37vw, 1.4rem);  /* @kind spacing */
+  --text-body:    1.0625rem;       /* @kind spacing */
+  --text-base:    1rem;            /* @kind spacing */
+  --text-sm:      0.9375rem;       /* @kind spacing */
+  --text-xs:      0.8125rem;       /* @kind spacing */
+  --text-overline:0.75rem;         /* @kind spacing */
 
   /* Line heights */
-  --leading-tight:   1.02;
+  --leading-tight:   0.96;
   --leading-snug:    1.14;
   --leading-heading: 1.18;
   --leading-normal:  1.5;
@@ -42,22 +41,21 @@
   --tracking-snug:    -0.015em;
   --tracking-normal:  0em;
   --tracking-wide:    0.02em;
-  --tracking-overline:0.16em;
+  --tracking-overline:0.2em;
 }
 
-/* ---- Optional helper classes (components mostly set their own) ---- */
+/* ---- Helper classes ---- */
 .kp-overline {
   font-family: var(--font-text);
   font-size: var(--text-overline);
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-overline);
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--teal-600);
 }
 .kp-statement {
   font-family: var(--font-display);
-  font-weight: var(--weight-black);
-  font-style: italic;
+  font-weight: var(--weight-light);
   font-size: var(--text-hero);
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tight);

@@ -1,5 +1,5 @@
 /* ------------------------------------------------------------------
-   Kris Pierce Consulting — Base / reset
+   Kris Pierce Consulting v3.0 — Base / reset
    Minimal, opinionated defaults so surfaces inherit the brand.
 ------------------------------------------------------------------ */
 *, *::before, *::after { box-sizing: border-box; }
@@ -32,7 +32,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 img { display: block; max-width: 100%; }
 
-::selection { background: var(--accent-soft); color: var(--ink-900); }
+::selection { background: var(--teal-200); color: var(--forest); }
 
 :focus-visible {
   outline: 2px solid var(--focus-ring);
