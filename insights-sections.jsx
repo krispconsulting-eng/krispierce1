@@ -191,31 +191,31 @@ function InsSubscribe() {
 }
 
 /* ---------------- Homepage teaser ---------------- */
+const TEASER_IMAGES = [
+  'assets/bush-path.jpg',
+  'assets/driftwood.jpg',
+  'assets/rocks-blocks.jpg',
+];
 function InsightsTeaser() {
   const latest = window.INSIGHTS.slice(0, 3);
   return (
     <section className="teaser" id="insights-teaser">
       <div className="teaser__head">
         <div>
-          <span className="overline">From the desk</span>
-          <h2 className="teaser__title">Insights you can put to work</h2>
+          <span className="overline">Insights</span>
+          <h2 className="teaser__title">Recent thinking</h2>
         </div>
-        <Button variant="secondary" arrow href="/engagement/insights">All insights &amp; resources</Button>
       </div>
       <div className="teaser__grid">
-        {latest.map((a) => (
-          <a key={a.id} className="ins-card" href="/engagement/insights" style={{ textDecoration:'none' }}>
+        {latest.map((a, i) => (
+          <a key={a.id} className="ins-card teaser-card" href="/engagement/insights" style={{ textDecoration:'none' }}>
+            <div className="teaser-card__media">
+              <img src={'/' + TEASER_IMAGES[i]} alt="" loading="lazy" />
+              <span className="teaser-card__pill">{a.category}</span>
+            </div>
             <div className="ins-card__body">
-              <div className="ins-card__top">
-                <span className="ins-card__cat">{a.category}</span>
-                <span className="ins-card__read">{a.read} min</span>
-              </div>
               <h3 className="ins-card__title">{a.title}</h3>
               <p className="ins-card__dek">{a.dek}</p>
-              <div className="ins-card__foot">
-                <span className="ins-card__date">{a.date}</span>
-                <span className="ins-card__go"><Icon name="arrow-right" size={16} /></span>
-              </div>
             </div>
           </a>
         ))}
