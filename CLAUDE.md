@@ -20,6 +20,26 @@ The rules that get broken most often:
 This is the CONSULTING practice, not the SCN2A Australia charity. If it is unclear
 which one a piece is for, ask before writing.
 
+## Visual brand — non-negotiable
+
+For ANY visual work (website changes, design assets, social graphics, decks,
+components), follow `brand-guidelines.md` and `typography-guide.md`. The rules
+that get broken most often:
+
+- **v3 palette only.** Teal/blue/forest. No clay, no warm gold, no ink-black
+  (#1D1C21). If you see old v2 colours, replace them.
+- **Fonts: Outfit (display) + Archivo (body).** No Hanken Grotesk, no serifs,
+  no Inter. Hero headlines use Outfit weight 200; section titles use weight 600.
+- **Forest gradient for dark surfaces:** `linear-gradient(165deg, #1E3D34 0%, #234A52 100%)`.
+  Never flat black or ink backgrounds.
+- **Overlines:** Archivo 12px, weight 600, uppercase, tracking 0.2em. Teal 600
+  on light, Blue 200 on dark. Never sentence case.
+- **Buttons:** Archivo 15px, weight 600, pill radius (999px). Primary is Blue 600,
+  not ink or teal.
+- **Shadows:** Always cooled `rgba(29,28,33,...)`, never pure black.
+- **The `_ds/` directory** is the design system source of truth for tokens,
+  components, and preview cards. Read it before creating new components.
+
 ## Tech / build
 
 - Vite + React 18 (`package.json`). Commands: `npm run dev`, `npm run build`,
