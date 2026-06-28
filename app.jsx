@@ -11,11 +11,14 @@ function App() {
           <span className="v3-overline v3-page-header__overline v3-header-reveal">Consumer and community engagement</span>
           <h1 className="v3-page-header__title v3-header-reveal">Engagement that moves beyond consultation and influences <b>decisions</b></h1>
           <p className="v3-page-header__lead v3-header-reveal">Designing, strengthening, and embedding meaningful consumer and community engagement across health, research, and rare disease.</p>
+          <p className="v3-page-header__lead v3-header-reveal" style={{ color: 'var(--teal-600)', fontWeight: 500 }}>
+            Every brief is different, and the method follows the question. I bring the method the problem needs, and I know which one that is.</p>
         </div>
       </section>
       <SectionNav active="engagement" />
       <main id="main-content">
         <Offerings />
+        <MethodSpectrum showFoot={false} />
         <Voices />
         <InsightsTeaser />
         <CTA />
@@ -31,7 +34,8 @@ function App() {
    hard fallback so content can never stay hidden. */
 function setupReveal() {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const sels = ['.v3-opener', '.v3-focus-card', '.voices', '.teaser__head', '.teaser__grid .ins-card',
+  const sels = ['.v3-opener', '.v3-focus-card', '.spectrum__head', '.spectrum__rail-wrap', '.spectrum__panel', '.spectrum__foot',
+    '.voices', '.teaser__head', '.teaser__grid .ins-card',
     '.v3-cta', '.contact__intro', '.contact__card', '.v3-foot'];
   const els = [];
   sels.forEach((s) => document.querySelectorAll(s).forEach((e) => els.push(e)));

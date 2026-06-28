@@ -15,8 +15,11 @@ import '../kit.css';
 import '../brand.css';
 import '../insights.css';
 
+import '../spectrum.css';
+
 import '../primitives.jsx';
 import '../sections.jsx';
 import '../sections2.jsx';
+import '../spectrum.jsx';
 import '../insights-sections.jsx';
 import '../app.jsx';

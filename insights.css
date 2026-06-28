@@ -164,6 +164,29 @@
   line-height: 1.1; color: var(--text-primary); margin: 12px 0 0; max-width: 16ch; }
 .teaser__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
 
+/* Teaser photo cards */
+.teaser-card .ins-card__body { gap: 10px; }
+.teaser-card .ins-card__top,
+.teaser-card .ins-card__foot,
+.teaser-card .ins-card__read { display: none; }
+.teaser-card__media {
+  position: relative; height: 220px; overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.teaser-card__media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .5s cubic-bezier(.22,1,.36,1);
+}
+.teaser-card:hover .teaser-card__media img { transform: scale(1.04); }
+.teaser-card__pill {
+  position: absolute; top: 14px; left: 14px;
+  font-family: var(--font-text); font-weight: 600; font-size: 11px;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; background: rgba(29,28,33,.54);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  padding: 5px 12px; border-radius: 999px; line-height: 1.4;
+}
+
 /* ---------------- Reader overlay ---------------- */
 .reader { position: fixed; inset: 0; z-index: 80; display: flex; justify-content: center;
   align-items: flex-start; padding: clamp(16px,4vw,56px); overflow-y: auto;

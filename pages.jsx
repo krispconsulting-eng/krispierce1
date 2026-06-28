@@ -161,35 +161,8 @@ function ExpertiseCards() {
 }
 
 function ExpertisePage() {
-  return (
-    <div className="site">
-      <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav active="engagement" variant="light" />
-      <main id="main-content">
-        <section className="v3-page-header">
-          <div className="v3-page-header__inner">
-            <span className="v3-overline v3-page-header__overline v3-header-reveal">Expertise</span>
-            <h1 className="v3-page-header__title v3-header-reveal">This isn't a service menu</h1>
-            <p className="v3-page-header__lead v3-header-reveal">Every brief is different, and the method follows the question. What follows
-              are areas of expertise and the outcomes they are built for. If your challenge doesn't fit neatly into one of
-              these, that's usually a sign to talk.</p>
-            <p className="v3-page-header__lead v3-header-reveal" style={{ color: 'var(--teal-600)', fontWeight: 500 }}>
-              I bring the method the problem needs, and I know which one that is. The point is never the method. It's what
-              changes because of it: a decision, a design, a strategy.</p>
-          </div>
-        </section>
-
-        <SectionNav active="expertise" />
-
-        <ExpertiseCards />
-
-        <MethodSpectrum showFoot={false} />
-
-        <CTA />
-      </main>
-      <Footer />
-    </div>
-  );
+  React.useEffect(() => { window.location.replace('/engagement#offerings'); }, []);
+  return null;
 }
 
 /* ============================ Contact ============================ */
