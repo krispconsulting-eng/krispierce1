@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kris Pierce Consulting">
-  <rect width="64" height="64" rx="13" fill="#1D1C21"/>
-  <text x="32" y="33" fill="#CDA67A" font-family="Georgia, 'Times New Roman', serif"
-        font-size="30" font-weight="600" letter-spacing="-1"
+  <rect width="64" height="64" rx="13" fill="#1E3D34"/>
+  <text x="32" y="33" fill="#D2E1EA" font-family="'Outfit', 'Helvetica Neue', Arial, sans-serif"
+        font-size="28" font-weight="600" letter-spacing="-1"
         text-anchor="middle" dominant-baseline="central">KP</text>
 </svg>
