@@ -1,0 +1,115 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Brand: Logo Contexts</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 250px;
+      background: var(--cream-50);
+      font-family: 'Archivo', sans-serif;
+      color: var(--ink-900);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 20px;
+      color: var(--ink-900);
+    }
+    .logo-row {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+    }
+    .logo-panel {
+      flex: 1;
+      border-radius: var(--radius-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px;
+      position: relative;
+    }
+    .logo-panel--light {
+      background: var(--cream-100);
+      border: 1px solid var(--cream-200);
+    }
+    .logo-panel--dark {
+      background: var(--forest);
+    }
+    .logo-wordmark {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 200;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+      text-align: center;
+    }
+    .logo-wordmark span {
+      display: block;
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+    .logo-panel--light .logo-wordmark {
+      color: var(--ink-900);
+    }
+    .logo-panel--light .logo-wordmark span {
+      color: var(--teal-600);
+    }
+    .logo-panel--dark .logo-wordmark {
+      color: var(--cream-50);
+    }
+    .logo-panel--dark .logo-wordmark span {
+      color: var(--teal-200);
+    }
+    .context-label {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 12px;
+      right: 16px;
+    }
+    .logo-panel--light .context-label {
+      color: var(--taupe-400);
+    }
+    .logo-panel--dark .context-label {
+      color: var(--teal-400);
+    }
+  </style>
+</head>
+<body>
+  <h2>Logo: Light and Dark Contexts</h2>
+  <div class="logo-row">
+    <div class="logo-panel logo-panel--light">
+      <div class="logo-wordmark">
+        Kris Pierce
+        <span>Consulting</span>
+      </div>
+      <div class="context-label">On Cream</div>
+    </div>
+    <div class="logo-panel logo-panel--dark">
+      <div class="logo-wordmark">
+        Kris Pierce
+        <span>Consulting</span>
+      </div>
+      <div class="context-label">On Forest</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!-- @dsCard group="Colours" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Neutrals: Cream, Paper, Ink, Taupe</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 250px;
+      background: var(--cream-50);
+      font-family: 'Archivo', sans-serif;
+      color: var(--ink-900);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 20px;
+    }
+    .group-label {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-600);
+      margin-bottom: 8px;
+    }
+    .row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .swatch-rect {
+      width: 64px;
+      height: 44px;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+    }
+    .swatch-label {
+      font-size: 10px;
+      font-weight: 600;
+      margin-top: 5px;
+      color: var(--ink-900);
+      text-align: center;
+      line-height: 1.2;
+    }
+    .swatch-hex {
+      font-size: 9px;
+      font-weight: 400;
+      color: var(--taupe-400);
+      text-align: center;
+      font-family: 'Archivo', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h2>Neutrals</h2>
+
+  <!-- Cream + Paper -->
+  <p class="group-label">Cream and Paper</p>
+  <div class="row">
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--cream-50);"></div>
+      <span class="swatch-label">Cream 50</span>
+      <span class="swatch-hex">#FBF9F5</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--cream-100);"></div>
+      <span class="swatch-label">Cream 100</span>
+      <span class="swatch-hex">#F4F1EB</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--cream-200);"></div>
+      <span class="swatch-label">Cream 200</span>
+      <span class="swatch-hex">#ECE7DD</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--paper);"></div>
+      <span class="swatch-label">Paper</span>
+      <span class="swatch-hex">#FFFFFF</span>
+    </div>
+  </div>
+
+  <!-- Ink -->
+  <p class="group-label">Ink</p>
+  <div class="row">
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--ink-700);"></div>
+      <span class="swatch-label">Ink 700</span>
+      <span class="swatch-hex">#3E484A</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--ink-800);"></div>
+      <span class="swatch-label">Ink 800</span>
+      <span class="swatch-hex">#2B3744</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--ink-900);"></div>
+      <span class="swatch-label">Ink 900</span>
+      <span class="swatch-hex">#1C2530</span>
+    </div>
+  </div>
+
+  <!-- Taupe -->
+  <p class="group-label">Taupe (cooled grey)</p>
+  <div class="row">
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--taupe-100);"></div>
+      <span class="swatch-label">Taupe 100</span>
+      <span class="swatch-hex">#DDE2DF</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--taupe-200);"></div>
+      <span class="swatch-label">Taupe 200</span>
+      <span class="swatch-hex">#C5CCC8</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--taupe-300);"></div>
+      <span class="swatch-label">Taupe 300</span>
+      <span class="swatch-hex">#A0ADA7</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--taupe-400);"></div>
+      <span class="swatch-label">Taupe 400</span>
+      <span class="swatch-hex">#7E8E87</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--taupe-500);"></div>
+      <span class="swatch-label">Taupe 500</span>
+      <span class="swatch-hex">#5E706A</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--taupe-600);"></div>
+      <span class="swatch-label">Taupe 600</span>
+      <span class="swatch-hex">#4A5953</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--taupe-700);"></div>
+      <span class="swatch-label">Taupe 700</span>
+      <span class="swatch-hex">#384540</span>
+    </div>
+  </div>
+</body>
+</html>

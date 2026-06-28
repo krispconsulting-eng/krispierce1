@@ -1,0 +1,159 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Cards</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    body {
+      padding: var(--space-6);
+      min-height: 400px;
+    }
+    .card-title {
+      font-family: var(--font-display);
+      font-weight: var(--weight-semibold);
+      font-size: var(--text-h3);
+      color: var(--text-primary);
+      margin-bottom: var(--space-5);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-5);
+    }
+    .card {
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+    }
+    .card-overline {
+      font-family: var(--font-text);
+      font-size: var(--text-overline);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-overline);
+      text-transform: uppercase;
+      color: var(--teal-600);
+      margin-bottom: var(--space-2);
+    }
+    .card h3 {
+      font-family: var(--font-display);
+      font-weight: var(--weight-semibold);
+      font-size: var(--text-h4);
+      margin-bottom: var(--space-2);
+    }
+    .card p {
+      font-size: var(--text-sm);
+      line-height: var(--leading-normal);
+      color: var(--text-secondary);
+    }
+
+    /* Surface card */
+    .card-surface {
+      background: var(--color-surface);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-card);
+    }
+
+    /* Alt card */
+    .card-alt {
+      background: var(--color-surface-alt);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Inverse card */
+    .card-inverse {
+      background: var(--color-surface-inverse);
+    }
+    .card-inverse .card-overline {
+      color: var(--teal-400);
+    }
+    .card-inverse h3 {
+      color: var(--text-on-inverse);
+    }
+    .card-inverse p {
+      color: var(--text-on-inverse-muted);
+    }
+
+    /* Glass strip and card */
+    .glass-strip {
+      background: linear-gradient(165deg, var(--forest) 0%, #234A52 100%);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+    }
+    .card-glass {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(var(--glass-blur));
+      -webkit-backdrop-filter: blur(var(--glass-blur));
+      box-shadow: var(--shadow-glass);
+    }
+    .card-glass .card-overline {
+      color: var(--teal-200);
+    }
+    .card-glass h3 {
+      color: var(--text-on-inverse);
+    }
+    .card-glass p {
+      color: var(--text-on-inverse-muted);
+    }
+
+    .variant-label {
+      font-family: var(--font-text);
+      font-size: 11px;
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-overline);
+      text-transform: uppercase;
+      color: var(--taupe-400);
+      margin-bottom: var(--space-2);
+    }
+  </style>
+</head>
+<body>
+  <div class="card-title">Cards</div>
+
+  <div class="grid">
+    <!-- Surface -->
+    <div>
+      <div class="variant-label">Surface</div>
+      <div class="card card-surface">
+        <div class="card-overline">Strategy</div>
+        <h3>Organisational Design</h3>
+        <p>Helping leaders rethink how their organisations are structured to deliver on what matters most.</p>
+      </div>
+    </div>
+
+    <!-- Alt -->
+    <div>
+      <div class="variant-label">Alt surface</div>
+      <div class="card card-alt">
+        <div class="card-overline">Advisory</div>
+        <h3>Programme Governance</h3>
+        <p>Clear frameworks that connect programme intent with measurable outcomes across the organisation.</p>
+      </div>
+    </div>
+
+    <!-- Inverse -->
+    <div>
+      <div class="variant-label">Inverse</div>
+      <div class="card card-inverse">
+        <div class="card-overline">Capability</div>
+        <h3>Change Leadership</h3>
+        <p>Building the internal muscle to lead change well, not just manage it.</p>
+      </div>
+    </div>
+
+    <!-- Glass -->
+    <div>
+      <div class="variant-label" style="color: var(--taupe-300)">Glass</div>
+      <div class="glass-strip">
+        <div class="card card-glass">
+          <div class="card-overline">Featured</div>
+          <h3>Systems Thinking</h3>
+          <p>Looking at problems as interconnected parts of a whole, not isolated issues to fix.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

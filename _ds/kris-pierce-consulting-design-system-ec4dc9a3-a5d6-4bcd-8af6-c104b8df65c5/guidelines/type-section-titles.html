@@ -1,0 +1,57 @@
+<!-- @dsCard group="Type" -->
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Type: Section Titles</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      height: 250px;
+      overflow: hidden;
+      background: var(--cream-50);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 48px;
+    }
+    .overline {
+      font-family: var(--font-text);
+      font-size: var(--text-overline);
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-overline);
+      text-transform: uppercase;
+      color: var(--teal-600);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: var(--weight-semibold);
+      font-size: 40px;
+      line-height: var(--leading-heading);
+      letter-spacing: var(--tracking-snug);
+      color: var(--ink-900);
+    }
+    .section-title .accent {
+      color: var(--teal-600);
+    }
+    .spec {
+      font-family: var(--font-text);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      margin-top: 24px;
+      line-height: var(--leading-normal);
+    }
+  </style>
+</head>
+<body>
+  <div class="overline">What we do</div>
+  <div class="section-title">
+    Organisational <span class="accent">clarity</span><br>starts with good questions
+  </div>
+  <div class="spec">Outfit 600 / display size (40 px) / line-height 1.18 / tracking -0.015em / accent word in Teal 600</div>
+</body>
+</html>

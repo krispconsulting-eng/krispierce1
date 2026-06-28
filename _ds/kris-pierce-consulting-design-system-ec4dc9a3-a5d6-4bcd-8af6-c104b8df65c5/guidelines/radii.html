@@ -1,0 +1,94 @@
+<!-- @dsCard group="Spacing" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Corner Radii</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 200px;
+      background: var(--cream-50);
+      font-family: 'Archivo', sans-serif;
+      color: var(--ink-900);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 20px;
+      color: var(--ink-900);
+    }
+    .row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-end;
+    }
+    .specimen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .specimen-rect {
+      width: 88px;
+      height: 72px;
+      background: white;
+      border: 2px solid var(--teal-600);
+    }
+    .specimen-label {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 8px;
+      color: var(--ink-900);
+      text-align: center;
+    }
+    .specimen-value {
+      font-size: 10.5px;
+      font-weight: 400;
+      color: var(--taupe-400);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Corner Radii</h2>
+
+  <div class="row">
+    <div class="specimen">
+      <div class="specimen-rect" style="border-radius: var(--radius-xs);"></div>
+      <span class="specimen-label">xs</span>
+      <span class="specimen-value">6px</span>
+    </div>
+    <div class="specimen">
+      <div class="specimen-rect" style="border-radius: var(--radius-sm);"></div>
+      <span class="specimen-label">sm</span>
+      <span class="specimen-value">10px</span>
+    </div>
+    <div class="specimen">
+      <div class="specimen-rect" style="border-radius: var(--radius-md);"></div>
+      <span class="specimen-label">md</span>
+      <span class="specimen-value">16px</span>
+    </div>
+    <div class="specimen">
+      <div class="specimen-rect" style="border-radius: var(--radius-lg);"></div>
+      <span class="specimen-label">lg</span>
+      <span class="specimen-value">24px</span>
+    </div>
+    <div class="specimen">
+      <div class="specimen-rect" style="border-radius: var(--radius-xl);"></div>
+      <span class="specimen-label">xl</span>
+      <span class="specimen-value">32px</span>
+    </div>
+    <div class="specimen">
+      <div class="specimen-rect" style="border-radius: var(--radius-pill);"></div>
+      <span class="specimen-label">pill</span>
+      <span class="specimen-value">999px</span>
+    </div>
+  </div>
+</body>
+</html>

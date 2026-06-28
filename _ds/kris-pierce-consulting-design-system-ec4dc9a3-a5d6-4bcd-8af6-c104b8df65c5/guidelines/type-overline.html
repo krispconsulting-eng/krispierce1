@@ -1,0 +1,83 @@
+<!-- @dsCard group="Type" -->
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Type: Overline</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      height: 160px;
+      overflow: hidden;
+      display: flex;
+      margin: 0;
+    }
+    .panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px 36px;
+    }
+    .panel.light {
+      background: var(--cream-50);
+    }
+    .panel.dark {
+      background: linear-gradient(165deg, var(--forest) 0%, #234A52 100%);
+    }
+    .overline {
+      font-family: var(--font-text);
+      font-size: 12px;
+      font-weight: var(--weight-semibold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .panel.light .overline {
+      color: var(--teal-600);
+    }
+    .panel.dark .overline {
+      color: var(--blue-200);
+    }
+    .context {
+      font-family: var(--font-display);
+      font-weight: var(--weight-semibold);
+      font-size: 22px;
+      line-height: var(--leading-heading);
+    }
+    .panel.light .context {
+      color: var(--ink-900);
+    }
+    .panel.dark .context {
+      color: var(--text-on-inverse);
+    }
+    .spec {
+      font-family: var(--font-text);
+      font-size: 10px;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+    .panel.light .spec {
+      color: var(--taupe-400);
+    }
+    .panel.dark .spec {
+      color: var(--text-on-inverse-muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="panel light">
+    <div class="overline">Our approach</div>
+    <div class="context">On light surfaces</div>
+    <div class="spec">Archivo 600 / 12 px / uppercase / 0.2em tracking / Teal 600</div>
+  </div>
+  <div class="panel dark">
+    <div class="overline">Case studies</div>
+    <div class="context">On dark surfaces</div>
+    <div class="spec">Archivo 600 / 12 px / uppercase / 0.2em tracking / Blue 200</div>
+  </div>
+</body>
+</html>

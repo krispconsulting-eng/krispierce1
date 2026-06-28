@@ -1,0 +1,97 @@
+<!-- @dsCard group="Spacing" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Shadow Tokens</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 250px;
+      background: var(--cream-50);
+      font-family: 'Archivo', sans-serif;
+      color: var(--ink-900);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+      color: var(--ink-900);
+    }
+    .row {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .shadow-specimen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .shadow-card {
+      width: 92px;
+      height: 72px;
+      background: white;
+      border-radius: var(--radius-sm);
+    }
+    .shadow-label {
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 10px;
+      color: var(--ink-900);
+      text-align: center;
+    }
+    .shadow-desc {
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--taupe-400);
+      text-align: center;
+      max-width: 92px;
+      line-height: 1.3;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Shadow Tokens</h2>
+
+  <div class="row">
+    <div class="shadow-specimen">
+      <div class="shadow-card" style="box-shadow: var(--shadow-xs);"></div>
+      <span class="shadow-label">xs</span>
+      <span class="shadow-desc">Subtle lift, inputs</span>
+    </div>
+    <div class="shadow-specimen">
+      <div class="shadow-card" style="box-shadow: var(--shadow-sm);"></div>
+      <span class="shadow-label">sm</span>
+      <span class="shadow-desc">Dropdowns, tooltips</span>
+    </div>
+    <div class="shadow-specimen">
+      <div class="shadow-card" style="box-shadow: var(--shadow-md);"></div>
+      <span class="shadow-label">md</span>
+      <span class="shadow-desc">Floating panels</span>
+    </div>
+    <div class="shadow-specimen">
+      <div class="shadow-card" style="box-shadow: var(--shadow-lg);"></div>
+      <span class="shadow-label">lg</span>
+      <span class="shadow-desc">Modals, overlays</span>
+    </div>
+    <div class="shadow-specimen">
+      <div class="shadow-card" style="box-shadow: var(--shadow-card);"></div>
+      <span class="shadow-label">card</span>
+      <span class="shadow-desc">Content cards</span>
+    </div>
+    <div class="shadow-specimen">
+      <div class="shadow-card" style="box-shadow: var(--shadow-glass);"></div>
+      <span class="shadow-label">glass</span>
+      <span class="shadow-desc">Frosted surfaces</span>
+    </div>
+  </div>
+</body>
+</html>

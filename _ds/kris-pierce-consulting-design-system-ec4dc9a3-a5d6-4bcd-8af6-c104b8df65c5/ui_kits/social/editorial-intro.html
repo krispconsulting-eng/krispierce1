@@ -1,0 +1,148 @@
+<!-- @dsCard group="Social" -->
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=540, initial-scale=1.0">
+  <title>Social Template - Editorial Intro</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 540px;
+      height: 540px;
+      overflow: hidden;
+      background: var(--forest);
+    }
+
+    .card {
+      width: 540px;
+      height: 540px;
+      background: linear-gradient(165deg, #1E3D34 0%, #234A52 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 56px 48px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle decorative arc */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(127, 168, 194, 0.18);
+      pointer-events: none;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -40px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(127, 168, 194, 0.10);
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .overline {
+      font-family: var(--font-text);
+      font-size: 11px;
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-overline);
+      text-transform: uppercase;
+      color: var(--blue-200);
+      margin-bottom: 20px;
+    }
+
+    .headline {
+      font-family: var(--font-display);
+      font-weight: var(--weight-light);
+      font-size: 42px;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      color: #F4F1EB;
+      margin-bottom: 20px;
+    }
+
+    .headline strong {
+      font-weight: var(--weight-semibold);
+      color: var(--blue-200);
+    }
+
+    .body-text {
+      font-family: var(--font-text);
+      font-size: 15px;
+      font-weight: var(--weight-regular);
+      line-height: 1.55;
+      color: rgba(244, 241, 235, 0.72);
+      max-width: 380px;
+    }
+
+    .lockup {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lockup-bar {
+      width: 24px;
+      height: 2px;
+      background: var(--teal-600);
+      border-radius: 1px;
+    }
+
+    .lockup-text {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: var(--weight-medium);
+      letter-spacing: 0.01em;
+      color: rgba(244, 241, 235, 0.56);
+    }
+
+    .lockup-url {
+      font-family: var(--font-text);
+      font-size: 11px;
+      font-weight: var(--weight-regular);
+      color: rgba(244, 241, 235, 0.36);
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <p class="overline">Strategy + Governance</p>
+      <h1 class="headline">
+        Complex problems<br>
+        need <strong>clear thinking</strong>,<br>
+        not more noise.
+      </h1>
+      <p class="body-text">
+        Practical strategy for organisations navigating
+        regulation, risk and change.
+      </p>
+    </div>
+    <div class="lockup">
+      <span class="lockup-bar"></span>
+      <span class="lockup-text">Kris Pierce Consulting</span>
+      <span class="lockup-url">krispierce.com.au</span>
+    </div>
+  </div>
+</body>
+</html>
