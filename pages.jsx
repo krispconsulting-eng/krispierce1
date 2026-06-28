@@ -176,7 +176,6 @@ function ExpertisePage() {
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav active="engagement" />
-      <SectionNav active="expertise" />
       <main id="main-content">
         <section className="v3-page-hero">
           <div className="blob b1"></div><div className="blob b2"></div><div className="blob b3"></div>
@@ -198,6 +197,8 @@ function ExpertisePage() {
               changes because of it: a decision, a design, a strategy.</p>
           </div>
         </section>
+
+        <SectionNav active="expertise" />
 
         <ExpertiseCards />
 
