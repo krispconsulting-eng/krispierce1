@@ -8,26 +8,15 @@ function AboutPage() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav active="about" />
+      <Nav active="about" variant="light" />
       <main id="main-content">
-        <section className="v3-page-hero">
-          <div className="blob b1"></div><div className="blob b2"></div><div className="blob b3"></div>
-          <svg className="v3-page-hero__arcs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <g fill="none" strokeWidth="1.5">
-              <circle cx="1180" cy="250" r="120" stroke="rgba(127,168,194,.55)"/>
-              <circle cx="1180" cy="250" r="200" stroke="rgba(127,168,194,.32)"/>
-              <circle cx="1180" cy="250" r="290" stroke="rgba(207,224,218,.22)"/>
-            </g>
-          </svg>
-          <div className="v3-page-hero__inner">
-            <span className="v3-overline v3-page-hero__overline v3-hero-reveal">About Kris</span>
-            <h1 className="v3-page-hero__title v3-hero-reveal">Using what I've learnt to level up engagement, build capacity, and back the next gen of <b>changemakers</b></h1>
-            <p className="v3-page-hero__lead v3-hero-reveal">I'm Kris Pierce. My consulting practice draws on two decades as a carer,
+        <section className="v3-page-header">
+          <div className="v3-page-header__inner">
+            <span className="v3-overline v3-page-header__overline v3-header-reveal">About Kris</span>
+            <h1 className="v3-page-header__title v3-header-reveal">Using what I've learnt to level up engagement, build capacity, and back the next gen of <b>changemakers</b></h1>
+            <p className="v3-page-header__lead v3-header-reveal">I'm Kris Pierce. My consulting practice draws on two decades as a carer,
               advocate, consultant, and researcher to help organisations strengthen engagement, build evidence,
               train advocates, mentor not-for-profits, and support the carers who hold the system together.</p>
-            <div className="v3-page-hero__actions v3-hero-reveal">
-              <a href="/contact" className="v3-btn v3-btn--blue">Start a conversation <span>→</span></a>
-            </div>
           </div>
         </section>
 
@@ -175,24 +164,16 @@ function ExpertisePage() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav active="engagement" />
+      <Nav active="engagement" variant="light" />
       <main id="main-content">
-        <section className="v3-page-hero">
-          <div className="blob b1"></div><div className="blob b2"></div><div className="blob b3"></div>
-          <svg className="v3-page-hero__arcs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <g fill="none" strokeWidth="1.5">
-              <circle cx="1180" cy="250" r="120" stroke="rgba(127,168,194,.55)"/>
-              <circle cx="1180" cy="250" r="200" stroke="rgba(127,168,194,.32)"/>
-              <circle cx="1180" cy="250" r="290" stroke="rgba(207,224,218,.22)"/>
-            </g>
-          </svg>
-          <div className="v3-page-hero__inner">
-            <span className="v3-overline v3-page-hero__overline v3-hero-reveal">Expertise</span>
-            <h1 className="v3-page-hero__title v3-hero-reveal">This isn't a service menu</h1>
-            <p className="v3-page-hero__lead v3-hero-reveal">Every brief is different, and the method follows the question. What follows
+        <section className="v3-page-header">
+          <div className="v3-page-header__inner">
+            <span className="v3-overline v3-page-header__overline v3-header-reveal">Expertise</span>
+            <h1 className="v3-page-header__title v3-header-reveal">This isn't a service menu</h1>
+            <p className="v3-page-header__lead v3-header-reveal">Every brief is different, and the method follows the question. What follows
               are areas of expertise and the outcomes they are built for. If your challenge doesn't fit neatly into one of
               these, that's usually a sign to talk.</p>
-            <p className="v3-page-hero__lead v3-hero-reveal" style={{ color: 'var(--blue-200)', fontWeight: 500 }}>
+            <p className="v3-page-header__lead v3-header-reveal" style={{ color: 'var(--teal-600)', fontWeight: 500 }}>
               I bring the method the problem needs, and I know which one that is. The point is never the method. It's what
               changes because of it: a decision, a design, a strategy.</p>
           </div>
@@ -235,20 +216,12 @@ function ContactPage() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav active="contact" />
+      <Nav active="contact" variant="light" />
       <main id="main-content">
-        <section className="v3-page-hero">
-          <div className="blob b1"></div><div className="blob b2"></div><div className="blob b3"></div>
-          <svg className="v3-page-hero__arcs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <g fill="none" strokeWidth="1.5">
-              <circle cx="1180" cy="250" r="120" stroke="rgba(127,168,194,.55)"/>
-              <circle cx="1180" cy="250" r="200" stroke="rgba(127,168,194,.32)"/>
-              <circle cx="1180" cy="250" r="290" stroke="rgba(207,224,218,.22)"/>
-            </g>
-          </svg>
-          <div className="v3-page-hero__inner">
-            <span className="v3-overline v3-page-hero__overline v3-hero-reveal">Contact</span>
-            <h1 className="v3-page-hero__title v3-hero-reveal">Let's <b>talk</b></h1>
+        <section className="v3-page-header">
+          <div className="v3-page-header__inner">
+            <span className="v3-overline v3-page-header__overline v3-header-reveal">Contact</span>
+            <h1 className="v3-page-header__title v3-header-reveal">Let's <b>talk</b></h1>
           </div>
         </section>
 
@@ -342,21 +315,13 @@ function PortfolioPage() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav active="portfolio" />
+      <Nav active="portfolio" variant="light" />
       <main id="main-content">
-        <section className="v3-page-hero">
-          <div className="blob b1"></div><div className="blob b2"></div><div className="blob b3"></div>
-          <svg className="v3-page-hero__arcs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <g fill="none" strokeWidth="1.5">
-              <circle cx="1180" cy="250" r="120" stroke="rgba(127,168,194,.55)"/>
-              <circle cx="1180" cy="250" r="200" stroke="rgba(127,168,194,.32)"/>
-              <circle cx="1180" cy="250" r="290" stroke="rgba(207,224,218,.22)"/>
-            </g>
-          </svg>
-          <div className="v3-page-hero__inner">
-            <span className="v3-overline v3-page-hero__overline v3-hero-reveal">Portfolio</span>
-            <h1 className="v3-page-hero__title v3-hero-reveal">Previous work, and what people <b>say</b></h1>
-            <p className="v3-page-hero__lead v3-hero-reveal">A selection of engagements and the outcomes they reached, alongside words from
+        <section className="v3-page-header">
+          <div className="v3-page-header__inner">
+            <span className="v3-overline v3-page-header__overline v3-header-reveal">Portfolio</span>
+            <h1 className="v3-page-header__title v3-header-reveal">Previous work, and what people <b>say</b></h1>
+            <p className="v3-page-header__lead v3-header-reveal">A selection of engagements and the outcomes they reached, alongside words from
               the people in the room. Client names are kept private; the work speaks plainly.</p>
           </div>
         </section>
