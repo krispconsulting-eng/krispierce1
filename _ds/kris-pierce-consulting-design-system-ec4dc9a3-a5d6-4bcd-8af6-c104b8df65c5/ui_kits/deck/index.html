@@ -1,0 +1,334 @@
+<!-- @dsCard group="Slides" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kris Pierce Consulting - Capability Deck</title>
+<link rel="stylesheet" href="../../styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600&family=Archivo:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:100%;height:100%;overflow:hidden;background:#1C2530}
+  body{font-family:'Archivo',sans-serif;color:#1C2530}
+
+  .deck{display:flex;transition:transform 0.6s cubic-bezier(0.32,0.72,0,1)}
+  .slide{
+    min-width:100vw;min-height:100vh;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:6vh 8vw;position:relative;overflow:hidden;
+  }
+
+  /* --- Shared type --- */
+  .overline{
+    font-family:'Archivo',sans-serif;font-weight:600;font-size:0.8rem;
+    letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1rem;
+  }
+  .headline{font-family:'Outfit',sans-serif;font-weight:200;line-height:1.15}
+  .headline--bold{font-weight:600}
+  .body-text{font-family:'Archivo',sans-serif;font-weight:400;font-size:1.1rem;line-height:1.7;max-width:52ch}
+  .body-text + .body-text{margin-top:0.75rem}
+
+  /* --- Nav indicator --- */
+  .nav-dots{
+    position:fixed;bottom:2.4rem;left:50%;transform:translateX(-50%);
+    display:flex;gap:10px;z-index:100;
+  }
+  .nav-dots span{
+    width:10px;height:10px;border-radius:999px;
+    background:rgba(255,255,255,0.28);transition:all 0.4s cubic-bezier(0.32,0.72,0,1);
+    cursor:pointer;
+  }
+  .nav-dots span.active{background:#7FA8C2;width:28px}
+
+  /* ============ SLIDE 1 - TITLE ============ */
+  .slide--title{
+    background:linear-gradient(165deg,#1E3D34 0%,#234A52 100%);
+    color:#FBF9F5;text-align:center;
+  }
+  .slide--title .overline{color:#7FA8C2}
+  .slide--title .headline{font-size:clamp(2.6rem,5.2vw,4.8rem);margin-bottom:1.2rem}
+  .slide--title .tagline{
+    font-family:'Archivo',sans-serif;font-weight:400;font-size:1.15rem;
+    color:#CFE0DA;max-width:46ch;line-height:1.6;
+  }
+  .logo-lockup{
+    display:flex;align-items:center;gap:0.6rem;margin-bottom:2.4rem;
+  }
+  .logo-mark{
+    width:42px;height:42px;border-radius:10px;
+    background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.32);
+    backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;
+    font-family:'Outfit',sans-serif;font-weight:600;font-size:1.1rem;color:#CFE0DA;
+  }
+  .logo-text{
+    font-family:'Outfit',sans-serif;font-weight:400;font-size:0.95rem;
+    color:#CFE0DA;letter-spacing:0.03em;
+  }
+
+  /* ============ SLIDE 2 - POSITIONING ============ */
+  .slide--positioning{background:#FBF9F5;text-align:center}
+  .slide--positioning .overline{color:#3D7A6B}
+  .slide--positioning .headline{font-size:clamp(1.8rem,3.6vw,3rem);color:#1E3D34;margin-bottom:1.6rem;max-width:28ch}
+  .slide--positioning .body-text{color:#4A5953;text-align:center;margin-inline:auto}
+
+  /* ============ SLIDE 3 - THREE MARKETS ============ */
+  .slide--markets{background:#F4F1EB}
+  .slide--markets .overline{color:#3D7A6B;text-align:center;width:100%}
+  .slide--markets .headline{
+    font-size:clamp(1.6rem,3vw,2.6rem);color:#1E3D34;
+    text-align:center;margin-bottom:2.8rem;
+  }
+  .markets-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;width:100%;max-width:960px;
+  }
+  .market-card{
+    background:#FFFFFF;border-radius:16px;padding:2.2rem 1.8rem;
+    box-shadow:0 2px 12px rgba(29,28,33,0.06);
+    display:flex;flex-direction:column;gap:0.8rem;
+  }
+  .market-card .card-icon{
+    width:44px;height:44px;border-radius:10px;display:flex;
+    align-items:center;justify-content:center;font-size:1.3rem;
+  }
+  .market-card:nth-child(1) .card-icon{background:#D2E1EA;color:#305670}
+  .market-card:nth-child(2) .card-icon{background:#CFE0DA;color:#2F5E52}
+  .market-card:nth-child(3) .card-icon{background:#E7F0EC;color:#3D7A6B}
+  .market-card h3{
+    font-family:'Outfit',sans-serif;font-weight:600;font-size:1.1rem;color:#1E3D34;
+  }
+  .market-card p{
+    font-family:'Archivo',sans-serif;font-weight:400;font-size:0.92rem;
+    color:#5E706A;line-height:1.6;
+  }
+
+  /* ============ SLIDE 4 - METHOD ============ */
+  .slide--method{
+    background:linear-gradient(165deg,#1E3D34 0%,#1B4A4A 50%,#234A52 100%);
+    color:#FBF9F5;
+  }
+  .slide--method .overline{color:#7FA8C2;text-align:center;width:100%}
+  .slide--method .headline{
+    font-size:clamp(1.6rem,3vw,2.6rem);text-align:center;margin-bottom:2.6rem;
+  }
+  .method-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;
+    width:100%;max-width:960px;
+  }
+  .method-item{
+    background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.14);
+    border-radius:16px;padding:1.8rem 1.4rem;backdrop-filter:blur(16px);
+    display:flex;flex-direction:column;gap:0.6rem;
+  }
+  .method-item .item-number{
+    font-family:'Outfit',sans-serif;font-weight:600;font-size:1.6rem;color:#7FA8C2;
+  }
+  .method-item h3{
+    font-family:'Outfit',sans-serif;font-weight:600;font-size:1rem;color:#FBF9F5;
+  }
+  .method-item p{
+    font-family:'Archivo',sans-serif;font-weight:400;font-size:0.85rem;
+    color:#CFE0DA;line-height:1.55;
+  }
+
+  /* ============ SLIDE 5 - DIFFERENCE ============ */
+  .slide--difference{background:#FBF9F5;text-align:center}
+  .slide--difference .overline{color:#3D7A6B}
+  .slide--difference .headline{
+    font-size:clamp(1.6rem,3.2vw,2.6rem);color:#1E3D34;
+    margin-bottom:1.4rem;max-width:30ch;
+  }
+  .slide--difference .body-text{color:#4A5953;text-align:center;margin-inline:auto;margin-bottom:2rem}
+  .diff-pills{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;max-width:720px}
+  .diff-pill{
+    background:#E7F0EC;color:#2F5E52;border-radius:999px;
+    padding:0.55rem 1.3rem;font-family:'Archivo',sans-serif;
+    font-weight:600;font-size:0.85rem;letter-spacing:0.02em;
+  }
+
+  /* ============ SLIDE 6 - CONTACT ============ */
+  .slide--contact{
+    background:linear-gradient(165deg,#1E3D34 0%,#234A52 100%);
+    color:#FBF9F5;text-align:center;
+  }
+  .slide--contact .overline{color:#7FA8C2}
+  .slide--contact .headline{font-size:clamp(1.8rem,3.6vw,3rem);margin-bottom:1.4rem}
+  .slide--contact .body-text{color:#CFE0DA;text-align:center;margin-inline:auto;margin-bottom:2.4rem}
+  .contact-row{
+    display:flex;gap:2rem;align-items:center;justify-content:center;
+    flex-wrap:wrap;margin-bottom:2.4rem;
+  }
+  .contact-link{
+    font-family:'Archivo',sans-serif;font-weight:600;font-size:1rem;
+    color:#CFE0DA;text-decoration:none;display:flex;align-items:center;gap:0.5rem;
+    transition:color 0.3s cubic-bezier(0.32,0.72,0,1);
+  }
+  .contact-link:hover{color:#FBF9F5}
+  .contact-link .link-icon{
+    width:36px;height:36px;border-radius:10px;
+    background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.32);
+    display:flex;align-items:center;justify-content:center;font-size:0.9rem;
+  }
+  .cta-btn{
+    display:inline-block;padding:0.85rem 2.4rem;border-radius:999px;
+    background:#3E6F8E;color:#FBF9F5;font-family:'Archivo',sans-serif;
+    font-weight:600;font-size:0.95rem;text-decoration:none;border:none;cursor:pointer;
+    transition:background 0.3s cubic-bezier(0.32,0.72,0,1);
+  }
+  .cta-btn:hover{background:#305670}
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1 - TITLE -->
+  <section class="slide slide--title">
+    <div class="logo-lockup">
+      <div class="logo-mark">KP</div>
+      <div class="logo-text">KrispConsulting</div>
+    </div>
+    <p class="overline">Capability overview</p>
+    <h1 class="headline">Kris Pierce Consulting</h1>
+    <p class="tagline">Consumer and community engagement strategy for organisations that need patients, carers, and communities at the centre of their work.</p>
+  </section>
+
+  <!-- SLIDE 2 - POSITIONING -->
+  <section class="slide slide--positioning">
+    <p class="overline">What we do</p>
+    <h2 class="headline">Consumer and community engagement across health, research, and rare disease.</h2>
+    <p class="body-text">Kris Pierce Consulting helps organisations build genuine, sustained relationships with the people their work is meant to serve. We design and deliver engagement that goes beyond consultation, embedding consumer and community voices into governance, research design, and programme delivery.</p>
+    <p class="body-text">The practice works across sectors where meaningful participation changes outcomes: pharmaceuticals, research institutions, and community organisations.</p>
+  </section>
+
+  <!-- SLIDE 3 - THREE MARKETS -->
+  <section class="slide slide--markets">
+    <p class="overline">Sectors we work in</p>
+    <h2 class="headline headline--bold">Three focus areas</h2>
+    <div class="markets-grid">
+      <div class="market-card">
+        <div class="card-icon">&#9906;</div>
+        <h3>Pharmaceutical and biotech</h3>
+        <p>Patient engagement strategy for clinical development, regulatory submissions, and market access. Helping sponsors bring the patient perspective into trial design and evidence generation.</p>
+      </div>
+      <div class="market-card">
+        <div class="card-icon">&#9881;</div>
+        <h3>Research and academia</h3>
+        <p>Co-designed research frameworks, consumer advisory structures, and participatory methods. Supporting investigators to embed lived experience from protocol through to publication.</p>
+      </div>
+      <div class="market-card">
+        <div class="card-icon">&#9825;</div>
+        <h3>Not-for-profit and advocacy</h3>
+        <p>Governance design, community engagement strategy, and capacity building for patient organisations and advocacy groups navigating complex health and policy landscapes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4 - METHOD -->
+  <section class="slide slide--method">
+    <p class="overline">How we work</p>
+    <h2 class="headline">Flexible methodology, tailored to context</h2>
+    <div class="method-grid">
+      <div class="method-item">
+        <span class="item-number">01</span>
+        <h3>Workshops</h3>
+        <p>Facilitated sessions that bring stakeholders together to align on priorities, surface insights, and build shared understanding across organisational silos.</p>
+      </div>
+      <div class="method-item">
+        <span class="item-number">02</span>
+        <h3>Co-design</h3>
+        <p>Participatory design processes where consumers and communities shape programmes, services, and research alongside the teams delivering them.</p>
+      </div>
+      <div class="method-item">
+        <span class="item-number">03</span>
+        <h3>Focus groups</h3>
+        <p>Structured qualitative engagement with patients, carers, and community members to gather perspectives that inform strategy and decision making.</p>
+      </div>
+      <div class="method-item">
+        <span class="item-number">04</span>
+        <h3>Engagement frameworks</h3>
+        <p>Repeatable structures for sustained consumer participation: advisory committees, feedback loops, and governance models that outlast any single project.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 5 - DIFFERENCE -->
+  <section class="slide slide--difference">
+    <p class="overline">Why Kris</p>
+    <h2 class="headline headline--bold">20+ years bringing patients into rooms where decisions get made.</h2>
+    <p class="body-text">Kris has worked at the intersection of patient engagement, clinical research, and health policy for more than two decades. That depth means practical advice grounded in what actually works, not theoretical frameworks.</p>
+    <div class="diff-pills">
+      <span class="diff-pill">Rare disease specialist</span>
+      <span class="diff-pill">Cross-sector experience</span>
+      <span class="diff-pill">Governance design</span>
+      <span class="diff-pill">Regulatory engagement</span>
+      <span class="diff-pill">Lived experience integration</span>
+      <span class="diff-pill">Australian and global networks</span>
+    </div>
+  </section>
+
+  <!-- SLIDE 6 - CONTACT -->
+  <section class="slide slide--contact">
+    <p class="overline">Get in touch</p>
+    <h1 class="headline">Let's talk about your next engagement challenge.</h1>
+    <p class="body-text">Whether you are scoping a patient engagement strategy, designing a consumer advisory structure, or need an experienced facilitator for a specific project, reach out for a conversation.</p>
+    <div class="contact-row">
+      <a class="contact-link" href="mailto:info@krispierce.com.au">
+        <span class="link-icon">&#9993;</span> info@krispierce.com.au
+      </a>
+      <a class="contact-link" href="https://krispierce.com.au" target="_blank">
+        <span class="link-icon">&#9741;</span> krispierce.com.au
+      </a>
+    </div>
+    <a class="cta-btn" href="mailto:info@krispierce.com.au">Start a conversation</a>
+  </section>
+
+</div>
+
+<!-- Navigation dots -->
+<div class="nav-dots" id="navDots"></div>
+
+<script>
+(function(){
+  const deck = document.getElementById('deck');
+  const slides = deck.querySelectorAll('.slide');
+  const dotsContainer = document.getElementById('navDots');
+  let current = 0;
+  const total = slides.length;
+
+  // Build dots
+  for(let i = 0; i < total; i++){
+    const dot = document.createElement('span');
+    if(i === 0) dot.classList.add('active');
+    dot.addEventListener('click', function(){ goTo(i); });
+    dotsContainer.appendChild(dot);
+  }
+  const dots = dotsContainer.querySelectorAll('span');
+
+  function goTo(index){
+    if(index < 0 || index >= total) return;
+    current = index;
+    deck.style.transform = 'translateX(-' + (current * 100) + 'vw)';
+    dots.forEach(function(d, i){ d.classList.toggle('active', i === current); });
+  }
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight' || e.key === 'ArrowDown') goTo(current + 1);
+    if(e.key === 'ArrowLeft' || e.key === 'ArrowUp') goTo(current - 1);
+  });
+
+  // Touch support
+  let touchStartX = 0;
+  document.addEventListener('touchstart', function(e){ touchStartX = e.touches[0].clientX; });
+  document.addEventListener('touchend', function(e){
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if(Math.abs(diff) > 50){
+      if(diff > 0) goTo(current + 1);
+      else goTo(current - 1);
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

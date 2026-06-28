@@ -1,0 +1,94 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Brand: Glass Effect</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 220px;
+      background: linear-gradient(165deg, #1E3D34 0%, #234A52 100%);
+      font-family: 'Archivo', sans-serif;
+      color: var(--cream-50);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 20px;
+      color: var(--cream-50);
+    }
+    .glass-row {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+    }
+    .glass-card {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 28px 24px;
+      box-shadow: var(--shadow-glass);
+    }
+    .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 200;
+      font-size: 48px;
+      line-height: 1;
+      color: var(--cream-50);
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-200);
+    }
+    .glass-note {
+      font-family: 'Archivo', sans-serif;
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.72);
+    }
+    .glass-specs {
+      margin-top: 10px;
+      font-family: 'Archivo', sans-serif;
+      font-size: 11px;
+      color: var(--teal-400);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <h2>Glass Effect: Frosted Cards</h2>
+  <div class="glass-row">
+    <div class="glass-card">
+      <div class="stat-number">20+</div>
+      <div class="stat-label">Years in Health</div>
+    </div>
+    <div class="glass-card">
+      <div class="stat-number">150</div>
+      <div class="stat-label">Organisations Supported</div>
+    </div>
+    <div class="glass-card">
+      <div class="glass-note">Glass panels use a translucent white fill with backdrop blur, sitting over gradient surfaces.</div>
+      <div class="glass-specs">
+        bg: rgba(255,255,255,0.14)<br>
+        border: rgba(255,255,255,0.32)<br>
+        blur: 16px
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Brand: Imagery Treatment</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 230px;
+      background: var(--cream-50);
+      font-family: 'Archivo', sans-serif;
+      color: var(--ink-900);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 20px;
+      color: var(--ink-900);
+    }
+    .imagery-panel {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 140px;
+      /* Simulated warm candid photo with gradient overlay */
+      background: linear-gradient(135deg, #7FA295 0%, #3D7A6B 30%, #2F5E52 60%, #1E3D34 100%);
+    }
+    .imagery-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(30, 61, 52, 0.85) 0%, rgba(30, 61, 52, 0.4) 50%, transparent 100%);
+    }
+    .imagery-text {
+      position: absolute;
+      left: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 320px;
+    }
+    .imagery-text h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 200;
+      font-size: 24px;
+      line-height: 1.25;
+      color: var(--cream-50);
+      margin-bottom: 8px;
+    }
+    .imagery-text p {
+      font-family: 'Archivo', sans-serif;
+      font-size: 12px;
+      line-height: 1.5;
+      color: var(--teal-200);
+    }
+    .treatment-notes {
+      display: flex;
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .treatment-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .treatment-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--teal-600);
+      flex-shrink: 0;
+      margin-top: 4px;
+    }
+    .treatment-note span {
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--taupe-500);
+    }
+  </style>
+</head>
+<body>
+  <h2>Imagery: Photo Treatment</h2>
+  <div class="imagery-panel">
+    <div class="imagery-gradient"></div>
+    <div class="imagery-text">
+      <h3>Warm, candid photography</h3>
+      <p>Ink gradient overlays protect text legibility while preserving the warmth of the original image.</p>
+    </div>
+  </div>
+  <div class="treatment-notes">
+    <div class="treatment-note">
+      <div class="treatment-dot"></div>
+      <span>Candid, natural moments</span>
+    </div>
+    <div class="treatment-note">
+      <div class="treatment-dot"></div>
+      <span>Ink gradient for text protection</span>
+    </div>
+    <div class="treatment-note">
+      <div class="treatment-dot"></div>
+      <span>No stock or staged imagery</span>
+    </div>
+  </div>
+</body>
+</html>

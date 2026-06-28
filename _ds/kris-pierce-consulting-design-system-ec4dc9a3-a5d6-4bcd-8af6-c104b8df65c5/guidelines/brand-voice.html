@@ -1,0 +1,118 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Brand: Voice Guidelines</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 280px;
+      background: var(--cream-50);
+      font-family: 'Archivo', sans-serif;
+      color: var(--ink-900);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 8px;
+      color: var(--ink-900);
+    }
+    .voice-intro {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--taupe-500);
+      margin-bottom: 20px;
+    }
+    .voice-row {
+      display: flex;
+      gap: 20px;
+    }
+    .voice-card {
+      flex: 1;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      position: relative;
+    }
+    .voice-card--yes {
+      background: var(--paper);
+      border: 1px solid var(--teal-200);
+    }
+    .voice-card--no {
+      background: var(--cream-100);
+      border: 1px solid var(--cream-200);
+    }
+    .voice-badge {
+      display: inline-block;
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      margin-bottom: 14px;
+    }
+    .voice-card--yes .voice-badge {
+      background: #E7F0EC;
+      color: var(--teal-700);
+    }
+    .voice-card--no .voice-badge {
+      background: var(--cream-200);
+      color: var(--taupe-500);
+    }
+    .voice-quote {
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--ink-900);
+      font-style: italic;
+    }
+    .voice-card--no .voice-quote {
+      color: var(--taupe-400);
+      text-decoration: line-through;
+      text-decoration-color: var(--taupe-300);
+    }
+    .voice-rules {
+      margin-top: 20px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .voice-rule {
+      font-size: 11px;
+      line-height: 1.4;
+      color: var(--taupe-500);
+      background: var(--cream-100);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+    }
+  </style>
+</head>
+<body>
+  <h2>Voice: Say This, Not This</h2>
+  <p class="voice-intro">Peer to peer. Grounded. One idea per piece. Australian English. No em dashes.</p>
+  <div class="voice-row">
+    <div class="voice-card voice-card--yes">
+      <div class="voice-badge">Say this</div>
+      <p class="voice-quote">"I have spent two decades bringing patients into the rooms where decisions get made."</p>
+    </div>
+    <div class="voice-card voice-card--no">
+      <div class="voice-badge">Not this</div>
+      <p class="voice-quote">"Revolutionary, world-class engagement solutions that 10x your impact!"</p>
+    </div>
+  </div>
+  <div class="voice-rules">
+    <div class="voice-rule">Australian English</div>
+    <div class="voice-rule">No em dashes</div>
+    <div class="voice-rule">Peer to peer, not coach</div>
+    <div class="voice-rule">No motivational tone</div>
+    <div class="voice-rule">One idea per piece</div>
+  </div>
+</body>
+</html>

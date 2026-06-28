@@ -1,0 +1,129 @@
+<!-- @dsCard group="Social" -->
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=540, initial-scale=1.0">
+  <title>Social Template - Bold Statement</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 540px;
+      height: 540px;
+      overflow: hidden;
+      background: var(--cream-50);
+    }
+
+    .card {
+      width: 540px;
+      height: 540px;
+      background: var(--cream-50);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 56px 52px;
+      position: relative;
+    }
+
+    /* Teal accent bar, left edge */
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 56px;
+      bottom: 56px;
+      width: 4px;
+      background: linear-gradient(180deg, var(--teal-600) 0%, var(--teal-400) 100%);
+      border-radius: 0 2px 2px 0;
+    }
+
+    .overline {
+      font-family: var(--font-text);
+      font-size: 11px;
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-overline);
+      text-transform: uppercase;
+      color: var(--teal-600);
+      margin-bottom: 28px;
+    }
+
+    .statement {
+      font-family: var(--font-display);
+      font-weight: var(--weight-semibold);
+      font-size: 32px;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      color: var(--ink-900);
+      margin-bottom: 32px;
+      max-width: 400px;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--teal-200);
+      border-radius: 1px;
+      margin-bottom: 20px;
+    }
+
+    .attribution {
+      font-family: var(--font-text);
+      font-size: 13px;
+      font-weight: var(--weight-medium);
+      color: var(--taupe-400);
+      line-height: 1.4;
+    }
+
+    .attribution strong {
+      font-weight: var(--weight-semibold);
+      color: var(--ink-900);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 40px;
+      left: 52px;
+      right: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 12px;
+      font-weight: var(--weight-medium);
+      color: var(--taupe-300);
+    }
+
+    .footer-url {
+      font-family: var(--font-text);
+      font-size: 11px;
+      font-weight: var(--weight-regular);
+      color: var(--taupe-300);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="overline">Governance</p>
+    <p class="statement">
+      Good governance is not about control.
+      It is about creating the conditions
+      where the right decisions get made,
+      by the right people, at the right time.
+    </p>
+    <div class="divider"></div>
+    <p class="attribution">
+      <strong>Kris Pierce</strong><br>
+      Principal Consultant
+    </p>
+    <div class="footer">
+      <span class="footer-brand">Kris Pierce Consulting</span>
+      <span class="footer-url">krispierce.com.au</span>
+    </div>
+  </div>
+</body>
+</html>

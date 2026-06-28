@@ -1,0 +1,137 @@
+<!-- @dsCard group="Social" -->
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=540, initial-scale=1.0">
+  <title>Social Template - Photo Cover</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 540px;
+      height: 540px;
+      overflow: hidden;
+      background: var(--forest);
+    }
+
+    .card {
+      width: 540px;
+      height: 540px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Photo placeholder: forest gradient simulating an image */
+    .photo-area {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 40%, rgba(61, 122, 107, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 60%, rgba(62, 111, 142, 0.20) 0%, transparent 50%),
+        linear-gradient(165deg, #1E3D34 0%, #234A52 100%);
+    }
+
+    /* Subtle texture overlay */
+    .photo-area::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.015) 2px,
+        rgba(255, 255, 255, 0.015) 4px
+      );
+      pointer-events: none;
+    }
+
+    /* Photo placeholder label */
+    .placeholder-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      font-family: var(--font-text);
+      font-size: 11px;
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-overline);
+      text-transform: uppercase;
+      color: rgba(244, 241, 235, 0.18);
+      pointer-events: none;
+    }
+
+    /* Glass overlay bar at bottom */
+    .glass-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 28px 44px 32px;
+      background: rgba(255, 255, 255, 0.14);
+      border-top: 1px solid rgba(255, 255, 255, 0.32);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .category {
+      font-family: var(--font-text);
+      font-size: 10px;
+      font-weight: var(--weight-semibold);
+      letter-spacing: var(--tracking-overline);
+      text-transform: uppercase;
+      color: var(--blue-200);
+      margin-bottom: 10px;
+      display: inline-block;
+      padding: 3px 10px;
+      background: rgba(255, 255, 255, 0.10);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .headline {
+      font-family: var(--font-display);
+      font-weight: var(--weight-semibold);
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: #F4F1EB;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-family: var(--font-text);
+      font-size: 13px;
+      font-weight: var(--weight-regular);
+      color: rgba(244, 241, 235, 0.56);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .subtitle .dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(244, 241, 235, 0.36);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="photo-area"></div>
+    <span class="placeholder-label">Photo</span>
+    <div class="glass-bar">
+      <span class="category">Regulatory Strategy</span>
+      <h2 class="headline">Navigating reform without losing focus</h2>
+      <p class="subtitle">
+        <span>Kris Pierce Consulting</span>
+        <span class="dot"></span>
+        <span>krispierce.com.au</span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

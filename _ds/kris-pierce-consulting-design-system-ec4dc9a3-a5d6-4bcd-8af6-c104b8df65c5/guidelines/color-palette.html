@@ -1,0 +1,137 @@
+<!-- @dsCard group="Colours" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Colour Palette: Forest, Teal, Blue</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 300px;
+      background: var(--cream-50);
+      font-family: 'Archivo', sans-serif;
+      color: var(--ink-900);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 20px;
+      color: var(--ink-900);
+    }
+    .group-label {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-600);
+      margin-bottom: 8px;
+    }
+    .row {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .swatch-rect {
+      width: 72px;
+      height: 52px;
+      border-radius: 10px;
+      border: 1px solid var(--border-subtle);
+    }
+    .swatch-label {
+      font-size: 10.5px;
+      font-weight: 600;
+      margin-top: 5px;
+      color: var(--ink-900);
+      text-align: center;
+      line-height: 1.2;
+    }
+    .swatch-hex {
+      font-size: 9.5px;
+      font-weight: 400;
+      color: var(--taupe-400);
+      text-align: center;
+      font-family: 'Archivo', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h2>Colour Palette</h2>
+
+  <!-- Forest -->
+  <p class="group-label">Forest</p>
+  <div class="row">
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--forest);"></div>
+      <span class="swatch-label">Forest</span>
+      <span class="swatch-hex">#1E3D34</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--forest-deep);"></div>
+      <span class="swatch-label">Forest Deep</span>
+      <span class="swatch-hex">#16302A</span>
+    </div>
+  </div>
+
+  <!-- Teal -->
+  <p class="group-label">Teal</p>
+  <div class="row">
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--teal-200);"></div>
+      <span class="swatch-label">Teal 200</span>
+      <span class="swatch-hex">#CFE0DA</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--teal-400);"></div>
+      <span class="swatch-label">Teal 400</span>
+      <span class="swatch-hex">#7FA295</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--teal-600);"></div>
+      <span class="swatch-label">Teal 600</span>
+      <span class="swatch-hex">#3D7A6B</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--teal-700);"></div>
+      <span class="swatch-label">Teal 700</span>
+      <span class="swatch-hex">#2F5E52</span>
+    </div>
+  </div>
+
+  <!-- Blue -->
+  <p class="group-label">Blue</p>
+  <div class="row">
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--blue-200);"></div>
+      <span class="swatch-label">Blue 200</span>
+      <span class="swatch-hex">#D2E1EA</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--blue-400);"></div>
+      <span class="swatch-label">Blue 400</span>
+      <span class="swatch-hex">#7FA8C2</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--blue-600);"></div>
+      <span class="swatch-label">Blue 600</span>
+      <span class="swatch-hex">#3E6F8E</span>
+    </div>
+    <div class="swatch">
+      <div class="swatch-rect" style="background: var(--blue-700);"></div>
+      <span class="swatch-label">Blue 700</span>
+      <span class="swatch-hex">#305670</span>
+    </div>
+  </div>
+</body>
+</html>

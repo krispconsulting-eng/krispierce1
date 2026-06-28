@@ -1,0 +1,116 @@
+<!-- @dsCard group="Colours" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=700">
+  <title>Status Colours</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 700px;
+      min-height: 180px;
+      background: var(--cream-50);
+      font-family: 'Archivo', sans-serif;
+      color: var(--ink-900);
+      padding: 28px 32px;
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      font-size: 12px;
+      color: var(--taupe-400);
+      margin-bottom: 22px;
+    }
+    .status-row {
+      display: flex;
+      gap: 16px;
+    }
+    .status-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+    }
+    .status-swatch {
+      width: 100%;
+      height: 40px;
+      border-radius: 10px;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .status-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+    }
+    .status-meta {
+      font-size: 10px;
+      color: var(--taupe-400);
+      text-align: center;
+      font-family: 'Archivo', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h2>Status Colours</h2>
+  <p class="subtitle">Muted, professional hues for feedback states. Never saturated or alarming.</p>
+
+  <div class="status-row">
+    <!-- Sage -->
+    <div class="status-item">
+      <div class="status-swatch" style="background: var(--sage-500);"></div>
+      <div class="status-badge" style="background: rgba(94,122,85,0.12); color: var(--sage-500);">
+        <span class="dot" style="background: var(--sage-500);"></span>
+        Complete
+      </div>
+      <span class="status-meta">Sage #5E7A55</span>
+    </div>
+
+    <!-- Amber -->
+    <div class="status-item">
+      <div class="status-swatch" style="background: var(--amber-500);"></div>
+      <div class="status-badge" style="background: rgba(181,135,47,0.12); color: var(--amber-500);">
+        <span class="dot" style="background: var(--amber-500);"></span>
+        In Progress
+      </div>
+      <span class="status-meta">Amber #B5872F</span>
+    </div>
+
+    <!-- Brick -->
+    <div class="status-item">
+      <div class="status-swatch" style="background: var(--brick-500);"></div>
+      <div class="status-badge" style="background: rgba(158,75,59,0.12); color: var(--brick-500);">
+        <span class="dot" style="background: var(--brick-500);"></span>
+        Attention
+      </div>
+      <span class="status-meta">Brick #9E4B3B</span>
+    </div>
+
+    <!-- Slate -->
+    <div class="status-item">
+      <div class="status-swatch" style="background: var(--slate-500);"></div>
+      <div class="status-badge" style="background: rgba(78,99,115,0.12); color: var(--slate-500);">
+        <span class="dot" style="background: var(--slate-500);"></span>
+        Neutral
+      </div>
+      <span class="status-meta">Slate #4E6373</span>
+    </div>
+  </div>
+</body>
+</html>
