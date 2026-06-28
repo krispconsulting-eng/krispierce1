@@ -11,6 +11,8 @@ const OFFERINGS = [
 ];
 
 function Offerings() {
+  const [flipped, setFlipped] = useState2(null);
+  const toggle = (i) => setFlipped((f) => (f === i ? null : i));
   const palette = ['teal','blue','teal','blue','teal','blue'];
   return (
     <section className="v3-focus" id="offerings">
@@ -21,20 +23,30 @@ function Offerings() {
       <div className="v3-wrap">
         <div className="v3-focus-grid">
           {OFFERINGS.map(([icon, title, body, fit], i) => (
-            <div className="v3-focus-card" key={title}>
-              <div className="v3-focus-card__top">
-                <div className={'v3-focus-card__icon ' + palette[i]}>
-                  <Icon name={icon} size={28} />
-                </div>
-                <span className="v3-focus-card__num">{String(i+1).padStart(2,'0')}</span>
-              </div>
-              <h3>{title}</h3>
-              <p className="v3-focus-card__body">{body}</p>
-              <div className="v3-focus-card__outcome">
-                <Icon name="arrow-right" size={15} />
-                <span>{fit}</span>
-              </div>
-            </div>
+            <button key={title} type="button"
+              className={'v3-focus-card' + (flipped === i ? ' is-flipped' : '')}
+              onClick={() => toggle(i)} aria-pressed={flipped === i}
+              aria-label={title + '. Activate to read more.'}>
+              <span className="v3-focus-card__inner">
+                <span className="v3-focus-card__face v3-focus-card__front">
+                  <span className="v3-focus-card__top">
+                    <span className={'v3-focus-card__icon ' + palette[i]}>
+                      <Icon name={icon} size={28} />
+                    </span>
+                    <span className="v3-focus-card__num">{String(i+1).padStart(2,'0')}</span>
+                  </span>
+                  <span className="v3-focus-card__title">{title}</span>
+                  <span className="v3-focus-card__hint">Hover or tap</span>
+                </span>
+                <span className="v3-focus-card__face v3-focus-card__back">
+                  <span className="v3-focus-card__body">{body}</span>
+                  <span className="v3-focus-card__outcome">
+                    <Icon name="arrow-right" size={15} />
+                    <span>{fit}</span>
+                  </span>
+                </span>
+              </span>
+            </button>
           ))}
         </div>
       </div>

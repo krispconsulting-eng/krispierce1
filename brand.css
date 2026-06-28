@@ -153,22 +153,39 @@
 
 /* CTA styles moved to kit.css */
 
-/* ---- Focus cards (engagement offerings) ---- */
+/* ---- Focus cards (engagement offerings, flip) ---- */
 .v3-focus { padding: 80px 0; }
 .v3-focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
 .v3-focus-card {
-  background: var(--cream-100); border: 1px solid var(--taupe-100);
-  border-radius: 22px; padding: clamp(24px, 2.8vw, 32px);
-  position: relative; overflow: hidden; display: flex; flex-direction: column;
+  appearance: none; border: none; background: none; padding: 0; margin: 0;
+  font: inherit; text-align: left; cursor: pointer; perspective: 1100px;
+  height: 100%;
+}
+.v3-focus-card:focus-visible { outline: none; }
+.v3-focus-card:focus-visible .v3-focus-card__face { outline: 2px solid var(--teal-400); outline-offset: 3px; }
+.v3-focus-card__inner {
+  position: relative; display: grid; width: 100%; height: 100%; min-height: 100%;
+  transition: transform .55s cubic-bezier(.32,.72,0,1); transform-style: preserve-3d;
+}
+.v3-focus-card:hover .v3-focus-card__inner,
+.v3-focus-card.is-flipped .v3-focus-card__inner { transform: rotateY(180deg); }
+.v3-focus-card__face {
+  grid-area: 1 / 1; min-width: 0; display: flex; flex-direction: column;
+  padding: clamp(24px, 2.8vw, 32px); border: 1px solid var(--taupe-100); border-radius: 22px;
+  background: var(--cream-100);
   box-shadow: 0 2px 8px -2px rgba(30,61,52,.06), inset 0 1px 0 rgba(255,255,255,.7);
-  transition: transform .5s cubic-bezier(.32,.72,0,1), box-shadow .5s cubic-bezier(.32,.72,0,1), border-color .5s cubic-bezier(.32,.72,0,1);
+  -webkit-backface-visibility: hidden; backface-visibility: hidden;
+  position: relative; overflow: hidden;
 }
-.v3-focus-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 28px 64px -16px rgba(30,61,52,.2), inset 0 1px 0 rgba(255,255,255,.9);
-  border-color: var(--teal-400);
+.v3-focus-card__front { justify-content: flex-start; gap: 14px; }
+.v3-focus-card__front::after {
+  content: ""; position: absolute; bottom: -1px; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--teal-600), var(--blue-600));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .4s cubic-bezier(.16,1,.3,1);
 }
-.v3-focus-card__top { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.v3-focus-card:hover .v3-focus-card__front::after { transform: scaleX(1); }
+.v3-focus-card__top { display: flex; align-items: center; gap: 16px; }
 .v3-focus-card__icon {
   width: 72px; height: 72px; border-radius: 18px; flex: none;
   display: flex; align-items: center; justify-content: center; color: #fff;
@@ -180,27 +197,27 @@
   font-family: var(--font-display); font-weight: 200; font-size: 2.2rem;
   color: var(--taupe-200); letter-spacing: -.03em; margin-left: auto;
 }
-.v3-focus-card h3 {
+.v3-focus-card__title {
   font-family: var(--font-display); font-weight: 600;
   font-size: clamp(1.15rem, 1.6vw, 1.35rem); letter-spacing: -.02em;
-  line-height: 1.2; margin-bottom: 8px;
+  line-height: 1.2; margin-top: auto;
+}
+.v3-focus-card__hint {
+  font-family: var(--font-text); font-size: 11px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--taupe-400); margin-top: 6px;
+}
+.v3-focus-card__back {
+  transform: rotateY(180deg); background: var(--cream-100);
+  justify-content: flex-start; gap: 12px; border-color: var(--teal-200);
+  box-shadow: 0 12px 32px -14px rgba(30,61,52,.16);
 }
 .v3-focus-card__body { color: var(--taupe-600); font-size: 14.5px; line-height: 1.58; flex: 1; }
 .v3-focus-card__outcome {
   display: flex; align-items: flex-start; gap: 8px;
-  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--taupe-100);
+  margin-top: auto; padding-top: 14px; border-top: 1px solid var(--taupe-100);
   font-size: 13.5px; font-weight: 500; line-height: 1.4; color: var(--teal-700);
 }
-.v3-focus-card__outcome svg { flex: none; margin-top: 2px; color: var(--teal-600);
-  transition: transform .25s cubic-bezier(.16,1,.3,1); }
-.v3-focus-card:hover .v3-focus-card__outcome svg { transform: translateX(3px); }
-.v3-focus-card::after {
-  content: ""; position: absolute; bottom: -1px; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--teal-600), var(--blue-600));
-  transform: scaleX(0); transform-origin: left;
-  transition: transform .4s cubic-bezier(.16,1,.3,1);
-}
-.v3-focus-card:hover::after { transform: scaleX(1); }
+.v3-focus-card__outcome svg { flex: none; margin-top: 2px; color: var(--teal-600); }
 
 /* ---- Responsive ---- */
 @media (max-width: 980px) {
@@ -223,4 +240,5 @@
 /* ---- Reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
   .v3-marquee__track { animation: none; }
+  .v3-focus-card__inner { transition: none; }
 }

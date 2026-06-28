@@ -50,8 +50,7 @@ function Nav({ active, variant }) {
    Insights. Rendered on every page within the section so the subpages stay
    reachable. */
 const ENGAGEMENT_SUBNAV = [
-  ['Overview', 'engagement', '/engagement'],
-  ['Expertise', 'expertise', '/engagement/expertise'],
+  ['Engagement', 'engagement', '/engagement'],
   ['Insights', 'insights', '/engagement/insights'],
 ];
 
