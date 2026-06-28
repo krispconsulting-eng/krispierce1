@@ -112,31 +112,15 @@
   .how-grid h2 b{font-weight:600;color:var(--teal-600)}
   .how-grid .how-body{color:var(--taupe-600);font-size:17px;line-height:1.7}
 
-  /* ---- FOCUS CARDS ---- */
-  .focus{padding:80px 0}
-  .focus-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
-  .focus-card{background:var(--cream-100);border:1px solid var(--taupe-100);border-radius:22px;padding:clamp(32px,4vw,48px);position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s,border-color .35s}
-  .focus-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px -16px rgba(30,61,52,.14);border-color:var(--teal-400)}
-  .focus-card .fc-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;font-size:24px}
-  .focus-card .fc-icon.teal{background:linear-gradient(135deg,var(--teal-600),var(--teal-400))}
-  .focus-card .fc-icon.blue{background:linear-gradient(135deg,var(--blue-600),var(--blue-400))}
-  .focus-card h3{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,2.2vw,1.7rem);letter-spacing:-.02em;margin-bottom:6px}
-  .focus-card .fc-sub{color:var(--taupe-600);font-size:15.5px}
-  .focus-card .fc-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-weight:600;font-size:15px;color:var(--teal-700);transition:gap .3s,color .3s}
-  .focus-card:hover .fc-link{gap:12px;color:var(--blue-600)}
-  .focus-card::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal-600),var(--blue-600));transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.16,1,.3,1)}
-  .focus-card:hover::after{transform:scaleX(1)}
-
-  /* ---- PROGRAMS ---- */
-  .programs{padding:0 0 96px}
-  .programs .overline{margin-bottom:28px}
-  .prog-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .prog-card{background:var(--paper);border:1px solid var(--taupe-100);border-radius:18px;padding:28px 30px;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s;position:relative}
-  .prog-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px -10px rgba(30,61,52,.1);border-color:var(--teal-200)}
-  .prog-card h3{font-family:var(--display);font-weight:500;font-size:1.15rem;letter-spacing:-.01em;margin-bottom:8px}
-  .prog-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--blue-600);background:var(--blue-200);border-radius:999px;padding:5px 14px}
-  .prog-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--blue-600);animation:pulse 2s ease-in-out infinite}
-  @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+  /* ---- WORK AREA BUTTONS ---- */
+  .work-areas{padding:80px 0 96px}
+  .wa-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+  .wa-btn{display:inline-block;font-family:var(--body);font-size:15px;font-weight:600;padding:12px 24px;border-radius:999px;border:1px solid var(--taupe-100);background:var(--cream-100);color:var(--ink);text-decoration:none;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s,border-color .3s,background .3s}
+  .wa-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px -8px rgba(30,61,52,.15);border-color:var(--teal-400);text-decoration:none}
+  .wa-btn--inquire{background:var(--blue-200);color:var(--blue-600);border-color:transparent}
+  .wa-btn--inquire:hover{background:var(--blue-600);color:#fff;border-color:var(--blue-600)}
+  .wa-btn--dev{background:var(--cream-100);color:var(--taupe-500);border-color:var(--taupe-100);cursor:default}
+  .wa-btn--dev:hover{transform:none;box-shadow:none}
 
   /* ---- RESEARCH PANEL ---- */
   .research{background:linear-gradient(160deg,var(--forest) 0%,#1B4A4A 50%,#234A52 100%);color:var(--cream-50);border-radius:var(--r-panel);padding:clamp(44px,6vw,78px);position:relative;overflow:hidden}
@@ -222,7 +206,7 @@
   .stagger.in>*:nth-child(4){transition-delay:.28s}
 
   /* ---- RESPONSIVE ---- */
-  @media(max-width:980px){.hero .chip{display:none}.focus-grid{grid-template-columns:1fr}.prog-row{grid-template-columns:1fr}}
+  @media(max-width:980px){.hero .chip{display:none}}
   @media(max-width:860px){
     .hero{min-height:auto}
     .ledger{grid-template-columns:1fr 1fr}
@@ -241,7 +225,6 @@
     .hero-text-reveal{opacity:1;transform:none;animation:none}
     .marquee .track{animation:none}
     .hero .blob{animation:none}
-    .prog-badge .dot{animation:none}
     html{scroll-behavior:auto}
   }
 </style>
@@ -314,50 +297,18 @@
   </div>
 </section>
 
-<!-- WHERE I FOCUS -->
-<section class="focus">
+<!-- WORK AREAS -->
+<section class="work-areas">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="overline">Where I focus now</span>
+      <span class="overline">Where I focus</span>
     </div>
-    <div class="focus-grid stagger reveal">
-      <a href="/engagement" class="focus-card">
-        <div class="fc-icon teal" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18v-1.5a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4V18"/><circle cx="9.5" cy="5.5" r="3"/><path d="M17 18v-1.5a4 4 0 0 0-3-3.87"/><path d="M14 2.63a3 3 0 0 1 0 5.74"/></svg>
-        </div>
-        <h3>Consulting</h3>
-        <p class="fc-sub">Consumer and community engagement</p>
-        <span class="fc-link">Explore the work <span>&rarr;</span></span>
-      </a>
-      <a href="/engagement/insights" class="focus-card">
-        <div class="fc-icon blue" aria-hidden="true">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5Z"/></svg>
-        </div>
-        <h3>Evidence</h3>
-        <p class="fc-sub">Research and evidence</p>
-        <span class="fc-link">Read the research <span>&rarr;</span></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- PROGRAMS -->
-<section class="programs">
-  <div class="wrap">
-    <span class="overline reveal">Programmes I'm developing</span>
-    <div class="prog-row stagger reveal" style="margin-top:0">
-      <div class="prog-card">
-        <h3>Advocacy and advocate training</h3>
-        <span class="prog-badge"><span class="dot"></span>Inquire</span>
-      </div>
-      <div class="prog-card">
-        <h3>Not-for-profit mentoring</h3>
-        <span class="prog-badge"><span class="dot"></span>Inquire</span>
-      </div>
-      <div class="prog-card">
-        <h3>Caregiving programme</h3>
-        <span class="prog-badge"><span class="dot"></span>In development</span>
-      </div>
+    <div class="wa-row reveal">
+      <a href="/engagement" class="wa-btn">Consumer and community engagement</a>
+      <a href="/engagement/insights" class="wa-btn">Research and evidence</a>
+      <a href="/contact?need=advocacy" class="wa-btn wa-btn--inquire">Advocacy and advocate training</a>
+      <a href="/contact?need=nfp" class="wa-btn wa-btn--inquire">Not-for-profit mentoring</a>
+      <span class="wa-btn wa-btn--dev">Caregiving programme</span>
     </div>
   </div>
 </section>
