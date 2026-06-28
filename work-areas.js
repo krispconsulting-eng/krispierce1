@@ -7,6 +7,7 @@
 
    status: 'available' — live section, linked, "Explore" CTA.
            'current'   — established work, linked to where it lives, no badge.
+           'inquire'   — accepting enquiries, shown as "Inquire", not linked.
            'coming'    — being introduced, shown as "Coming soon", not linked.
 
    Adding or launching an area is a data change here only: flip status to
@@ -42,7 +43,7 @@ const WORK_AREAS = [
     title: 'Advocacy and advocate training',
     blurb: 'Education, mentoring, and structured support for advocates and emerging leaders growing into the rooms where health decisions get made.',
     href: null,
-    status: 'coming',
+    status: 'inquire',
   },
   {
     id: 'nfp-mentoring',
@@ -52,7 +53,7 @@ const WORK_AREAS = [
     title: 'Not-for-profit mentoring',
     blurb: 'Practical guidance for small charities and not-for-profits finding their feet, from governance and strategy to building genuine community voice into the work.',
     href: null,
-    status: 'coming',
+    status: 'inquire',
   },
   {
     id: 'caregiving',

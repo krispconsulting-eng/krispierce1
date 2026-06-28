@@ -446,6 +446,7 @@ html { scroll-behavior: smooth; }
   font-family: var(--font-display); font-weight: 200;
   font-size: clamp(1.6rem, 3vw, 2.4rem); max-width: 32ch;
   line-height: 1.12; letter-spacing: -.02em;
+  color: var(--cream-50);
   position: relative; z-index: 2; margin-top: 10px;
 }
 .v3-cta__h2 b { font-weight: 600; color: var(--blue-400); }
