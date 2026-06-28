@@ -161,9 +161,9 @@ function InsightsApp() {
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav active="engagement" variant="light" />
-      <SectionNav active="insights" />
       <main id="main-content">
         <InsHeader />
+        <SectionNav active="insights" />
         {t.showFeatured && <InsFeature item={window.FEATURED_INSIGHT} onOpen={openArticle} />}
         <InsLibrary items={window.INSIGHTS} cols={t.cols} cardStyle={t.cardStyle}
           accent={t.accent} onOpen={openArticle} />

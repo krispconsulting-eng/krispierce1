@@ -50,6 +50,9 @@ function AboutPage() {
               be heard.</p>
             <p className="page-prose">Across these roles, the work has reached research institutes, government bodies,
               advocacy organisations, and industry sponsors.</p>
+            <div style={{ marginTop: '18px' }}>
+              <a href="/credentials" className="v3-btn v3-btn--blue">Credentials and publications <span>→</span></a>
+            </div>
           </div>
         </section>
 
@@ -162,7 +165,6 @@ function ExpertisePage() {
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <Nav active="engagement" variant="light" />
-      <SectionNav active="expertise" />
       <main id="main-content">
         <section className="v3-page-header">
           <div className="v3-page-header__inner">
@@ -177,16 +179,9 @@ function ExpertisePage() {
           </div>
         </section>
 
-        <ExpertiseCards />
+        <SectionNav active="expertise" />
 
-        <section className="credential-badge" style={{ textAlign: 'center', padding: '3rem 1.5rem' }}>
-          <a href="https://credsverse.com/credentials/b2bd0a36-60d8-4eb3-a8c9-2a335403b4a4"
-            target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn.certifier.io/0952e954-56e7-4e86-af01-8571d859aef3/credentials/01kvyxdh82pt6ksk5frkkjvkjp/designs/01ketg54q3cdayckbzgem8jfh5/dKhS1X8KEg.png"
-              alt="Verified credential badge"
-              style={{ maxWidth: '280px', width: '100%', height: 'auto' }} />
-          </a>
-        </section>
+        <ExpertiseCards />
 
         <MethodSpectrum showFoot={false} />
 
