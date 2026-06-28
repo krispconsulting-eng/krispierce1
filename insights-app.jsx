@@ -160,7 +160,7 @@ function InsightsApp() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav theme="solid" active="engagement" />
+      <Nav active="engagement" variant="light" />
       <SectionNav active="insights" />
       <main id="main-content">
         <InsHeader />

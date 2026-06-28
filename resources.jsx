@@ -96,7 +96,7 @@ function ResGate({ item, onClose }) {
 /* Entrance reveal (reduced-motion safe). */
 function setupResReveal() {
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const sels = ['.v3-page-hero__inner', '.ins-guide', '.v3-cta'];
+  const sels = ['.v3-page-header__inner', '.ins-guide', '.v3-cta'];
   const staggerSels = ['.ins-guide'];
   const els = [];
   sels.forEach((s) => document.querySelectorAll(s).forEach((e) => els.push(e)));
@@ -132,21 +132,13 @@ function ResourcesApp() {
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">Skip to content</a>
-      <Nav active="resources" />
+      <Nav active="resources" variant="light" />
       <main id="main-content">
-        <section className="v3-page-hero">
-          <div className="blob b1"></div><div className="blob b2"></div><div className="blob b3"></div>
-          <svg className="v3-page-hero__arcs" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <g fill="none" strokeWidth="1.5">
-              <circle cx="1180" cy="250" r="120" stroke="rgba(127,168,194,.55)"/>
-              <circle cx="1180" cy="250" r="200" stroke="rgba(127,168,194,.32)"/>
-              <circle cx="1180" cy="250" r="290" stroke="rgba(207,224,218,.22)"/>
-            </g>
-          </svg>
-          <div className="v3-page-hero__inner">
-            <span className="v3-overline v3-page-hero__overline v3-hero-reveal">Resources</span>
-            <h1 className="v3-page-hero__title v3-hero-reveal">Practical tools you can take and <b>use</b></h1>
-            <p className="v3-page-hero__lead v3-hero-reveal">Guides, frameworks, and checklists drawn straight from the work. Each one is
+        <section className="v3-page-header">
+          <div className="v3-page-header__inner">
+            <span className="v3-overline v3-page-header__overline v3-header-reveal">Resources</span>
+            <h1 className="v3-page-header__title v3-header-reveal">Practical tools you can take and <b>use</b></h1>
+            <p className="v3-page-header__lead v3-header-reveal">Guides, frameworks, and checklists drawn straight from the work. Each one is
               something I use with clients, made plain enough to apply on your own. Tell me where to send it, and adapt
               whatever's useful to your context.</p>
           </div>

@@ -6,20 +6,22 @@ const NAV_LINKS = [
   ['Resources','resources','/resources'],
 ];
 
-function Nav({ active }) {
+function Nav({ active, variant }) {
   const [open, setOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const isLight = variant === 'light';
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  const logoSrc = (isLight && !scrolled) ? '/assets/logo-wordmark.png' : '/assets/logo-wordmark-cream.png';
   return (
-    <header className={'v3-nav' + (scrolled ? ' is-scrolled' : '')}>
+    <header className={'v3-nav' + (isLight ? ' v3-nav--light' : '') + (scrolled ? ' is-scrolled' : '')}>
       <div className="v3-nav__inner">
         <a href="/" className="v3-nav__mark" aria-label="Kris Pierce Consulting">
-          <img src="/assets/logo-wordmark-cream.png" alt="Kris Pierce Consulting" />
+          <img src={logoSrc} alt="Kris Pierce Consulting" />
         </a>
         <nav className="v3-nav__links">
           {NAV_LINKS.map(([label, id, href]) => (
