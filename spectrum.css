@@ -58,7 +58,7 @@
 .spectrum__axis span:nth-child(2) {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, var(--clay-300), var(--clay-600));
+  background: linear-gradient(90deg, var(--teal-200), var(--teal-600));
   letter-spacing: 0;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .spectrum__tab.is-active .kpc-chip {
-  background: var(--clay-500);
+  background: var(--teal-600);
   color: #fff;
   border-color: transparent;
 }
@@ -235,7 +235,7 @@
 .spectrum__use-list svg {
   margin-top: 2px;
   flex: none;
-  color: var(--sage-500);
+  color: var(--teal-600);
 }
 
 /* the at-a-glance card */
@@ -301,11 +301,11 @@
   height: 7px;
   flex: 1;
   border-radius: 999px;
-  background: var(--taupe-200);
+  background: var(--teal-200);
 }
 
 .spectrum__share-dot.on {
-  background: var(--clay-600);
+  background: var(--teal-600);
 }
 
 .spectrum__foot {

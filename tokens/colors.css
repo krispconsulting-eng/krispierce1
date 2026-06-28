@@ -11,14 +11,14 @@
   --cream-200: #ECE7DD;   /* hairline / quiet fills     */
   --paper:     #FFFFFF;   /* cards on cream             */
 
-  /* ---- Taupe / greige (warm grey-brown) ---- */
-  --taupe-100: #DFDAD0;
-  --taupe-200: #C9C2B5;
-  --taupe-300: #ABA294;
-  --taupe-400: #8C867A;   /* the signature mushroom     */
-  --taupe-500: #6E685E;
-  --taupe-600: #56514A;
-  --taupe-700: #423E38;
+  /* ---- Taupe / greige (cooled to match teal-blue palette) ---- */
+  --taupe-100: #DDE2DF;
+  --taupe-200: #C5CCC8;
+  --taupe-300: #A0ADA7;
+  --taupe-400: #7E8E87;
+  --taupe-500: #5E706A;
+  --taupe-600: #4A5953;
+  --taupe-700: #384540;
 
   /* ---- Ink (cooled near-black) ---- */
   --ink-900: #1C2530;
@@ -65,7 +65,7 @@
   --color-surface-inverse:var(--ink-900);
 
   --text-primary:     var(--ink-900);
-  --text-secondary:   #5A554C;
+  --text-secondary:   #4A5C55;
   --text-muted:       var(--taupe-400);
   --text-on-inverse:        #F4F1EB;
   --text-on-inverse-muted:  rgba(244, 241, 235, 0.66);
