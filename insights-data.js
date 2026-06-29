@@ -20,7 +20,7 @@ window.FEATURED_INSIGHT = {
   read: 7,
   date: 'March 2025',
   slot: 'ins-feature',
-  cover: 'assets/insight-boardroom.jpg',
+  cover: 'assets/hollow-centre.png',
   body: [
     'There is a version of engagement that satisfies a governance requirement and changes nothing. It gets commissioned late, against a brief that is already fixed, and the people in the room can tell. The report that follows reads as credible to a board because it has the right shape. To everyone who took part, it reads as exactly what it was.',
     'The cost is rarely a single failed project. It is the slow erosion of trust that makes the next round of engagement harder, and the round after that harder still. People remember being consulted on a decision that had already been made. They are slower to show up, and more guarded when they do.',
