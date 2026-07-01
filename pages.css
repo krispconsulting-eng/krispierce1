@@ -226,3 +226,70 @@
 
 @media (max-width: 680px)  { .exp-cards { grid-template-columns: repeat(2, 1fr); } }
 @media (prefers-reduced-motion: reduce) { .exp-card__inner { transition: none; } }
+
+/* ==================================================================
+   Work With Me page — reuses .page-block chrome, adds section pieces
+   ================================================================== */
+
+/* Who I work with — tag list */
+.ww-taglist { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.ww-tag { display: inline-flex; align-items: center; padding: 10px 17px; border-radius: 999px;
+  background: var(--accent-wash); color: var(--teal-700); border: 1px solid var(--border-subtle);
+  font-family: var(--font-text); font-weight: 500; font-size: 14.5px; line-height: 1; }
+
+/* Problems solved — two-column checklist */
+.ww-checklist { list-style: none; margin: 6px 0 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 14px 32px; }
+.ww-checklist li { display: flex; gap: 12px; align-items: flex-start;
+  font-size: 16.5px; line-height: 1.5; color: var(--text-primary); }
+.ww-checklist svg { flex: none; margin-top: 2px; color: var(--teal-600); }
+
+/* How we work — three steps */
+.ww-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+.ww-step { background: var(--paper); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  padding: clamp(22px,2.4vw,30px); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 12px;
+  transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out); }
+.ww-step:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.ww-step__k { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-text);
+  font-weight: 700; font-size: 12px; letter-spacing: .13em; text-transform: uppercase; color: var(--teal-600); }
+.ww-step__title { font-family: var(--font-display); font-weight: 600; font-size: 23px; letter-spacing: -.015em;
+  color: var(--text-primary); margin: 0; }
+.ww-step__body { color: var(--text-secondary); font-size: 15.5px; line-height: 1.6; margin: 0; }
+
+/* Meaningful Partnership Model — five stages */
+.ww-model { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 10px; }
+.ww-stage { padding: 22px 18px; border-radius: var(--radius-lg); background: var(--cream-100);
+  border: 1px solid var(--teal-200); display: flex; flex-direction: column; gap: 8px; }
+.ww-stage__n { font-family: var(--font-display); font-weight: 700; font-size: 13px;
+  letter-spacing: .1em; color: var(--teal-600); }
+.ww-stage__name { font-family: var(--font-display); font-weight: 600; font-size: 18px; color: var(--text-primary); }
+.ww-stage__desc { font-size: 13.5px; line-height: 1.5; color: var(--text-secondary); }
+
+/* Typical engagements — bordered row list */
+.ww-engagements { list-style: none; margin: 6px 0 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ww-engagements li { display: flex; gap: 12px; align-items: center; padding: 14px 18px;
+  border: 1px solid var(--border-subtle); border-radius: var(--radius-md); background: var(--paper);
+  font-size: 15.5px; color: var(--text-primary); box-shadow: var(--shadow-xs); }
+.ww-engagements svg { flex: none; color: var(--teal-600); }
+
+/* Featured work — compact cards */
+.ww-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
+.ww-feature { padding: 24px 26px; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
+  background: var(--paper); box-shadow: var(--shadow-sm); }
+.ww-feature__title { font-family: var(--font-display); font-weight: 600; font-size: 18px;
+  letter-spacing: -.01em; color: var(--text-primary); margin: 0 0 7px; }
+.ww-feature__body { color: var(--text-secondary); font-size: 15px; line-height: 1.58; margin: 0; }
+
+/* FAQ */
+.ww-faq { border-top: 1px solid var(--border-subtle); margin-top: 8px; }
+.ww-faq__item { border-bottom: 1px solid var(--border-subtle); padding: 22px 0; }
+.ww-faq__q { font-family: var(--font-display); font-weight: 600; font-size: 19px;
+  letter-spacing: -.01em; color: var(--text-primary); margin: 0 0 8px; }
+.ww-faq__a { color: var(--text-secondary); font-size: 16px; line-height: 1.62; margin: 0; max-width: 62ch; }
+
+@media (max-width: 900px) {
+  .ww-steps { grid-template-columns: 1fr; }
+  .ww-model { grid-template-columns: 1fr 1fr; }
+  .ww-checklist, .ww-engagements, .ww-featured { grid-template-columns: 1fr; }
+}

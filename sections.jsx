@@ -2,6 +2,7 @@
 
 const NAV_LINKS = [
   ['Engagement','engagement','/engagement'],
+  ['Work with me','work','/work-with-me'],
   ['About','about','/about'],
   ['Resources','resources','/resources'],
 ];

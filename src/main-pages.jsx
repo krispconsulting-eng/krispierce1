@@ -15,5 +15,6 @@ import '../primitives.jsx';
 import '../sections.jsx';
 import '../sections2.jsx';
 import '../pages.jsx';
+import '../work-with-me.jsx';
 import '../spectrum.jsx';
 import '../pages-app.jsx';
