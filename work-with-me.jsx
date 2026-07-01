@@ -237,6 +237,21 @@ function WorkWithMePage() {
           </div>
         </WwSection>
 
+        <WwSection label="Go deeper">
+          <h2>See the thinking, and the tools</h2>
+          <p className="page-prose">The ideas underneath the work, and practical resources you can take away and use in your own context.</p>
+          <div className="ww-featured">
+            <a className="ww-feature ww-feature--link" href="/engagement/insights">
+              <h3 className="ww-feature__title">Insights <Icon name="arrow-right" size={17} /></h3>
+              <p className="ww-feature__body">Field notes and long reads on doing engagement that counts, not engagement that performs.</p>
+            </a>
+            <a className="ww-feature ww-feature--link" href="/resources">
+              <h3 className="ww-feature__title">Resources <Icon name="arrow-right" size={17} /></h3>
+              <p className="ww-feature__body">Guides, checklists, and frameworks drawn straight from the work, free to download and adapt.</p>
+            </a>
+          </div>
+        </WwSection>
+
         <section className="v3-cta-section">
           <div className="v3-wrap">
             <div className="v3-cta">

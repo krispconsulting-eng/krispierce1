@@ -278,8 +278,13 @@
 .ww-feature { padding: 24px 26px; border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);
   background: var(--paper); box-shadow: var(--shadow-sm); }
 .ww-feature__title { font-family: var(--font-display); font-weight: 600; font-size: 18px;
-  letter-spacing: -.01em; color: var(--text-primary); margin: 0 0 7px; }
+  letter-spacing: -.01em; color: var(--text-primary); margin: 0 0 7px; display: flex; align-items: center; gap: 8px; }
+.ww-feature__title svg { color: var(--teal-600); transition: transform .2s var(--ease-out); }
 .ww-feature__body { color: var(--text-secondary); font-size: 15px; line-height: 1.58; margin: 0; }
+.ww-feature--link { display: block; text-decoration: none;
+  transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out), border-color .3s var(--ease-out); }
+.ww-feature--link:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--border-default); }
+.ww-feature--link:hover .ww-feature__title svg { transform: translateX(3px); }
 
 /* FAQ */
 .ww-faq { border-top: 1px solid var(--border-subtle); margin-top: 8px; }
