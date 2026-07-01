@@ -31,19 +31,6 @@ window.FEATURED_INSIGHT = {
 /* The grid. Newest first. */
 window.INSIGHTS = [
   {
-    id: 'hta-expects-patient-evidence',
-    category: 'Thought Leadership',
-    title: 'What HTA bodies increasingly expect from patient evidence',
-    dek: 'For years, patient input to health technology assessment was a testimonial at the end. That is no longer where the bar sits. What assessment now asks for, and why the goodwill version no longer carries.',
-    read: 7, date: 'June 2025', slot: 'ins-9',
-    body: [
-      'Health technology assessment has changed. For years the patient contribution was a testimonial near the end of a submission, welcome but weightless. That is no longer where the bar sits. Assessment bodies increasingly expect patient evidence to carry the same structure they ask of any other evidence.',
-      'In practice that means three things. Representativeness: whose experience is this, and who is missing from it. Method: how it was gathered, and whether it would survive the scrutiny applied to clinical data. Relevance: whether it speaks to the decision in front of the committee, or only to a general sense that patients matter.',
-      'The organisations that do this well stop treating patient input as a submission formality and start treating it as evidence to be generated deliberately, early, and with a clear line to the decision it informs. Built that way, it strengthens the case rather than decorating it.',
-      'The mistake is to leave it to the end and hope goodwill carries it. Committees can tell the difference between evidence built to inform a decision and a quote chosen to soften one. The first can move an assessment. The second rarely survives the room.',
-    ],
-  },
-  {
     id: 'trust-in-rare-disease-research',
     category: 'Rare Disease and Policy',
     title: 'Building trust in rare disease research',
