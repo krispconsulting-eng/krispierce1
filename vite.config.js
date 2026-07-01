@@ -17,6 +17,7 @@ export default defineConfig({
         'engagement-expertise': 'engagement/expertise.html',
         'engagement-insights': 'engagement/insights.html',
         about: 'about.html',
+        'work-with-me': 'work-with-me.html',
         portfolio: 'portfolio.html',
         resources: 'resources.html',
         contact: 'contact.html',
