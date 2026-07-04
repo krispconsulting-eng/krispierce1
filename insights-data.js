@@ -208,28 +208,4 @@ window.GUIDES = [
     meta: 'PDF, 2 pages',
     file: 'assets/guides/partnership-ready.pdf',
   },
-  {
-    id: 'ten-questions-research',
-    kind: 'Guide',
-    title: 'Ten Questions Every Research Team Should Ask',
-    dek: 'The questions worth settling before a research team approaches a single consumer.',
-    meta: 'PDF, 2 pages',
-    file: 'assets/guides/ten-questions-research.pdf',
-  },
-  {
-    id: 'consumer-remuneration',
-    kind: 'Guide',
-    title: 'A Guide to Consumer Remuneration',
-    dek: 'Practical principles for paying consumers properly, and the signal it sends when you do.',
-    meta: 'PDF, 2 pages',
-    file: 'assets/guides/consumer-remuneration.pdf',
-  },
-  {
-    id: 'better-advisory-groups',
-    kind: 'Guide',
-    title: 'Building Better Advisory Groups',
-    dek: 'How to build a consumer advisory group that shapes decisions, not one that meets and is ignored.',
-    meta: 'PDF, 2 pages',
-    file: 'assets/guides/better-advisory-groups.pdf',
-  },
 ];
