@@ -234,15 +234,15 @@
   .index.in .row-item:nth-child(3){transition-delay:.34s}
 
   /* ---- FEATURE QUOTE ---- */
-  .feature{background:linear-gradient(150deg,var(--forest) 0%,#234A52 100%);color:var(--cream-50);border-radius:var(--r-panel);padding:clamp(44px,6vw,78px);position:relative;overflow:hidden}
+  .feature{background:linear-gradient(150deg,var(--forest) 0%,#234A52 100%);color:var(--cream-50);padding:clamp(22px,3vw,39px) 0;position:relative;overflow:hidden}
   .feature svg.farcs{position:absolute;right:-40px;top:-40px;width:360px;height:360px;opacity:.55;pointer-events:none}
   .feature svg.farcs g{transform-origin:200px 160px;animation:arcSpin 90s linear infinite}
   .feature svg.farcs circle:nth-child(2){animation:arcPulse 8s ease-in-out infinite}
   @keyframes arcPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.06);opacity:.7}}
   .feature .overline{color:var(--blue-200)}
-  .feature .quote{font-family:var(--display);font-weight:200;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.25;margin:22px 0 0;letter-spacing:-.02em;position:relative;z-index:2}
+  .feature .quote{font-family:var(--display);font-weight:200;font-size:clamp(1.1rem,1.8vw,1.4rem);line-height:1.35;margin:12px 0 0;letter-spacing:-.02em;position:relative;z-index:2}
   .feature .quote b{font-weight:600;color:var(--blue-200)}
-  .feature .attrib{margin-top:30px;font-size:14px;color:var(--teal-200);letter-spacing:.02em;position:relative;z-index:2}
+  .feature .attrib{margin-top:14px;font-size:13px;color:var(--teal-200);letter-spacing:.02em;position:relative;z-index:2}
 
   /* ---- ABOUT ---- */
   .about{display:grid;grid-template-columns:1.04fr 0.96fr;gap:clamp(32px,6vw,84px);align-items:center;padding:96px 0 40px}
@@ -423,13 +423,13 @@
 
 <!-- FEATURE QUOTE -->
 <section style="padding-top:20px">
-  <div class="wrap">
-    <div class="feature reveal-scale">
-      <svg class="farcs" viewBox="0 0 360 360" aria-hidden="true"><g fill="none" stroke-width="1.5">
-        <circle cx="200" cy="160" r="70" stroke="rgba(210,225,234,.5)"/>
-        <circle cx="200" cy="160" r="120" stroke="rgba(127,168,194,.4)"/>
-        <circle cx="200" cy="160" r="170" stroke="rgba(207,224,218,.25)"/>
-      </g></svg>
+  <div class="feature reveal-scale">
+    <svg class="farcs" viewBox="0 0 360 360" aria-hidden="true"><g fill="none" stroke-width="1.5">
+      <circle cx="200" cy="160" r="70" stroke="rgba(210,225,234,.5)"/>
+      <circle cx="200" cy="160" r="120" stroke="rgba(127,168,194,.4)"/>
+      <circle cx="200" cy="160" r="170" stroke="rgba(207,224,218,.25)"/>
+    </g></svg>
+    <div class="wrap">
       <span class="overline">In their words</span>
       <p class="quote">"Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda."</p>
       <p class="attrib"><strong>Donna Walsh, CEO</strong><br/>International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening</p>
