@@ -40,6 +40,16 @@ that get broken most often:
 - **The `_ds/` directory** is the design system source of truth for tokens,
   components, and preview cards. Read it before creating new components.
 
+### Skill precedence for visual work
+
+Generic design skills in this repo (`design-taste-frontend`,
+`high-end-visual-design`, `minimalist-ui`, `impeccable`) provide craft and
+process guidance only. Where they prescribe specific fonts, palettes, or
+visual styles (e.g. Geist/Clash Display, warm creams, muted pastels), those
+prescriptions DO NOT apply here: `brand-guidelines.md`, `typography-guide.md`,
+and `PRODUCT.md` always win. Outfit + Archivo and the v3 teal/blue/forest
+palette are fixed regardless of what any skill suggests.
+
 ## Tech / build
 
 - Vite + React 18 (`package.json`). Commands: `npm run dev`, `npm run build`,
