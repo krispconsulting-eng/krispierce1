@@ -168,10 +168,6 @@
   .hero h1 b{font-weight:600;color:var(--blue-200)}
   .hero .lead{font-size:clamp(1.15rem,1.8vw,1.4rem);color:rgba(251,250,247,.84);max-width:52ch;margin:30px 0 38px;font-weight:400;line-height:1.55}
   .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .hero .chip{position:absolute;right:30px;bottom:46px;z-index:3;background:rgba(251,250,247,.08);backdrop-filter:blur(20px);border:1px solid rgba(251,250,247,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 8px 32px rgba(0,0,0,.12);border-radius:20px;padding:20px 24px;max-width:230px;transition:transform .4s cubic-bezier(.16,1,.3,1),box-shadow .4s}
-  .hero .chip:hover{transform:translateY(-4px);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 16px 48px rgba(0,0,0,.18)}
-  .hero .chip .n{font-family:var(--display);font-weight:200;font-size:2.6rem;line-height:1;letter-spacing:-.03em;color:var(--cream-50)}
-  .hero .chip .t{font-size:13px;color:var(--blue-200);margin-top:8px;line-height:1.4}
 
   /* hero text animations */
   .hero-text-reveal{opacity:0;transform:translateY(28px);filter:blur(6px);animation:textUp 1s cubic-bezier(.16,1,.3,1) forwards}
@@ -185,9 +181,6 @@
   .hero svg.arcs path{stroke-dasharray:2200;stroke-dashoffset:2200;animation:arcDraw 3s cubic-bezier(.16,1,.3,1) .6s forwards}
   @keyframes arcSpin{to{transform:rotate(360deg)}}
   @keyframes arcDraw{to{stroke-dashoffset:0}}
-  /* hero chip entrance */
-  .hero .chip{opacity:0;transform:translateY(16px);animation:chipIn .8s cubic-bezier(.16,1,.3,1) 1.1s forwards}
-  @keyframes chipIn{to{opacity:1;transform:none}}
 
   /* ---- MARQUEE ---- */
   .marquee{background:var(--forest-deep);color:var(--teal-200);overflow:hidden;border-top:1px solid rgba(207,224,218,.16);border-bottom:1px solid rgba(207,224,218,.16)}
@@ -219,46 +212,6 @@
   .how-grid h2 b{font-weight:600;color:var(--teal-600)}
   .how-grid .how-body{color:var(--taupe-600);font-size:17px;line-height:1.7}
 
-  /* ---- WORK AREA CARDS ---- */
-  .work-areas{padding:40px 0 96px}
-  .wa-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:0}
-  .wa-card{position:relative;display:flex;flex-direction:column;justify-content:space-between;font-family:var(--body);font-size:13px;font-weight:600;padding:22px 18px 18px;min-height:132px;border-radius:16px;border:1px solid var(--taupe-100);background:var(--cream-100);color:var(--ink);text-decoration:none;overflow:hidden;transition:transform .5s cubic-bezier(.16,1,.3,1),box-shadow .5s cubic-bezier(.16,1,.3,1),border-color .4s}
-  .wa-icon{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;margin-bottom:12px;background:var(--teal-100,rgba(207,224,218,.35));flex-shrink:0;transition:background .4s}
-  .wa-icon svg{width:20px;height:20px;color:var(--teal-600);transition:color .4s}
-  .wa-card:hover .wa-icon{background:var(--teal-200,rgba(207,224,218,.6))}
-  .wa-card--inquire .wa-icon{background:rgba(127,168,194,.2)}
-  .wa-card--inquire .wa-icon svg{color:var(--blue-600)}
-  .wa-card--inquire:hover .wa-icon{background:rgba(255,255,255,.2)}
-  .wa-card--inquire:hover .wa-icon svg{color:#fff}
-  .wa-card--dev .wa-icon{background:rgba(200,195,185,.15)}
-  .wa-card--dev .wa-icon svg{color:var(--taupe-400)}
-  .wa-card::before{content:"";position:absolute;top:0;left:18px;right:18px;height:3px;border-radius:0 0 3px 3px;background:var(--teal-600);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1)}
-  .wa-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px -10px rgba(30,61,52,.14);border-color:var(--teal-400);text-decoration:none}
-  .wa-card:hover::before{transform:scaleX(1)}
-  .wa-card .wa-arrow{display:flex;align-items:center;justify-content:flex-end;margin-top:12px;opacity:0;transform:translateX(-8px);transition:opacity .4s,transform .4s cubic-bezier(.16,1,.3,1)}
-  .wa-card:hover .wa-arrow{opacity:1;transform:translateX(0)}
-  .wa-card .wa-arrow svg{width:16px;height:16px;color:var(--teal-600)}
-  .wa-card--inquire{background:var(--blue-200);color:var(--blue-600);border-color:transparent}
-  .wa-card--inquire::before{background:var(--blue-600)}
-  .wa-card--inquire:hover{background:var(--blue-600);color:#fff;border-color:var(--blue-600)}
-  .wa-card--inquire:hover .wa-arrow svg{color:#fff}
-  .wa-card--dev{background:var(--cream-100);color:var(--taupe-500);border-color:var(--taupe-100);cursor:default}
-  .wa-card--dev::before{background:var(--taupe-300)}
-  .wa-card--dev:hover{transform:none;box-shadow:none}
-  .wa-card--dev:hover::before{transform:scaleX(0)}
-  .wa-card--dev .wa-tag{display:inline-block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--taupe-400);margin-top:8px}
-  .wa-card.reveal-card{opacity:0;transform:translateY(16px);filter:blur(3px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1),filter .7s ease,box-shadow .5s cubic-bezier(.16,1,.3,1),border-color .4s}
-  .wa-card.reveal-card.in{opacity:1;transform:none;filter:blur(0)}
-
-  /* ---- RESEARCH PANEL ---- */
-  .research{background:linear-gradient(160deg,var(--forest) 0%,#1B4A4A 50%,#234A52 100%);color:var(--cream-50);border-radius:var(--r-panel);padding:clamp(44px,6vw,78px);position:relative;overflow:hidden}
-  .research svg.rarcs{position:absolute;left:-60px;bottom:-60px;width:420px;height:420px;opacity:.45;pointer-events:none}
-  .research svg.rarcs g{transform-origin:210px 210px;animation:arcSpin 70s linear infinite reverse}
-  .research .overline{color:var(--blue-200)}
-  .research h2{font-family:var(--display);font-weight:200;font-size:clamp(2rem,4.4vw,3.4rem);line-height:1.08;letter-spacing:-.025em;max-width:20ch;margin-top:18px;position:relative;z-index:2}
-  .research h2 b{font-weight:600;color:var(--blue-200)}
-  .research .rlead{font-size:clamp(1rem,1.5vw,1.15rem);color:rgba(251,250,247,.78);max-width:54ch;margin:24px 0 32px;line-height:1.6;position:relative;z-index:2}
-  .research .btn{position:relative;z-index:2}
 
   /* ---- SERVICES INDEX ---- */
   .opener .overline{margin-bottom:20px}
@@ -339,9 +292,6 @@
   .stagger.in>*:nth-child(4){transition-delay:.38s}
 
   /* ---- RESPONSIVE ---- */
-  @media(max-width:980px){.hero .chip{display:none};.wa-row{grid-template-columns:repeat(3,1fr)}}
-  @media(max-width:640px){.wa-row{grid-template-columns:1fr 1fr}.wa-card{min-height:120px}}
-  @media(max-width:400px){.wa-row{grid-template-columns:1fr}}
   @media(max-width:860px){
     .hero{min-height:auto}
     .ledger{grid-template-columns:1fr 1fr}
@@ -358,15 +308,11 @@
     .stagger>*{opacity:1;transform:none;filter:none;transition:none}
     .index .row-item{opacity:1;transform:none;filter:none;transition:background .3s,padding .3s}
     .hero-text-reveal{opacity:1;transform:none;filter:none;animation:none}
-    .hero .chip{opacity:1;transform:none;animation:none}
     .hero svg.arcs g,.hero svg.arcs path{animation:none}
-    .research svg.rarcs g{animation:none}
     .feature svg.farcs g,.feature svg.farcs circle{animation:none}
     .cta::before{animation:none}
     .marquee .track{animation:none}
     .hero .blob{animation:none}
-    .wa-card--dev:hover{transform:none}
-    .wa-card.reveal-card{opacity:1;transform:none;filter:none;transition:box-shadow .3s,border-color .3s}
     html{scroll-behavior:auto}
   }
 </style>
@@ -407,7 +353,6 @@
       <a href="/work-with-me" class="btn btn-out-light">See how I work</a>
     </div>
   </div>
-  <div class="chip"><div class="n">20+</div><div class="t">years of lived experience, brought into the work</div></div>
 </section>
 
 <!-- MARQUEE -->
@@ -443,71 +388,11 @@
   </div>
 </section>
 
-<!-- WORK AREAS -->
-<section class="work-areas">
-  <div class="wrap">
-    <div class="wa-row">
-      <a href="/engagement" class="wa-card reveal-card" style="transition-delay:.05s">
-        <div>
-          <span class="wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-          <span>Consumer and community engagement</span>
-        </div>
-        <span class="wa-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-      </a>
-      <a href="/engagement/insights" class="wa-card reveal-card" style="transition-delay:.12s">
-        <div>
-          <span class="wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></span>
-          <span>Research and evidence</span>
-        </div>
-        <span class="wa-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-      </a>
-      <a href="/contact?need=advocacy" class="wa-card wa-card--inquire reveal-card" style="transition-delay:.19s">
-        <div>
-          <span class="wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-          <span>Advocacy and advocate training</span>
-        </div>
-        <span class="wa-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-      </a>
-      <a href="/contact?need=nfp" class="wa-card wa-card--inquire reveal-card" style="transition-delay:.26s">
-        <div>
-          <span class="wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
-          <span>Not-for-profit mentoring</span>
-        </div>
-        <span class="wa-arrow"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
-      </a>
-      <span class="wa-card wa-card--dev reveal-card" style="transition-delay:.33s">
-        <div>
-          <span class="wa-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
-          <span>Caregiving programme</span>
-        </div>
-        <span class="wa-tag">Coming soon</span>
-      </span>
-    </div>
-  </div>
-</section>
-
-<!-- RESEARCH -->
-<section style="padding-top:20px">
-  <div class="wrap">
-    <div class="research reveal-scale">
-      <svg class="rarcs" viewBox="0 0 420 420" aria-hidden="true"><g fill="none" stroke-width="1.5">
-        <circle cx="210" cy="210" r="80" stroke="rgba(210,225,234,.4)"/>
-        <circle cx="210" cy="210" r="140" stroke="rgba(127,168,194,.3)"/>
-        <circle cx="210" cy="210" r="200" stroke="rgba(207,224,218,.2)"/>
-      </g></svg>
-      <span class="overline">Research and evidence</span>
-      <h2>Evidence that carries the <b>patient voice</b></h2>
-      <p class="rlead">Two decades of participatory and applied health research, built so that what patients and carers actually experience reaches the people designing studies, services, and policy.</p>
-      <a href="/engagement/insights" class="btn btn-blue">Read the research &rarr;</a>
-    </div>
-  </div>
-</section>
-
 <!-- SERVICES INDEX -->
 <section style="padding-top:60px">
   <div class="wrap opener reveal">
     <span class="overline">What I do</span>
-    <h2>Insights that <b>change the work.</b></h2>
+    <h2>Insights that <b>change the outcomes.</b></h2>
   </div>
   <div class="wrap">
     <div class="index stagger reveal">
@@ -582,7 +467,6 @@
     el.style.transitionDelay=(Math.min(i,6)*50)+'ms';
     obs.observe(el);
   });
-  document.querySelectorAll('.reveal-card').forEach(function(el){obs.observe(el)});
 
   // sticky nav background
   var hdr=document.querySelector('header');
