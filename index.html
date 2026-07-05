@@ -236,16 +236,13 @@
   .index.in .row-item:nth-child(2){transition-delay:.22s}
   .index.in .row-item:nth-child(3){transition-delay:.34s}
 
-  /* ---- FEATURE QUOTE ---- */
-  .feature{background:linear-gradient(150deg,var(--forest) 0%,#234A52 100%);color:var(--cream-50);padding:clamp(22px,3vw,39px) 0;position:relative;overflow:hidden}
-  .feature svg.farcs{position:absolute;right:-40px;top:-40px;width:360px;height:360px;opacity:.55;pointer-events:none}
-  .feature svg.farcs g{transform-origin:200px 160px;animation:arcSpin 90s linear infinite}
-  .feature svg.farcs circle:nth-child(2){animation:arcPulse 8s ease-in-out infinite}
-  @keyframes arcPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.06);opacity:.7}}
-  .feature .overline{color:var(--blue-200)}
-  .feature .quote{font-family:var(--display);font-weight:200;font-size:clamp(1.1rem,1.8vw,1.4rem);line-height:1.35;margin:12px 0 0;letter-spacing:-.02em;position:relative;z-index:2}
-  .feature .quote b{font-weight:600;color:var(--blue-200)}
-  .feature .attrib{margin-top:14px;font-size:13px;color:var(--teal-200);letter-spacing:.02em;position:relative;z-index:2}
+  /* ---- SPEECH BUBBLE (reusable quote component) ---- */
+  .speech-bubble{position:relative;max-width:620px;background:var(--paper);border:1px solid var(--teal-200);border-radius:24px;padding:26px 32px 28px;box-shadow:0 18px 40px -22px rgba(29,28,33,.25)}
+  .speech-bubble::after{content:"";position:absolute;bottom:-11px;left:44px;width:20px;height:20px;background:var(--paper);border-bottom:1px solid var(--teal-200);border-right:1px solid var(--teal-200);border-bottom-right-radius:4px;transform:rotate(45deg)}
+  .speech-bubble .quote{font-family:var(--display);font-weight:200;font-size:clamp(1.05rem,1.6vw,1.3rem);line-height:1.4;letter-spacing:-.02em;margin:10px 0 0;color:var(--ink)}
+  .speech-bubble .quote b{font-weight:600;color:var(--teal-700)}
+  .speech-attrib{margin:22px 0 0 46px;font-size:13px;color:var(--taupe-500);letter-spacing:.02em}
+  .speech-attrib strong{color:var(--ink)}
 
   /* ---- ABOUT ---- */
   .about{display:grid;grid-template-columns:1.04fr 0.96fr;gap:clamp(32px,6vw,84px);align-items:center;padding:96px 0 40px}
@@ -259,16 +256,16 @@
   .about .photo.reveal-right{transform:translateX(36px) scale(.95)}
 
   /* ---- CTA ---- */
-  .cta{background:var(--ink);color:var(--cream-50);border-radius:24px;padding:clamp(28px,3.6vw,44px) clamp(32px,4vw,52px);text-align:left;position:relative;overflow:hidden;display:grid;grid-template-columns:1fr auto;gap:24px 40px;align-items:center;box-shadow:0 20px 48px -18px rgba(28,37,48,.3),inset 0 1px 0 rgba(255,255,255,.06)}
-  .cta::before{content:"";position:absolute;top:-50%;right:-30%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(62,111,142,.18),transparent 65%);pointer-events:none;animation:ctaGlow 10s ease-in-out infinite}
+  .cta{background:linear-gradient(165deg,var(--forest) 0%,#234A52 100%);color:var(--cream-50);padding:clamp(40px,5.5vw,68px) 0;text-align:left;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;top:-50%;right:-10%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(62,111,142,.18),transparent 65%);pointer-events:none;animation:ctaGlow 10s ease-in-out infinite}
   @keyframes ctaGlow{0%,100%{transform:translate(0,0) scale(1);opacity:.6}50%{transform:translate(-30px,20px) scale(1.2);opacity:1}}
-  .cta__content{position:relative;z-index:2}
-  .cta .overline{color:var(--blue-400)}
-  .cta h2{font-family:var(--display);font-weight:200;font-size:clamp(1.2rem,2.25vw,1.8rem);max-width:32ch;line-height:1.12;letter-spacing:-.02em;position:relative;z-index:2;margin-top:10px;color:var(--cream-50)}
+  .cta__inner{display:grid;grid-template-columns:1fr auto;gap:24px 40px;align-items:center;position:relative;z-index:2}
+  .cta .overline{color:var(--blue-200)}
+  .cta h2{font-family:var(--display);font-weight:200;font-size:clamp(1.2rem,2.25vw,1.8rem);max-width:32ch;line-height:1.12;letter-spacing:-.02em;margin-top:10px;color:var(--cream-50)}
   .cta h2 b{font-weight:600;color:var(--blue-400)}
-  .cta .clead{font-size:1rem;color:rgba(251,250,247,.72);max-width:52ch;margin:12px 0 0;position:relative;z-index:2}
-  .cta .btn{position:relative;z-index:2;white-space:nowrap}
-  @media(max-width:720px){.cta{grid-template-columns:1fr}}
+  .cta .clead{font-size:1rem;color:rgba(251,250,247,.72);max-width:52ch;margin:12px 0 0}
+  .cta .btn{white-space:nowrap}
+  @media(max-width:720px){.cta__inner{grid-template-columns:1fr}}
 
   /* ---- FOOTER ---- */
   footer{padding:48px 0;color:var(--taupe-500);font-size:14px}
@@ -314,7 +311,6 @@
     .index .row-item{opacity:1;transform:none;filter:none;transition:background .3s,padding .3s}
     .hero-text-reveal{opacity:1;transform:none;filter:none;animation:none}
     .hero svg.arcs g,.hero svg.arcs path{animation:none}
-    .feature svg.farcs g,.feature svg.farcs circle{animation:none}
     .cta::before{animation:none}
     .marquee .track{animation:none}
     .hero .blob{animation:none}
@@ -427,28 +423,25 @@
   </div>
 </section>
 
-<!-- FEATURE QUOTE -->
-<section style="padding-top:20px">
-  <div class="feature reveal-scale">
-    <svg class="farcs" viewBox="0 0 360 360" aria-hidden="true"><g fill="none" stroke-width="1.5">
-      <circle cx="200" cy="160" r="70" stroke="rgba(210,225,234,.5)"/>
-      <circle cx="200" cy="160" r="120" stroke="rgba(127,168,194,.4)"/>
-      <circle cx="200" cy="160" r="170" stroke="rgba(207,224,218,.25)"/>
-    </g></svg>
-    <div class="wrap">
-      <span class="overline">In their words</span>
-      <p class="quote">"Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda."</p>
-      <p class="attrib"><strong>Donna Walsh, CEO</strong><br/>International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening</p>
+<!-- IN THEIR WORDS -->
+<section style="padding-top:20px;padding-bottom:72px">
+  <div class="wrap">
+    <div class="reveal-scale">
+      <div class="speech-bubble">
+        <span class="overline">In their words</span>
+        <p class="quote">"Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda."</p>
+      </div>
+      <p class="speech-attrib"><strong>Donna Walsh, CEO</strong><br/>International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening</p>
     </div>
   </div>
 </section>
 
 
 <!-- CTA -->
-<section style="padding-top:20px;padding-bottom:96px">
-  <div class="wrap">
-    <div class="cta reveal-scale">
-      <div class="cta__content">
+<section style="padding:0">
+  <div class="cta reveal-scale">
+    <div class="wrap cta__inner">
+      <div>
         <span class="overline">Start a conversation</span>
         <h2>Building engagement, growing capability, or investing in the next generation? <b>I can help.</b></h2>
         <p class="clead">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
