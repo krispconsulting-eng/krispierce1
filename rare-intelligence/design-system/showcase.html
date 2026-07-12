@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Rare Intelligence: Design System</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<style>
+  .sc-wrap{max-width:1100px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(20px,5vw,48px);}
+  .sc-head h1{font-size:var(--ri-fs-h1);font-weight:var(--ri-fw-black);}
+  .sc-head p{color:var(--ri-ink-500);margin-top:10px;max-width:60ch;}
+  .sc-sec{margin-top:clamp(36px,5vw,56px);}
+  .sc-sec > h2{font-size:1.4rem;font-weight:var(--ri-fw-bold);margin-bottom:6px;}
+  .sc-sec > .k{font-size:13px;color:var(--ri-ink-400);margin-bottom:18px;}
+  .sw-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;}
+  .sw{border-radius:var(--ri-radius-md);overflow:hidden;border:1px solid var(--ri-border);background:var(--ri-paper);}
+  .sw i{display:block;height:60px;}
+  .sw span{display:block;font-size:11px;color:var(--ri-ink-500);padding:7px 9px;font-variant-numeric:tabular-nums;}
+  .sw b{display:block;font-size:11px;color:var(--ri-ink-900);padding:7px 9px 0;font-weight:var(--ri-fw-semi);}
+  .type-row{border-top:1px solid var(--ri-border);padding:16px 0;display:flex;justify-content:space-between;gap:20px;align-items:baseline;flex-wrap:wrap;}
+  .type-row .lbl{font-size:12px;color:var(--ri-ink-400);font-family:var(--ri-font-body);white-space:nowrap;}
+  .demo{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .grad-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .grad{height:90px;border-radius:var(--ri-radius-lg);display:flex;align-items:flex-end;padding:12px;color:#fff;font-size:12px;font-weight:600;}
+  @media(max-width:640px){.grad-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="sc-wrap">
+  <div class="sc-head">
+    <span class="ri-wordmark"><span class="ri-sig"></span><span class="rare">Rare</span> <span class="intel">Intelligence</span></span>
+    <h1 style="margin-top:16px;">Design system</h1>
+    <p>The ocean-blue system for the course brand. Everything below reads from <code>tokens.css</code>. Fonts are Bricolage Grotesque (display) and Figtree (body).</p>
+  </div>
+
+  <section class="sc-sec">
+    <h2>Ocean</h2><div class="k">Primary. --ri-ocean-*</div>
+    <div class="sw-row">
+      <div class="sw"><i style="background:#EEF4FB"></i><span>50</span></div>
+      <div class="sw"><i style="background:#DBE7F5"></i><span>100</span></div>
+      <div class="sw"><i style="background:#B9CFEA"></i><span>200</span></div>
+      <div class="sw"><i style="background:#8FB0DA"></i><span>300</span></div>
+      <div class="sw"><i style="background:#5C8DC6"></i><span>400</span></div>
+      <div class="sw"><i style="background:#2E6FB2"></i><span>500</span></div>
+      <div class="sw"><i style="background:#245C97"></i><span>600</span></div>
+      <div class="sw"><i style="background:#1D4A7C"></i><span>700</span></div>
+      <div class="sw"><i style="background:#163A61"></i><span>800</span></div>
+      <div class="sw"><i style="background:#10314F"></i><span>900</span></div>
+    </div>
+  </section>
+
+  <section class="sc-sec">
+    <h2>Teal &amp; Coral</h2><div class="k">Secondary accent and spark. --ri-teal-* / --ri-coral-*</div>
+    <div class="sw-row">
+      <div class="sw"><b>Teal</b><i style="background:#D6F3EF"></i><span>100</span></div>
+      <div class="sw"><i style="background:#79D8CE"></i><span>300</span></div>
+      <div class="sw"><i style="background:#16B0A3"></i><span>500</span></div>
+      <div class="sw"><i style="background:#0E9184"></i><span>600</span></div>
+      <div class="sw"><b>Coral</b><i style="background:#FFE7DF"></i><span>100</span></div>
+      <div class="sw"><i style="background:#FF8A6B"></i><span>400</span></div>
+      <div class="sw"><i style="background:#FF6F4D"></i><span>500</span></div>
+      <div class="sw"><i style="background:#E8583A"></i><span>600</span></div>
+    </div>
+  </section>
+
+  <section class="sc-sec">
+    <h2>Neutrals</h2><div class="k">Cool, navy-based. Deliberately not warm cream.</div>
+    <div class="sw-row">
+      <div class="sw"><i style="background:#F4F8FC"></i><span>bg</span></div>
+      <div class="sw"><i style="background:#ECF2F9"></i><span>raise</span></div>
+      <div class="sw"><i style="background:#FFFFFF"></i><span>paper</span></div>
+      <div class="sw"><i style="background:#6B7C8D"></i><span>ink-400</span></div>
+      <div class="sw"><i style="background:#506274"></i><span>ink-500</span></div>
+      <div class="sw"><i style="background:#2A3E52"></i><span>ink-700</span></div>
+      <div class="sw"><i style="background:#0F2438"></i><span>ink-900</span></div>
+    </div>
+  </section>
+
+  <section class="sc-sec">
+    <h2>Gradients</h2><div class="k">--ri-grad-ocean / --ri-grad-deep / --ri-grad-spark</div>
+    <div class="grad-row">
+      <div class="grad" style="background:var(--ri-grad-ocean)">ocean</div>
+      <div class="grad" style="background:var(--ri-grad-deep)">deep</div>
+      <div class="grad" style="background:var(--ri-grad-spark)">spark</div>
+    </div>
+  </section>
+
+  <section class="sc-sec">
+    <h2>Type</h2><div class="k">Bricolage Grotesque + Figtree</div>
+    <div class="type-row"><h1 style="font-size:var(--ri-fs-display);font-weight:800;">Rare disease outcomes</h1><span class="lbl">display / 800</span></div>
+    <div class="type-row"><h2 style="font-size:var(--ri-fs-h2);font-weight:700;">Section title</h2><span class="lbl">h2 / 700</span></div>
+    <div class="type-row"><h3 style="font-size:var(--ri-fs-h3);font-weight:600;">Card title</h3><span class="lbl">h3 / 600</span></div>
+    <div class="type-row"><p style="font-size:var(--ri-fs-lead);color:var(--ri-ink-500);">Lead paragraph, for introductions and hero subtext.</p><span class="lbl">lead</span></div>
+    <div class="type-row"><p>Body text in Figtree, the workhorse for reading and interface.</p><span class="lbl">body / 400</span></div>
+    <div class="type-row"><span class="ri-overline">Overline label</span><span class="lbl">overline</span></div>
+  </section>
+
+  <section class="sc-sec">
+    <h2>Buttons</h2><div class="k">.ri-btn variants</div>
+    <div class="demo">
+      <a class="ri-btn ri-btn--primary">Primary</a>
+      <a class="ri-btn ri-btn--teal">Teal</a>
+      <a class="ri-btn ri-btn--spark">Spark</a>
+      <a class="ri-btn ri-btn--ghost">Ghost</a>
+    </div>
+    <div class="demo" style="margin-top:14px;padding:16px;border-radius:var(--ri-radius-lg);background:var(--ri-grad-deep);">
+      <a class="ri-btn ri-btn--on-dark">On dark</a>
+      <a class="ri-btn ri-btn--line-dark">Line dark</a>
+    </div>
+  </section>
+
+  <section class="sc-sec">
+    <h2>Chips</h2><div class="k">.ri-chip variants</div>
+    <div class="demo">
+      <span class="ri-chip">Default</span>
+      <span class="ri-chip ri-chip--free">Free</span>
+      <span class="ri-chip ri-chip--soft">Most chosen</span>
+      <span class="ri-chip ri-chip--spark">Bonus</span>
+    </div>
+  </section>
+
+  <section class="sc-sec">
+    <h2>Course card &amp; pathway</h2><div class="k">.ri-card (in a colour-coded tier) and .ri-pathcard</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;" class="ri-tier ri-tier--ocean">
+      <article class="ri-card">
+        <div class="ri-card__top"><span class="ri-card__idx">04</span><span class="ri-chip ri-chip--soft">Most chosen</span></div>
+        <h3>Access, Regulation and HTA in Australia</h3>
+        <p class="ri-card__outcome">Contribute a consumer input to a PBAC or MSAC process, and appraise the evidence behind a decision.</p>
+        <div class="ri-card__meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current Jul 2026</span></div>
+        <div class="ri-card__foot"><span class="ri-price">$145 <small>AUD</small></span><a class="ri-btn ri-btn--ghost ri-btn--sm">Enrol</a></div>
+      </article>
+      <aside class="ri-pathcard">
+        <h4>The pathway</h4><p class="ri-pathcard__sub">Start free, climb as far as you need.</p>
+        <div class="ri-path">
+          <div class="ri-step ri-step--on"><span class="ri-step__node">01</span><div><div class="ri-step__title">Orientation</div><div class="ri-step__meta">Understand the system. Free.</div></div></div>
+          <div class="ri-step"><span class="ri-step__node">02</span><div><div class="ri-step__title">Partnering</div><div class="ri-step__meta">Research, regulation, HTA.</div></div></div>
+        </div>
+        <div class="ri-pathcard__foot"><span class="tick"></span> Content current as at July 2026</div>
+      </aside>
+    </div>
+  </section>
+</div>
+</body>
+</html>

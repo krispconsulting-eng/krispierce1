@@ -1,14 +1,21 @@
-# Rare Intelligence
+# Rare Intelligence (commercial and platform blueprint)
 
-The online course brand for Kris Pierce Consulting. Rare Intelligence turns the
-rare disease course suites in `../` into a sold, delivered, professional online
-product: families and advocates, and the organisations that serve them, learning
-the systems that decide outcomes, with content that stays current as the law
-moves.
+> **Note on the brand.** Rare Intelligence is now its own independent brand with
+> its own design system, quarantined from Kris Pierce Consulting branding. That
+> brand lives in `/rare-intelligence/` at the repository root (fonts, ocean-blue
+> palette, tokens, components, and a sales page), and it supersedes the
+> Kris-derived visual approach once described in this folder's
+> `01-brand-identity.md` and `prototype-sales-page.html`.
+>
+> This folder remains the **commercial, platform, content-governance and
+> automation** blueprint for the courses. It is brand-agnostic and applies to the
+> new brand unchanged. Where documents here describe visuals as a sub-brand of
+> Kris, read `/rare-intelligence/BRAND.md` instead.
 
-Rare Intelligence is an endorsed sub-brand. It carries its own name and identity
-across every course, and it sits visibly under Kris Pierce Consulting so the
-credibility transfers both ways.
+Rare Intelligence turns the rare disease course suites in `../` into a sold,
+delivered, professional online product: families and advocates, and the
+organisations that serve them, learning the systems that decide outcomes, with
+content that stays current as the law moves.
 
 ## The decisions made
 
