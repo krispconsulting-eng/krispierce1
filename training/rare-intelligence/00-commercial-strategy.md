@@ -40,25 +40,29 @@ Three things, none of which is a gimmick:
 
 ## The catalogue and packaging
 
-The two suites are the launch catalogue. They package three ways, so a learner
-can buy small, buy a pathway, or license for a team.
+The two suites are the launch catalogue. They package four ways, so a learner
+can buy small, buy a pathway, buy the whole pack, or license for a team.
 
 ### 1. Single course (self-paced)
 
 Any one course, bought on its own. The entry point and the impulse purchase.
 
-### 2. Pathway bundle (a full suite)
+### 2. Pathway (a full program)
 
-All courses in a suite, at a discount to buying them singly, and the only way to
-get the **Working with Industry** bonus course. The main offer for a committed
-learner, and the best value signal.
+All courses in one program, families and advocates or organisations, at a
+discount to buying them singly. The main offer for a committed learner who wants
+their side of the catalogue.
 
-The bonus is deliberate: "Working with Industry" (partnering with pharma and
-medtech inside the Medicines Australia Code) is not sold on its own. It unlocks
-free the moment someone buys a full pathway, which is what turns a two-course
-cherry-pick into a whole-pathway purchase.
+### 3. The whole pack (both programs, plus the bonuses)
 
-### 3. Organisation licence (team seats)
+Every course in both programs, at the best per-course price, and the only place
+the bonuses live: the **Working with Industry** course, the **toolkit** of
+templates, and the **Rare Intelligence Practitioner credential**. This is the
+top of the ladder and the aspirational buy. Buying the whole pack is also cheaper
+than buying both pathways separately, so it is the natural upsell for anyone who
+wanted more than one program.
+
+### 4. Organisation licence (team seats)
 
 A block of seats for an organisation's staff and volunteers, sold to the
 organisations suite in particular. The highest-value line, and the one most
@@ -78,29 +82,44 @@ This is a recommendation, not a lock; you can price it if you prefer.
 A simple, flat structure for the Australian market, in AUD, GST-inclusive. These
 are defensible opening numbers, not fixed; test and adjust. The model is
 deliberately easy to say in one line: the intro is free, every course is $145,
-and any full pathway unlocks a bonus.
+a program pathway saves you money, and the whole pack unlocks the bonuses.
 
 | Line | Price (AUD) | Notes |
 |---|---|---|
 | Free intro course | 0 | Understanding the Rare Disease System. The front door and list builder. |
 | Any single course | 145 | Flat, either program. Self-paced, lifetime access. |
-| Families and advocates pathway | 590 | All six courses, plus the Working with Industry bonus. Roughly 20% off singles. |
-| Organisations pathway | 790 | All seven courses, plus the Working with Industry bonus. Roughly 22% off singles. |
-| Bonus: Working with Industry | Included with any pathway | Not sold on its own. Worth $145; the reward for taking a full pathway. |
+| Families and advocates pathway | 590 | All six families courses. Lifetime access. |
+| Organisations pathway | 790 | All seven organisations courses. Lifetime access. |
+| The whole pack (both programs) | 1,190 | Every course in both programs, and the only place the bonuses live. Cheaper than the two pathways bought separately. |
 | Organisation licence | 2,400 | Up to 10 seats across the organisations courses. |
 | Live cohort intake (optional) | +300 per person | Facilitated version with live sessions, capped, run in intakes. |
+
+### The bonuses (whole pack only)
+
+The bonuses are the reason to buy the whole pack rather than one pathway. They
+are not sold separately and do not come with a single pathway; the whole pack is
+the only way to get them.
+
+- **Working with Industry, inside the Code.** A full course on partnering with
+  pharma and medtech authentically, within the Medicines Australia Code of
+  Conduct. Worth $145 on its own terms; only available here.
+- **The toolkit.** The templates and worked examples that turn learning into
+  doing: a consumer-input template for PBAC and MSAC, a governance and
+  constitution starter, a grant-application skeleton, and a submission template.
+- **The Rare Intelligence Practitioner credential.** A completion certificate for
+  the full pack, not just a single course, with the "content current as at" date.
+  The credential that says someone did the whole thing.
 
 Notes on the logic:
 
 - **Flat $145 is the whole story.** One price for every course keeps the offer
   legible and removes the friction of working out what a given course "should"
-  cost. It also makes the free intro and the pathway discount the only two
-  numbers a buyer has to weigh.
-- **The bonus anchors the pathway.** "Working with Industry" is not sold
-  separately, so the only way to get it is to buy a full pathway. It is the
-  reason to go all in rather than cherry-pick two courses, and it is genuinely
-  valuable content (partnering with industry inside the Medicines Australia
-  Code), not a token freebie.
+  cost.
+- **The whole pack is where the bonuses live.** A single pathway is a good buy;
+  the whole pack is the aspirational one, because it is the only way to unlock
+  the industry course, the toolkit and the practitioner credential. At $1,190 it
+  is also cheaper than buying both pathways separately ($1,380), so the person
+  who was going to buy both is nudged all the way up.
 - **The org licence is the revenue line.** One licence is worth several
   pathways, and organisations can fund it from grants or program budgets. Sell it
   actively.
