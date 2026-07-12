@@ -250,7 +250,7 @@ submission, and use the national framework as a lever.
 This is the strand that runs through the whole suite and also stands alone. It
 is here because the work is emotionally demanding and the people who do it burn
 out. Treating wellbeing as core content, not a closing thank-you, is a
-deliberate design choice borrowed from the programmes that do this best.
+deliberate design choice borrowed from the programs that do this best.
 
 Subjects, drawn from Domains I and J:
 
@@ -300,7 +300,7 @@ basics.
 
 ### The face-to-face event
 
-The same content assembles into a live programme. A flagship two-day event maps
+The same content assembles into a live program. A flagship two-day event maps
 cleanly onto the suite:
 
 - **Day one, orientation and partnering.** Course 1 as the opening morning,
@@ -310,7 +310,7 @@ cleanly onto the suite:
   expert office hours, and a submission lab from Course 5. The wellbeing session
   and family stream from Course 6 run across both days.
 
-Design features worth holding to, all drawn from programmes that have proven
+Design features worth holding to, all drawn from programs that have proven
 them:
 
 - **Mandatory pre-work.** The Course 1 online modules are completed before
@@ -344,7 +344,7 @@ follow:
 ## Australian anchors
 
 The repository names European and United States bodies because that is where
-its source programmes ran. For an Australian audience, every one of them has a
+its source programs ran. For an Australian audience, every one of them has a
 local equivalent, and this suite uses the local one throughout:
 
 | Function | Use in this suite |

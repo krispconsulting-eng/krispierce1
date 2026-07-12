@@ -7,7 +7,7 @@ menu. The built suite for families and advocates is in
 ## Purpose
 
 This repository distils the recurring subjects across the major rare disease
-patient-training programmes worldwide into one menu you can select, sequence and
+patient-training programs worldwide into one menu you can select, sequence and
 source from when designing an event. It draws on the EURORDIS Open Academy
 schools (Medicines R&D; Scientific Innovation & Translational Research), the
 EUPATI Open Classroom, EUCAPA, the Global Genes RARE Drug Development Symposium,
@@ -17,7 +17,7 @@ infrastructure.
 
 Subjects are grouped into ten domains. For each subject you get a one-line
 scope, the primary audience, the delivery formats that have been used for it in
-practice, and the programmes it is drawn from, so you can see where it is proven
+practice, and the programs it is drawn from, so you can see where it is proven
 and where to find material or faculty.
 
 ## How to use it
@@ -41,7 +41,7 @@ School on Scientific Innovation & Translational Research. EUPATI = EUPATI Open
 Classroom (incl. HTAR course). EUCAPA = European Capacity Building for Patients.
 RDDS = Global Genes RARE Drug Development Symposium. GAUK = Genetic Alliance UK.
 RVA = Rare Voices Australia. PVI = Patient Voice Initiative. CCI-AU = Australian
-consumer-and-community-involvement programmes (CCIP, AHRA, ACTA, Involve
+consumer-and-community-involvement programs (CCIP, AHRA, ACTA, Involve
 Australia, NHMRC Statement).
 
 **Jurisdiction note.** Where a subject names a regulator, HTA body or policy
@@ -89,7 +89,7 @@ Medicines Australia Code of Conduct for any industry-facing content.
 | Ethics in trials and ethics committee participation | What review involves, experienced from the inside | BOTH | Role-play simulation | OA-MRD |
 | Pharmacovigilance, safety and benefit-risk | How safety is monitored and weighed after approval | BOTH | E-learning, session | OA-MRD, EUPATI |
 | Drug repurposing | Routes to repurpose existing medicines for rare conditions | BOTH | Webinar | OA-MRD, OA-SITR |
-| Designing a patient-centric development programme | Building a development plan around patient needs | ADV | Hands-on workshop | OA-MRD |
+| Designing a patient-centric development program | Building a development plan around patient needs | ADV | Hands-on workshop | OA-MRD |
 | Trial readiness for organisations | Moving a community from awareness to genuine readiness: endpoints, team, momentum | ORG | Framework session | RDDS |
 
 ### Domain D. Regulation, access and HTA
@@ -153,7 +153,7 @@ Medicines Australia Code of Conduct for any industry-facing content.
 | Subject | Scope | Audience | Proven formats | Drawn from |
 |---|---|---|---|---|
 | Leadership in advocacy: shared and distributed models | Leading without burning out a single person or group | BOTH | Plenary, masterclass | OA-MRD, OA-SITR, RVA |
-| Mentoring, peer learning and communities of practice | Structures that make learning compound after the event | BOTH | CoP, mentoring programme | EURORDIS alumni, RVA |
+| Mentoring, peer learning and communities of practice | Structures that make learning compound after the event | BOTH | CoP, mentoring program | EURORDIS alumni, RVA |
 | Resilience and wellbeing for staff and volunteers | Skills to sustain people doing emotionally demanding work | BOTH | Multi-week course, workshop | GAUK |
 | Mental health in rare disease and MHFA | Mental health in context; companion to formal Mental Health First Aid | BOTH | E-learning | RVA, GAUK |
 | Self-care and boundaries | Maintaining the line between personal and professional | BOTH | Workshop | GAUK, RVA |
@@ -172,7 +172,7 @@ Medicines Australia Code of Conduct for any industry-facing content.
 
 ## Delivery-format toolkit
 
-The programmes converge on a small set of formats. Each does a particular job; a
+The programs converge on a small set of formats. Each does a particular job; a
 good agenda mixes input with application.
 
 - **Pre-event e-learning (self-paced):** levels a mixed-ability cohort before
@@ -201,7 +201,7 @@ good agenda mixes input with application.
   the RDDS finale.
 - **Communities of practice:** sustained peer learning between events (RVA's
   ARDO-CoP).
-- **Mentoring programmes:** small mentor-to-mentee groups plus masterclasses
+- **Mentoring programs:** small mentor-to-mentee groups plus masterclasses
   (EURORDIS alumni mentoring).
 - **Alumni network:** keeps value compounding long after the room empties.
 - **Take-home toolkits and resource libraries:** extend reach to those who could
@@ -251,7 +251,7 @@ with leadership from I. EURORDIS-style blended pathway: e-learning, live
 webinars, in-person days, a site visit, and entry to an alumni network. Outcome:
 advocates who can partner credibly across the research lifecycle.
 
-**4. Make-your-programme-investable workshop (one to two days, ORG).** Domain B
+**4. Make-your-program-investable workshop (one to two days, ORG).** Domain B
 (data and natural history), C (trial readiness), F (data, IP, publication) and G
 (investment readiness), culminating in a pitch session with expert judges.
 RDDS-style. Outcome: communities that can attract and sustain industry and
@@ -259,7 +259,7 @@ investor interest.
 
 ## Caveats
 
-- This is a menu synthesised from existing programmes, not an endorsement of any
+- This is a menu synthesised from existing programs, not an endorsement of any
   one curriculum. Select for your audience and jurisdiction.
 - Several subjects are jurisdiction-specific. Swap EU and US anchors (EMA, FDA,
   EU HTAR, Medicaid) for Australian equivalents (TGA, PBAC, MSAC, the National

@@ -1,4 +1,4 @@
-# Event blueprint: a two-day face-to-face programme
+# Event blueprint: a two-day face-to-face program
 
 One way to assemble the course suite into a live event for families and
 advocates. It is a sample, not a fixed timetable. The design choices matter more
