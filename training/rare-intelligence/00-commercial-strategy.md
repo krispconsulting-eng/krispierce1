@@ -49,8 +49,14 @@ Any one course, bought on its own. The entry point and the impulse purchase.
 
 ### 2. Pathway bundle (a full suite)
 
-All courses in a suite, at a discount to buying them singly. The main offer for a
-committed learner, and the best value signal.
+All courses in a suite, at a discount to buying them singly, and the only way to
+get the **Working with Industry** bonus course. The main offer for a committed
+learner, and the best value signal.
+
+The bonus is deliberate: "Working with Industry" (partnering with pharma and
+medtech inside the Medicines Australia Code) is not sold on its own. It unlocks
+free the moment someone buys a full pathway, which is what turns a two-course
+cherry-pick into a whole-pathway purchase.
 
 ### 3. Organisation licence (team seats)
 
@@ -69,25 +75,34 @@ This is a recommendation, not a lock; you can price it if you prefer.
 
 ## Pricing
 
-A starting structure for the Australian market, in AUD, GST-inclusive. These are
-defensible opening numbers, not fixed; test and adjust.
+A simple, flat structure for the Australian market, in AUD, GST-inclusive. These
+are defensible opening numbers, not fixed; test and adjust. The model is
+deliberately easy to say in one line: the intro is free, every course is $145,
+and any full pathway unlocks a bonus.
 
 | Line | Price (AUD) | Notes |
 |---|---|---|
-| Free intro course | 0 | Course 1, families-and-advocates. List builder. |
-| Single course, families and advocates | 145 | Self-paced, lifetime access. |
-| Single course, organisations | 245 | More specialised, higher willingness to pay. |
-| Pathway bundle, families and advocates | 590 | Six courses; about a third off singles. |
-| Pathway bundle, organisations | 990 | Seven courses; about a third off singles. |
-| Organisation licence | 2,400 | Up to 10 seats across any organisations course. |
+| Free intro course | 0 | Understanding the Rare Disease System. The front door and list builder. |
+| Any single course | 145 | Flat, either program. Self-paced, lifetime access. |
+| Families and advocates pathway | 590 | All six courses, plus the Working with Industry bonus. Roughly 20% off singles. |
+| Organisations pathway | 790 | All seven courses, plus the Working with Industry bonus. Roughly 22% off singles. |
+| Bonus: Working with Industry | Included with any pathway | Not sold on its own. Worth $145; the reward for taking a full pathway. |
+| Organisation licence | 2,400 | Up to 10 seats across the organisations courses. |
 | Live cohort intake (optional) | +300 per person | Facilitated version with live sessions, capped, run in intakes. |
 
 Notes on the logic:
 
-- **Anchor with the bundle.** Show the single price next to the bundle so the
-  bundle reads as the sensible choice. Most considered buyers take the pathway.
-- **The org licence is the revenue line.** One licence is worth roughly four
-  bundles, and organisations can fund it from grants or program budgets. Sell it
+- **Flat $145 is the whole story.** One price for every course keeps the offer
+  legible and removes the friction of working out what a given course "should"
+  cost. It also makes the free intro and the pathway discount the only two
+  numbers a buyer has to weigh.
+- **The bonus anchors the pathway.** "Working with Industry" is not sold
+  separately, so the only way to get it is to buy a full pathway. It is the
+  reason to go all in rather than cherry-pick two courses, and it is genuinely
+  valuable content (partnering with industry inside the Medicines Australia
+  Code), not a token freebie.
+- **The org licence is the revenue line.** One licence is worth several
+  pathways, and organisations can fund it from grants or program budgets. Sell it
   actively.
 - **The live cohort is a premium, not the default.** Self-paced is the product.
   A facilitated intake, run a few times a year, captures the people who will pay

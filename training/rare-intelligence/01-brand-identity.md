@@ -54,9 +54,16 @@ clearly not the same page.
    editorial layout with the forest gradient used only in contained accent panels
    and the final call to action, never as the page ground. It reads as a calm
    learning product, a field guide, not a practice statement.
-2. **Blue-led accent.** Blue 600 `#3E6F8E` is the primary accent and Teal 600
-   `#3D7A6B` the secondary, the reverse of the consulting site. Both are existing
-   v3 colours; nothing new is introduced, the emphasis simply shifts.
+2. **The palette used boldly, and colour-coded.** The consulting site uses the
+   palette quietly: mostly cream and forest, with teal and blue as restrained
+   accents. Rare Intelligence uses the same palette with more energy, because a
+   course catalogue that looks austere does not feel worth enrolling in. Blue 600
+   leads, Teal 600 supports, and the tiers are **colour-coded**: Orientation
+   teal, Partnering blue, Influence green (Sage). Coloured washes fill featured
+   cards, vivid teal-to-blue gradients carry the hero pathway card and the bonus
+   banner, and each course card takes a slim top accent in its tier colour. No
+   new hues are introduced; the existing v3 palette is simply used at full
+   strength and given a job (the tier system) rather than kept decorative.
 3. **A signature motif: the pathway.** Learning is a pathway, and the courses are
    already built in tiers. A recurring node-and-line device carries this: a step
    diagram in the hero, a small leading node on every eyebrow label, node bullets
@@ -80,8 +87,15 @@ the first glance.
 - **Primary accent:** Blue 600 `#3E6F8E`; eyebrow labels on light use Blue 700
   `#305670`.
 - **Secondary accent:** Teal 600 `#3D7A6B`, used for pathway and bundle cues.
-- **Dark surfaces (contained only):** the forest gradient, unchanged,
-  `linear-gradient(158deg, #1E3D34 0%, #234A52 100%)`.
+- **Tier colours (colour-coding):** Orientation and Foundations teal (`#3D7A6B`,
+  wash `#E7F0EC`), Partnering and Sustainability blue (`#3E6F8E`, wash `#EAF1F5`),
+  Influence and Research readiness green/Sage (`#5E7A55`, wash `#EDF2E9`). Each
+  tier's number badge, card top accent and index numeral take its colour.
+- **Signature gradients:** the vivid teal-to-blue gradient
+  `linear-gradient(142deg, #2F5E52 0%, #3D7A6B 42%, #3E6F8E 100%)` for the hero
+  pathway card and the bonus banner; the forest gradient
+  `linear-gradient(165deg, #1E3D34 0%, #234A52 100%)` reserved for the single
+  deep closing call to action.
 - **Page ground:** Cream 50 `#FBF9F5`; cards Paper white; section bands Cream 100.
 - **Progress and "current" cues:** the status hues already defined, Sage 500
   `#5E7A55` for complete and for "current as at", Amber 500 `#B5872F` for "review

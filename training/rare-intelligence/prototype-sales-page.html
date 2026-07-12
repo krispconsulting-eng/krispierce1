@@ -11,20 +11,18 @@
 
   :root{
     --forest:#1E3D34; --forest-deep:#16302A;
-    --teal-600:#3D7A6B; --teal-400:#7FA295; --teal-200:#CFE0DA;
+    --teal-600:#3D7A6B; --teal-700:#2F5E52; --teal-400:#7FA295; --teal-200:#CFE0DA;
     --blue-600:#3E6F8E; --blue-700:#305670; --blue-400:#7FA8C2; --blue-200:#D2E1EA;
     --cream-50:#FBF9F5; --cream-100:#F4F1EB; --cream-200:#ECE7DD; --paper:#FFFFFF;
     --ink-900:#1C2530; --text-secondary:#4A5C55; --taupe-400:#7E8E87; --taupe-500:#5E706A;
     --taupe-300:#A0ADA7; --taupe-100:#DDE2DF;
-    --sage:#5E7A55; --amber:#B5872F; --slate:#4E6373;
-    --accent-wash:#E7F0EC;
-    --border-subtle:rgba(29,28,33,0.09); --border-default:rgba(29,28,33,0.16); --border-inverse:rgba(244,241,235,0.18);
-    --shadow-sm:0 2px 10px -2px rgba(29,28,33,0.08);
-    --shadow-md:0 12px 30px -14px rgba(29,28,33,0.20);
-    --shadow-blue:0 16px 34px -14px rgba(62,111,142,0.55);
+    --sage:#5E7A55; --sage-wash:#EDF2E9; --sage-200:#D9E4CF;
+    --amber:#B5872F; --slate:#4E6373; --slate-wash:#EAEEF1;
+    --wash-teal:#E7F0EC; --wash-blue:#EAF1F5;
     --display:"Outfit","Archivo","Helvetica Neue",Arial,sans-serif;
     --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
-    --grad-forest:linear-gradient(158deg,#1E3D34 0%,#234A52 100%);
+    --grad-vivid:linear-gradient(142deg,#2F5E52 0%,#3D7A6B 42%,#3E6F8E 100%);
+    --grad-blue:linear-gradient(140deg,#3E6F8E 0%,#3D7A6B 100%);
     --grad-cta:linear-gradient(165deg,#1E3D34 0%,#1B4A4A 50%,#234A52 100%);
     --maxw:1200px; --pad:clamp(20px,5vw,64px);
     --ease:cubic-bezier(0.22,1,0.36,1);
@@ -37,134 +35,164 @@
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
 
-  /* signature: label with a leading node */
   .label{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.2em;color:var(--blue-700);}
-  .label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue-600);box-shadow:0 0 0 4px rgba(62,111,142,0.14);}
+  .label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue-600);box-shadow:0 0 0 4px rgba(62,111,142,0.15);}
   .label.on-dark{color:var(--blue-200);}
-  .label.on-dark::before{background:var(--blue-200);box-shadow:0 0 0 4px rgba(210,225,234,0.16);}
+  .label.on-dark::before{background:var(--blue-200);box-shadow:0 0 0 4px rgba(210,225,234,0.18);}
   .label.teal{color:var(--teal-600);}
-  .label.teal::before{background:var(--teal-600);box-shadow:0 0 0 4px rgba(61,122,107,0.14);}
+  .label.teal::before{background:var(--teal-600);box-shadow:0 0 0 4px rgba(61,122,107,0.15);}
 
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-size:15px;font-weight:600;border-radius:999px;padding:13px 26px;border:1px solid transparent;cursor:pointer;transition:transform .2s var(--ease),box-shadow .3s var(--ease),background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);}
   .btn-primary{background:var(--blue-600);color:var(--cream-50);}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-blue);}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(62,111,142,0.55);}
   .btn-primary:active{transform:translateY(0) scale(.985);}
-  .btn-ghost{background:transparent;color:var(--blue-700);border-color:var(--border-default);}
+  .btn-teal{background:var(--teal-600);color:var(--cream-50);}
+  .btn-teal:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(61,122,107,0.45);}
+  .btn-ghost{background:transparent;color:var(--blue-700);border-color:rgba(29,28,33,0.16);}
   .btn-ghost:hover{border-color:var(--blue-600);color:var(--blue-600);transform:translateY(-1px);}
   .btn-onforest{background:var(--cream-50);color:var(--forest);}
   .btn-onforest:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(0,0,0,0.4);}
-  .btn-line-dark{background:transparent;color:var(--cream-50);border-color:rgba(251,250,247,0.38);}
+  .btn-line-dark{background:transparent;color:var(--cream-50);border-color:rgba(251,250,247,0.4);}
   .btn-line-dark:hover{border-color:var(--blue-200);color:var(--blue-200);}
   .btn:focus-visible,a:focus-visible{outline:3px solid var(--blue-400);outline-offset:2px;}
+  .btn-sm{padding:10px 20px;font-size:14px;}
 
-  /* light nav (distinct from the consulting forest nav) */
-  .nav{position:sticky;top:0;z-index:30;background:rgba(251,249,245,0.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-subtle);}
+  /* light nav */
+  .nav{position:sticky;top:0;z-index:30;background:rgba(251,249,245,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(29,28,33,0.08);}
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
   .mark{display:flex;align-items:baseline;gap:12px;}
   .wordmark{font-family:var(--display);font-size:20px;letter-spacing:-0.01em;color:var(--ink-900);}
   .wordmark .lite{font-weight:300;}
-  .wordmark .bold{font-weight:600;color:var(--blue-600);}
+  .wordmark .bold{font-weight:600;background:linear-gradient(92deg,var(--teal-600),var(--blue-600));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
   .parent{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--taupe-400);}
   .nav-links{display:flex;gap:26px;align-items:center;}
   .nav-links a{font-size:15px;font-weight:500;color:var(--text-secondary);}
   .nav-links a:hover{color:var(--blue-600);}
 
-  /* hero: light, split, with a contained forest pathway card */
-  .hero{position:relative;overflow:hidden;}
-  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,5vw,64px);align-items:center;padding-top:clamp(48px,7vw,88px);padding-bottom:clamp(48px,7vw,88px);}
+  /* hero */
+  .hero{position:relative;overflow:hidden;background:
+    radial-gradient(680px 380px at 88% 8%,rgba(127,162,149,0.22),transparent 60%),
+    radial-gradient(560px 360px at 8% 92%,rgba(127,168,194,0.18),transparent 62%),
+    var(--cream-50);}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,5vw,60px);align-items:center;padding-top:clamp(48px,7vw,84px);padding-bottom:clamp(48px,7vw,84px);}
   .hero h1{font-size:clamp(2.3rem,4.4vw,3.6rem);letter-spacing:-0.025em;line-height:1.04;margin:20px 0 0;font-weight:400;}
-  .hero h1 b{font-weight:600;color:var(--blue-600);}
-  .hero .lead{font-size:clamp(1.08rem,1.5vw,1.28rem);color:var(--text-secondary);line-height:1.55;max-width:46ch;margin:20px 0 0;}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px;}
-  .hero-trust{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap;}
-  .trust b{font-family:var(--display);font-weight:300;font-size:1.9rem;letter-spacing:-0.02em;color:var(--ink-900);display:block;line-height:1;}
-  .trust span{font-size:12.5px;color:var(--taupe-500);letter-spacing:0.01em;}
+  .hero h1 b{font-weight:600;background:linear-gradient(96deg,var(--teal-600),var(--blue-600));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+  .hero .lead{font-size:clamp(1.08rem,1.5vw,1.26rem);color:var(--text-secondary);line-height:1.55;max-width:46ch;margin:20px 0 0;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:28px;}
+  .pricebar{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap;}
+  .pill{display:flex;flex-direction:column;gap:2px;padding:12px 18px;border-radius:14px;background:var(--paper);border:1px solid rgba(29,28,33,0.08);box-shadow:0 2px 10px -4px rgba(29,28,33,0.10);}
+  .pill b{font-family:var(--display);font-weight:600;font-size:1.15rem;letter-spacing:-0.01em;line-height:1;}
+  .pill.free b{color:var(--sage);}
+  .pill.each b{color:var(--blue-600);}
+  .pill.p-bonus b{color:var(--teal-600);}
+  .pill span{font-size:11.5px;color:var(--taupe-500);}
 
-  /* the pathway card (signature device) */
-  .pathcard{background:var(--grad-forest);color:var(--cream-50);border-radius:24px;padding:clamp(24px,3vw,34px);box-shadow:var(--shadow-md);position:relative;overflow:hidden;}
-  .pathcard h4{color:var(--cream-50);font-weight:500;font-size:1.05rem;letter-spacing:0.01em;}
-  .pathcard .pc-sub{color:rgba(244,241,235,0.66);font-size:13px;margin-top:4px;}
-  .path{margin-top:22px;display:flex;flex-direction:column;gap:0;}
+  /* pathway card, vivid gradient */
+  .pathcard{background:var(--grad-vivid);color:var(--cream-50);border-radius:24px;padding:clamp(24px,3vw,34px);box-shadow:0 24px 50px -24px rgba(47,94,82,0.55);position:relative;overflow:hidden;}
+  .pathcard::after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.06);top:-90px;right:-70px;}
+  .pathcard h4{color:var(--cream-50);font-weight:500;font-size:1.05rem;position:relative;z-index:1;}
+  .pathcard .pc-sub{color:rgba(244,241,235,0.72);font-size:13px;margin-top:4px;position:relative;z-index:1;}
+  .path{margin-top:22px;display:flex;flex-direction:column;position:relative;z-index:1;}
   .step{display:grid;grid-template-columns:34px 1fr;gap:14px;position:relative;padding-bottom:20px;}
   .step:last-child{padding-bottom:0;}
-  .step .node{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(210,225,234,0.5);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:500;font-size:14px;color:var(--blue-200);background:rgba(255,255,255,0.05);z-index:2;}
-  .step.active .node{background:var(--blue-200);color:var(--forest);border-color:var(--blue-200);}
-  .step::before{content:"";position:absolute;left:16.5px;top:34px;bottom:-2px;width:1.5px;background:linear-gradient(rgba(210,225,234,0.42),rgba(210,225,234,0.12));}
+  .step .node{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.45);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:14px;color:#fff;background:rgba(255,255,255,0.08);z-index:2;}
+  .step.active .node{background:#fff;color:var(--teal-700);border-color:#fff;}
+  .step::before{content:"";position:absolute;left:16.5px;top:34px;bottom:-2px;width:1.5px;background:linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.14));}
   .step:last-child::before{display:none;}
-  .step .st-body{padding-top:5px;}
-  .step .st-title{font-weight:500;font-size:15px;color:var(--cream-50);}
-  .step .st-meta{font-size:12.5px;color:rgba(244,241,235,0.6);margin-top:2px;}
-  .pc-foot{margin-top:22px;padding-top:16px;border-top:1px solid rgba(244,241,235,0.14);display:flex;align-items:center;justify-content:space-between;gap:12px;}
-  .pc-foot .stamp{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--blue-200);}
-  .pc-foot .stamp .tick{width:7px;height:7px;border-radius:50%;background:var(--sage);}
+  .step .st-title{font-weight:500;font-size:15px;color:#fff;padding-top:5px;}
+  .step .st-meta{font-size:12.5px;color:rgba(244,241,235,0.66);margin-top:2px;}
+  .pc-foot{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.16);position:relative;z-index:1;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#fff;}
+  .pc-foot .tick{width:7px;height:7px;border-radius:50%;background:#B8E0C8;}
 
   /* value band */
-  .band{background:var(--paper);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);}
-  .band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;padding-top:40px;padding-bottom:40px;}
+  .band{background:var(--paper);border-top:1px solid rgba(29,28,33,0.08);border-bottom:1px solid rgba(29,28,33,0.08);}
+  .band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0;}
+  .val{padding:38px clamp(18px,2.4vw,30px);border-left:1px solid rgba(29,28,33,0.07);}
+  .val:first-child{border-left:none;padding-left:0;}
   .val h4{font-size:1.08rem;font-weight:600;margin-bottom:7px;letter-spacing:-0.01em;}
   .val p{font-size:14.5px;color:var(--text-secondary);line-height:1.5;}
-  .val .vnode{width:9px;height:9px;border-radius:50%;background:var(--blue-600);margin-bottom:14px;box-shadow:0 0 0 5px rgba(62,111,142,0.12);}
-  .val:nth-child(2) .vnode{background:var(--teal-600);box-shadow:0 0 0 5px rgba(61,122,107,0.12);}
-  .val:nth-child(3) .vnode{background:var(--sage);box-shadow:0 0 0 5px rgba(94,122,85,0.14);}
+  .val .vnode{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+  .val:nth-child(1) .vnode{background:var(--wash-teal);} .val:nth-child(1) .vnode i{background:var(--teal-600);}
+  .val:nth-child(2) .vnode{background:var(--wash-blue);} .val:nth-child(2) .vnode i{background:var(--blue-600);}
+  .val:nth-child(3) .vnode{background:var(--sage-wash);} .val:nth-child(3) .vnode i{background:var(--sage);}
+  .val .vnode i{width:11px;height:11px;border-radius:3px;display:block;}
 
-  /* program section */
-  section.program{padding-top:clamp(52px,7vw,92px);padding-bottom:clamp(30px,4vw,56px);}
-  .prog-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:8px;}
+  /* program */
+  section.program{padding-top:clamp(52px,7vw,88px);padding-bottom:clamp(30px,4vw,52px);}
+  .prog-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;}
   .prog-head h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:600;letter-spacing:-0.02em;margin-top:12px;}
   .prog-head p{font-size:1rem;color:var(--text-secondary);max-width:52ch;margin-top:10px;}
 
-  /* tier: numbered index (real sequence) */
-  .tier{margin-top:36px;}
-  .tier-head{display:flex;align-items:baseline;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--border-subtle);margin-bottom:22px;}
-  .tier-num{font-family:var(--display);font-weight:300;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-0.03em;color:var(--blue-400);line-height:1;font-variant-numeric:tabular-nums;}
-  .tier-name{font-family:var(--display);font-weight:600;font-size:1.15rem;letter-spacing:0.01em;color:var(--ink-900);}
-  .tier-note{font-size:13.5px;color:var(--taupe-500);margin-left:auto;max-width:40ch;text-align:right;}
+  /* tiers, colour-coded */
+  .tier{margin-top:34px;--tc:var(--blue-600);--tw:var(--wash-blue);--tw2:var(--blue-200);}
+  .tier.t-teal{--tc:var(--teal-600);--tw:var(--wash-teal);--tw2:var(--teal-200);}
+  .tier.t-blue{--tc:var(--blue-600);--tw:var(--wash-blue);--tw2:var(--blue-200);}
+  .tier.t-green{--tc:var(--sage);--tw:var(--sage-wash);--tw2:var(--sage-200);}
+  .tier-head{display:flex;align-items:center;gap:14px;padding-bottom:16px;margin-bottom:20px;border-bottom:2px solid var(--tw2);}
+  .tier-num{width:42px;height:42px;border-radius:12px;background:var(--tc);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:600;font-size:1.15rem;letter-spacing:-0.01em;font-variant-numeric:tabular-nums;flex:none;}
+  .tier-name{font-family:var(--display);font-weight:600;font-size:1.18rem;letter-spacing:-0.005em;color:var(--ink-900);}
+  .tier-note{font-size:13.5px;color:var(--taupe-500);margin-left:auto;max-width:38ch;text-align:right;}
 
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  /* reference-card language: tighter radius, flatter, structured, index numeral */
-  .card{background:var(--paper);border:1px solid var(--border-subtle);border-radius:14px;box-shadow:var(--shadow-sm);padding:22px;display:flex;flex-direction:column;transition:border-color .25s var(--ease),box-shadow .25s var(--ease),transform .25s var(--ease);}
-  .card:hover{border-color:var(--blue-400);box-shadow:var(--shadow-md);transform:translateY(-2px);}
+  .card{position:relative;background:var(--paper);border:1px solid rgba(29,28,33,0.09);border-radius:14px;box-shadow:0 2px 12px -6px rgba(29,28,33,0.12);padding:22px;padding-top:24px;display:flex;flex-direction:column;overflow:hidden;transition:border-color .25s var(--ease),box-shadow .25s var(--ease),transform .25s var(--ease);}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--tc);}
+  .card:hover{border-color:var(--tc);box-shadow:0 16px 34px -18px rgba(29,28,33,0.28);transform:translateY(-3px);}
   .card .chd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px;}
-  .card .cidx{font-family:var(--display);font-weight:300;font-size:1.05rem;color:var(--taupe-300);font-variant-numeric:tabular-nums;letter-spacing:-0.01em;}
-  .chip{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;padding:4px 9px;border-radius:6px;}
-  .chip-free{background:rgba(94,122,85,0.13);color:var(--sage);}
-  .chip-core{background:var(--accent-wash);color:var(--teal-600);}
+  .card .cidx{font-family:var(--display);font-weight:600;font-size:1rem;color:var(--tc);font-variant-numeric:tabular-nums;}
+  .chip{font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;padding:4px 9px;border-radius:6px;color:#fff;background:var(--tc);}
+  .chip.free{background:var(--sage);}
+  .chip.soft{background:var(--tw);color:var(--tc);}
   .card h3{font-size:1.16rem;font-weight:600;letter-spacing:-0.015em;line-height:1.22;}
   .card .outcome{font-size:14px;color:var(--text-secondary);line-height:1.5;margin-top:9px;flex:1;}
-  .card .meta{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--taupe-500);margin-top:15px;padding-top:13px;border-top:1px solid var(--border-subtle);}
-  .card .meta b{font-weight:600;}
+  .card .meta{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--taupe-500);margin-top:15px;padding-top:13px;border-top:1px solid rgba(29,28,33,0.08);}
+  .card .meta b{font-weight:600;color:var(--taupe-500);}
   .card .foot{display:flex;align-items:center;justify-content:space-between;margin-top:15px;}
-  .price{font-family:var(--display);font-weight:500;font-size:1.24rem;letter-spacing:-0.02em;color:var(--ink-900);}
+  .price{font-family:var(--display);font-weight:600;font-size:1.22rem;letter-spacing:-0.02em;color:var(--ink-900);}
   .price small{font-family:var(--sans);font-size:11.5px;font-weight:600;color:var(--taupe-400);letter-spacing:0.04em;}
   .price.free{color:var(--sage);}
-  .btn-sm{padding:10px 20px;font-size:14px;}
+  .card.feature{background:var(--tw);border-color:var(--tw2);}
 
-  /* bundle strip: lighter, editorial, node-ruled (not a big dark slab) */
-  .bundle{margin-top:26px;background:var(--cream-100);border:1px solid var(--border-subtle);border-radius:16px;padding:24px clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;}
-  .bundle h3{font-size:1.28rem;font-weight:600;letter-spacing:-0.015em;}
+  /* bundle */
+  .bundle{margin-top:24px;background:var(--paper);border:1px solid rgba(29,28,33,0.09);border-radius:16px;padding:0;display:flex;flex-wrap:wrap;align-items:stretch;overflow:hidden;box-shadow:0 8px 26px -18px rgba(29,28,33,0.2);}
+  .bundle .b-main{flex:1 1 340px;padding:24px clamp(22px,3vw,30px);}
+  .bundle h3{font-size:1.3rem;font-weight:600;letter-spacing:-0.015em;}
   .bundle p{font-size:14px;color:var(--text-secondary);margin-top:6px;max-width:54ch;}
-  .bundle-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-  .bundle .was{font-size:13.5px;color:var(--taupe-400);text-decoration:line-through;}
-  .bundle .now{font-family:var(--display);font-weight:500;font-size:1.7rem;letter-spacing:-0.02em;color:var(--ink-900);line-height:1;}
-  .bundle .now small{font-family:var(--sans);font-size:11.5px;font-weight:600;color:var(--taupe-500);letter-spacing:0.03em;display:block;margin-top:3px;}
+  .bundle .b-bonus{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:12.5px;font-weight:600;color:var(--teal-700);background:var(--wash-teal);border:1px solid var(--teal-200);padding:7px 13px;border-radius:999px;}
+  .bundle .b-bonus::before{content:"+";font-weight:700;color:var(--teal-600);}
+  .bundle .b-buy{flex:0 0 auto;background:var(--grad-blue);color:#fff;padding:24px clamp(22px,3vw,30px);display:flex;flex-direction:column;justify-content:center;gap:10px;min-width:230px;}
+  .bundle .was{font-size:13px;color:rgba(255,255,255,0.7);text-decoration:line-through;}
+  .bundle .now{font-family:var(--display);font-weight:600;font-size:1.8rem;letter-spacing:-0.02em;line-height:1;color:#fff;}
+  .bundle .now small{font-family:var(--sans);font-size:11.5px;font-weight:600;color:rgba(255,255,255,0.82);letter-spacing:0.03em;display:block;margin-top:4px;}
 
-  /* how it works: light editorial split */
-  .how{background:var(--paper);border-top:1px solid var(--border-subtle);}
-  .how .wrap{padding-top:clamp(52px,7vw,88px);padding-bottom:clamp(52px,7vw,88px);display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(28px,5vw,56px);align-items:start;}
+  /* bonus banner */
+  .bonus-band{padding-top:8px;padding-bottom:clamp(40px,5vw,64px);}
+  .bonus{background:var(--grad-vivid);color:#fff;border-radius:22px;padding:clamp(26px,3.5vw,40px);display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px;align-items:center;position:relative;overflow:hidden;box-shadow:0 24px 50px -26px rgba(47,94,82,0.5);}
+  .bonus::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.14);top:-120px;right:60px;}
+  .bonus .tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--forest);background:#fff;padding:5px 12px;border-radius:999px;}
+  .bonus h3{color:#fff;font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:600;letter-spacing:-0.02em;margin-top:14px;}
+  .bonus p{color:rgba(244,241,235,0.86);font-size:15px;margin-top:12px;max-width:48ch;position:relative;z-index:1;}
+  .bonus .b-side{position:relative;z-index:1;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.2);border-radius:16px;padding:22px;}
+  .bonus .b-side .k{font-size:12px;color:rgba(244,241,235,0.7);text-transform:uppercase;letter-spacing:0.14em;font-weight:600;}
+  .bonus .b-side .v{font-family:var(--display);font-weight:500;font-size:1.5rem;margin-top:6px;}
+  .bonus .b-side .n{font-size:13px;color:rgba(244,241,235,0.82);margin-top:8px;line-height:1.5;}
+
+  /* how */
+  .how{background:var(--paper);border-top:1px solid rgba(29,28,33,0.08);}
+  .how .wrap{padding-top:clamp(52px,7vw,84px);padding-bottom:clamp(52px,7vw,84px);display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(28px,5vw,56px);align-items:start;}
   .how h2{font-size:clamp(1.7rem,2.9vw,2.4rem);font-weight:600;letter-spacing:-0.02em;margin:12px 0 16px;}
   .how p{font-size:15.5px;color:var(--text-secondary);line-height:1.62;}
   .how p+p{margin-top:13px;}
-  .currency{background:var(--cream-100);border:1px solid var(--border-subtle);border-radius:16px;padding:24px;}
+  .currency{background:var(--wash-teal);border:1px solid var(--teal-200);border-radius:16px;padding:24px;}
   .currency h4{font-size:1.05rem;font-weight:600;margin-bottom:12px;}
-  .stamp-lg{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--sage);background:rgba(94,122,85,0.10);border:1px solid rgba(94,122,85,0.22);padding:8px 14px;border-radius:999px;}
+  .stamp-lg{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--teal-700);background:#fff;border:1px solid var(--teal-200);padding:8px 14px;border-radius:999px;}
   .stamp-lg .tick{width:8px;height:8px;border-radius:50%;background:var(--sage);}
   .currency ul{margin:14px 0 0;padding:0;list-style:none;}
   .currency li{font-size:14px;color:var(--text-secondary);line-height:1.5;margin-bottom:11px;padding-left:20px;position:relative;}
-  .currency li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--teal-400);}
+  .currency li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--teal-600);}
 
-  /* final CTA: the one big forest moment */
+  /* final */
   .final{background:var(--grad-cta);color:var(--cream-50);}
-  .final .wrap{padding-top:clamp(56px,7vw,92px);padding-bottom:clamp(56px,7vw,92px);text-align:center;}
+  .final .wrap{padding-top:clamp(56px,7vw,88px);padding-bottom:clamp(56px,7vw,88px);text-align:center;}
   .final h2{color:var(--cream-50);font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:500;max-width:22ch;margin:16px auto 0;letter-spacing:-0.02em;}
   .final h2 b{font-weight:600;color:var(--blue-200);}
   .final p{color:rgba(244,241,235,0.82);max-width:52ch;margin:16px auto 0;font-size:15.5px;}
@@ -174,21 +202,23 @@
   footer{background:var(--forest-deep);color:rgba(244,241,235,0.72);}
   footer .wrap{padding-top:40px;padding-bottom:40px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;}
   footer .wordmark{font-size:17px;color:var(--cream-50);}
-  footer .wordmark .bold{color:var(--blue-200);}
   footer a{color:var(--blue-200);}
   footer .fmeta{font-size:13px;line-height:1.6;}
 
   @media (max-width:920px){
-    .hero-grid{grid-template-columns:1fr;gap:34px;}
-    .band .wrap{grid-template-columns:1fr;gap:22px;}
+    .hero-grid{grid-template-columns:1fr;gap:32px;}
+    .band .wrap{grid-template-columns:1fr;}
+    .val{border-left:none;border-top:1px solid rgba(29,28,33,0.07);padding-left:0;padding-right:0;}
+    .val:first-child{border-top:none;}
     .grid{grid-template-columns:repeat(2,1fr);}
     .how .wrap{grid-template-columns:1fr;gap:26px;}
+    .bonus{grid-template-columns:1fr;}
     .nav-links{display:none;}
     .tier-note{display:none;}
   }
   @media (max-width:560px){
     .grid{grid-template-columns:1fr;}
-    .bundle-right{width:100%;justify-content:space-between;}
+    .bundle .b-buy{width:100%;}
   }
   @media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto;}}
 </style>
@@ -221,10 +251,10 @@
         <a href="#families" class="btn btn-primary">Browse courses</a>
         <a href="#start" class="btn btn-ghost">Start with the free course</a>
       </div>
-      <div class="hero-trust">
-        <div class="trust"><b>13</b><span>courses across two programs</span></div>
-        <div class="trust"><b>2</b><span>decades of lived experience</span></div>
-        <div class="trust"><b>AU</b><span>TGA, PBAC, MSAC anchored</span></div>
+      <div class="pricebar">
+        <div class="pill free"><b>Free</b><span>Intro to rare disease</span></div>
+        <div class="pill each"><b>$145</b><span>Each course, flat</span></div>
+        <div class="pill p-bonus"><b>Bonus</b><span>Working with Industry, with any pathway</span></div>
       </div>
     </div>
 
@@ -234,20 +264,18 @@
       <div class="path">
         <div class="step active">
           <div class="node">01</div>
-          <div class="st-body"><div class="st-title">Orientation</div><div class="st-meta">Understand the system. Free.</div></div>
+          <div><div class="st-title">Orientation</div><div class="st-meta">Understand the system. Free.</div></div>
         </div>
         <div class="step">
           <div class="node">02</div>
-          <div class="st-body"><div class="st-title">Partnering</div><div class="st-meta">Research, trials, regulation and HTA.</div></div>
+          <div><div class="st-title">Partnering</div><div class="st-meta">Research, trials, regulation and HTA.</div></div>
         </div>
         <div class="step">
           <div class="node">03</div>
-          <div class="st-body"><div class="st-title">Influence</div><div class="st-meta">Move the system itself.</div></div>
+          <div><div class="st-title">Influence</div><div class="st-meta">Move the system itself.</div></div>
         </div>
       </div>
-      <div class="pc-foot">
-        <span class="stamp"><span class="tick"></span> Content current as at July 2026</span>
-      </div>
+      <div class="pc-foot"><span class="tick"></span> Content current as at July 2026</div>
     </aside>
   </div>
 </header>
@@ -255,17 +283,17 @@
 <section class="band">
   <div class="wrap">
     <div class="val">
-      <div class="vnode"></div>
+      <div class="vnode"><i></i></div>
       <h4>Depth, not overview</h4>
       <p>Correct, current and specific. Distilled from EURORDIS, EUPATI, EUCAPA and Global Genes, then mapped to the TGA, PBAC, MSAC and the National Action Plan.</p>
     </div>
     <div class="val">
-      <div class="vnode"></div>
+      <div class="vnode"><i></i></div>
       <h4>Experience and machinery</h4>
       <p>Two decades as a carer in rare disease, and senior advisory roles in HTA, genomics and consumer engagement. Very few people can teach both.</p>
     </div>
     <div class="val">
-      <div class="vnode"></div>
+      <div class="vnode"><i></i></div>
       <h4>Kept current</h4>
       <p>Rules change; the courses change with them. Every course carries a visible date for when its content was last checked against the law.</p>
     </div>
@@ -278,28 +306,28 @@
       <div>
         <span class="label">Program one</span>
         <h2>Families and advocates</h2>
-        <p>From understanding a diagnosis, to partnering in research and access, to influencing the system. Six courses, three tiers, one wellbeing strand throughout.</p>
+        <p>From understanding a diagnosis, to partnering in research and access, to influencing the system. Start free; every course after is $145.</p>
       </div>
-      <a href="#start" class="btn btn-ghost">Start free</a>
+      <a href="#start" class="btn btn-teal">Start free</a>
     </div>
 
-    <div class="tier">
+    <div class="tier t-teal">
       <div class="tier-head">
         <span class="tier-num">01</span><span class="tier-name">Orientation</span>
         <span class="tier-note">For families finding their feet. No prior knowledge assumed.</span>
       </div>
       <div class="grid">
-        <article class="card">
-          <div class="chd"><span class="cidx">01</span><span class="chip chip-free">Free</span></div>
+        <article class="card feature">
+          <div class="chd"><span class="cidx">01</span><span class="chip free">Free</span></div>
           <h3>Understanding the Rare Disease System</h3>
           <p class="outcome">Map the system, name the people who make the decisions, and place your own experience inside it.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current Jul 2026</span></div>
-          <div class="foot"><span class="price free">Free</span><a href="#start" class="btn btn-primary btn-sm">Start</a></div>
+          <div class="foot"><span class="price free">Free</span><a href="#start" class="btn btn-teal btn-sm">Start</a></div>
         </article>
       </div>
     </div>
 
-    <div class="tier">
+    <div class="tier t-blue">
       <div class="tier-head">
         <span class="tier-num">02</span><span class="tier-name">Partnering</span>
         <span class="tier-note">For advocates ready to sit at a research, regulatory or reimbursement table.</span>
@@ -320,7 +348,7 @@
           <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
         <article class="card">
-          <div class="chd"><span class="cidx">04</span><span class="chip chip-core">Most chosen</span></div>
+          <div class="chd"><span class="cidx">04</span><span class="chip soft">Most chosen</span></div>
           <h3>Access, Regulation and HTA in Australia</h3>
           <p class="outcome">Contribute a consumer input to a PBAC or MSAC process, and appraise the evidence behind a decision.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current Jul 2026</span></div>
@@ -329,7 +357,7 @@
       </div>
     </div>
 
-    <div class="tier">
+    <div class="tier t-green">
       <div class="tier-head">
         <span class="tier-num">03</span><span class="tier-name">Influence</span>
         <span class="tier-note">From individual concern to systemic change.</span>
@@ -343,7 +371,7 @@
           <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
         <article class="card">
-          <div class="chd"><span class="cidx">06</span><span class="chip chip-core">Woven strand</span></div>
+          <div class="chd"><span class="cidx">06</span><span class="chip soft">Woven strand</span></div>
           <h3>Sustaining Yourself in This Work</h3>
           <p class="outcome">Resilience, mental health in context, and boundaries, plus sibling and carer support.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
@@ -353,21 +381,22 @@
     </div>
 
     <div class="bundle">
-      <div>
+      <div class="b-main">
         <span class="label teal">Pathway bundle</span>
         <h3 style="margin-top:9px;">The full families and advocates pathway</h3>
         <p>All six courses, orientation to influence, with the wellbeing strand throughout. Lifetime access, kept current.</p>
+        <span class="b-bonus">Bonus course included: Working with Industry</span>
       </div>
-      <div class="bundle-right">
+      <div class="b-buy">
         <span class="was">$725 singly</span>
         <span class="now">$590<small>AUD, one payment</small></span>
-        <a href="#" class="btn btn-primary">Get the pathway</a>
+        <a href="#" class="btn btn-onforest btn-sm">Get the pathway</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="program" id="orgs" style="background:var(--cream-100);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
+<section class="program" id="orgs" style="background:var(--cream-100);border-top:1px solid rgba(29,28,33,0.08);border-bottom:1px solid rgba(29,28,33,0.08);">
   <div class="wrap">
     <div class="prog-head">
       <div>
@@ -377,7 +406,7 @@
       </div>
     </div>
 
-    <div class="tier">
+    <div class="tier t-teal">
       <div class="tier-head">
         <span class="tier-num">01</span><span class="tier-name">Foundations</span>
         <span class="tier-note">For new or forming groups.</span>
@@ -388,12 +417,12 @@
           <h3>Governance, Compliance and Running an Organisation</h3>
           <p class="outcome">Stand up a compliant, well-governed organisation that survives its founders, with ACNC obligations handled.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
-          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
       </div>
     </div>
 
-    <div class="tier">
+    <div class="tier t-blue">
       <div class="tier-head">
         <span class="tier-num">02</span><span class="tier-name">Sustainability</span>
         <span class="tier-note">Fund the work, and serve the whole community.</span>
@@ -404,19 +433,19 @@
           <h3>Funding and Sustainability</h3>
           <p class="outcome">Fund the work through more than one channel, run the grant lifecycle, and partner inside the Code.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
-          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
         <article class="card">
           <div class="chd"><span class="cidx">03</span></div>
           <h3>Building and Sustaining Community</h3>
           <p class="outcome">Reach and serve a whole community, including the people usually left out, and support the wider family.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
-          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
       </div>
     </div>
 
-    <div class="tier">
+    <div class="tier t-green">
       <div class="tier-head">
         <span class="tier-num">03</span><span class="tier-name">Research readiness</span>
         <span class="tier-note">For groups near research and industry.</span>
@@ -427,19 +456,19 @@
           <h3>Data Assets and Research Readiness</h3>
           <p class="outcome">Design and govern the registries, natural history and data assets that make your community a research partner.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current Jul 2026</span></div>
-          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
         <article class="card">
           <div class="chd"><span class="cidx">05</span></div>
           <h3>Making the Case to Partners and Investors</h3>
           <p class="outcome">Make a credible, evidence-backed case for partnership or investment, and stand up to the questions.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
-          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
       </div>
     </div>
 
-    <div class="tier">
+    <div class="tier t-blue">
       <div class="tier-head">
         <span class="tier-num">04</span><span class="tier-name">Influence &amp; leadership</span>
         <span class="tier-note">Shape the system, and lead without burning out.</span>
@@ -450,28 +479,46 @@
           <h3>Systemic Advocacy and Ecosystem Building</h3>
           <p class="outcome">Run a systemic campaign, lodge an effective submission, and coordinate so capability spreads across the sector.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
-          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
         <article class="card">
-          <div class="chd"><span class="cidx">07</span><span class="chip chip-core">Woven strand</span></div>
+          <div class="chd"><span class="cidx">07</span><span class="chip soft">Woven strand</span></div>
           <h3>Leading Without Burning Out</h3>
           <p class="outcome">Spread leadership beyond one person, and keep your staff and volunteers well in demanding work.</p>
           <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
-          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
         </article>
       </div>
     </div>
 
     <div class="bundle">
-      <div>
+      <div class="b-main">
         <span class="label teal">Pathway and licence</span>
         <h3 style="margin-top:9px;">The full pathway, or seats for your team</h3>
         <p>All seven courses as a pathway, or an organisation licence covering up to ten seats. Often grant-fundable.</p>
+        <span class="b-bonus">Bonus course included: Working with Industry</span>
       </div>
-      <div class="bundle-right">
-        <span class="was">$1,715 singly</span>
-        <span class="now">$990<small>pathway &middot; licence from $2,400</small></span>
-        <a href="#" class="btn btn-primary">Talk about a licence</a>
+      <div class="b-buy">
+        <span class="was">$1,015 singly</span>
+        <span class="now">$790<small>pathway &middot; licence from $2,400</small></span>
+        <a href="#" class="btn btn-onforest btn-sm">Talk about a licence</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="program bonus-band">
+  <div class="wrap">
+    <div class="bonus">
+      <div>
+        <span class="tag">Bonus, included with any pathway</span>
+        <h3>Working with Industry, inside the Code</h3>
+        <p>The course you cannot buy on its own. Partner with pharma and medtech authentically: sponsorship, conflict of interest, and genuine co-design, all inside the Medicines Australia Code of Conduct. It unlocks free the moment you take a full pathway.</p>
+      </div>
+      <div class="b-side">
+        <div class="k">Standalone value</div>
+        <div class="v">$145, included free</div>
+        <div class="n">Added to your library automatically when you buy any families or organisations pathway.</div>
       </div>
     </div>
   </div>
@@ -503,7 +550,7 @@
   <div class="wrap">
     <span class="label on-dark">Start where it costs nothing</span>
     <h2>Begin with the free course, then go <b>as far as you need</b></h2>
-    <p>Understanding the Rare Disease System is free. It is the honest way in: the orientation that makes everything else make sense. Paid courses and pathways follow when you are ready.</p>
+    <p>Understanding the Rare Disease System is free. Every course after is $145, and any full pathway unlocks the Working with Industry bonus.</p>
     <div class="hero-cta">
       <a href="#" class="btn btn-onforest">Start the free course</a>
       <a href="#families" class="btn btn-line-dark">See all courses</a>
@@ -514,7 +561,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <span class="wordmark"><span class="lite">Rare</span> <span class="bold">Intelligence</span></span>
+      <span class="wordmark"><span class="lite">Rare</span> <span class="bold" style="color:var(--blue-200);-webkit-text-fill-color:var(--blue-200);">Intelligence</span></span>
       <p class="fmeta" style="margin-top:8px;">A program of Kris Pierce Consulting &middot; krispierce.com.au</p>
     </div>
     <div class="fmeta" style="text-align:right;">
