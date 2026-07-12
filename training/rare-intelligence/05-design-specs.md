@@ -34,17 +34,24 @@ provided as a self-contained page alongside this blueprint.
 The shelf. It has to make the two programs legible in one glance and route a
 visitor to the right course.
 
-- **Header:** a compact forest-gradient hero (not full height), with the Rare
-  Intelligence wordmark, an overline ("Courses by Kris Pierce Consulting"), an
-  Outfit weight-200 headline, and one line of lead text. Shorter than the home
-  hero; this is a shelf, not a front door.
-- **Program split:** two clear sections, "Families and advocates" and
-  "Organisations", each introduced by an overline and a one-line description.
-- **Course cards:** a responsive grid, Paper white on cream. Each card carries:
-  the tier label as an overline, the course title in Outfit H3, a one-line
-  outcome, a small row of meta (self-paced, module count, "current as at" date),
-  the price, and a primary button. The free intro course card is visually
-  distinct with a Sage 500 "Free" chip.
+- **Header:** light-led, per the five moves in `01-brand-identity.md`. A cream
+  editorial hero split two ways: on the left the eyebrow label (with its leading
+  node), a grounded Outfit headline with the key phrase in Blue 600, lead text,
+  two buttons, and a short trust row; on the right the signature **pathway card**,
+  a contained forest-gradient panel showing the tiers as a node-and-line step
+  diagram. This is the front door and the clearest statement that this is not the
+  consulting home page.
+- **Program split:** two clear programs, "Families and advocates" and
+  "Organisations", each introduced by a label and a one-line description.
+- **Numbered tiers:** within each program, courses are grouped under large
+  numbered tier indices (01 Orientation, 02 Partnering, and so on), each with a
+  hairline rule and a right-aligned tier note. The numbering is a real sequence,
+  not decoration.
+- **Course cards:** a responsive grid of reference-style cards, Paper white on
+  cream, 14px radius, flatter shadow. Each card carries an index numeral, an
+  optional chip (Sage "Free" or Teal "Most chosen"), the course title in Outfit,
+  a one-line outcome, a hairline meta row (self-paced, module count, "current as
+  at" date), the price, and a button.
 - **Bundle callout:** after each program grid, a wider forest-gradient panel
   offering the pathway bundle at its price, with the single-course total shown
   struck through as the anchor.

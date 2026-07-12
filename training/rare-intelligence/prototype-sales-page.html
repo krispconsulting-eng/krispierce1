@@ -14,146 +14,183 @@
     --teal-600:#3D7A6B; --teal-400:#7FA295; --teal-200:#CFE0DA;
     --blue-600:#3E6F8E; --blue-700:#305670; --blue-400:#7FA8C2; --blue-200:#D2E1EA;
     --cream-50:#FBF9F5; --cream-100:#F4F1EB; --cream-200:#ECE7DD; --paper:#FFFFFF;
-    --ink-900:#1C2530; --text-secondary:#4A5C55; --taupe-400:#7E8E87; --taupe-500:#5E706A; --taupe-100:#DDE2DF;
+    --ink-900:#1C2530; --text-secondary:#4A5C55; --taupe-400:#7E8E87; --taupe-500:#5E706A;
+    --taupe-300:#A0ADA7; --taupe-100:#DDE2DF;
     --sage:#5E7A55; --amber:#B5872F; --slate:#4E6373;
     --accent-wash:#E7F0EC;
     --border-subtle:rgba(29,28,33,0.09); --border-default:rgba(29,28,33,0.16); --border-inverse:rgba(244,241,235,0.18);
-    --shadow-card:0 18px 48px -28px rgba(29,28,33,0.30);
     --shadow-sm:0 2px 10px -2px rgba(29,28,33,0.08);
-    --shadow-blue:0 16px 34px -14px rgba(62,111,142,0.65);
+    --shadow-md:0 12px 30px -14px rgba(29,28,33,0.20);
+    --shadow-blue:0 16px 34px -14px rgba(62,111,142,0.55);
     --display:"Outfit","Archivo","Helvetica Neue",Arial,sans-serif;
     --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
-    --grad-hero:linear-gradient(165deg,#1E3D34 0%,#234A52 100%);
+    --grad-forest:linear-gradient(158deg,#1E3D34 0%,#234A52 100%);
     --grad-cta:linear-gradient(165deg,#1E3D34 0%,#1B4A4A 50%,#234A52 100%);
-    --maxw:1240px; --pad:clamp(20px,5vw,72px);
+    --maxw:1200px; --pad:clamp(20px,5vw,64px);
     --ease:cubic-bezier(0.22,1,0.36,1);
   }
   *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
-  body{margin:0;background:var(--cream-50);color:var(--ink-900);font-family:var(--sans);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
-  h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:-0.015em;line-height:1.18;color:var(--ink-900);}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+  body{margin:0;background:var(--cream-50);color:var(--ink-900);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  h1,h2,h3,h4{font-family:var(--display);margin:0;text-wrap:balance;line-height:1.14;color:var(--ink-900);}
   p{margin:0;}
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
-  .overline{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.2em;color:var(--blue-700);margin:0;}
-  .overline.on-dark{color:var(--blue-200);}
 
-  /* nav */
-  .nav{position:sticky;top:0;z-index:20;background:rgba(30,61,52,0.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-inverse);}
-  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;}
-  .brandmark{font-family:var(--display);font-size:20px;color:var(--cream-50);letter-spacing:-0.01em;}
-  .brandmark .lite{font-weight:200;}
-  .brandmark .bold{font-weight:600;color:var(--blue-200);}
-  .nav-parent{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:rgba(244,241,235,0.66);}
-  .nav-links{display:flex;gap:26px;align-items:center;}
-  .nav-links a{font-size:15px;font-weight:500;color:rgba(244,241,235,0.82);}
-  .nav-links a:hover{color:var(--blue-200);}
+  /* signature: label with a leading node */
+  .label{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.2em;color:var(--blue-700);}
+  .label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue-600);box-shadow:0 0 0 4px rgba(62,111,142,0.14);}
+  .label.on-dark{color:var(--blue-200);}
+  .label.on-dark::before{background:var(--blue-200);box-shadow:0 0 0 4px rgba(210,225,234,0.16);}
+  .label.teal{color:var(--teal-600);}
+  .label.teal::before{background:var(--teal-600);box-shadow:0 0 0 4px rgba(61,122,107,0.14);}
+
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-size:15px;font-weight:600;border-radius:999px;padding:13px 26px;border:1px solid transparent;cursor:pointer;transition:transform .2s var(--ease),box-shadow .3s var(--ease),background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);}
   .btn-primary{background:var(--blue-600);color:var(--cream-50);}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-blue);}
   .btn-primary:active{transform:translateY(0) scale(.985);}
-  .btn-outline{background:transparent;color:var(--cream-50);border-color:rgba(251,250,247,0.4);}
-  .btn-outline:hover{border-color:var(--blue-400);color:var(--blue-200);}
   .btn-ghost{background:transparent;color:var(--blue-700);border-color:var(--border-default);}
-  .btn-ghost:hover{border-color:var(--blue-600);color:var(--blue-600);}
-  .btn:focus-visible{outline:3px solid var(--blue-400);outline-offset:2px;}
-  a:focus-visible{outline:3px solid var(--blue-400);outline-offset:2px;border-radius:4px;}
+  .btn-ghost:hover{border-color:var(--blue-600);color:var(--blue-600);transform:translateY(-1px);}
+  .btn-onforest{background:var(--cream-50);color:var(--forest);}
+  .btn-onforest:hover{transform:translateY(-2px);box-shadow:0 16px 34px -14px rgba(0,0,0,0.4);}
+  .btn-line-dark{background:transparent;color:var(--cream-50);border-color:rgba(251,250,247,0.38);}
+  .btn-line-dark:hover{border-color:var(--blue-200);color:var(--blue-200);}
+  .btn:focus-visible,a:focus-visible{outline:3px solid var(--blue-400);outline-offset:2px;}
 
-  /* hero */
-  .hero{background:var(--grad-hero);color:var(--cream-50);position:relative;overflow:hidden;}
-  .hero .wrap{padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(56px,8vw,104px);position:relative;z-index:2;}
-  .hero-mark{font-family:var(--display);font-size:clamp(2.6rem,6.4vw,5rem);line-height:0.98;letter-spacing:-0.035em;margin:18px 0 0;}
-  .hero-mark .lite{font-weight:200;}
-  .hero-mark .bold{font-weight:600;color:var(--blue-200);}
-  .hero-lead{font-size:clamp(1.12rem,1.7vw,1.35rem);line-height:1.55;color:rgba(244,241,235,0.86);max-width:56ch;margin:22px 0 0;}
-  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
-  .hero-arc{position:absolute;top:-120px;right:-120px;width:520px;height:520px;border-radius:50%;border:1.5px solid rgba(127,168,194,0.28);z-index:1;}
-  .hero-arc.two{width:360px;height:360px;top:-40px;right:-40px;border-color:rgba(207,224,218,0.22);}
-  .hero-blob{position:absolute;border-radius:50%;filter:blur(60px);z-index:0;}
-  .hero-blob.a{width:380px;height:380px;background:rgba(63,111,142,0.32);top:-80px;right:120px;}
-  .hero-blob.b{width:300px;height:300px;background:rgba(127,162,149,0.20);bottom:-120px;left:-60px;}
+  /* light nav (distinct from the consulting forest nav) */
+  .nav{position:sticky;top:0;z-index:30;background:rgba(251,249,245,0.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border-subtle);}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .mark{display:flex;align-items:baseline;gap:12px;}
+  .wordmark{font-family:var(--display);font-size:20px;letter-spacing:-0.01em;color:var(--ink-900);}
+  .wordmark .lite{font-weight:300;}
+  .wordmark .bold{font-weight:600;color:var(--blue-600);}
+  .parent{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.18em;color:var(--taupe-400);}
+  .nav-links{display:flex;gap:26px;align-items:center;}
+  .nav-links a{font-size:15px;font-weight:500;color:var(--text-secondary);}
+  .nav-links a:hover{color:var(--blue-600);}
 
-  /* value strip */
-  .values{background:var(--cream-100);border-bottom:1px solid var(--border-subtle);}
-  .values .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:44px;padding-bottom:44px;}
-  .value h4{font-size:1.125rem;font-weight:600;margin-bottom:6px;}
-  .value p{font-size:15px;color:var(--text-secondary);line-height:1.55;}
-  .value .dot{width:34px;height:34px;border-radius:9px;background:var(--accent-wash);display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
-  .value .dot span{width:12px;height:12px;border-radius:3px;background:var(--blue-600);}
-  .value:nth-child(2) .dot span{background:var(--teal-600);}
-  .value:nth-child(3) .dot span{background:var(--sage);}
+  /* hero: light, split, with a contained forest pathway card */
+  .hero{position:relative;overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:clamp(28px,5vw,64px);align-items:center;padding-top:clamp(48px,7vw,88px);padding-bottom:clamp(48px,7vw,88px);}
+  .hero h1{font-size:clamp(2.3rem,4.4vw,3.6rem);letter-spacing:-0.025em;line-height:1.04;margin:20px 0 0;font-weight:400;}
+  .hero h1 b{font-weight:600;color:var(--blue-600);}
+  .hero .lead{font-size:clamp(1.08rem,1.5vw,1.28rem);color:var(--text-secondary);line-height:1.55;max-width:46ch;margin:20px 0 0;}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px;}
+  .hero-trust{display:flex;gap:26px;margin-top:34px;flex-wrap:wrap;}
+  .trust b{font-family:var(--display);font-weight:300;font-size:1.9rem;letter-spacing:-0.02em;color:var(--ink-900);display:block;line-height:1;}
+  .trust span{font-size:12.5px;color:var(--taupe-500);letter-spacing:0.01em;}
 
-  /* sections */
-  section.block{padding-top:clamp(56px,8vw,104px);padding-bottom:clamp(40px,5vw,72px);}
-  .sec-head{max-width:64ch;margin-bottom:36px;}
-  .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.75rem);font-weight:600;margin-top:12px;}
-  .sec-head p{font-size:1.05rem;color:var(--text-secondary);margin-top:12px;}
+  /* the pathway card (signature device) */
+  .pathcard{background:var(--grad-forest);color:var(--cream-50);border-radius:24px;padding:clamp(24px,3vw,34px);box-shadow:var(--shadow-md);position:relative;overflow:hidden;}
+  .pathcard h4{color:var(--cream-50);font-weight:500;font-size:1.05rem;letter-spacing:0.01em;}
+  .pathcard .pc-sub{color:rgba(244,241,235,0.66);font-size:13px;margin-top:4px;}
+  .path{margin-top:22px;display:flex;flex-direction:column;gap:0;}
+  .step{display:grid;grid-template-columns:34px 1fr;gap:14px;position:relative;padding-bottom:20px;}
+  .step:last-child{padding-bottom:0;}
+  .step .node{width:34px;height:34px;border-radius:50%;border:1.5px solid rgba(210,225,234,0.5);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:500;font-size:14px;color:var(--blue-200);background:rgba(255,255,255,0.05);z-index:2;}
+  .step.active .node{background:var(--blue-200);color:var(--forest);border-color:var(--blue-200);}
+  .step::before{content:"";position:absolute;left:16.5px;top:34px;bottom:-2px;width:1.5px;background:linear-gradient(rgba(210,225,234,0.42),rgba(210,225,234,0.12));}
+  .step:last-child::before{display:none;}
+  .step .st-body{padding-top:5px;}
+  .step .st-title{font-weight:500;font-size:15px;color:var(--cream-50);}
+  .step .st-meta{font-size:12.5px;color:rgba(244,241,235,0.6);margin-top:2px;}
+  .pc-foot{margin-top:22px;padding-top:16px;border-top:1px solid rgba(244,241,235,0.14);display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .pc-foot .stamp{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--blue-200);}
+  .pc-foot .stamp .tick{width:7px;height:7px;border-radius:50%;background:var(--sage);}
 
-  /* course grid */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  .card{background:var(--paper);border:1px solid var(--border-subtle);border-radius:20px;box-shadow:var(--shadow-card);padding:24px;display:flex;flex-direction:column;transition:transform .25s var(--ease),box-shadow .25s var(--ease);}
-  .card:hover{transform:translateY(-3px);box-shadow:0 26px 56px -30px rgba(29,28,33,0.36);}
-  .card .toprow{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;}
-  .tier{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--taupe-400);}
-  .chip{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;padding:4px 10px;border-radius:999px;}
-  .chip-free{background:rgba(94,122,85,0.14);color:var(--sage);}
+  /* value band */
+  .band{background:var(--paper);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);}
+  .band .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;padding-top:40px;padding-bottom:40px;}
+  .val h4{font-size:1.08rem;font-weight:600;margin-bottom:7px;letter-spacing:-0.01em;}
+  .val p{font-size:14.5px;color:var(--text-secondary);line-height:1.5;}
+  .val .vnode{width:9px;height:9px;border-radius:50%;background:var(--blue-600);margin-bottom:14px;box-shadow:0 0 0 5px rgba(62,111,142,0.12);}
+  .val:nth-child(2) .vnode{background:var(--teal-600);box-shadow:0 0 0 5px rgba(61,122,107,0.12);}
+  .val:nth-child(3) .vnode{background:var(--sage);box-shadow:0 0 0 5px rgba(94,122,85,0.14);}
+
+  /* program section */
+  section.program{padding-top:clamp(52px,7vw,92px);padding-bottom:clamp(30px,4vw,56px);}
+  .prog-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:8px;}
+  .prog-head h2{font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:600;letter-spacing:-0.02em;margin-top:12px;}
+  .prog-head p{font-size:1rem;color:var(--text-secondary);max-width:52ch;margin-top:10px;}
+
+  /* tier: numbered index (real sequence) */
+  .tier{margin-top:36px;}
+  .tier-head{display:flex;align-items:baseline;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--border-subtle);margin-bottom:22px;}
+  .tier-num{font-family:var(--display);font-weight:300;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-0.03em;color:var(--blue-400);line-height:1;font-variant-numeric:tabular-nums;}
+  .tier-name{font-family:var(--display);font-weight:600;font-size:1.15rem;letter-spacing:0.01em;color:var(--ink-900);}
+  .tier-note{font-size:13.5px;color:var(--taupe-500);margin-left:auto;max-width:40ch;text-align:right;}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  /* reference-card language: tighter radius, flatter, structured, index numeral */
+  .card{background:var(--paper);border:1px solid var(--border-subtle);border-radius:14px;box-shadow:var(--shadow-sm);padding:22px;display:flex;flex-direction:column;transition:border-color .25s var(--ease),box-shadow .25s var(--ease),transform .25s var(--ease);}
+  .card:hover{border-color:var(--blue-400);box-shadow:var(--shadow-md);transform:translateY(-2px);}
+  .card .chd{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px;}
+  .card .cidx{font-family:var(--display);font-weight:300;font-size:1.05rem;color:var(--taupe-300);font-variant-numeric:tabular-nums;letter-spacing:-0.01em;}
+  .chip{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:0.12em;padding:4px 9px;border-radius:6px;}
+  .chip-free{background:rgba(94,122,85,0.13);color:var(--sage);}
   .chip-core{background:var(--accent-wash);color:var(--teal-600);}
-  .card h3{font-size:1.24rem;font-weight:600;letter-spacing:-0.02em;line-height:1.2;}
-  .card .outcome{font-size:14.5px;color:var(--text-secondary);line-height:1.5;margin-top:10px;flex:1;}
-  .card .meta{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:12.5px;color:var(--taupe-500);margin-top:16px;padding-top:14px;border-top:1px solid var(--border-subtle);}
-  .card .meta b{font-weight:600;color:var(--taupe-500);}
-  .card .foot{display:flex;align-items:center;justify-content:space-between;margin-top:16px;}
-  .price{font-family:var(--display);font-weight:600;font-size:1.32rem;letter-spacing:-0.02em;color:var(--ink-900);}
-  .price small{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--taupe-400);letter-spacing:0.04em;}
+  .card h3{font-size:1.16rem;font-weight:600;letter-spacing:-0.015em;line-height:1.22;}
+  .card .outcome{font-size:14px;color:var(--text-secondary);line-height:1.5;margin-top:9px;flex:1;}
+  .card .meta{display:flex;flex-wrap:wrap;gap:6px 12px;font-size:12px;color:var(--taupe-500);margin-top:15px;padding-top:13px;border-top:1px solid var(--border-subtle);}
+  .card .meta b{font-weight:600;}
+  .card .foot{display:flex;align-items:center;justify-content:space-between;margin-top:15px;}
+  .price{font-family:var(--display);font-weight:500;font-size:1.24rem;letter-spacing:-0.02em;color:var(--ink-900);}
+  .price small{font-family:var(--sans);font-size:11.5px;font-weight:600;color:var(--taupe-400);letter-spacing:0.04em;}
   .price.free{color:var(--sage);}
+  .btn-sm{padding:10px 20px;font-size:14px;}
 
-  /* bundle panel */
-  .bundle{background:var(--grad-cta);color:var(--cream-50);border-radius:28px;padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px;margin-top:34px;overflow:hidden;position:relative;}
-  .bundle h3{color:var(--cream-50);font-size:clamp(1.4rem,2.4vw,2rem);font-weight:600;}
-  .bundle p{color:rgba(244,241,235,0.82);font-size:15px;margin-top:8px;max-width:52ch;}
-  .bundle-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
-  .bundle .was{font-size:14px;color:rgba(244,241,235,0.6);text-decoration:line-through;}
-  .bundle .now{font-family:var(--display);font-weight:600;font-size:2.2rem;letter-spacing:-0.03em;line-height:1;}
-  .bundle .now small{font-family:var(--sans);font-size:12px;font-weight:600;color:rgba(244,241,235,0.7);letter-spacing:0.04em;display:block;margin-top:4px;}
+  /* bundle strip: lighter, editorial, node-ruled (not a big dark slab) */
+  .bundle{margin-top:26px;background:var(--cream-100);border:1px solid var(--border-subtle);border-radius:16px;padding:24px clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;}
+  .bundle h3{font-size:1.28rem;font-weight:600;letter-spacing:-0.015em;}
+  .bundle p{font-size:14px;color:var(--text-secondary);margin-top:6px;max-width:54ch;}
+  .bundle-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+  .bundle .was{font-size:13.5px;color:var(--taupe-400);text-decoration:line-through;}
+  .bundle .now{font-family:var(--display);font-weight:500;font-size:1.7rem;letter-spacing:-0.02em;color:var(--ink-900);line-height:1;}
+  .bundle .now small{font-family:var(--sans);font-size:11.5px;font-weight:600;color:var(--taupe-500);letter-spacing:0.03em;display:block;margin-top:3px;}
 
-  /* credibility + currency */
-  .split{display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;align-items:start;}
-  .prose p{font-size:16px;color:var(--text-secondary);line-height:1.62;}
-  .prose p + p{margin-top:14px;}
-  .aside{background:var(--cream-100);border:1px solid var(--border-subtle);border-radius:20px;padding:26px;}
-  .aside h4{font-size:1.05rem;font-weight:600;margin-bottom:12px;}
-  .stamp{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--sage);background:rgba(94,122,85,0.10);border:1px solid rgba(94,122,85,0.22);padding:8px 14px;border-radius:999px;}
-  .stamp .tick{width:8px;height:8px;border-radius:50%;background:var(--sage);}
-  .aside ul{margin:14px 0 0;padding-left:18px;}
-  .aside li{font-size:14.5px;color:var(--text-secondary);line-height:1.5;margin-bottom:8px;}
+  /* how it works: light editorial split */
+  .how{background:var(--paper);border-top:1px solid var(--border-subtle);}
+  .how .wrap{padding-top:clamp(52px,7vw,88px);padding-bottom:clamp(52px,7vw,88px);display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(28px,5vw,56px);align-items:start;}
+  .how h2{font-size:clamp(1.7rem,2.9vw,2.4rem);font-weight:600;letter-spacing:-0.02em;margin:12px 0 16px;}
+  .how p{font-size:15.5px;color:var(--text-secondary);line-height:1.62;}
+  .how p+p{margin-top:13px;}
+  .currency{background:var(--cream-100);border:1px solid var(--border-subtle);border-radius:16px;padding:24px;}
+  .currency h4{font-size:1.05rem;font-weight:600;margin-bottom:12px;}
+  .stamp-lg{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:600;color:var(--sage);background:rgba(94,122,85,0.10);border:1px solid rgba(94,122,85,0.22);padding:8px 14px;border-radius:999px;}
+  .stamp-lg .tick{width:8px;height:8px;border-radius:50%;background:var(--sage);}
+  .currency ul{margin:14px 0 0;padding:0;list-style:none;}
+  .currency li{font-size:14px;color:var(--text-secondary);line-height:1.5;margin-bottom:11px;padding-left:20px;position:relative;}
+  .currency li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--teal-400);}
 
-  /* final cta */
+  /* final CTA: the one big forest moment */
   .final{background:var(--grad-cta);color:var(--cream-50);}
-  .final .wrap{padding-top:clamp(56px,7vw,88px);padding-bottom:clamp(56px,7vw,88px);text-align:center;}
-  .final h2{color:var(--cream-50);font-size:clamp(1.9rem,3.4vw,2.75rem);font-weight:600;max-width:20ch;margin:14px auto 0;}
-  .final p{color:rgba(244,241,235,0.82);max-width:52ch;margin:16px auto 0;}
-  .final .hero-cta{justify-content:center;}
+  .final .wrap{padding-top:clamp(56px,7vw,92px);padding-bottom:clamp(56px,7vw,92px);text-align:center;}
+  .final h2{color:var(--cream-50);font-size:clamp(1.9rem,3.2vw,2.7rem);font-weight:500;max-width:22ch;margin:16px auto 0;letter-spacing:-0.02em;}
+  .final h2 b{font-weight:600;color:var(--blue-200);}
+  .final p{color:rgba(244,241,235,0.82);max-width:52ch;margin:16px auto 0;font-size:15.5px;}
+  .final .hero-cta{justify-content:center;margin-top:28px;}
+  .final .label{justify-content:center;}
 
-  /* footer */
   footer{background:var(--forest-deep);color:rgba(244,241,235,0.72);}
-  footer .wrap{padding-top:44px;padding-bottom:44px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;}
-  footer .brandmark{font-size:17px;}
+  footer .wrap{padding-top:40px;padding-bottom:40px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;}
+  footer .wordmark{font-size:17px;color:var(--cream-50);}
+  footer .wordmark .bold{color:var(--blue-200);}
   footer a{color:var(--blue-200);}
   footer .fmeta{font-size:13px;line-height:1.6;}
 
-  @media (max-width:900px){
-    .values .wrap{grid-template-columns:1fr;gap:22px;}
+  @media (max-width:920px){
+    .hero-grid{grid-template-columns:1fr;gap:34px;}
+    .band .wrap{grid-template-columns:1fr;gap:22px;}
     .grid{grid-template-columns:repeat(2,1fr);}
-    .split{grid-template-columns:1fr;gap:28px;}
+    .how .wrap{grid-template-columns:1fr;gap:26px;}
     .nav-links{display:none;}
+    .tier-note{display:none;}
   }
   @media (max-width:560px){
     .grid{grid-template-columns:1fr;}
-    .bundle-right{text-align:left;align-items:flex-start;}
+    .bundle-right{width:100%;justify-content:space-between;}
   }
-  @media (prefers-reduced-motion:reduce){
-    *{transition:none !important;}
-  }
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;scroll-behavior:auto;}}
 </style>
 </head>
 <body>
@@ -161,122 +198,168 @@
 
 <nav class="nav">
   <div class="wrap">
-    <div style="display:flex;align-items:baseline;gap:14px;">
-      <span class="brandmark"><span class="lite">Rare</span> <span class="bold">Intelligence</span></span>
-      <span class="nav-parent">by Kris Pierce Consulting</span>
+    <div class="mark">
+      <span class="wordmark"><span class="lite">Rare</span> <span class="bold">Intelligence</span></span>
+      <span class="parent">by Kris Pierce Consulting</span>
     </div>
     <div class="nav-links">
       <a href="#families">Families &amp; advocates</a>
       <a href="#orgs">Organisations</a>
       <a href="#how">How it works</a>
-      <a href="#start" class="btn btn-outline" style="padding:9px 20px;">Start free</a>
+      <a href="#start" class="btn btn-primary btn-sm">Start free</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
-  <div class="hero-blob a"></div>
-  <div class="hero-blob b"></div>
-  <div class="hero-arc"></div>
-  <div class="hero-arc two"></div>
-  <div class="wrap">
-    <p class="overline on-dark">Online courses in rare disease capability</p>
-    <h1 class="hero-mark"><span class="lite">Learn the systems that</span><br><span class="bold">decide rare disease outcomes</span></h1>
-    <p class="hero-lead">Courses for families, advocates and the organisations that serve them, built from the major international patient-training programs and anchored to the Australian system. Taught by someone who has sat on both sides of the table.</p>
-    <div class="hero-cta">
-      <a href="#families" class="btn btn-primary">Browse courses</a>
-      <a href="#start" class="btn btn-outline">Start with the free course</a>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="label">Online courses in rare disease capability</span>
+      <h1>Learn the systems that <b>decide rare disease outcomes</b>.</h1>
+      <p class="lead">Courses for families, advocates and the organisations that serve them. Built from the major international patient-training programs, anchored to the Australian system, and taught by someone who has sat on both sides of the table.</p>
+      <div class="hero-cta">
+        <a href="#families" class="btn btn-primary">Browse courses</a>
+        <a href="#start" class="btn btn-ghost">Start with the free course</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust"><b>13</b><span>courses across two programs</span></div>
+        <div class="trust"><b>2</b><span>decades of lived experience</span></div>
+        <div class="trust"><b>AU</b><span>TGA, PBAC, MSAC anchored</span></div>
+      </div>
     </div>
+
+    <aside class="pathcard" aria-label="The families and advocates pathway">
+      <h4>The pathway</h4>
+      <p class="pc-sub">Families and advocates. Start free, climb as far as you need.</p>
+      <div class="path">
+        <div class="step active">
+          <div class="node">01</div>
+          <div class="st-body"><div class="st-title">Orientation</div><div class="st-meta">Understand the system. Free.</div></div>
+        </div>
+        <div class="step">
+          <div class="node">02</div>
+          <div class="st-body"><div class="st-title">Partnering</div><div class="st-meta">Research, trials, regulation and HTA.</div></div>
+        </div>
+        <div class="step">
+          <div class="node">03</div>
+          <div class="st-body"><div class="st-title">Influence</div><div class="st-meta">Move the system itself.</div></div>
+        </div>
+      </div>
+      <div class="pc-foot">
+        <span class="stamp"><span class="tick"></span> Content current as at July 2026</span>
+      </div>
+    </aside>
   </div>
 </header>
 
-<section class="values">
+<section class="band">
   <div class="wrap">
-    <div class="value">
-      <div class="dot"><span></span></div>
+    <div class="val">
+      <div class="vnode"></div>
       <h4>Depth, not overview</h4>
-      <p>Correct, current and specific. Built from EURORDIS, EUPATI, EUCAPA and Global Genes, and mapped to the TGA, PBAC, MSAC and the National Action Plan.</p>
+      <p>Correct, current and specific. Distilled from EURORDIS, EUPATI, EUCAPA and Global Genes, then mapped to the TGA, PBAC, MSAC and the National Action Plan.</p>
     </div>
-    <div class="value">
-      <div class="dot"><span></span></div>
+    <div class="val">
+      <div class="vnode"></div>
       <h4>Experience and machinery</h4>
       <p>Two decades as a carer in rare disease, and senior advisory roles in HTA, genomics and consumer engagement. Very few people can teach both.</p>
     </div>
-    <div class="value">
-      <div class="dot"><span></span></div>
+    <div class="val">
+      <div class="vnode"></div>
       <h4>Kept current</h4>
       <p>Rules change; the courses change with them. Every course carries a visible date for when its content was last checked against the law.</p>
     </div>
   </div>
 </section>
 
-<section class="block" id="families">
+<section class="program" id="families">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="overline">Program one</p>
-      <h2>Families and advocates</h2>
-      <p>From understanding a diagnosis and the system around it, to partnering in research, regulation and access, to influencing the system itself. Start free and climb as far as you want to go.</p>
+    <div class="prog-head">
+      <div>
+        <span class="label">Program one</span>
+        <h2>Families and advocates</h2>
+        <p>From understanding a diagnosis, to partnering in research and access, to influencing the system. Six courses, three tiers, one wellbeing strand throughout.</p>
+      </div>
+      <a href="#start" class="btn btn-ghost">Start free</a>
     </div>
-    <div class="grid">
 
-      <article class="card">
-        <div class="toprow"><span class="tier">Orientation</span><span class="chip chip-free">Free</span></div>
-        <h3>Understanding the Rare Disease System</h3>
-        <p class="outcome">Map the system, name the people who make the decisions, and place your own experience inside it. No prior knowledge needed.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price free">Free</span><a href="#start" class="btn btn-primary" style="padding:11px 22px;">Start</a></div>
-      </article>
+    <div class="tier">
+      <div class="tier-head">
+        <span class="tier-num">01</span><span class="tier-name">Orientation</span>
+        <span class="tier-note">For families finding their feet. No prior knowledge assumed.</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="chd"><span class="cidx">01</span><span class="chip chip-free">Free</span></div>
+          <h3>Understanding the Rare Disease System</h3>
+          <p class="outcome">Map the system, name the people who make the decisions, and place your own experience inside it.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price free">Free</span><a href="#start" class="btn btn-primary btn-sm">Start</a></div>
+        </article>
+      </div>
+    </div>
 
-      <article class="card">
-        <div class="toprow"><span class="tier">Partnering</span></div>
-        <h3>From Lived Experience to Evidence</h3>
-        <p class="outcome">Turn lived experience into evidence a researcher or committee can use, work as a genuine partner, and tell your story safely.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
+    <div class="tier">
+      <div class="tier-head">
+        <span class="tier-num">02</span><span class="tier-name">Partnering</span>
+        <span class="tier-note">For advocates ready to sit at a research, regulatory or reimbursement table.</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="chd"><span class="cidx">02</span></div>
+          <h3>From Lived Experience to Evidence</h3>
+          <p class="outcome">Turn lived experience into evidence a researcher or committee can use, and tell your story safely.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+        <article class="card">
+          <div class="chd"><span class="cidx">03</span></div>
+          <h3>Inside Research and Clinical Trials</h3>
+          <p class="outcome">Read and question a trial, understand endpoints and small-population design, and hold your own.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+        <article class="card">
+          <div class="chd"><span class="cidx">04</span><span class="chip chip-core">Most chosen</span></div>
+          <h3>Access, Regulation and HTA in Australia</h3>
+          <p class="outcome">Contribute a consumer input to a PBAC or MSAC process, and appraise the evidence behind a decision.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+      </div>
+    </div>
 
-      <article class="card">
-        <div class="toprow"><span class="tier">Partnering</span></div>
-        <h3>Inside Research and Clinical Trials</h3>
-        <p class="outcome">Read and question a trial, understand endpoints and small-population design, and hold your own at a research table.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
-
-      <article class="card">
-        <div class="toprow"><span class="tier">Partnering</span><span class="chip chip-core">Most chosen</span></div>
-        <h3>Access, Regulation and HTA in Australia</h3>
-        <p class="outcome">Contribute a consumer input to a PBAC or MSAC process, understand the TGA pathways, and appraise the evidence behind a decision.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
-
-      <article class="card">
-        <div class="toprow"><span class="tier">Influence</span></div>
-        <h3>Advocacy That Moves the System</h3>
-        <p class="outcome">Plan a campaign, write and lodge an effective submission, and use the National Strategic Action Plan as a lever.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
-
-      <article class="card">
-        <div class="toprow"><span class="tier">Wellbeing strand</span></div>
-        <h3>Sustaining Yourself in This Work</h3>
-        <p class="outcome">Resilience, mental health in context, and boundaries, plus sibling and carer support. The work is demanding; this keeps you well in it.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
-
+    <div class="tier">
+      <div class="tier-head">
+        <span class="tier-num">03</span><span class="tier-name">Influence</span>
+        <span class="tier-note">From individual concern to systemic change.</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="chd"><span class="cidx">05</span></div>
+          <h3>Advocacy That Moves the System</h3>
+          <p class="outcome">Plan a campaign, write and lodge an effective submission, and use the National Action Plan as a lever.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+        <article class="card">
+          <div class="chd"><span class="cidx">06</span><span class="chip chip-core">Woven strand</span></div>
+          <h3>Sustaining Yourself in This Work</h3>
+          <p class="outcome">Resilience, mental health in context, and boundaries, plus sibling and carer support.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$145 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+      </div>
     </div>
 
     <div class="bundle">
       <div>
-        <p class="overline on-dark">Pathway bundle</p>
-        <h3 style="margin-top:10px;">The full families and advocates pathway</h3>
-        <p>All six courses, from orientation to influence, with the wellbeing strand throughout. Lifetime access, and the content stays current.</p>
+        <span class="label teal">Pathway bundle</span>
+        <h3 style="margin-top:9px;">The full families and advocates pathway</h3>
+        <p>All six courses, orientation to influence, with the wellbeing strand throughout. Lifetime access, kept current.</p>
       </div>
       <div class="bundle-right">
-        <span class="was">$725 bought singly</span>
+        <span class="was">$725 singly</span>
         <span class="now">$590<small>AUD, one payment</small></span>
         <a href="#" class="btn btn-primary">Get the pathway</a>
       </div>
@@ -284,93 +367,129 @@
   </div>
 </section>
 
-<section class="block" id="orgs" style="background:var(--cream-100);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
+<section class="program" id="orgs" style="background:var(--cream-100);border-top:1px solid var(--border-subtle);border-bottom:1px solid var(--border-subtle);">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="overline">Program two</p>
-      <h2>Organisations</h2>
-      <p>For the people running or building a rare disease patient organisation. Governance and funding, community and data, and the influence to shape the system and share the load across the sector.</p>
+    <div class="prog-head">
+      <div>
+        <span class="label">Program two</span>
+        <h2>Organisations</h2>
+        <p>For the people running or building a rare disease patient organisation. Governance and funding, community and data, and the influence to shape the system.</p>
+      </div>
     </div>
-    <div class="grid">
 
-      <article class="card">
-        <div class="toprow"><span class="tier">Foundations</span></div>
-        <h3>Governance, Compliance and Running an Organisation</h3>
-        <p class="outcome">Stand up or tidy a compliant, well-governed organisation that survives its founders, with ACNC obligations handled.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
+    <div class="tier">
+      <div class="tier-head">
+        <span class="tier-num">01</span><span class="tier-name">Foundations</span>
+        <span class="tier-note">For new or forming groups.</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="chd"><span class="cidx">01</span></div>
+          <h3>Governance, Compliance and Running an Organisation</h3>
+          <p class="outcome">Stand up a compliant, well-governed organisation that survives its founders, with ACNC obligations handled.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+      </div>
+    </div>
 
-      <article class="card">
-        <div class="toprow"><span class="tier">Sustainability</span></div>
-        <h3>Funding and Sustainability</h3>
-        <p class="outcome">Fund the work through more than one channel, run the grant lifecycle, and partner with industry inside the Code.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
+    <div class="tier">
+      <div class="tier-head">
+        <span class="tier-num">02</span><span class="tier-name">Sustainability</span>
+        <span class="tier-note">Fund the work, and serve the whole community.</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="chd"><span class="cidx">02</span></div>
+          <h3>Funding and Sustainability</h3>
+          <p class="outcome">Fund the work through more than one channel, run the grant lifecycle, and partner inside the Code.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+        <article class="card">
+          <div class="chd"><span class="cidx">03</span></div>
+          <h3>Building and Sustaining Community</h3>
+          <p class="outcome">Reach and serve a whole community, including the people usually left out, and support the wider family.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+      </div>
+    </div>
 
-      <article class="card">
-        <div class="toprow"><span class="tier">Sustainability</span></div>
-        <h3>Building and Sustaining Community</h3>
-        <p class="outcome">Reach and serve a whole community, including the people usually left out, and support the wider family.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
+    <div class="tier">
+      <div class="tier-head">
+        <span class="tier-num">03</span><span class="tier-name">Research readiness</span>
+        <span class="tier-note">For groups near research and industry.</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="chd"><span class="cidx">04</span></div>
+          <h3>Data Assets and Research Readiness</h3>
+          <p class="outcome">Design and govern the registries, natural history and data assets that make your community a research partner.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+        <article class="card">
+          <div class="chd"><span class="cidx">05</span></div>
+          <h3>Making the Case to Partners and Investors</h3>
+          <p class="outcome">Make a credible, evidence-backed case for partnership or investment, and stand up to the questions.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+      </div>
+    </div>
 
-      <article class="card">
-        <div class="toprow"><span class="tier">Research readiness</span></div>
-        <h3>Data Assets and Research Readiness</h3>
-        <p class="outcome">Design and govern the registries, natural history and data assets that make your community a credible research partner.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>4 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
-
-      <article class="card">
-        <div class="toprow"><span class="tier">Research readiness</span></div>
-        <h3>Making the Case to Partners and Investors</h3>
-        <p class="outcome">Make a credible, evidence-backed case for partnership or investment, and stand up to the questions that follow.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
-
-      <article class="card">
-        <div class="toprow"><span class="tier">Influence</span></div>
-        <h3>Systemic Advocacy and Ecosystem Building</h3>
-        <p class="outcome">Run a systemic campaign, lodge an effective submission, and coordinate with others so capability spreads across the sector.</p>
-        <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current as at Jul 2026</span></div>
-        <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost" style="padding:11px 22px;">Enrol</a></div>
-      </article>
-
+    <div class="tier">
+      <div class="tier-head">
+        <span class="tier-num">04</span><span class="tier-name">Influence &amp; leadership</span>
+        <span class="tier-note">Shape the system, and lead without burning out.</span>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <div class="chd"><span class="cidx">06</span></div>
+          <h3>Systemic Advocacy and Ecosystem Building</h3>
+          <p class="outcome">Run a systemic campaign, lodge an effective submission, and coordinate so capability spreads across the sector.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+        <article class="card">
+          <div class="chd"><span class="cidx">07</span><span class="chip chip-core">Woven strand</span></div>
+          <h3>Leading Without Burning Out</h3>
+          <p class="outcome">Spread leadership beyond one person, and keep your staff and volunteers well in demanding work.</p>
+          <div class="meta"><span><b>Self-paced</b></span><span>3 modules</span><span>Current Jul 2026</span></div>
+          <div class="foot"><span class="price">$245 <small>AUD</small></span><a href="#" class="btn btn-ghost btn-sm">Enrol</a></div>
+        </article>
+      </div>
     </div>
 
     <div class="bundle">
       <div>
-        <p class="overline on-dark">Pathway and licence</p>
-        <h3 style="margin-top:10px;">The full organisations pathway, or seats for your team</h3>
-        <p>All seven courses as a pathway, or an organisation licence covering up to ten seats across your staff and volunteers. Often grant-fundable.</p>
+        <span class="label teal">Pathway and licence</span>
+        <h3 style="margin-top:9px;">The full pathway, or seats for your team</h3>
+        <p>All seven courses as a pathway, or an organisation licence covering up to ten seats. Often grant-fundable.</p>
       </div>
       <div class="bundle-right">
-        <span class="was">$1,715 bought singly</span>
-        <span class="now">$990<small>AUD pathway &middot; licence from $2,400</small></span>
+        <span class="was">$1,715 singly</span>
+        <span class="now">$990<small>pathway &middot; licence from $2,400</small></span>
         <a href="#" class="btn btn-primary">Talk about a licence</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="block" id="how">
-  <div class="wrap split">
-    <div class="prose">
-      <p class="overline">Why it is credible</p>
-      <h2 style="font-size:clamp(1.7rem,3vw,2.4rem);font-weight:600;margin:12px 0 18px;">Taught from both sides of the table</h2>
-      <p>Rare Intelligence is a program of Kris Pierce Consulting. Kris has been a carer in rare disease for two decades, and has held senior advisory roles in health technology assessment, genomics and consumer engagement. The courses carry both: the lived experience and the machinery of how decisions actually get made.</p>
-      <p>The content is not a generic overview. It is distilled from the major international patient-training programs, EURORDIS, EUPATI, EUCAPA, Global Genes, Genetic Alliance UK and Rare Voices Australia, and then anchored to the Australian system throughout: the TGA, the PBAC and MSAC, the National Strategic Action Plan for Rare Diseases, and the NHMRC involvement standards.</p>
-      <p>There is no launch-week urgency here and no manufactured scarcity. The courses are worth the price because of what you can do at the end of them. That is the whole pitch.</p>
+<section class="how" id="how">
+  <div class="wrap">
+    <div>
+      <span class="label">Why it is credible</span>
+      <h2>Taught from both sides of the table</h2>
+      <p>Rare Intelligence is a program of Kris Pierce Consulting. Kris has been a carer in rare disease for two decades, and has held senior advisory roles in health technology assessment, genomics and consumer engagement. The courses carry both: the lived experience, and the machinery of how decisions actually get made.</p>
+      <p>The content is not a generic overview. It is distilled from the major international patient-training programs, EURORDIS, EUPATI, EUCAPA, Global Genes, Genetic Alliance UK and Rare Voices Australia, then anchored to the Australian system throughout: the TGA, the PBAC and MSAC, the National Strategic Action Plan for Rare Diseases, and the NHMRC involvement standards.</p>
+      <p>There is no launch-week urgency here and no manufactured scarcity. The courses are worth the price because of what you can do at the end of them.</p>
     </div>
-    <aside class="aside">
+    <aside class="currency">
       <h4>Content that stays current</h4>
-      <span class="stamp"><span class="tick"></span> Current as at July 2026</span>
-      <p style="font-size:14.5px;color:var(--text-secondary);margin-top:14px;line-height:1.55;">Most online courses are right on the day they publish and slowly go out of date. These do not. Behind every course:</p>
+      <span class="stamp-lg"><span class="tick"></span> Current as at July 2026</span>
+      <p style="font-size:14px;color:var(--text-secondary);margin-top:14px;line-height:1.55;">Most online courses are right on the day they publish and slowly go out of date. These do not.</p>
       <ul>
         <li>A regulatory watch on the TGA, PBAC, MSAC, ACNC and the National Action Plan.</li>
         <li>Every lesson linked to the rules it depends on, so a change is found and fixed fast.</li>
@@ -382,12 +501,12 @@
 
 <section class="final" id="start">
   <div class="wrap">
-    <p class="overline on-dark">Start where it costs nothing</p>
-    <h2>Begin with the free course, then go as far as you need</h2>
+    <span class="label on-dark">Start where it costs nothing</span>
+    <h2>Begin with the free course, then go <b>as far as you need</b></h2>
     <p>Understanding the Rare Disease System is free. It is the honest way in: the orientation that makes everything else make sense. Paid courses and pathways follow when you are ready.</p>
     <div class="hero-cta">
-      <a href="#" class="btn btn-primary">Start the free course</a>
-      <a href="#families" class="btn btn-outline">See all courses</a>
+      <a href="#" class="btn btn-onforest">Start the free course</a>
+      <a href="#families" class="btn btn-line-dark">See all courses</a>
     </div>
   </div>
 </section>
@@ -395,7 +514,7 @@
 <footer>
   <div class="wrap">
     <div>
-      <span class="brandmark"><span class="lite" style="color:var(--cream-50);">Rare</span> <span class="bold">Intelligence</span></span>
+      <span class="wordmark"><span class="lite">Rare</span> <span class="bold">Intelligence</span></span>
       <p class="fmeta" style="margin-top:8px;">A program of Kris Pierce Consulting &middot; krispierce.com.au</p>
     </div>
     <div class="fmeta" style="text-align:right;">

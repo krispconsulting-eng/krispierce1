@@ -40,24 +40,50 @@ endorses. The relationship is always visible, never hidden.
 
 ## Visual system
 
-Same palette, same fonts, same tokens. Rare Intelligence is distinguished by
-**one deliberate move**, not by a new look.
+Rare Intelligence is a sibling of the consulting brand, not a twin. It keeps the
+same palette and the same fonts, because those are fixed. It earns its own
+identity through temperament and structure. Five deliberate moves together make a
+course page unmistakably its own while staying in the family. The test is simple:
+side by side with krispierce.com.au, it should read as clearly related and
+clearly not the same page.
 
-### The distinguishing move: Blue-led, not Teal-led
+### The five moves
 
-The consulting site leads with Teal 600 as its accent. Rare Intelligence leads
-with **Blue 600 (`#3E6F8E`)** as its primary accent, with Teal as the secondary.
-This is enough to make a course page feel like its own space while staying
-unmistakably within the family. Blue is already the button and focus colour in
-the v3 system, so nothing new is introduced; the emphasis simply shifts.
+1. **Light-led, not dark-led.** The consulting site leads dark: a full
+   forest-gradient hero, atmospheric. Rare Intelligence leads light: a cream,
+   editorial layout with the forest gradient used only in contained accent panels
+   and the final call to action, never as the page ground. It reads as a calm
+   learning product, a field guide, not a practice statement.
+2. **Blue-led accent.** Blue 600 `#3E6F8E` is the primary accent and Teal 600
+   `#3D7A6B` the secondary, the reverse of the consulting site. Both are existing
+   v3 colours; nothing new is introduced, the emphasis simply shifts.
+3. **A signature motif: the pathway.** Learning is a pathway, and the courses are
+   already built in tiers. A recurring node-and-line device carries this: a step
+   diagram in the hero, a small leading node on every eyebrow label, node bullets
+   in lists. It is the ownable graphic that replaces the consulting site's blobs
+   and arcs, and it is drawn in plain CSS and simple SVG, never a heavy asset.
+4. **Numbered tiers.** Courses are grouped under large numbered tier indices
+   (01 Orientation, 02 Partnering, 03 Influence). The numbering is honest: the
+   tiers are a real sequence, so the structure encodes something true. It gives
+   the catalogue a field-guide rhythm the consulting site does not have.
+5. **A tighter, reference-card language.** Where the consulting site uses large,
+   soft, floating cards (24 to 32px radius, deep shadow), Rare Intelligence uses
+   smaller-radius (14px), flatter, more precise cards, each with an index numeral
+   and hairline structure. It signals reference and study, not marketing.
 
-- **Primary accent:** Blue 600 `#3E6F8E` (overlines on light become Blue 700
-  `#305670` for contrast; keep Teal 600 as an option where blue would clash).
-- **Secondary accent:** Teal 600 `#3D7A6B`.
-- **Dark surfaces:** the forest gradient, unchanged.
-  `linear-gradient(165deg, #1E3D34 0%, #234A52 100%)`.
-- **Page background:** Cream 50 `#FBF9F5`, unchanged.
-- **Progress and "current" cues** use the status hues already defined: Sage 500
+Supporting these: a **light nav** (cream ground, dark text) distinct from the
+consulting site's transparent-over-forest nav, so the sibling identity reads from
+the first glance.
+
+### Tokens
+
+- **Primary accent:** Blue 600 `#3E6F8E`; eyebrow labels on light use Blue 700
+  `#305670`.
+- **Secondary accent:** Teal 600 `#3D7A6B`, used for pathway and bundle cues.
+- **Dark surfaces (contained only):** the forest gradient, unchanged,
+  `linear-gradient(158deg, #1E3D34 0%, #234A52 100%)`.
+- **Page ground:** Cream 50 `#FBF9F5`; cards Paper white; section bands Cream 100.
+- **Progress and "current" cues:** the status hues already defined, Sage 500
   `#5E7A55` for complete and for "current as at", Amber 500 `#B5872F` for "review
   due", Slate 500 `#4E6373` for informational notices.
 
@@ -72,9 +98,8 @@ Outfit; see below. No new fonts, ever.
 Set "Rare Intelligence" in Outfit. Two weights give the mark its character
 without a custom logo:
 
-- "Rare" in Outfit weight 200 (light), the same light weight as the hero
-  headline.
-- "Intelligence" in Outfit weight 600 (semibold).
+- "Rare" in Outfit weight 300 (light).
+- "Intelligence" in Outfit weight 600 (semibold), in Blue 600 on light grounds.
 
 The weight contrast alone makes it a mark. On dark surfaces, "Intelligence" may
 take Blue 200 `#D2E1EA` for emphasis, mirroring the hero-headline treatment. This
@@ -133,8 +158,9 @@ not templated from a generic tool. Specification:
 
 ## What not to do
 
-- Do not build a second visual language. One deliberate move (blue-led) is the
-  whole differentiation. Anything more fractures the brand.
+- Do not introduce a new palette or new fonts. The five moves are all
+  temperament and structure; they work precisely because the materials stay the
+  v3 system. Change the materials and it stops being a sibling.
 - Do not drop the parent endorsement to make Rare Intelligence look bigger. The
   parent is the point.
 - Do not use em dashes, motivational language, or launch-marketing urgency
