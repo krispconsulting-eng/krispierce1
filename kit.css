@@ -279,6 +279,10 @@ html { scroll-behavior: smooth; }
 /* Inline form error */
 .contact__error { color:var(--brick-500); font-size:14px; line-height:1.5; margin:0; }
 
+/* One-line collection notice above form submit buttons */
+.form-privacy { color:var(--text-muted); font-size:13px; line-height:1.5; margin:0; }
+.form-privacy a { color:var(--blue-600); font-weight:600; }
+
 /* Honeypot — visually hidden, off-screen, never display:none (bots skip those) */
 .hp-field { position:absolute; left:-9999px; top:auto; width:1px; height:1px; opacity:0;
   pointer-events:none; }
@@ -342,6 +346,8 @@ html { scroll-behavior: smooth; }
 .v3-foot__inner { display:flex; justify-content:space-between; align-items:center;
   gap:20px; flex-wrap:wrap; max-width:1240px; margin:0 auto; padding:0 30px; }
 .v3-foot__mark img { height:52px; width:auto; display:block; }
+.v3-foot__info a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.v3-foot__info a:hover { color:var(--blue-700); }
 
 /* ---------------- V3 Compact Page Header (interior pages) ---------------- */
 .v3-page-header { background:var(--cream-50); padding:120px 0 0; position:relative; }

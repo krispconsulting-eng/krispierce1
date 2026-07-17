@@ -58,6 +58,8 @@
   max-width: 64ch; text-wrap: pretty; }
 .page-prose + .page-prose { margin-top: 4px; }
 .page-prose strong { color: var(--text-primary); font-weight: 600; }
+.page-prose a { color: var(--blue-700); font-weight: 600; text-decoration: none; }
+.page-prose a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .page-divider { max-width: var(--container-max); margin: 0 auto;
   border: 0; border-top: 1px solid var(--border-subtle);
   width: calc(100% - 2*var(--container-pad)); }
