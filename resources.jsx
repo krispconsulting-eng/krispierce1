@@ -84,6 +84,7 @@ function ResGate({ item, onClose }) {
                 <p className="contact__error" role="alert">Sorry, that didn't send. Please try again, or email
                   <a href="mailto:info@krispierce.com.au"> info@krispierce.com.au</a>.</p>
               )}
+              <p className="form-privacy">By submitting, you agree to our <a href="/privacy">Privacy Statement</a>.</p>
               <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Get the ' + item.kind.toLowerCase()}</Button>
             </form>
           </React.Fragment>

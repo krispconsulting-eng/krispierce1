@@ -21,6 +21,7 @@ export default defineConfig({
         portfolio: 'portfolio.html',
         resources: 'resources.html',
         contact: 'contact.html',
+        privacy: 'privacy.html',
       },
     },
   },

@@ -162,6 +162,7 @@ function Contact() {
               <p className="contact__error" role="alert">Sorry, that didn't send. Please try again, or email
                 <a href="mailto:info@krispierce.com.au"> info@krispierce.com.au</a>.</p>
             )}
+            <p className="form-privacy">By submitting, you agree to our <a href="/privacy">Privacy Statement</a>.</p>
             <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Send message'}</Button>
           </form>
         )}
@@ -177,7 +178,7 @@ function Footer() {
         <a href="/" className="v3-foot__mark" aria-label="Kris Pierce Consulting">
           <img src="/assets/logo-wordmark.png" alt="Kris Pierce Consulting" />
         </a>
-        <div className="v3-foot__info">krispierce.com.au · Sunshine Coast, Queensland · © {new Date().getFullYear()}</div>
+        <div className="v3-foot__info">krispierce.com.au · Sunshine Coast, Queensland · © {new Date().getFullYear()} · <a href="/privacy">Privacy</a></div>
       </div>
     </footer>
   );

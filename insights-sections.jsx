@@ -175,11 +175,14 @@ function InsSubscribe() {
                 <span>Thank you. You are on the list, and I will keep it worth your while.</span>
               </div>
             ) : (
-              <form className="ins-sub__row" onSubmit={submit}>
-                <Field label="Email" type="email" required placeholder="you@organisation.org"
-                  value={email} onChange={(e)=>setEmail(e.target.value)} />
-                <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Subscribe'}</Button>
-              </form>
+              <React.Fragment>
+                <p className="ins-sub__note ins-sub__note--pre">By submitting, you agree to our <a href="/privacy">Privacy Statement</a>.</p>
+                <form className="ins-sub__row" onSubmit={submit}>
+                  <Field label="Email" type="email" required placeholder="you@organisation.org"
+                    value={email} onChange={(e)=>setEmail(e.target.value)} />
+                  <Button arrow disabled={status === 'sending'}>{status === 'sending' ? 'Sending…' : 'Subscribe'}</Button>
+                </form>
+              </React.Fragment>
             )}
             {status === 'error' && <p className="ins-sub__note" role="alert" style={{ color: 'var(--brick-500)' }}>Sorry, that didn't send. Please try again.</p>}
             {!sent && status !== 'error' && <p className="ins-sub__note">For people working in health, industry, and advocacy. I do not share your address.</p>}
