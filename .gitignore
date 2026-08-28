@@ -5,3 +5,6 @@ dist/
 
 # Raw image dump from the design handoff — not used by the live site
 project/uploads/
+
+# Seeded design-canvas output (generated from the .dc.html sources; ~2 MB)
+figures/**/national-collaborative-figure.html
