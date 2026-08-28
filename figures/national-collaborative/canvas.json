@@ -1,6 +1,7 @@
 {
   "artboards": [
-    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1180, "h": 820, "title": "Figure 1", "print": "fixed" }
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1180, "h": 820, "title": "Figure 1", "print": "fixed" },
+    { "file": "CaseForChange.dc.html", "x": 1280, "y": 0, "w": 794, "h": 1123, "title": "Case for change", "print": "fixed" }
   ],
-  "launch": { "view": "focused", "file": "Main.dc.html" }
+  "launch": { "view": "canvas" }
 }
