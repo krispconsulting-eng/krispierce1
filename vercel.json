@@ -6,6 +6,8 @@
   "redirects": [
     { "source": "/methods", "destination": "/engagement/expertise", "permanent": true },
     { "source": "/expertise", "destination": "/engagement/expertise", "permanent": true },
-    { "source": "/insights", "destination": "/engagement/insights", "permanent": true }
+    { "source": "/insights", "destination": "/engagement/insights", "permanent": true },
+    { "source": "/consulting", "destination": "/work-with-me", "permanent": false },
+    { "source": "/advisory", "destination": "/work-with-me", "permanent": false }
   ]
 }

@@ -10,6 +10,7 @@ import '../tokens/typography.css';
 import '../kit.css';
 import '../pages.css';
 import '../spectrum.css';
+import '../service-pages.css';
 
 import '../primitives.jsx';
 import '../sections.jsx';
@@ -18,4 +19,6 @@ import '../pages.jsx';
 import '../work-with-me.jsx';
 import '../privacy.jsx';
 import '../spectrum.jsx';
+import '../service-pages-data.js';
+import '../service-pages.jsx';
 import '../pages-app.jsx';

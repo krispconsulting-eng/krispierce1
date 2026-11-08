@@ -7,25 +7,25 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
-  <title>Kris Pierce | Consumer Engagement, Health Research &amp; Advocacy</title>
-  <meta name="description" content="Kris Pierce partners with health organisations, industry, and not-for-profits on consumer and community engagement and health research, with advocacy training, not-for-profit mentoring, and a caregiving program to come. Two decades of lived experience and professional rigour." />
-  <meta name="keywords" content="consumer engagement, community engagement, health research, patient advocacy, advocate training, not-for-profit mentoring, caregiver support, rare disease, health policy, co-design, participatory research, Australia" />
+  <title>Kris Pierce Consulting | Strategic engagement across health and research systems</title>
+  <meta name="description" content="Strategic engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
+  <meta name="keywords" content="consumer engagement, patient engagement, health technology assessment, HTA, rare disease, health policy, clinical trial readiness, lived experience, consulting, Australia" />
   <meta name="author" content="Kris Pierce" />
   <link rel="canonical" href="https://krispierce.com.au/" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <meta name="theme-color" content="#1C2530" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kris Pierce" />
-  <meta property="og:title" content="Kris Pierce | Consumer Engagement, Health Research &amp; Advocacy" />
-  <meta property="og:description" content="Consumer and community engagement and health research that put the person at the centre, with advocacy training, not-for-profit mentoring, and a caregiving program to come. Two decades of lived experience and professional rigour." />
+  <meta property="og:title" content="Kris Pierce Consulting | Strategic engagement across health and research systems" />
+  <meta property="og:description" content="Strategic engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
   <meta property="og:url" content="https://krispierce.com.au/" />
   <meta property="og:image" content="https://krispierce.com.au/assets/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_AU" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kris Pierce | Consumer Engagement, Health Research &amp; Advocacy" />
-  <meta name="twitter:description" content="Consumer and community engagement and health research that put the person at the centre, with advocacy training, not-for-profit mentoring, and a caregiving program to come." />
+  <meta name="twitter:title" content="Kris Pierce Consulting | Strategic engagement across health and research systems" />
+  <meta name="twitter:description" content="Strategic engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
   <meta name="twitter:image" content="https://krispierce.com.au/assets/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -167,7 +167,7 @@
   .hero svg.arcs{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.6}
   .hero .wrap{position:relative;z-index:3;width:100%}
   .hero .kicker{color:var(--blue-200);letter-spacing:.22em}
-  .hero h1{font-family:var(--display);font-weight:200;font-size:clamp(2.55rem,6.45vw,5.4rem);line-height:.94;letter-spacing:-.035em;margin:24px 0 0;max-width:15ch}
+  .hero h1{font-family:var(--display);font-weight:200;font-size:clamp(2.3rem,5.1vw,4.4rem);line-height:.98;letter-spacing:-.035em;margin:24px 0 0;max-width:19ch}
   .hero h1 b{font-weight:600;color:var(--blue-200)}
   .hero .lead{font-size:clamp(1.15rem,1.8vw,1.4rem);color:rgba(251,250,247,.84);max-width:52ch;margin:30px 0 38px;font-weight:400;line-height:1.55}
   .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
@@ -275,6 +275,71 @@
   /* ---- DIVIDER ---- */
   .divider{height:1px;background:linear-gradient(90deg,transparent,var(--taupe-200) 20%,var(--taupe-200) 80%,transparent);margin:0 auto;max-width:var(--maxw)}
 
+  /* ---- PORTRAIT (About) ---- */
+  .about .portrait{justify-self:center;width:100%;max-width:360px}
+  .about .portrait .photo{aspect-ratio:2/3}
+  .about .portrait figcaption{margin-top:14px;font-size:13px;color:var(--taupe-500);letter-spacing:.02em}
+
+  /* ---- LISTS (publications, committees, leadership) ---- */
+  .list-sec{padding:48px 0 16px}
+  .list-grid{display:grid;grid-template-columns:.3fr .7fr;gap:clamp(24px,5vw,72px);align-items:start}
+  .list-label{padding-top:22px}
+  .list{list-style:none;border-top:1px solid var(--taupe-200)}
+  .list li{display:grid;grid-template-columns:132px 1fr;gap:clamp(16px,3vw,32px);padding:20px 0;border-bottom:1px solid var(--taupe-200);align-items:baseline}
+  .list .yr{font-family:var(--display);font-weight:300;font-size:1.05rem;letter-spacing:-.01em;color:var(--teal-600);white-space:nowrap}
+  .list .t{font-weight:500;font-size:17px;line-height:1.45;color:var(--ink);max-width:62ch}
+  .list .v{margin-top:4px;font-size:14.5px;color:var(--taupe-500)}
+  .list--wide{margin-top:0}
+  .quals{margin-top:36px}
+  .tags{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+  .tags li{display:inline-flex;align-items:center;padding:10px 17px;border-radius:999px;background:#E7F0EC;color:var(--teal-700);border:1px solid var(--teal-200);font-weight:500;font-size:14.5px;line-height:1}
+
+  /* ---- WHAT I DO (static rows) ---- */
+  .sec-head.wide h2{max-width:30ch;font-size:clamp(1.7rem,3.2vw,2.6rem)}
+  .sec-head + .index{margin-top:0}
+  .row-item.static{grid-template-columns:auto 1fr;cursor:default}
+  .row-item.static:hover{background:none;padding-left:6px;padding-right:6px}
+  .row-item.static:hover .num{color:var(--teal-400)}
+  .index.in .row-item:nth-child(4){transition-delay:.46s}
+
+  /* ---- STATEMENT ---- */
+  .statement-sec{padding:40px 0 96px}
+  .statement{background:linear-gradient(165deg,var(--forest) 0%,#234A52 100%);color:var(--cream-50);border-radius:var(--r-panel);padding:clamp(40px,6vw,84px) clamp(28px,5vw,72px);box-shadow:0 20px 48px -18px rgba(29,28,33,.3)}
+  .statement .overline{color:var(--blue-200)}
+  .statement .st-lead{font-family:var(--display);font-weight:200;font-size:clamp(1.6rem,3.4vw,2.7rem);line-height:1.1;letter-spacing:-.025em;max-width:24ch;margin-top:18px}
+  .statement .st-lead + .st-lead{margin-top:8px;color:var(--blue-200)}
+  .statement .st-body{margin-top:32px;max-width:60ch;font-size:clamp(1.05rem,1.5vw,1.2rem);line-height:1.6;color:rgba(251,250,247,.82)}
+
+  /* ---- SELECTED WORK (cards) ---- */
+  .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .card{display:flex;flex-direction:column;gap:12px;background:var(--paper);border:1px solid var(--taupe-100);border-radius:22px;padding:30px 32px 28px;color:inherit;box-shadow:0 12px 30px -22px rgba(29,28,33,.28);transition:transform .35s cubic-bezier(.32,.72,0,1),box-shadow .35s cubic-bezier(.32,.72,0,1),border-color .25s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -22px rgba(29,28,33,.3);border-color:var(--teal-200)}
+  .card .tag{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--teal-600)}
+  .card h3{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.1vw,1.65rem);letter-spacing:-.02em;line-height:1.15}
+  .card p{color:var(--taupe-600);font-size:15.5px;line-height:1.6}
+  .card .more{margin-top:auto;padding-top:8px;font-weight:600;font-size:15px;color:var(--blue-700)}
+
+  /* ---- SPEAKING & CONVENING ---- */
+  .speaking-sec{padding:72px 0}
+  .speaking{border-top:1px solid var(--taupe-200);padding-top:48px}
+  .speaking .overline{margin-bottom:6px}
+  .speaking__text{font-family:var(--display);font-weight:200;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.18;letter-spacing:-.02em;max-width:34ch;margin-top:10px}
+
+  /* ---- INSIGHTS (post rows) ---- */
+  .posts{border-top:1px solid var(--taupe-200)}
+  .post{display:grid;grid-template-columns:150px 1fr auto;gap:28px;align-items:center;padding:26px 6px;border-bottom:1px solid var(--taupe-200);color:inherit;transition:background .3s,padding .3s}
+  .post:hover{background:var(--cream-100);padding-left:18px;padding-right:18px}
+  .post .date{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--taupe-500)}
+  .post h3{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,2vw,1.5rem);letter-spacing:-.02em;line-height:1.2}
+  .post .go{font-family:var(--display);font-size:1.4rem;color:var(--teal-600);transition:transform .3s cubic-bezier(.16,1,.3,1),color .3s}
+  .post:hover .go{transform:translateX(8px);color:var(--blue-600)}
+
+  /* ---- CTA details ---- */
+  .cta-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 36px;margin-top:30px;max-width:640px}
+  .cta-facts dt{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.2em;color:var(--blue-200)}
+  .cta-facts dd{margin-top:4px;color:rgba(251,250,247,.86);font-size:15.5px;line-height:1.5}
+  .cta-facts a{color:var(--cream-50);text-decoration:underline;text-underline-offset:3px}
+
   /* ---- REVEAL SYSTEM ---- */
   .reveal{opacity:0;transform:translateY(24px);filter:blur(4px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1),filter .9s ease}
   .reveal.in{opacity:1;transform:none;filter:blur(0)}
@@ -304,6 +369,14 @@
     .about{grid-template-columns:1fr}
     .how-grid{grid-template-columns:1fr}
     .links{display:none}
+    .list-grid{grid-template-columns:1fr;gap:6px}
+    .list-label{padding-top:0}
+    .list li{grid-template-columns:1fr;gap:4px}
+    .cards{grid-template-columns:1fr}
+    .post{grid-template-columns:1fr;gap:6px}
+    .post .go{display:none}
+    .cta-facts{grid-template-columns:1fr}
+    .statement-sec{padding-bottom:72px}
   }
   @media(prefers-reduced-motion:reduce){
     .reveal,.reveal-left,.reveal-right,.reveal-scale{opacity:1;transform:none;filter:none;transition:none}
@@ -347,106 +420,206 @@
     </g>
   </svg>
   <div class="wrap">
-    <span class="overline kicker hero-text-reveal" style="color:var(--blue-200)">Healthcare engagement practice</span>
-    <h1 class="hero-text-reveal">Strengthening <b>engagement</b> and capacity</h1>
-    <p class="lead hero-text-reveal">Drawing on two decades of lived and professional experience to support advocacy, leadership, and meaningful participation.</p>
+    <span class="overline kicker hero-text-reveal" style="color:var(--blue-200)">Consulting</span>
+    <h1 class="hero-text-reveal">Strategic <b>engagement</b> across health and research systems.</h1>
+    <p class="lead hero-text-reveal">Connecting systems, evidence, and lived experience to deliver outcomes that hold.</p>
     <div class="hero-actions hero-text-reveal">
-      <a href="/contact" class="btn btn-blue">Start a conversation</a>
-      <a href="/work-with-me" class="btn btn-out-light">See how I work</a>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="track">
-    <span>Insights</span><span>Patient-centred outcomes</span><span>Flexible methodology</span><span>Co-design</span><span>Participatory research</span><span>Together, we discover what works</span>
-    <span>Insights</span><span>Patient-centred outcomes</span><span>Flexible methodology</span><span>Co-design</span><span>Participatory research</span><span>Together, we discover what works</span>
-  </div>
-</div>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="wrap">
-    <div class="ledger stagger reveal">
-      <div><div class="fig">20+ years</div><div class="cap">Lived experience and practice</div></div>
-      <div><div class="fig">Co-design</div><div class="cap">Communities as collaborators</div></div>
-      <div><div class="fig">Participatory</div><div class="cap">Research that includes people</div></div>
-      <div><div class="fig">Independent</div><div class="cap">A practice, not a panel</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW I WORK -->
-<section class="how-i-work" id="work">
-  <div class="wrap">
-    <div class="how-grid">
-      <h2 class="reveal">One consulting practice, <b>many ways in</b></h2>
-      <div class="reveal">
-        <p class="how-body">Everything I offer comes from the same place: what I've learnt through life and work about putting people at the centre. Whether it's strengthening engagement, building the evidence base, training the next generation of advocates, or supporting carers and small organisations to find their feet, it's all one practice.</p>
-        <a href="/work-with-me" class="btn btn-blue" style="margin-top:26px">See how we can work together &rarr;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES INDEX -->
-<section style="padding-top:60px">
-  <div class="wrap opener reveal">
-    <span class="overline">What I do</span>
-    <h2>Insights that <b>change the outcomes.</b></h2>
-  </div>
-  <div class="wrap">
-    <div class="index stagger reveal">
-      <a class="row-item" href="/engagement"><div class="num">01</div><div><h3>Consumer and community engagement</h3><p>Engagement that genuinely includes people, from advisory work to co-designed research. Built with communities, never about them.</p></div><div class="go">&rarr;</div></a>
-      <a class="row-item" href="/engagement/insights"><div class="num">02</div><div><h3>Health research partnership</h3><p>Participatory and co-design methods that bring the patient perspective into study design, endpoints and evidence, with the rigour funders and regulators expect.</p></div><div class="go">&rarr;</div></a>
-      <div class="row-item"><div class="num">03</div><div><h3>Advocacy training and mentoring</h3><p>Practical support for advocates and not-for-profit teams who want to be effective in the rooms where health decisions are made.</p></div><div class="go">&rarr;</div></div>
+      <a href="/work-with-me" class="btn btn-blue">Work with me</a>
+      <a href="/engagement/insights" class="btn btn-out-light">View insights &rarr;</a>
     </div>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section>
+<section id="about-kris" style="padding:0">
   <div class="wrap">
     <div class="about">
       <div class="reveal-left">
         <span class="overline">About Kris</span>
-        <h2>Consulting grounded in what I've lived, not just what I've studied</h2>
-        <p>I've been the carer in the waiting room, the advocate at the table, the consultant redesigning the process, and the researcher building the evidence. That combination is what I bring to every engagement.</p>
-        <p>My consulting practice exists to level up engagement, build capacity in organisations and communities, and support the emerging leaders and carers who will carry this work forward.</p>
+        <h2>Fifteen years of senior leadership in consumer and patient engagement, rare disease advocacy, and research translation.</h2>
+        <p>Lived experience applied through strategic and system-level thinking, embedded in the research, regulation, and policy work that shapes how decisions get made.</p>
         <a href="/about" class="btn btn-out" style="margin-top:24px">More about Kris &rarr;</a>
       </div>
-      <div class="photo reveal-right">
-        <img src="/assets/kris-towerbridge.jpg" alt="Kris Pierce" />
-      </div>
+      <figure class="portrait reveal-right">
+        <div class="photo"><img src="/assets/kris-portrait.jpg" alt="Portrait of Kris Pierce" width="360" height="540" /></div>
+        <figcaption>Kris Pierce · Sunshine Coast, Queensland</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- IN THEIR WORDS -->
-<section style="padding-top:20px;padding-bottom:72px">
+<!-- SELECTED PUBLICATIONS -->
+<section class="list-sec" id="publications">
   <div class="wrap">
-    <div class="reveal-scale">
-      <div class="speech-bubble">
-        <span class="overline">In their words</span>
-        <p class="quote">"Kris brought a unique combination of lived experience and professional expertise, alongside a deep understanding of the rare epilepsy community, which helped us shape an engaging, inclusive, and meaningful agenda."</p>
-      </div>
-      <p class="speech-attrib"><strong>Donna Walsh, CEO</strong><br/>International Bureau for Epilepsy, Rare Epilepsy Leaders Global Convening</p>
+    <div class="list-grid">
+      <div class="list-label reveal-left"><span class="overline">Selected publications</span></div>
+      <ol class="list reveal">
+        <li><span class="yr">2025</span><div><p class="t">‘Just realising I wasn’t alone… was profound’: a mixed-methods evaluation of a pilot peer-to-peer wellbeing program for carers of children with rare epilepsies.</p><p class="v">Orphanet Journal of Rare Diseases · first author</p></div></li>
+        <li><span class="yr">2025</span><div><p class="t">An alternative model for patient capacity development to participate in health technology assessment.</p><p class="v">International Journal of Technology Assessment in Health Care · first author</p></div></li>
+        <li><span class="yr">2025</span><div><p class="t">Early and often: reimagining patient community engagement to improve clinical trials feasibility.</p><p class="v">Global Genes White Paper · co-author</p></div></li>
+        <li><span class="yr">2025</span><div><p class="t">Fulfilling the needs of caregivers in delivering health services to children with developmental and epileptic encephalopathies.</p><p class="v">European Journal of Paediatric Neurology</p></div></li>
+        <li><span class="yr">2023</span><div><p class="t">Quality of life in caregivers of a child with a developmental and epileptic encephalopathy.</p><p class="v">Developmental Medicine &amp; Child Neurology</p></div></li>
+        <li><span class="yr">2022</span><div><p class="t">The impact of COVID-19 on families of children with chronic illness.</p><p class="v">PLOS ONE</p></div></li>
+        <li><span class="yr">2021</span><div><p class="t">How to plan and conduct telehealth consultations with children and adolescents.</p><p class="v">World Health Organisation · contributor</p></div></li>
+      </ol>
     </div>
   </div>
 </section>
 
+<!-- COMMITTEE & ADVISORY ROLES -->
+<section class="list-sec" id="committees">
+  <div class="wrap">
+    <div class="list-grid">
+      <div class="list-label reveal-left"><span class="overline">Committee &amp; advisory roles</span></div>
+      <ol class="list reveal">
+        <li><span class="yr">From 2025</span><div><p class="t">Task Force on Regulatory Convergence</p><p class="v">International Rare Diseases Research Consortium (IRDiRC)</p></div></li>
+        <li><span class="yr">From 2023</span><div><p class="t">Australian Response Steering Committee, Intersectoral Global Action Plan on Epilepsy &amp; Other Neurological Disorders</p><p class="v">World Health Organisation IGAP</p></div></li>
+        <li><span class="yr">From 2023</span><div><p class="t">Board of Management, Global Epilepsy Research Alliance</p><p class="v">International</p></div></li>
+        <li><span class="yr">From 2023</span><div><p class="t">Community Council · ILAE Care Pathways Task Force</p><p class="v">International Bureau of Epilepsy</p></div></li>
+        <li><span class="yr">From 2023</span><div><p class="t">Rare Disease &amp; Patient Involvement Committees</p><p class="v">Health Technology Assessment International (HTAi)</p></div></li>
+        <li><span class="yr">From 2021</span><div><p class="t">Peer &amp; Consumer Grant Assessor</p><p class="v">NHMRC · Medical Research Future Fund</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
 
-<!-- CTA -->
-<section style="padding:0">
+<!-- WHAT I DO -->
+<section id="what-i-do" style="padding-top:72px">
+  <div class="wrap">
+    <div class="sec-head wide reveal">
+      <span class="overline">What I do</span>
+      <h2>Four ways the practice supports <span style="white-space:nowrap">decision-makers</span> in <b>complex health environments.</b></h2>
+    </div>
+    <div class="index stagger reveal">
+      <div class="row-item static"><div class="num">01</div><div><h3>Strategic consulting</h3><p>Embedding lived experience into policy, research, and system design so decisions are informed, feasible, and grounded in real-world conditions.</p></div></div>
+      <div class="row-item static"><div class="num">02</div><div><h3>Consumer &amp; patient engagement</h3><p>Designing meaningful, evidence-based engagement approaches that move beyond tokenism and influence the decisions that matter.</p></div></div>
+      <div class="row-item static"><div class="num">03</div><div><h3>Health systems &amp; HTA</h3><p>Supporting evidence readiness and consumer integration across regulatory, reimbursement, and clinical decision-making.</p></div></div>
+      <div class="row-item static"><div class="num">04</div><div><h3>Speaking &amp; facilitation</h3><p>Translating complexity into clear, actionable insight for boards, committees, conferences, and cross-sector working groups.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section class="statement-sec">
+  <div class="wrap">
+    <div class="statement reveal-scale">
+      <span class="overline">Why it matters</span>
+      <p class="st-lead">Health systems are not designed for complexity.</p>
+      <p class="st-lead">Patients and families are often required to navigate what the system cannot see.</p>
+      <p class="st-body">I work at the intersection of lived experience and system design, ensuring decisions are grounded in reality, not assumption, and that engagement is structured to change something, not simply to be recorded.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head wide reveal">
+      <span class="overline">Leadership</span>
+      <h2>Senior leadership across research alliances, advocacy, and <b>rare disease.</b></h2>
+      <p class="sec-sub">Director and founder-level appointments that have built consumer engagement infrastructure across national research networks, rare disease communities, and paediatric health services.</p>
+    </div>
+    <ol class="list list--wide reveal">
+      <li><span class="yr">Current</span><div><p class="t">Strategic Lead, Consumer and Community Engagement</p><p class="v">Rare Diseases NSW · UNSW Sydney</p></div></li>
+      <li><span class="yr">From 2020</span><div><p class="t">Director, Consumer Involvement</p><p class="v">Child Unlimited · UNSW</p></div></li>
+      <li><span class="yr">2019 to present</span><div><p class="t">Founder &amp; Director</p><p class="v">SCN2A Australia</p></div></li>
+      <li><span class="yr">2021 to 2024</span><div><p class="t">Rare Epilepsy Lead</p><p class="v">Epilepsy Foundation</p></div></li>
+      <li><span class="yr">2019 to 2024</span><div><p class="t">Chair, Rare Global Advocacy Leadership Council</p><p class="v">Global Genes</p></div></li>
+      <li><span class="yr">2017 to 2023</span><div><p class="t">Co-Founder &amp; Lead</p><p class="v">Genetic Epilepsy Team Australia (GETA)</p></div></li>
+      <li><span class="yr">2021 to 2023</span><div><p class="t">Co-Chair, Consumer Advisory Council</p><p class="v">Royal Children’s Hospital, Melbourne</p></div></li>
+    </ol>
+    <div class="quals reveal">
+      <span class="overline">Qualifications &amp; recognition</span>
+      <ul class="tags">
+        <li>Master of Health Science</li>
+        <li>Master of Wellness</li>
+        <li>GAICD</li>
+        <li>Victorian Women’s Honour Roll · 2022</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTED WORK -->
+<section id="selected-work" style="padding-top:72px">
+  <div class="wrap">
+    <div class="sec-head wide reveal">
+      <span class="overline">Selected work</span>
+      <h2>Where the practice has <b>been applied.</b></h2>
+      <p class="sec-sub">A selection of recent engagements across government, research, and rare disease. Detailed case material is available under confidentiality on request.</p>
+    </div>
+    <div class="cards reveal">
+      <a class="card" href="/consulting/consumer-engagement-frameworks">
+        <span class="tag">Engagement design</span>
+        <h3>Consumer engagement frameworks</h3>
+        <p>Structured, evidence-based engagement approaches across paediatric and rare disease research and care settings.</p>
+        <span class="more">Read more &rarr;</span>
+      </a>
+      <a class="card" href="/consulting/rare-disease-strategy">
+        <span class="tag">Strategy</span>
+        <h3>Rare disease strategy</h3>
+        <p>Supporting national and global initiatives focused on complex, low-prevalence conditions and the systems around them.</p>
+        <span class="more">Read more &rarr;</span>
+      </a>
+      <a class="card" href="/consulting/clinical-trial-readiness">
+        <span class="tag">Research readiness</span>
+        <h3>Clinical trial readiness</h3>
+        <p>Working with sponsors, sites, and consumer groups to improve pathways to research participation and treatment access.</p>
+        <span class="more">Read more &rarr;</span>
+      </a>
+      <a class="card" href="/consulting/policy-hta-engagement">
+        <span class="tag">Policy &amp; HTA</span>
+        <h3>Policy and HTA engagement</h3>
+        <p>Embedding consumer perspectives into health technology assessment, reimbursement, and clinical decision-making.</p>
+        <span class="more">Read more &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING & CONVENING -->
+<section class="speaking-sec" id="speaking">
+  <div class="wrap">
+    <div class="speaking reveal">
+      <span class="overline">Speaking &amp; convening</span>
+      <p class="speaking__text">Translating consumer perspective into policy, clinical-trial decisions, and rare-disease strategy, in rooms across Australia and internationally.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section id="insights" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head wide reveal">
+      <span class="overline">Insights</span>
+      <h2><b>Blog posts.</b></h2>
+      <p class="sec-sub">Clear, evidence-informed perspectives on health systems, lived experience, and navigating complexity.</p>
+    </div>
+    <div class="posts reveal">
+      <a class="post" href="/engagement/insights#lived-experience-hta-decision-making"><span class="date">March 2026</span><h3>What lived experience adds to HTA decision-making</h3><span class="go">&rarr;</span></a>
+      <a class="post" href="/engagement/insights#engagement-that-holds-up-under-scrutiny"><span class="date">February 2026</span><h3>Designing engagement that holds up under scrutiny</h3><span class="go">&rarr;</span></a>
+      <a class="post" href="/engagement/insights#complexity-is-not-an-edge-case"><span class="date">January 2026</span><h3>Complexity is not an edge case, it is the case</h3><span class="go">&rarr;</span></a>
+    </div>
+    <a href="/engagement/insights" class="btn btn-out" style="margin-top:32px">All insights &rarr;</a>
+  </div>
+</section>
+
+<!-- WORK WITH ME -->
+<section id="work-with-me" style="padding:72px 0 0">
   <div class="cta reveal-scale">
     <div class="wrap cta__inner">
       <div>
-        <span class="overline">Start a conversation</span>
-        <h2>Building engagement, growing capability, or investing in the next generation? <b>I can help.</b></h2>
-        <p class="clead">If you are bringing a medicine, a study or a programme to the people it affects, let's talk about doing it with them.</p>
+        <span class="overline">Work with me</span>
+        <h2>For partnerships, strategic projects, speaking, and <b>systems change initiatives.</b></h2>
+        <p class="clead">Outline the decision at stake and the stakeholders involved. If the fit is right, we will arrange a scoping conversation within the week.</p>
+        <dl class="cta-facts">
+          <div><dt>Email</dt><dd><a href="mailto:info@krispierce.com.au">info@krispierce.com.au</a></dd></div>
+          <div><dt>Based</dt><dd>Sunshine Coast, Queensland</dd></div>
+          <div><dt>Response</dt><dd>Within five business days</dd></div>
+          <div><dt>Disclosure</dt><dd>Commercial &amp; advocacy interests on request</dd></div>
+        </dl>
       </div>
-      <a href="/contact" class="btn btn-blue">Start a conversation &rarr;</a>
+      <a href="/contact" class="btn btn-blue">Get in touch &rarr;</a>
     </div>
   </div>
 </section>

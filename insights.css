@@ -216,6 +216,9 @@
 .reader__body { margin-top: 26px; }
 .reader__body p { color: var(--text-secondary); font-size: 17px; line-height: 1.72; margin: 0 0 18px;
   max-width: 62ch; }
+.reader__body h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.25rem,1.1rem+.6vw,1.5rem);
+  letter-spacing: -.02em; line-height: 1.2; color: var(--text-primary); margin: 36px 0 14px; max-width: 40ch; }
+.reader__body h2:first-child { margin-top: 0; }
 .reader__foot { margin-top: 16px; padding-top: 26px; border-top: 1px solid var(--border-subtle);
   display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .reader__foot span { color: var(--text-muted); font-size: 14.5px; }

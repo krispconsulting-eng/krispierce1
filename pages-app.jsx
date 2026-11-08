@@ -35,13 +35,13 @@ function setupPageReveal() {
   setTimeout(() => els.forEach((e) => { e.style.transition = 'none'; e.style.opacity = '1'; e.style.transform = 'none'; }), 3200);
 }
 
-const PAGES = { about: AboutPage, expertise: ExpertisePage, contact: ContactPage, portfolio: PortfolioPage, work: WorkWithMePage, privacy: PrivacyPage };
+const PAGES = { about: AboutPage, expertise: ExpertisePage, contact: ContactPage, portfolio: PortfolioPage, work: WorkWithMePage, privacy: PrivacyPage, service: ServicePage, program: ProgramPage };
 
 function PageApp() {
   usePageEffect(() => { setupPageReveal(); }, []);
   const key = document.body.dataset.page;
   const Page = PAGES[key];
-  return Page ? <Page /> : null;
+  return Page ? <Page slug={document.body.dataset.slug} /> : null;
 }
 
 ReactDOM.createRoot(document.getElementById('app')).render(<PageApp />);

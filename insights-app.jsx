@@ -25,7 +25,7 @@ function Reader({ item, onClose }) {
         </div>
         <p className="reader__lead">{item.dek}</p>
         <div className="reader__body">
-          {body.map((p, i) => <p key={i}>{p}</p>)}
+          {body.map((p, i) => (typeof p === 'string' ? <p key={i}>{p}</p> : <h2 key={i}>{p.h}</h2>))}
         </div>
         <div className="reader__foot">
           <Button arrow href="/contact">Start a conversation</Button>
@@ -154,8 +154,34 @@ function InsightsApp() {
 
   useAppEffect(() => { setupInsReveal(); }, [t.cols, t.cardStyle, t.showFeatured]);
 
-  const openArticle = (a) => setReading(a);
+  /* Each article can be opened by its id in the URL hash, so other pages can
+     link to a specific post. The path is written out in full because this page
+     sets <base href="/">, which would otherwise turn a bare "#id" into "/#id". */
+  const articleUrl = (hash) => window.location.pathname + window.location.search + hash;
+  const openArticle = (a) => {
+    setReading(a);
+    try { window.history.replaceState(null, '', articleUrl('#' + a.id)); } catch (e) { /* no-op */ }
+  };
+  const closeArticle = () => {
+    setReading(null);
+    try { window.history.replaceState(null, '', articleUrl('')); } catch (e) { /* no-op */ }
+  };
   const openGuide = (g) => setGating(g);
+
+  useAppEffect(() => {
+    const syncFromHash = () => {
+      let id = '';
+      try { id = decodeURIComponent((window.location.hash || '').replace(/^#/, '')); } catch (e) { return; }
+      if (!id) return;
+      const hit = [window.FEATURED_INSIGHT].concat(window.INSIGHTS || []).find((a) => a && a.id === id);
+      if (hit) setReading(hit);
+    };
+    syncFromHash();
+    /* Pasting another post's link into this tab only changes the hash, so the
+       page does not reload; follow it. */
+    window.addEventListener('hashchange', syncFromHash);
+    return () => window.removeEventListener('hashchange', syncFromHash);
+  }, []);
 
   return (
     <div className="site">
@@ -172,7 +198,7 @@ function InsightsApp() {
       </main>
       <Footer onNav={(id) => { window.location.href = '/#' + id; }} />
 
-      {reading && <Reader item={reading} onClose={() => setReading(null)} />}
+      {reading && <Reader item={reading} onClose={closeArticle} />}
       {gating && <ResourceGate item={gating} onClose={() => setGating(null)} />}
 
       <TweaksPanel title="Tweaks">

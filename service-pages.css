@@ -1,0 +1,31 @@
+/* Kris Pierce Consulting: service and program pages.
+   Everything structural comes from kit.css (.v3-page-header, .v3-btn) and
+   pages.css (.page-block, .page-prose, .ww-checklist, .ww-engagements).
+   This file only adds what those do not cover. v3 tokens only. */
+
+/* The label rail is an h2 on these pages (better outline for readers and
+   search); keep it looking like the div the other interior pages use. */
+h2.page-block__label { margin: 0; }
+
+/* The selectors below are doubled up (two classes) so they beat the base rules
+   in pages.css whichever order the bundler emits the two stylesheets in. */
+
+/* Checklists sit flush under the block top, with no extra offset. */
+.ww-checklist.svc-checklist { margin-top: 0; }
+
+/* "How the work runs": one column of bordered rows with a quiet teal marker
+   (no arrows, since these are not links). */
+.ww-engagements.svc-rows { grid-template-columns: 1fr; margin-top: 4px; }
+.ww-engagements.svc-rows li { align-items: flex-start; font-size: 16.5px; line-height: 1.5; }
+.ww-engagements.svc-rows li::before {
+  content: ""; flex: none; width: 8px; height: 8px; margin-top: .5em;
+  border-radius: 50%; background: var(--teal-600);
+}
+
+/* Closing button, kept at its natural width inside the flex column body. */
+.svc-cta { align-self: flex-start; margin-top: 4px; }
+
+/* Program pages: the button sits under the lead in the page header. It is the
+   fourth child, so it needs its own place in the entrance sequence. */
+.svc-header-cta { margin-top: 26px; }
+.svc-header-cta.v3-header-reveal { animation-delay: .6s; }
