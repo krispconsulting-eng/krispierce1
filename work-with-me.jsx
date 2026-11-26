@@ -111,10 +111,10 @@ function WorkWithMePage() {
         <section className="v3-page-header">
           <div className="v3-page-header__inner">
             <span className="v3-overline v3-page-header__overline v3-header-reveal">Work with me</span>
-            <h1 className="v3-page-header__title v3-header-reveal">Helping health organisations make better decisions by embedding <b>lived experience</b> where it matters most</h1>
+            <h1 className="v3-page-header__title v3-header-reveal">Helping health organisations make better decisions across research, policy, and <b>practice</b></h1>
             <p className="v3-page-header__lead v3-header-reveal">Everything I offer, from strategic advice and research partnership to
               HTA readiness and organisation-wide capability, comes from one place: flexible, collaborative work that generates
-              insight you can act on and moves outcomes toward the people most affected.</p>
+              insight you can act on and moves outcomes toward the people most affected. Lived experience runs through the method rather than sitting on top of it.</p>
           </div>
         </section>
 
