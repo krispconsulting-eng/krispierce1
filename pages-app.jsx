@@ -35,7 +35,7 @@ function setupPageReveal() {
   setTimeout(() => els.forEach((e) => { e.style.transition = 'none'; e.style.opacity = '1'; e.style.transform = 'none'; }), 3200);
 }
 
-const PAGES = { about: AboutPage, expertise: ExpertisePage, contact: ContactPage, portfolio: PortfolioPage, work: WorkWithMePage, privacy: PrivacyPage, service: ServicePage, program: ProgramPage };
+const PAGES = { about: AboutPage, expertise: ExpertisePage, contact: ContactPage, portfolio: PortfolioPage, work: WorkWithMePage, privacy: PrivacyPage, wellbeing: WellbeingPage, service: ServicePage, program: ProgramPage };
 
 function PageApp() {
   usePageEffect(() => { setupPageReveal(); }, []);

@@ -11,6 +11,7 @@ import '../kit.css';
 import '../pages.css';
 import '../spectrum.css';
 import '../service-pages.css';
+import '../wellbeing.css';
 
 import '../primitives.jsx';
 import '../sections.jsx';
@@ -18,6 +19,7 @@ import '../sections2.jsx';
 import '../pages.jsx';
 import '../work-with-me.jsx';
 import '../privacy.jsx';
+import '../wellbeing.jsx';
 import '../spectrum.jsx';
 import '../service-pages-data.js';
 import '../service-pages.jsx';

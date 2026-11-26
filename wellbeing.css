@@ -1,0 +1,108 @@
+/* Caregiver Wellbeing page body (REVIEW VERSION).
+   Source of truth: BRAND-BRIEF.md v2 (10 October 2026), Natural Coastal v1.2.
+   Exact HEX only. Newsreader (headings) + Hanken Grotesk (body, controls).
+   Everything is scoped under .cw / .cw-site so the rest of krispierce.com.au
+   keeps its own brand. No gradients, shadows, borders on cards, or blobs. */
+
+.cw-site {
+  --cw-ocean: #14384A;
+  --cw-natural: #4D7765;
+  --cw-mist: #A8C9D0;
+  --cw-sand: #EADBC8;
+  --cw-paper: #F8F7F2;
+  --cw-white: #FFFFFF;
+  --cw-head: 'Newsreader', Georgia, serif;
+  --cw-text: 'Hanken Grotesk', system-ui, sans-serif;
+  background: var(--cw-paper);
+}
+/* The site-wide grain overlay is transparency; the brief allows none. */
+.cw-site::after { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html:has(body[data-page="wellbeing"]) { scroll-behavior: smooth; }
+}
+
+.cw { background: var(--cw-paper); color: var(--cw-ocean); font-family: var(--cw-text);
+  font-size: 16px; line-height: 1.55; }
+.cw *, .cw *::before, .cw *::after { box-sizing: border-box; }
+
+.cw-wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.cw-wrap--narrow { max-width: 720px; }
+
+.cw-intro { padding: 136px 0 64px; }
+.cw-section { padding: 64px 0; scroll-margin-top: 96px; }
+.cw-section--sand { background: var(--cw-sand); }
+.cw-section--white { background: var(--cw-white); }
+.cw-section--mist { background: var(--cw-mist); }
+
+.cw-h1 { font-family: var(--cw-head); font-weight: 400; font-size: 44px; line-height: 1.15;
+  margin: 0 0 12px; color: var(--cw-ocean); letter-spacing: 0; }
+.cw-tagline { font-family: var(--cw-head); font-weight: 400; font-size: 28px; line-height: 1.25;
+  margin: 0 0 24px; color: var(--cw-ocean); }
+.cw-h2 { font-family: var(--cw-head); font-weight: 400; font-size: 28px; line-height: 1.25;
+  margin: 0 0 16px; color: var(--cw-ocean); letter-spacing: 0; }
+.cw-lead { font-size: 18px; line-height: 1.55; max-width: 60ch; margin: 0 0 16px; }
+.cw-body { font-size: 16px; line-height: 1.55; max-width: 64ch; margin: 0 0 16px; }
+.cw-meta { font-size: 14px; line-height: 1.55; margin: 16px 0; }
+.cw-status { font-size: 15px; font-weight: 600; color: var(--cw-natural); margin: 0 0 16px; }
+.cw-status--ocean { color: var(--cw-ocean); }
+
+.cw a:not(.cw-btn) { color: var(--cw-natural); text-decoration: underline; text-underline-offset: 3px; }
+.cw a:not(.cw-btn):hover { color: var(--cw-ocean); }
+
+.cw-card { background: var(--cw-white); border-radius: 18px; padding: 32px; border: 0; box-shadow: none; }
+
+/* Buttons and focus */
+.cw-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
+  padding: 10px 24px; border-radius: 10px; border: 0; background: var(--cw-ocean); color: var(--cw-paper);
+  font-family: var(--cw-text); font-size: 15px; font-weight: 600; line-height: 1.2; text-decoration: none;
+  cursor: pointer; margin-top: 8px; }
+.cw-btn:disabled { cursor: progress; }
+.cw-btn-secondary { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px;
+  border-radius: 10px; border: 1px solid var(--cw-ocean); background: var(--cw-white); color: var(--cw-ocean);
+  font-family: var(--cw-text); font-size: 15px; font-weight: 500; cursor: pointer; }
+.cw a:focus-visible, .cw button:focus-visible, .cw input:focus-visible, .cw [tabindex="-1"]:focus-visible {
+  outline: 2px solid var(--cw-ocean); outline-offset: 2px; }
+
+/* Wheel: text list with domain marks on white. Colour never carries meaning alone. */
+.cw-domains { list-style: none; padding: 0; margin: 8px 0 24px; display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; max-width: 640px; }
+.cw-domains li { display: flex; align-items: center; gap: 12px; font-size: 16px; min-height: 32px; }
+.cw-domains__mark { flex: none; width: 20px; height: 20px; border-radius: 4px; }
+
+/* Form */
+.cw-form { margin-top: 8px; }
+.cw-field { margin: 16px 0 8px; }
+.cw-field label { display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.cw-field input { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--cw-ocean);
+  border-radius: 10px; background: var(--cw-white); color: var(--cw-ocean); font-family: var(--cw-text);
+  font-size: 16px; }
+.cw-field input[aria-invalid="true"] { border-width: 2px; }
+.cw-error { font-size: 15px; font-weight: 600; margin: 8px 0 0; color: var(--cw-ocean); }
+.cw-error::before { content: "Error: "; }
+.cw-result { margin-top: 16px; padding: 16px; border-radius: 10px; background: var(--cw-sand); }
+.cw-result p { margin: 0 0 8px; }
+.cw-result p:last-child { margin: 0; }
+/* Deep natural on sand is large-text only, so links here use Deep ocean. */
+.cw .cw-result a:not(.cw-btn) { color: var(--cw-ocean); }
+.cw-form__done { font-family: var(--cw-head); font-size: 20px; font-weight: 500; line-height: 1.25; margin: 0 0 16px; }
+
+/* Review notes: temporary, remove every [data-review] before go-live. */
+.cw-review { background: var(--cw-paper); border-left: 4px solid var(--cw-mist); border-radius: 8px;
+  padding: 12px 16px; margin: 0 0 24px; font-size: 14px; line-height: 1.5; max-width: 64ch; }
+.cw-section--white .cw-review, .cw-card .cw-review { background: var(--cw-paper); }
+.cw-review__label { display: block; font-weight: 600; margin-bottom: 4px; }
+.cw-review p { margin: 0 0 8px; }
+.cw-review p:last-child { margin: 0; }
+.cw-review__actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+
+@media (max-width: 720px) {
+  .cw-intro { padding: 112px 0 48px; }
+  .cw-section { padding: 48px 0; }
+  .cw-wrap { padding: 0 16px; }
+  .cw-h1 { font-size: 32px; }
+  .cw-tagline { font-size: 24px; }
+  .cw-h2 { font-size: 24px; }
+  .cw-card { padding: 24px 16px; }
+  .cw-domains { grid-template-columns: 1fr; }
+}

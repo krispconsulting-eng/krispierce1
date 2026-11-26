@@ -1,6 +1,7 @@
 /* Kris Pierce Consulting — website sections (part 1): Nav, SectionNav */
 
 const NAV_LINKS = [
+  ['Wellbeing','wellbeing','/wellbeing'],
   ['Engagement','engagement','/engagement'],
   ['Work with me','work','/work-with-me'],
   ['About','about','/about'],
