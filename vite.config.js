@@ -22,6 +22,7 @@ export default defineConfig({
         resources: 'resources.html',
         contact: 'contact.html',
         privacy: 'privacy.html',
+        wellbeing: 'wellbeing.html',
         'consulting-policy-hta-engagement': 'consulting/policy-hta-engagement.html',
         'consulting-clinical-trial-readiness': 'consulting/clinical-trial-readiness.html',
         'consulting-rare-disease-strategy': 'consulting/rare-disease-strategy.html',
