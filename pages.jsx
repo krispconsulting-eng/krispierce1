@@ -43,7 +43,8 @@ function AboutPage() {
               Sydney, is the day-to-day base. Beyond that sit the committees that shape how patient voice enters
               health decisions in Australia: Deputy Chair of the HTA Consumer Consultative Committee, member of the
               MSAC Evaluation Sub-Committee, member of the Genomics Australia Advisory Council, and internationally,
-              Co-Chair of the HTAi Consumer Network.</p>
+              the Rare Disease and Patient Involvement Committees at Health Technology Assessment
+              International (HTAi).</p>
             <p className="page-prose"><strong>SCN2A Australia</strong>, a charity supporting families affected by one
               of the rarer developmental and epileptic encephalopathies, was founded and is directed by Kris. That work
               spans research partnerships, policy, and the day-to-day reality of a small patient community trying to
@@ -178,7 +179,7 @@ function ContactPage() {
     setStatus('sending');
     try {
       await sendLead({
-        subject: 'New enquiry — krispierce.com.au',
+        subject: 'New enquiry: krispierce.com.au',
         from_name: form.name || 'Website enquiry',
         Name: form.name, Organisation: form.org, Email: form.email, Phone: form.phone,
         'What they need': form.need, Message: form.about,

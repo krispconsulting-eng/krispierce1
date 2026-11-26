@@ -72,7 +72,7 @@ const FEATURED = [
   ['National policy contributions', 'Deputy Chair of the HTA Consumer Consultative Committee and member of the MSAC Evaluation Sub-Committee, shaping how patient voice enters health decisions in Australia.'],
   ['Research collaborations', 'Two decades of participatory and applied health research, bringing the patient and carer perspective into study design, endpoints, and evidence.'],
   ['Genomics advisory', 'Member of the Genomics Australia Advisory Council, contributing lived-experience perspective to the national genomics agenda.'],
-  ['International engagement', 'Co-Chair of the HTAi Consumer Network and an invited speaker at international convenings on rare disease and consumer partnership.'],
+  ['International engagement', 'Member of the Rare Disease and Patient Involvement Committees at Health Technology Assessment International (HTAi), and an invited speaker at international convenings on rare disease and consumer partnership.'],
   ['Advisory roles', 'Ongoing senior advisory work across consumer engagement, HTA, and rare disease, where decisions are actually made.'],
 ];
 

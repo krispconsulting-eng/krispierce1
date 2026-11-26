@@ -7,8 +7,8 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
-  <title>Kris Pierce Consulting | Strategic engagement across health and research systems</title>
-  <meta name="description" content="Strategic engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
+  <title>Kris Pierce Consulting | Strategy, evidence, and engagement across health and research systems</title>
+  <meta name="description" content="Strategy, evidence, and engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
   <meta name="keywords" content="consumer engagement, patient engagement, health technology assessment, HTA, rare disease, health policy, clinical trial readiness, lived experience, consulting, Australia" />
   <meta name="author" content="Kris Pierce" />
   <link rel="canonical" href="https://krispierce.com.au/" />
@@ -16,16 +16,16 @@
   <meta name="theme-color" content="#1C2530" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Kris Pierce" />
-  <meta property="og:title" content="Kris Pierce Consulting | Strategic engagement across health and research systems" />
-  <meta property="og:description" content="Strategic engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
+  <meta property="og:title" content="Kris Pierce Consulting | Strategy, evidence, and engagement across health and research systems" />
+  <meta property="og:description" content="Strategy, evidence, and engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
   <meta property="og:url" content="https://krispierce.com.au/" />
   <meta property="og:image" content="https://krispierce.com.au/assets/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_AU" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kris Pierce Consulting | Strategic engagement across health and research systems" />
-  <meta name="twitter:description" content="Strategic engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
+  <meta name="twitter:title" content="Kris Pierce Consulting | Strategy, evidence, and engagement across health and research systems" />
+  <meta name="twitter:description" content="Strategy, evidence, and engagement across health and research systems. Kris Pierce connects systems, evidence, and lived experience to deliver outcomes that hold." />
   <meta name="twitter:image" content="https://krispierce.com.au/assets/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -318,6 +318,14 @@
   .card h3{font-family:var(--display);font-weight:500;font-size:clamp(1.3rem,2.1vw,1.65rem);letter-spacing:-.02em;line-height:1.15}
   .card p{color:var(--taupe-600);font-size:15.5px;line-height:1.6}
   .card .more{margin-top:auto;padding-top:8px;font-weight:600;font-size:15px;color:var(--blue-700)}
+  .cards--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+  /* ---- HOW WE START ---- */
+  .steps{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(26px,3.4vw,46px);border-top:1px solid var(--taupe-200);padding-top:38px}
+  .steps li{display:flex;flex-direction:column;gap:10px}
+  .steps .step-num{font-family:var(--display);font-weight:200;font-size:2.2rem;line-height:1;letter-spacing:-.03em;color:var(--teal-400)}
+  .steps h3{font-family:var(--display);font-weight:500;font-size:clamp(1.15rem,1.9vw,1.45rem);letter-spacing:-.02em;line-height:1.18}
+  .steps p{color:var(--taupe-600);font-size:15.5px;line-height:1.6;margin:0;max-width:40ch}
 
   /* ---- SPEAKING & CONVENING ---- */
   .speaking-sec{padding:72px 0}
@@ -368,11 +376,15 @@
     .row-item .go{display:none}.row-item .num{font-size:2rem;min-width:54px}
     .about{grid-template-columns:1fr}
     .how-grid{grid-template-columns:1fr}
-    .links{display:none}
+    .links{gap:0}
+    .links a:not(.btn){display:none}
+    .links .btn{padding:11px 20px;font-size:14px}
     .list-grid{grid-template-columns:1fr;gap:6px}
     .list-label{padding-top:0}
     .list li{grid-template-columns:1fr;gap:4px}
     .cards{grid-template-columns:1fr}
+    .cards--3{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr;gap:28px}
     .post{grid-template-columns:1fr;gap:6px}
     .post .go{display:none}
     .cta-facts{grid-template-columns:1fr}
@@ -421,11 +433,41 @@
   </svg>
   <div class="wrap">
     <span class="overline kicker hero-text-reveal" style="color:var(--blue-200)">Consulting</span>
-    <h1 class="hero-text-reveal">Strategic <b>engagement</b> across health and research systems.</h1>
+    <h1 class="hero-text-reveal">Strategy, evidence, and engagement across health and research <b>systems.</b></h1>
     <p class="lead hero-text-reveal">Connecting systems, evidence, and lived experience to deliver outcomes that hold.</p>
     <div class="hero-actions hero-text-reveal">
       <a href="/work-with-me" class="btn btn-blue">Work with me</a>
       <a href="/engagement/insights" class="btn btn-out-light">View insights &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO I WORK WITH -->
+<section id="who-i-work-with" style="padding-top:72px">
+  <div class="wrap">
+    <div class="sec-head wide reveal">
+      <span class="overline">Who I work with</span>
+      <h2>Three routes into the <b>practice.</b></h2>
+    </div>
+    <div class="cards cards--3 reveal">
+      <a class="card" href="/consulting/policy-hta-engagement">
+        <span class="tag">Government &amp; HTA</span>
+        <h3>Health systems and policy</h3>
+        <p>Embedding consumer perspectives into health technology assessment, reimbursement, and clinical decision-making.</p>
+        <span class="more">See the work &rarr;</span>
+      </a>
+      <a class="card" href="/consulting/clinical-trial-readiness">
+        <span class="tag">Industry partners</span>
+        <h3>Research and trial readiness</h3>
+        <p>Working with sponsors, sites, and consumer groups to improve pathways to research participation and treatment access.</p>
+        <span class="more">See the work &rarr;</span>
+      </a>
+      <a class="card" href="/consulting/consumer-engagement-frameworks">
+        <span class="tag">Research &amp; not-for-profit</span>
+        <h3>Engagement design</h3>
+        <p>Structured, evidence-based engagement approaches across paediatric and rare disease research and care settings.</p>
+        <span class="more">See the work &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
@@ -444,41 +486,6 @@
         <div class="photo"><img src="/assets/kris-portrait.jpg" alt="Portrait of Kris Pierce" width="360" height="540" /></div>
         <figcaption>Kris Pierce · Sunshine Coast, Queensland</figcaption>
       </figure>
-    </div>
-  </div>
-</section>
-
-<!-- SELECTED PUBLICATIONS -->
-<section class="list-sec" id="publications">
-  <div class="wrap">
-    <div class="list-grid">
-      <div class="list-label reveal-left"><span class="overline">Selected publications</span></div>
-      <ol class="list reveal">
-        <li><span class="yr">2025</span><div><p class="t">‘Just realising I wasn’t alone… was profound’: a mixed-methods evaluation of a pilot peer-to-peer wellbeing program for carers of children with rare epilepsies.</p><p class="v">Orphanet Journal of Rare Diseases · first author</p></div></li>
-        <li><span class="yr">2025</span><div><p class="t">An alternative model for patient capacity development to participate in health technology assessment.</p><p class="v">International Journal of Technology Assessment in Health Care · first author</p></div></li>
-        <li><span class="yr">2025</span><div><p class="t">Early and often: reimagining patient community engagement to improve clinical trials feasibility.</p><p class="v">Global Genes White Paper · co-author</p></div></li>
-        <li><span class="yr">2025</span><div><p class="t">Fulfilling the needs of caregivers in delivering health services to children with developmental and epileptic encephalopathies.</p><p class="v">European Journal of Paediatric Neurology</p></div></li>
-        <li><span class="yr">2023</span><div><p class="t">Quality of life in caregivers of a child with a developmental and epileptic encephalopathy.</p><p class="v">Developmental Medicine &amp; Child Neurology</p></div></li>
-        <li><span class="yr">2022</span><div><p class="t">The impact of COVID-19 on families of children with chronic illness.</p><p class="v">PLOS ONE</p></div></li>
-        <li><span class="yr">2021</span><div><p class="t">How to plan and conduct telehealth consultations with children and adolescents.</p><p class="v">World Health Organisation · contributor</p></div></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<!-- COMMITTEE & ADVISORY ROLES -->
-<section class="list-sec" id="committees">
-  <div class="wrap">
-    <div class="list-grid">
-      <div class="list-label reveal-left"><span class="overline">Committee &amp; advisory roles</span></div>
-      <ol class="list reveal">
-        <li><span class="yr">From 2025</span><div><p class="t">Task Force on Regulatory Convergence</p><p class="v">International Rare Diseases Research Consortium (IRDiRC)</p></div></li>
-        <li><span class="yr">From 2023</span><div><p class="t">Australian Response Steering Committee, Intersectoral Global Action Plan on Epilepsy &amp; Other Neurological Disorders</p><p class="v">World Health Organisation IGAP</p></div></li>
-        <li><span class="yr">From 2023</span><div><p class="t">Board of Management, Global Epilepsy Research Alliance</p><p class="v">International</p></div></li>
-        <li><span class="yr">From 2023</span><div><p class="t">Community Council · ILAE Care Pathways Task Force</p><p class="v">International Bureau of Epilepsy</p></div></li>
-        <li><span class="yr">From 2023</span><div><p class="t">Rare Disease &amp; Patient Involvement Committees</p><p class="v">Health Technology Assessment International (HTAi)</p></div></li>
-        <li><span class="yr">From 2021</span><div><p class="t">Peer &amp; Consumer Grant Assessor</p><p class="v">NHMRC · Medical Research Future Fund</p></div></li>
-      </ol>
     </div>
   </div>
 </section>
@@ -507,35 +514,6 @@
       <p class="st-lead">Health systems are not designed for complexity.</p>
       <p class="st-lead">Patients and families are often required to navigate what the system cannot see.</p>
       <p class="st-body">I work at the intersection of lived experience and system design, ensuring decisions are grounded in reality, not assumption, and that engagement is structured to change something, not simply to be recorded.</p>
-    </div>
-  </div>
-</section>
-
-<!-- LEADERSHIP -->
-<section id="leadership" style="padding-top:24px">
-  <div class="wrap">
-    <div class="sec-head wide reveal">
-      <span class="overline">Leadership</span>
-      <h2>Senior leadership across research alliances, advocacy, and <b>rare disease.</b></h2>
-      <p class="sec-sub">Director and founder-level appointments that have built consumer engagement infrastructure across national research networks, rare disease communities, and paediatric health services.</p>
-    </div>
-    <ol class="list list--wide reveal">
-      <li><span class="yr">Current</span><div><p class="t">Strategic Lead, Consumer and Community Engagement</p><p class="v">Rare Diseases NSW · UNSW Sydney</p></div></li>
-      <li><span class="yr">From 2020</span><div><p class="t">Director, Consumer Involvement</p><p class="v">Child Unlimited · UNSW</p></div></li>
-      <li><span class="yr">2019 to present</span><div><p class="t">Founder &amp; Director</p><p class="v">SCN2A Australia</p></div></li>
-      <li><span class="yr">2021 to 2024</span><div><p class="t">Rare Epilepsy Lead</p><p class="v">Epilepsy Foundation</p></div></li>
-      <li><span class="yr">2019 to 2024</span><div><p class="t">Chair, Rare Global Advocacy Leadership Council</p><p class="v">Global Genes</p></div></li>
-      <li><span class="yr">2017 to 2023</span><div><p class="t">Co-Founder &amp; Lead</p><p class="v">Genetic Epilepsy Team Australia (GETA)</p></div></li>
-      <li><span class="yr">2021 to 2023</span><div><p class="t">Co-Chair, Consumer Advisory Council</p><p class="v">Royal Children’s Hospital, Melbourne</p></div></li>
-    </ol>
-    <div class="quals reveal">
-      <span class="overline">Qualifications &amp; recognition</span>
-      <ul class="tags">
-        <li>Master of Health Science</li>
-        <li>Master of Wellness</li>
-        <li>GAICD</li>
-        <li>Victorian Women’s Honour Roll · 2022</li>
-      </ul>
     </div>
   </div>
 </section>
@@ -577,6 +555,53 @@
   </div>
 </section>
 
+<!-- SELECTED PUBLICATIONS -->
+<section class="list-sec" id="publications">
+  <div class="wrap">
+    <div class="list-grid">
+      <div class="list-label reveal-left"><span class="overline">Selected publications</span></div>
+      <ol class="list reveal">
+        <li><span class="yr">2025</span><div><p class="t">‘Just realising I wasn’t alone… was profound’: a mixed-methods evaluation of a pilot peer-to-peer wellbeing program for carers of children with rare epilepsies.</p><p class="v">Orphanet Journal of Rare Diseases · first author</p></div></li>
+        <li><span class="yr">2025</span><div><p class="t">An alternative model for patient capacity development to participate in health technology assessment.</p><p class="v">International Journal of Technology Assessment in Health Care · first author</p></div></li>
+        <li><span class="yr">2025</span><div><p class="t">Early and often: reimagining patient community engagement to improve clinical trials feasibility.</p><p class="v">Global Genes White Paper · co-author</p></div></li>
+        <li><span class="yr">2025</span><div><p class="t">Fulfilling the needs of caregivers in delivering health services to children with developmental and epileptic encephalopathies.</p><p class="v">European Journal of Paediatric Neurology</p></div></li>
+        <li><span class="yr">2023</span><div><p class="t">Quality of life in caregivers of a child with a developmental and epileptic encephalopathy.</p><p class="v">Developmental Medicine &amp; Child Neurology</p></div></li>
+        <li><span class="yr">2022</span><div><p class="t">The impact of COVID-19 on families of children with chronic illness.</p><p class="v">PLOS ONE</p></div></li>
+        <li><span class="yr">2021</span><div><p class="t">How to plan and conduct telehealth consultations with children and adolescents.</p><p class="v">World Health Organisation · contributor</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head wide reveal">
+      <span class="overline">Leadership</span>
+      <h2>Senior leadership across research alliances, advocacy, and <b>rare disease.</b></h2>
+      <p class="sec-sub">Director and founder-level appointments that have built consumer engagement infrastructure across national research networks, rare disease communities, and paediatric health services.</p>
+    </div>
+    <ol class="list list--wide reveal">
+      <li><span class="yr">Current</span><div><p class="t">Strategic Lead, Consumer and Community Engagement</p><p class="v">Rare Diseases NSW · UNSW Sydney</p></div></li>
+      <li><span class="yr">From 2020</span><div><p class="t">Director, Consumer Involvement</p><p class="v">Child Unlimited · UNSW</p></div></li>
+      <li><span class="yr">2019 to present</span><div><p class="t">Founder &amp; Director</p><p class="v">SCN2A Australia</p></div></li>
+      <li><span class="yr">2021 to 2024</span><div><p class="t">Rare Epilepsy Lead</p><p class="v">Epilepsy Foundation</p></div></li>
+      <li><span class="yr">2019 to 2024</span><div><p class="t">Chair, Rare Global Advocacy Leadership Council</p><p class="v">Global Genes</p></div></li>
+      <li><span class="yr">2017 to 2023</span><div><p class="t">Co-Founder &amp; Lead</p><p class="v">Genetic Epilepsy Team Australia (GETA)</p></div></li>
+      <li><span class="yr">2021 to 2023</span><div><p class="t">Co-Chair, Consumer Advisory Council</p><p class="v">Royal Children’s Hospital, Melbourne</p></div></li>
+    </ol>
+    <div class="quals reveal">
+      <span class="overline">Qualifications &amp; recognition</span>
+      <ul class="tags">
+        <li>Master of Health Science</li>
+        <li>Master of Wellness</li>
+        <li>GAICD</li>
+        <li>Victorian Women’s Honour Roll · 2022</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- SPEAKING & CONVENING -->
 <section class="speaking-sec" id="speaking">
   <div class="wrap">
@@ -601,6 +626,21 @@
       <a class="post" href="/engagement/insights#complexity-is-not-an-edge-case"><span class="date">January 2026</span><h3>Complexity is not an edge case, it is the case</h3><span class="go">&rarr;</span></a>
     </div>
     <a href="/engagement/insights" class="btn btn-out" style="margin-top:32px">All insights &rarr;</a>
+  </div>
+</section>
+
+<!-- HOW WE START -->
+<section id="how-we-start" style="padding-top:72px">
+  <div class="wrap">
+    <div class="sec-head wide reveal">
+      <span class="overline">How we start</span>
+      <h2>Scope is not fixed <b>up front.</b></h2>
+    </div>
+    <ol class="steps reveal">
+      <li><span class="step-num">01</span><h3>We talk</h3><p>A scoping conversation about the decision at stake and the people it affects.</p></li>
+      <li><span class="step-num">02</span><h3>We agree the question and the approach</h3><p>The method follows the question, so we settle both together before anything begins.</p></li>
+      <li><span class="step-num">03</span><h3>We act on what we find</h3><p>The work has to shift a decision, a design, or a strategy. Otherwise it is just data collection.</p></li>
+    </ol>
   </div>
 </section>
 
